@@ -48,5 +48,3 @@ url-mappings:
 ## License
 
 Apache-2.0.
-
-
