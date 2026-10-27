@@ -1,0 +1,18 @@
+# Must fail: a data type version that records no addition. It is complete otherwise (versions a
+# concept, has identifier and both statuses), so only dt:DataTypeVersionShape can reject it.
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/never-added>
+    a dt:DataType ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Never added" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1>
+    a dt:DataTypeVersion ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1"^^xsd:anyURI ;
+    rim:validityStatus rim:invalid ;
+    rim:publicationStatus rim:published .

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Types vocabulary",
+  "abstract": "The data types of process profile inputs and outputs, as a Registered Item Model concept plane: a rim:ConceptSystem of dt:DataType concepts (sub-class of rim:Concept), each with a governed rim:ConceptVersion. Encoding is out of scope.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "dateOfLastChange": "2026-10-26",
+  "version": "0.1",
+  "itemClass": "model",
+  "register": "data-types",
+  "isProfileOf": [
+    "ogc.model.registered-item.rim.concept-version",
+    "ogc.model.registered-item.rim.register"
+  ],
+  "dependsOn": [
+    "ogc.model.registered-item.core-ontology",
+    "ogc.model.registered-item.rim.concept-version",
+    "ogc.model.registered-item.rim.register"
+  ],
+  "shaclShapes": [
+    "shapes.shacl"
+  ],
+  "ldContext": "context.jsonld",
+  "scope": "dev",
+  "tags": ["data type", "SKOS", "concept plane", "ISO 19135", "register"],
+  "sources": [
+    {
+      "title": "ISO 19135:2026, Geographic information — Registration and register governance",
+      "link": "https://www.iso.org/standard/86261.html"
+    },
+    {
+      "title": "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType",
+      "link": "https://docs.ogc.org/is/09-146r8/09-146r8.html"
+    },
+    {
+      "title": "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture",
+      "link": "https://www.ogc.org/standards/sfa/"
+    },
+    {
+      "title": "OGC 17-030r1 LAS Specification 1.4 OGC Community Standard",
+      "link": "https://www.ogc.org/standards/las/"
+    }
+  ],
+  "maturity": "development",
+  "highlighted": true,
+  "group": "Data Types"
+}

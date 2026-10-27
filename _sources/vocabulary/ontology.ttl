@@ -1,0 +1,87 @@
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+#################################################################
+# Ontology metadata
+#
+# A profile of the Registered Item Model (ISO 19135:2026) concept plane
+# for a vocabulary of data types. It adds nothing to the register model:
+# it names a concept system, its register and its governance, and a
+# DataType as a kind of concept. Follows the pattern of the Registered
+# Item Model's own activity-type profile.
+#################################################################
+
+dt: a owl:Ontology ;
+    owl:imports rim: ;
+    dct:title "Data Types vocabulary" ;
+    dct:description "Registered Item Model concept-plane profile: the data types of process profile inputs and outputs as rim:Concepts in a rim:ConceptSystem, each with a governed rim:ConceptVersion. A data type names the kind of data, not its encoding, which is declared at the Implementation Profile tier." ;
+    dct:creator "GeoLabs SARL" ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> .
+
+#################################################################
+# Concept plane: a DataType is a kind of concept, its version a kind of
+# concept version. Meaning (DataType / skos:prefLabel / skos:definition /
+# skos:broader) is kept separate from the governed state (the version's
+# validity, publication and recorded addition).
+#################################################################
+
+dt:DataType a owl:Class ;
+    rdfs:subClassOf rim:Concept ;
+    rdfs:isDefinedBy dt: ;
+    rdfs:label "Data type" ;
+    rdfs:comment "A kind of data a process profile input or output carries (raster by band count, geometry by type, point cloud, table, literals, ...). It names the kind of data, not its encoding: the encoding a concrete process uses is declared where that process is profiled. A unit of meaning in the dt:dataTypes concept system; some types are grounded in a standard that happens to be a format (e.g. point cloud in LAS)." .
+
+dt:DataTypeVersion a owl:Class ;
+    rdfs:subClassOf rim:ConceptVersion ;
+    rdfs:isDefinedBy dt: ;
+    rdfs:label "Data type version" ;
+    rdfs:comment "A governed version of a dt:DataType: carries the object identifier, validity and publication status, and the recorded addition. rim:versionOf points to its dt:DataType." .
+
+#################################################################
+# The register, its system and its concept system
+#
+# A concept register in ISO 19135:2026 terms: it maintains a concept
+# plane. The register is governed by GeoLabs; the concept system holds
+# the data type concepts (skos:inScheme).
+#################################################################
+
+dt:register a rim:Register ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/register"^^xsd:anyURI ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
+    dct:title "Data Types"@en ;
+    dct:description "A concept-plane register of the kinds of data that process profile inputs and outputs carry."@en ;
+    rim:registerOwner dt:geolabs ;
+    rim:registerManager dt:geolabs ;
+    rim:runsOn dt:registerSystem .
+
+dt:geolabs a prov:Organization ;
+    rdfs:label "GeoLabs SARL" ;
+    rdfs:seeAlso <https://www.geolabs.fr/> .
+
+dt:registerSystem a rim:RegisterSystem ;
+    rdfs:label "OGC Building Blocks register (bblocks-postprocess, GitHub Pages)" ;
+    rdfs:seeAlso <https://github.com/GeoLabs/bblocks-data-types/> .
+
+dt:dataTypes a rim:ConceptSystem , skos:ConceptScheme ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-types"^^xsd:anyURI ;
+    dct:title "Data types"@en ;
+    skos:prefLabel "Data types"@en ;
+    dct:description "The kinds of data a process profile's inputs and outputs carry. A data type names the kind of data, not its encoding."@en .
+
+#################################################################
+# Entry into the register: a proposed addition
+#
+# Every concept version records one rim:RegisterAction of type
+# rim:additionAction, proposed (rim:proposer) by dt:geolabs, at the date
+# the vocabulary was first drafted (2026-10-08, inline in
+# bblocks-generic-profiles). No control-body decision has been recorded,
+# so versions are rim:invalid (not in force) and rim:published (visible):
+# a proposed addition awaiting a decision. dt:AdditionProposalShape
+# requires the addition and its proposer on every version.
+#################################################################

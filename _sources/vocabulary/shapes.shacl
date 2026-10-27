@@ -1,0 +1,37 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim:  <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# Constrained-profile shapes. A dt:DataType is a rim:Concept and a dt:DataTypeVersion is a
+# rim:ConceptVersion (ontology.ttl), so the Registered Item Model's own rim:ConceptShape (preferred
+# label) and rim:ConceptVersionShape (versionOf a concept, object identifier, validity and
+# publication status) already apply through the ontology closure. These shapes add only what makes
+# this a data-types register:
+#   - a dt:DataType belongs to the dt:dataTypes concept system;
+#   - a dt:DataTypeVersion records its addition, proposed by an agent (as the generic-profiles
+#     register does for its items), and versions exactly one dt:DataType.
+# A broader data type is referenced as an IRI, not with sh:class: each entry is validated on its
+# own, so the broader type's own triples need not be in the data graph.
+
+dt:DataTypeShape a sh:NodeShape ;
+    sh:targetClass dt:DataType ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue dt:dataTypes ; sh:minCount 1 ;
+                  sh:message "A data type must be skos:inScheme dt:dataTypes." ] ;
+    sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ] ;
+    sh:property [ sh:path skos:broader ; sh:nodeKind sh:IRI ] .
+
+dt:DataTypeVersionShape a sh:NodeShape ;
+    sh:targetClass dt:DataTypeVersion ;
+    sh:property [ sh:path rim:versionOf ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "A data type version must version exactly one dt:DataType." ] ;
+    sh:property [
+        sh:path rim:hasAction ;
+        sh:qualifiedValueShape [
+            sh:property [ sh:path rim:actionType ; sh:hasValue rim:additionAction ] ,
+                        [ sh:path rim:proposer ;   sh:minCount 1 ]
+        ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:minCount 1 ;
+        sh:message "A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer."
+    ] .
