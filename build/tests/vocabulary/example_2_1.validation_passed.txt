@@ -1,5 +1,5 @@
 Validation report for data-types.vocabulary - Data Types vocabulary
-Generated 2026-10-27T12:54:14.463600+00:00
+Generated 2026-10-27T12:55:46.645231+00:00
 === Files ===
 Using example_2_1.ttl from examples
 Output Turtle example_2_1.ttl created
@@ -7,35 +7,33 @@ Output Turtle example_2_1.ttl created
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/register/ontology.ttl
- - https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl
- - https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/rim/concept-version/ontology.ttl
  - /github/workspace/_sources/vocabulary/ontology.ttl
+ - https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl
 Validation result for _sources/vocabulary/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/vocabulary/shapes.shacl:
- - Shape dt:DataTypeShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface>,<https://geolabs.github.io/bblocks-data-types/def/data-type/tin>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster>,<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve>
- - Shape dt:DataTypeVersionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1>
  - Shape dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape: *none*
+ - Shape dt:DataTypeShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/tin>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band>,<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point>,<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud>
+ - Shape dt:DataTypeVersionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string/v1>
 
 Validation result for https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:
- - Shape rim:TextShape: *none*
- - Shape rim:RegisterActionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point/actions/addition>
- - Shape rim:ConceptVersionShape: *none*
  - Shape rim:RegisterSpecificationShape: *none*
  - Shape rim:RegisterItemShape: *none*
- - Shape rim:RegisterShape: *none*
- - Shape rim:ConceptShape: *none*
+ - Shape rim:TextShape: *none*
  - Shape rim:CommitmentShape: *none*
- - Shape rim:RegisterItemClassShape: *none*
+ - Shape rim:ConceptVersionShape: *none*
+ - Shape rim:RegisterShape: *none*
  - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:ConceptShape: *none*
+ - Shape rim:RegisterActionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition>
+ - Shape rim:RegisterItemClassShape: *none*
 
 === End SHACL ===
 

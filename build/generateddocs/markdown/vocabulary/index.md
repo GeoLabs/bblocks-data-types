@@ -437,7 +437,7 @@ None
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/_sources/vocabulary/context.jsonld)
+[context.jsonld](https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/context.jsonld)
 
 ## Sources
 

@@ -1,7 +1,7 @@
 {
   "@context": [
     {
-      "@base": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined"
+      "@base": "https://geolabs.github.io/bblocks-data-types"
     },
     {
       "bblocks": "https://www.opengis.net/def/bblocks/",
@@ -213,7 +213,7 @@
   "name": "Building Blocks - Data Types",
   "abstract": "A concept-plane register (ISO 19135:2026, via the Registered Item Model) of the kinds of data\nthat process profile inputs and outputs carry -- raster (by band count), elevation model,\ngeometry (by type), feature collection, point cloud, TIN, table, bounding box and the literals.\nEach data type is a rim:Concept in a rim:ConceptSystem, with a governed rim:ConceptVersion.\nA data type names the *kind* of data, not its encoding: the encoding a concrete process uses is\ndeclared where that process is profiled (an Implementation Profile's schema).\n",
   "description": "This register holds, as a Registered Item Model **concept plane**, the vocabulary first drafted\ninline in [GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)\nas its generic-profiles.data-type block. Extracting it makes the vocabulary reusable beyond that\none register and gives it its own governance and lifecycle.\n\nModelled on the concept plane of the\n[Registered Item Model](https://nielshoffmann.github.io/registered-item-model/): dt:DataType is a\nsub-class of rim:Concept (a unit of meaning), dt:dataTypes is the rim:ConceptSystem that holds\nthem, and each type's governed state lives on a rim:ConceptVersion. A data type names the kind of\ndata (its meaning); the encoding a concrete process uses is declared at the Implementation Profile\ntier, not here. Some types are nonetheless grounded in a standard that happens to be a format\n(e.g. point cloud in the OGC LAS community standard) -- that is their source, not their encoding.\n\nIdentifiers: this register mints its own IRIs\n(https://geolabs.github.io/bblocks-data-types/def/data-type/...). The original inline block in\nbblocks-generic-profiles keeps its own until a permanent, register-independent namespace is agreed\nand that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.\n",
-  "modified": "2026-10-27T12:54:12.904605",
+  "modified": "2026-10-27T12:55:44.732603",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
@@ -223,34 +223,34 @@
   },
   "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
   "gitHubRepository": "https://github.com/GeoLabs/bblocks-data-types/blob/master/",
-  "baseURL": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/",
-  "viewerURL": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/",
+  "baseURL": "https://geolabs.github.io/bblocks-data-types/",
+  "viewerURL": "https://geolabs.github.io/bblocks-data-types/",
   "license": {
     "name": "Apache-2.0"
   },
-  "validationReport": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/tests/report.html",
-  "validationReportJson": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/tests/report.json",
+  "validationReport": "https://geolabs.github.io/bblocks-data-types/build/tests/report.html",
+  "validationReportJson": "https://geolabs.github.io/bblocks-data-types/build/tests/report.json",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json",
     "https://nielshoffmann.github.io/registered-item-model/build/register.json"
   ],
-  "remoteCacheDir": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/annotated/_cache",
+  "remoteCacheDir": "https://geolabs.github.io/bblocks-data-types/build/annotated/_cache",
   "links": [
     {
       "rel": "self",
-      "href": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/register.json",
+      "href": "https://geolabs.github.io/bblocks-data-types/build/register.json",
       "type": "application/json",
       "title": "This Building Blocks Register in JSON format"
     },
     {
       "rel": "self",
-      "href": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/bblocks.ttl",
+      "href": "https://geolabs.github.io/bblocks-data-types/build/bblocks.ttl",
       "type": "text/turtle",
       "title": "This Building Blocks Register in RDF Turtle format"
     },
     {
       "rel": "self",
-      "href": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/bblocks.jsonld",
+      "href": "https://geolabs.github.io/bblocks-data-types/build/bblocks.jsonld",
       "type": "application/ld+json",
       "title": "This Building Blocks Register in JSON-LD format"
     }
@@ -285,7 +285,7 @@
       "shaclShapes": [
         {
           "prof:hasArtifact": [
-            "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/_sources/vocabulary/shapes.shacl"
+            "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://data-types.vocabulary",
           "prof:hasRole": "role:validation",
@@ -303,7 +303,7 @@
         }
       ],
       "ldContext": {
-        "prof:hasArtifact": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/_sources/vocabulary/context.jsonld",
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/context.jsonld",
         "prof:hasRole": "role:mapping",
         "dct:format": "application/ld+json",
         "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
@@ -341,27 +341,27 @@
         "name": "Apache-2.0"
       },
       "ontology": {
-        "prof:hasArtifact": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/annotated/vocabulary/ontology.ttl",
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/ontology.ttl",
         "prof:hasRole": "role:specification",
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
-      "sourceLdContext": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/context.jsonld",
-      "sourceFiles": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/_sources/vocabulary/",
+      "sourceLdContext": "https://geolabs.github.io/bblocks-data-types/context.jsonld",
+      "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/vocabulary/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/generateddocs/markdown/vocabulary/index.md"
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/markdown/vocabulary/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/generateddocs/json-full/vocabulary/index.json"
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/json-full/vocabulary/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/bblock/data-types.vocabulary"
+          "url": "https://geolabs.github.io/bblocks-data-types/bblock/data-types.vocabulary"
         }
       },
       "@id": "bblocks://data-types.vocabulary",
@@ -376,7 +376,7 @@
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
-        "@id": "https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/"
+        "@id": "https://geolabs.github.io/bblocks-data-types/"
       }
     }
   ],
