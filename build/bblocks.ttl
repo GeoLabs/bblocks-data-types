@@ -2,8 +2,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ns1: <http://www.iana.org/assignments/> .
-@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix ns1: <http://www.w3.org/ns/oa#> .
+@prefix ns2: <http://www.iana.org/assignments/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -18,18 +18,18 @@
 
 <https://geolabs.github.io/bblocks-data-types/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N6080cbd9c1b54f0d9059f9bcc00b009c ;
+    prov:wasAttributedTo _:Nde413a0a3d434ed58c7ea25bbfe98bc6 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-10-27T12:55:46.771798"^^xsd:dateTime ;
-            prov:startedAtTime "2026-10-27T12:55:46.663339"^^xsd:dateTime ;
+            prov:endedAtTime "2026-10-27T12:57:17.659452"^^xsd:dateTime ;
+            prov:startedAtTime "2026-10-27T12:57:17.487207"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
                 [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:3c6e73a2c8175807004530ea2ecdc31887045546" ;
+                    dct:hasVersion "git:a975517b95a18b0497c0c57040f3b33b04d27b3e" ;
                     rdfs:seeAlso <https://geolabs.github.io/bblocks-data-types/build/register.json> ] ;
-            prov:wasAssociatedWith _:N6080cbd9c1b54f0d9059f9bcc00b009c ] .
+            prov:wasAssociatedWith _:Nde413a0a3d434ed58c7ea25bbfe98bc6 ] .
 
 <https://www.iso.org/standard/86261.html> rdfs:label "ISO 19135:2026, Geographic information — Registration and register governance" .
 
@@ -44,10 +44,10 @@
     rdfs:label "Data Types vocabulary" ;
     dct:abstract "The data types of process profile inputs and outputs, as a Registered Item Model concept plane: a rim:ConceptSystem of dt:DataType concepts (sub-class of rim:Concept), each with a governed rim:ConceptVersion. Encoding is out of scope."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-10-26T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-types/build/generateddocs/json-full/vocabulary/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-types/build/generateddocs/markdown/vocabulary/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-types/build/generateddocs/json-full/vocabulary/index.json> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://geolabs.github.io/bblocks-data-types/bblock/data-types.vocabulary> ] ;
     dct:hasVersion "0.1" ;
@@ -65,24 +65,24 @@
         "concept plane",
         "data type",
         "register" ;
-    prof:hasResource [ dct:conformsTo shacl: ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://data-types.vocabulary> ;
             prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/context.jsonld> ;
-            prof:hasRole role:mapping ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.model.registered-item.core-ontology> ;
             prof:hasArtifact <https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo owl:Ontology ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact <https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/ontology.ttl> ;
-            prof:hasRole role:specification ] ;
+            prof:hasRole role:validation ] ;
     prof:isProfileOf <bblocks://ogc.model.registered-item.rim.concept-version>,
         <bblocks://ogc.model.registered-item.rim.register> ;
     bblocks:dependsOn <bblocks://ogc.model.registered-item.core-ontology>,
@@ -123,27 +123,27 @@ bblocks-generic-profiles keeps its own until a permanent, register-independent n
 and that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:license [ rdfs:label "Apache-2.0" ] ;
-    dct:modified "2026-10-27T12:55:44.732603"^^xsd:dateTime ;
+    dct:modified "2026-10-27T12:57:16.122508"^^xsd:dateTime ;
     owl:imports <https://nielshoffmann.github.io/registered-item-model/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> ;
     skos:hasTopConcept <bblocks://data-types.vocabulary> ;
     skos:prefLabel "Building Blocks - Data Types" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
-            dct:type "text/turtle" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://geolabs.github.io/bblocks-data-types/build/bblocks.ttl> ],
-        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://geolabs.github.io/bblocks-data-types/build/bblocks.jsonld> ],
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://geolabs.github.io/bblocks-data-types/build/bblocks.jsonld> ],
         [ rdfs:label "This Building Blocks Register in JSON format" ;
             dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://geolabs.github.io/bblocks-data-types/build/register.json> ] ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://geolabs.github.io/bblocks-data-types/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://geolabs.github.io/bblocks-data-types/build/bblocks.ttl> ] ;
     foaf:homepage <https://geolabs.github.io/bblocks-data-types/> ;
     bblocks:hasValidationReport <https://geolabs.github.io/bblocks-data-types/build/tests/report.html> .
 
-_:N6080cbd9c1b54f0d9059f9bcc00b009c a prov:Agent,
+_:Nde413a0a3d434ed58c7ea25bbfe98bc6 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.5.36" ;
