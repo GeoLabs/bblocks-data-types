@@ -1,0 +1,52 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dt:DataType a owl:Class ;
+    rdfs:label "Data type" ;
+    rdfs:comment "A kind of data a process profile input or output carries (raster by band count, geometry by type, point cloud, table, literals, ...). It names the kind of data, not its encoding: the encoding a concrete process uses is declared where that process is profiled. A unit of meaning in the dt:dataTypes concept system; some types are grounded in a standard that happens to be a format (e.g. point cloud in LAS)." ;
+    rdfs:isDefinedBy dt: ;
+    rdfs:subClassOf rim:Concept .
+
+dt:DataTypeVersion a owl:Class ;
+    rdfs:label "Data type version" ;
+    rdfs:comment "A governed version of a dt:DataType: carries the object identifier, validity and publication status, and the recorded addition. rim:versionOf points to its dt:DataType." ;
+    rdfs:isDefinedBy dt: ;
+    rdfs:subClassOf rim:ConceptVersion .
+
+dt:dataTypes a skos:ConceptScheme,
+        rim:ConceptSystem ;
+    dct:description "The kinds of data a process profile's inputs and outputs carry. A data type names the kind of data, not its encoding."@en ;
+    dct:title "Data types"@en ;
+    skos:prefLabel "Data types"@en ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-types"^^xsd:anyURI .
+
+dt:register a rim:Register ;
+    dct:description "A concept-plane register of the kinds of data that process profile inputs and outputs carry."@en ;
+    dct:title "Data Types"@en ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/register"^^xsd:anyURI ;
+    rim:registerManager dt:geolabs ;
+    rim:registerOwner dt:geolabs ;
+    rim:runsOn dt:registerSystem .
+
+dt:registerSystem a rim:RegisterSystem ;
+    rdfs:label "OGC Building Blocks register (bblocks-postprocess, GitHub Pages)" ;
+    rdfs:seeAlso <https://github.com/GeoLabs/bblocks-data-types/> .
+
+dt: a owl:Ontology ;
+    dct:creator "GeoLabs SARL" ;
+    dct:description "Registered Item Model concept-plane profile: the data types of process profile inputs and outputs as rim:Concepts in a rim:ConceptSystem, each with a governed rim:ConceptVersion. A data type names the kind of data, not its encoding, which is declared at the Implementation Profile tier." ;
+    dct:license <https://www.apache.org/licenses/LICENSE-2.0> ;
+    dct:title "Data Types vocabulary" ;
+    owl:imports rim: .
+
+dt:geolabs a prov:Organization ;
+    rdfs:label "GeoLabs SARL" ;
+    rdfs:seeAlso <https://www.geolabs.fr/> .
+

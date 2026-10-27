@@ -1,0 +1,37 @@
+# Data Types
+
+A concept-plane register (ISO 19135:2026, via the Registered Item Model) of the kinds of data
+that process profile inputs and outputs carry -- raster (by band count), elevation model,
+geometry (by type), feature collection, point cloud, TIN, table, bounding box and the literals.
+Each data type is a rim:Concept in a rim:ConceptSystem, with a governed rim:ConceptVersion.
+A data type names the *kind* of data, not its encoding: the encoding a concrete process uses is
+declared where that process is profiled (an Implementation Profile's schema).
+
+
+This register holds, as a Registered Item Model **concept plane**, the vocabulary first drafted
+inline in [GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+as its generic-profiles.data-type block. Extracting it makes the vocabulary reusable beyond that
+one register and gives it its own governance and lifecycle.
+
+Modelled on the concept plane of the
+[Registered Item Model](https://nielshoffmann.github.io/registered-item-model/): dt:DataType is a
+sub-class of rim:Concept (a unit of meaning), dt:dataTypes is the rim:ConceptSystem that holds
+them, and each type's governed state lives on a rim:ConceptVersion. A data type names the kind of
+data (its meaning); the encoding a concrete process uses is declared at the Implementation Profile
+tier, not here. Some types are nonetheless grounded in a standard that happens to be a format
+(e.g. point cloud in the OGC LAS community standard) -- that is their source, not their encoding.
+
+Identifiers: this register mints its own IRIs
+(https://geolabs.github.io/bblocks-data-types/def/data-type/...). The original inline block in
+bblocks-generic-profiles keeps its own until a permanent, register-independent namespace is agreed
+and that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.
+
+
+## Building Blocks
+
+### `data-types.vocabulary` — Data Types vocabulary
+
+**Type:** model
+
+The data types of process profile inputs and outputs, as a Registered Item Model concept plane: a rim:ConceptSystem of dt:DataType concepts (sub-class of rim:Concept), each with a governed rim:ConceptVersion. Encoding is out of scope.
+

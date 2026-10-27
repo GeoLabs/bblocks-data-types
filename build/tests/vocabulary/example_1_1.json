@@ -1,0 +1,26 @@
+{
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
+  "type": "DataTypeVersion",
+  "versionOf": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
+    "type": "DataType",
+    "prefLabel": "Raster (single band)",
+    "definition": "A raster with exactly one band: a range type of one field.",
+    "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types",
+    "broader": [
+      "https://geolabs.github.io/bblocks-data-types/def/data-type/raster"
+    ]
+  },
+  "version": "1.0",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
+  "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
+  "validityStatus": "invalid",
+  "publicationStatus": "published",
+  "hasAction": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition",
+    "type": "RegisterAction",
+    "actionType": "addition",
+    "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+    "startedAtTime": "2026-10-08T00:00:00Z"
+  }
+}

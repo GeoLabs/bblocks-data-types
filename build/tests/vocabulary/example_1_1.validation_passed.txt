@@ -1,0 +1,6 @@
+Validation report for data-types.vocabulary - Data Types vocabulary
+Generated 2026-10-27T12:51:15.975031+00:00
+=== Files ===
+Using example_1_1.json from examples
+=== End Files ===
+

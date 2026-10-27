@@ -1,0 +1,151 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix ns2: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix shacl: <https://www.w3.org/TR/shacl/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://docs.ogc.org/is/09-146r8/09-146r8.html> rdfs:label "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType" .
+
+<https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/bblocks.ttl> a prov:Entity ;
+    dct:format "text/turtle" ;
+    prov:wasAttributedTo _:N536ac7ea03264f81b1d63825bf01645e ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            prov:endedAtTime "2026-10-27T12:51:16.247181"^^xsd:dateTime ;
+            prov:startedAtTime "2026-10-27T12:51:16.090361"^^xsd:dateTime ;
+            prov:used [ a prov:Entity ;
+                    dct:format "application/json" ;
+                    dct:hasVersion "git:650a5dbf86b9ff52b3a8f099681a4afe6e57513f" ;
+                    rdfs:seeAlso <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:N536ac7ea03264f81b1d63825bf01645e ] .
+
+<https://www.iso.org/standard/86261.html> rdfs:label "ISO 19135:2026, Geographic information — Registration and register governance" .
+
+<https://www.ogc.org/standards/las/> rdfs:label "OGC 17-030r1 LAS Specification 1.4 OGC Community Standard" .
+
+<https://www.ogc.org/standards/sfa/> rdfs:label "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture" .
+
+<bblocks://data-types.vocabulary> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Model ;
+    rdfs:label "Data Types vocabulary" ;
+    dct:abstract "The data types of process profile inputs and outputs, as a Registered Item Model concept plane: a rim:ConceptSystem of dt:DataType concepts (sub-class of rim:Concept), each with a governed rim:ConceptVersion. Encoding is out of scope."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-10-26T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/generateddocs/markdown/vocabulary/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/bblock/data-types.vocabulary> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/generateddocs/json-full/vocabulary/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-10-27"^^xsd:date ;
+    dct:source <https://docs.ogc.org/is/09-146r8/09-146r8.html>,
+        <https://www.iso.org/standard/86261.html>,
+        <https://www.ogc.org/standards/las/>,
+        <https://www.ogc.org/standards/sfa/> ;
+    skos:inScheme <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/> ;
+    skos:prefLabel "Data Types vocabulary" ;
+    skos:topConceptOf <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/> ;
+    dcat:keyword "ISO 19135",
+        "SKOS",
+        "concept plane",
+        "data type",
+        "register" ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/_sources/vocabulary/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/annotated/vocabulary/ontology.ttl> ;
+            prof:hasRole role:specification ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.model.registered-item.core-ontology> ;
+            prof:hasArtifact <https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://data-types.vocabulary> ;
+            prof:hasArtifact <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/_sources/vocabulary/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    prof:isProfileOf <bblocks://ogc.model.registered-item.rim.concept-version>,
+        <bblocks://ogc.model.registered-item.rim.register> ;
+    bblocks:dependsOn <bblocks://ogc.model.registered-item.core-ontology>,
+        <bblocks://ogc.model.registered-item.rim.concept-version>,
+        <bblocks://ogc.model.registered-item.rim.register> ;
+    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/context.jsonld> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/dev> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/> a skos:ConceptScheme,
+        dcat:Catalog,
+        bblocks:BBlocksRegister ;
+    rdfs:label "Building Blocks - Data Types" ;
+    dct:abstract """A concept-plane register (ISO 19135:2026, via the Registered Item Model) of the kinds of data
+that process profile inputs and outputs carry -- raster (by band count), elevation model,
+geometry (by type), feature collection, point cloud, TIN, table, bounding box and the literals.
+Each data type is a rim:Concept in a rim:ConceptSystem, with a governed rim:ConceptVersion.
+A data type names the *kind* of data, not its encoding: the encoding a concrete process uses is
+declared where that process is profiled (an Implementation Profile's schema).
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:description """This register holds, as a Registered Item Model **concept plane**, the vocabulary first drafted
+inline in [GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)
+as its generic-profiles.data-type block. Extracting it makes the vocabulary reusable beyond that
+one register and gives it its own governance and lifecycle.
+
+Modelled on the concept plane of the
+[Registered Item Model](https://nielshoffmann.github.io/registered-item-model/): dt:DataType is a
+sub-class of rim:Concept (a unit of meaning), dt:dataTypes is the rim:ConceptSystem that holds
+them, and each type's governed state lives on a rim:ConceptVersion. A data type names the kind of
+data (its meaning); the encoding a concrete process uses is declared at the Implementation Profile
+tier, not here. Some types are nonetheless grounded in a standard that happens to be a format
+(e.g. point cloud in the OGC LAS community standard) -- that is their source, not their encoding.
+
+Identifiers: this register mints its own IRIs
+(https://geolabs.github.io/bblocks-data-types/def/data-type/...). The original inline block in
+bblocks-generic-profiles keeps its own until a permanent, register-independent namespace is agreed
+and that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.
+"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:license [ rdfs:label "Apache-2.0" ] ;
+    dct:modified "2026-10-27T12:51:13.558094"^^xsd:dateTime ;
+    owl:imports <https://nielshoffmann.github.io/registered-item-model/build/register.json>,
+        <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://data-types.vocabulary> ;
+    skos:prefLabel "Building Blocks - Data Types" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+            dct:type "text/turtle" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+            dct:type "application/ld+json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/bblocks.jsonld> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/register.json> ] ;
+    foaf:homepage <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/> ;
+    bblocks:hasValidationReport <https://raw.githubusercontent.com/GeoLabs/bblocks-data-types/undefined/build/tests/report.html> .
+
+_:N536ac7ea03264f81b1d63825bf01645e a prov:Agent,
+        schema:SoftwareApplication ;
+    rdfs:label "OGC-NA tools" ;
+    dct:hasVersion "0.5.36" ;
+    rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
+

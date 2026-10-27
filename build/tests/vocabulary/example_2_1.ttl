@@ -1,0 +1,320 @@
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/boolean"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/boolean> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/curve"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/curve/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/curve/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/curve> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/number"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/number> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/point/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/point"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/point/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/point/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/point> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/raster/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/raster> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/surface"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/surface/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/surface> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/table/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/table"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/table/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/table/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/table> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1> a dt:DataTypeVersion ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/tin"^^xsd:anyURI ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition> ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/tin> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean> a dt:DataType ;
+    skos:definition "A literal truth value." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Boolean" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box> a dt:DataType ;
+    skos:definition "An axis-aligned extent given by its corners, with its CRS." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Bounding box" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/curve> a dt:DataType ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry> ;
+    skos:definition "A 1-dimensional geometry, e.g. a LineString." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Curve" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model> a dt:DataType ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> ;
+    skos:definition "A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM)." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Elevation model" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection> a dt:DataType ;
+    skos:definition "A set of features, each with a geometry and attributes -- e.g. a SAGA shapes layer, a GeoJSON or OGC API - Features feature collection." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Feature collection" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/number> a dt:DataType ;
+    skos:definition "A literal number." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Number" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/point> a dt:DataType ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry> ;
+    skos:definition "A 0-dimensional geometry, a single location." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Point" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud> a dt:DataType ;
+    skos:definition "A set of three-dimensional points, each with its own attributes (intensity, classification, ...), typically from LiDAR." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Point cloud" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/point/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band> a dt:DataType ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/raster> ;
+    skos:definition "A raster with more than one band: a range type of several fields." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Raster (multiple bands)" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string> a dt:DataType ;
+    skos:definition "A literal character string, e.g. an expression, a CRS identifier or a format name." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "String" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/surface> a dt:DataType ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry> ;
+    skos:definition "A 2-dimensional geometry, e.g. a Polygon." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Surface" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/table> a dt:DataType ;
+    skos:definition "Records of attribute values, without geometry." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Table" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/table/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/tin> a dt:DataType ;
+    skos:definition "A surface represented by a network of triangles over irregularly spaced points." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Triangulated irregular network" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> a dt:DataType ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/raster> ;
+    skos:definition "A raster with exactly one band: a range type of one field." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Raster (single band)" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster> a dt:DataType ;
+    skos:definition "A coverage on a regular grid of cells, each cell carrying one value per band; how many bands it has, and what they mean, is its range type." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Raster" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry> a dt:DataType ;
+    skos:definition "A geometric object of the Simple Feature Access geometry model." ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Geometry" .
+
+dt:dataTypes a skos:ConceptScheme,
+        rim:ConceptSystem ;
+    skos:prefLabel "Data types"@en .
+
