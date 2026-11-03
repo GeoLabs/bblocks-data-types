@@ -11,6 +11,9 @@
   "version": "1.0",
   "itemClass": "model",
   "register": "data-types",
+  "isProfileOf": [
+    "data-types.data-type.polyhedral-surface"
+  ],
   "dependsOn": [
     "data-types.vocabulary"
   ],
@@ -27,6 +30,14 @@
     {
       "title": "SAGA 7.3.0 TIN tools",
       "link": "https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html"
+    },
+    {
+      "title": "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture",
+      "link": "https://www.ogc.org/standards/sfa/"
+    },
+    {
+      "title": "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry",
+      "link": "https://docs.ogc.org/is/23-034/23-034.html"
     }
   ],
   "group": "Geometry data types",
@@ -53,7 +64,7 @@
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/",
   "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/tin/",
-  "description": "A surface represented by a network of triangles over irregularly spaced points.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/tin` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Hierarchy\n\n- Broader: none (top-level data type)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).\n- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.\n- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.\n\n## Sources\n\n- ISO 19107:2019 Geographic information -- Spatial schema (TIN)\n- [SAGA 7.3.0 TIN tools](https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html)\n",
+  "description": "A surface represented by a network of triangles over irregularly spaced points.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/tin` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Hierarchy\n\n- Broader: [PolyhedralSurface](../polyhedral-surface/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).\n- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.\n- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.\n\n## Sources\n\n- ISO 19107:2019 Geographic information -- Spatial schema (TIN)\n- [SAGA 7.3.0 TIN tools](https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html)\n- [OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture](https://www.ogc.org/standards/sfa/)\n- [OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry](https://docs.ogc.org/is/23-034/23-034.html)\n",
   "examples": [
     {
       "title": "Triangulated irregular network",
@@ -69,8 +80,8 @@
           "language": "turtle",
           "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/ontology.ttl",
           "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/tin/example_1_2.ttl",
-          "sizeBytes": 2118,
-          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/tin> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"Triangulated irregular network\"@en ; skos:definition \"A surface represented by a network of triangles over irregularly spaced points.\"@en ; dct:source [ dct:title \"ISO 19107:2019 Geographic information -- Spatial schema (TIN)\"@en ], [ dct:title \"SAGA 7.3.0 TIN tools\"@en ; dct:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/tin> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/tin\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-10-08T00:00:00Z\"^^xsd:dateTime .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title \"Triangulated irregular network\"@en ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/tin/item\"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .\n"
+          "sizeBytes": 2501,
+          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/tin> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"Triangulated irregular network\"@en ; skos:definition \"A surface represented by a network of triangles over irregularly spaced points.\"@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface> ; dct:source [ dct:title \"ISO 19107:2019 Geographic information -- Spatial schema (TIN)\"@en ], [ dct:title \"SAGA 7.3.0 TIN tools\"@en ; dct:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html> ], [ dct:title \"OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture\"@en ; dct:references <https://www.ogc.org/standards/sfa/> ], [ dct:title \"OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry\"@en ; dct:references <https://docs.ogc.org/is/23-034/23-034.html> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/tin> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/tin\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-10-08T00:00:00Z\"^^xsd:dateTime .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title \"Triangulated irregular network\"@en ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/tin/item\"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .\n"
         },
         {
           "language": "jsonld",

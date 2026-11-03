@@ -19,9 +19,11 @@
         dt:DataType,
         rim:Concept ;
     dct:source [ dct:references <https://www.ogc.org/standards/sfa/> ;
-            dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ] ;
+            dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ],
+        [ dct:references <https://docs.ogc.org/is/23-034/23-034.html> ;
+            dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ] ;
     skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/curve> ;
-    skos:definition "A connected sequence of two or more points joined by straight line segments, forming a one-dimensional geometry."@en ;
+    skos:definition "A curve with linear interpolation between points: each consecutive pair of points defines a line segment."@en ;
     skos:inScheme dt:dataTypes ;
     skos:prefLabel "LineString"@en .
 

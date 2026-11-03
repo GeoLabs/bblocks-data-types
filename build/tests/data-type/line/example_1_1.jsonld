@@ -1,0 +1,33 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line/context.jsonld",
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line/item",
+  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "realizes": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line",
+      "type": "Concept",
+      "prefLabel": "Line",
+      "definition": "A line string with exactly two points, hence a single straight line segment.",
+      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line/v1",
+    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "startedAtTime": "2026-11-03T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

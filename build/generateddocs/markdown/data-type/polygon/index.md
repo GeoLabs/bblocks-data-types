@@ -3,13 +3,13 @@
 
 `data-types.data-type.polygon` *v1.0*
 
-A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes.
+A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
-A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes.
+A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.
 
 ## Definition
 
@@ -30,7 +30,7 @@ Illustration only: the data type does not depend on any encoding. Here is one po
 ## Hierarchy
 
 - Broader: [Surface](../surface/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)
-- Narrower: none
+- Narrower: [Triangle](../triangle/)
 
 ## Content of this block
 
@@ -41,6 +41,7 @@ Illustration only: the data type does not depend on any encoding. Here is one po
 ## Sources
 
 - [OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture](https://www.ogc.org/standards/sfa/)
+- [OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry](https://docs.ogc.org/is/23-034/23-034.html)
 
 ## Examples
 
@@ -61,7 +62,7 @@ The register item of the Polygon data type: it realizes the governed version of 
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/polygon",
       "type": "Concept",
       "prefLabel": "Polygon",
-      "definition": "A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes.",
+      "definition": "A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.",
       "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
     },
     "version": "1.0",
@@ -92,7 +93,7 @@ The register item of the Polygon data type: it realizes the governed version of 
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/polygon> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Polygon"@en ; skos:definition "A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/surface> ; dct:source [ dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://www.ogc.org/standards/sfa/> ] .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/polygon> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Polygon"@en ; skos:definition "A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/surface> ; dct:source [ dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://www.ogc.org/standards/sfa/> ], [ dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ; dct:references <https://docs.ogc.org/is/23-034/23-034.html> ] .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/polygon/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/polygon> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/polygon/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/polygon"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/polygon/actions/addition> .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/polygon/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/polygon/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Polygon"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/polygon/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/polygon/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
@@ -115,7 +116,7 @@ The register item of the Polygon data type: it realizes the governed version of 
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/polygon",
       "type": "Concept",
       "prefLabel": "Polygon",
-      "definition": "A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes.",
+      "definition": "A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.",
       "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
     },
     "version": "1.0",
@@ -380,6 +381,7 @@ You can find the full JSON-LD context here:
 ## Sources
 
 * [OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture](https://www.ogc.org/standards/sfa/)
+* [OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry](https://docs.ogc.org/is/23-034/23-034.html)
 
 # For developers
 

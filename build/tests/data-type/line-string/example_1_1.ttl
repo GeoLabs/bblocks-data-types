@@ -13,7 +13,7 @@
     rim:validityStatus rim:invalid .
 
 <https://geolabs.github.io/bblocks-data-types/def/data-type/line-string> a rim:Concept ;
-    skos:definition "A connected sequence of two or more points joined by straight line segments, forming a one-dimensional geometry." ;
+    skos:definition "A curve with linear interpolation between points: each consecutive pair of points defines a line segment." ;
     skos:inScheme dt:data-types ;
     skos:prefLabel "LineString" .
 

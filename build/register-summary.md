@@ -95,11 +95,23 @@ A geometric object of the Simple Feature Access geometry model.
 
 A geometry that is a collection of geometry objects, which may be of different types.
 
+### `data-types.data-type.line` — Data type: Line
+
+**Type:** model
+
+A line string with exactly two points, hence a single straight line segment.
+
 ### `data-types.data-type.line-string` — Data type: LineString
 
 **Type:** model
 
-A connected sequence of two or more points joined by straight line segments, forming a one-dimensional geometry.
+A curve with linear interpolation between points: each consecutive pair of points defines a line segment.
+
+### `data-types.data-type.linear-ring` — Data type: LinearRing
+
+**Type:** model
+
+A line string that is both closed and simple.
 
 ### `data-types.data-type.multi-curve` — Data type: MultiCurve
 
@@ -153,7 +165,13 @@ A set of three-dimensional points, each with its own attributes (intensity, clas
 
 **Type:** model
 
-A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes.
+A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.
+
+### `data-types.data-type.polyhedral-surface` — Data type: PolyhedralSurface
+
+**Type:** model
+
+A simple surface consisting of a number of polygon patches, or facets.
 
 ### `data-types.data-type.raster` — Data type: Raster
 
@@ -334,4 +352,10 @@ Records of attribute values, without geometry.
 **Type:** model
 
 A surface represented by a network of triangles over irregularly spaced points.
+
+### `data-types.data-type.triangle` — Data type: Triangle
+
+**Type:** model
+
+A polygon with three distinct, non-collinear vertices and no interior boundary.
 

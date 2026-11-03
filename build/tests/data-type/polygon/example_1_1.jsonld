@@ -12,7 +12,7 @@
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/polygon",
       "type": "Concept",
       "prefLabel": "Polygon",
-      "definition": "A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes.",
+      "definition": "A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.",
       "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
     },
     "version": "1.0",

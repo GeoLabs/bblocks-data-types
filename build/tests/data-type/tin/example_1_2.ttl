@@ -20,7 +20,12 @@
         rim:Concept ;
     dct:source [ dct:title "ISO 19107:2019 Geographic information -- Spatial schema (TIN)"@en ],
         [ dct:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html> ;
-            dct:title "SAGA 7.3.0 TIN tools"@en ] ;
+            dct:title "SAGA 7.3.0 TIN tools"@en ],
+        [ dct:references <https://www.ogc.org/standards/sfa/> ;
+            dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ],
+        [ dct:references <https://docs.ogc.org/is/23-034/23-034.html> ;
+            dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ] ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface> ;
     skos:definition "A surface represented by a network of triangles over irregularly spaced points."@en ;
     skos:inScheme dt:dataTypes ;
     skos:prefLabel "Triangulated irregular network"@en .

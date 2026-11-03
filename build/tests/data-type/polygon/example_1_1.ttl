@@ -13,7 +13,7 @@
     rim:validityStatus rim:invalid .
 
 <https://geolabs.github.io/bblocks-data-types/def/data-type/polygon> a rim:Concept ;
-    skos:definition "A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes." ;
+    skos:definition "A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon." ;
     skos:inScheme dt:data-types ;
     skos:prefLabel "Polygon" .
 
