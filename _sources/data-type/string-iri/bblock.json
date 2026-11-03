@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: String — IRI",
+  "abstract": "A string representing an Internationalized Resource Identifier (IRI) as defined by RFC 3987.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-01T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "isProfileOf": [
+    "data-types.data-type.string"
+  ],
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "EOAP schemas: string_format.yaml (JSON Schema format: iri)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    },
+    {
+      "title": "RFC 3987",
+      "link": "https://datatracker.ietf.org/doc/html/rfc3987"
+    }
+  ],
+  "group": "String formats",
+  "highlighted": true
+}

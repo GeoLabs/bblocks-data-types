@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: String — duration",
+  "abstract": "A string representing a duration as specified by ISO 8601.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-01T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "isProfileOf": [
+    "data-types.data-type.string"
+  ],
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/string-duration"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "EOAP schemas: string_format.yaml (JSON Schema format: duration)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    }
+  ],
+  "group": "String formats",
+  "highlighted": true
+}

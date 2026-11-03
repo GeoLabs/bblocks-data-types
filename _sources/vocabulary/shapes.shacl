@@ -11,23 +11,30 @@
 #   - a dt:DataType belongs to the dt:dataTypes concept system;
 #   - a dt:DataTypeVersion records its addition, proposed by an agent (as the generic-profiles
 #     register does for its items), and versions exactly one dt:DataType.
-# A broader data type is referenced as an IRI, not with sh:class: each entry is validated on its
-# own, so the broader type's own triples need not be in the data graph.
+# Each data-type concept is declared in an individual Building Block ontology. The shared block's
+# shaclClosures includes those ontologies, so broader and versionOf links can be checked against
+# the registered concepts.
+
+dt:RegisterShape a sh:NodeShape ;
+    sh:targetNode dt:register ;
+    sh:property [ sh:path dt:conceptSystem ; sh:class rim:ConceptSystem ; sh:minCount 1 ; sh:maxCount 1 ;
+                  sh:message "The data-types register must identify its one rim:ConceptSystem." ] .
 
 dt:DataTypeShape a sh:NodeShape ;
     sh:targetClass dt:DataType ;
     sh:property [ sh:path skos:inScheme ; sh:hasValue dt:dataTypes ; sh:minCount 1 ;
                   sh:message "A data type must be skos:inScheme dt:dataTypes." ] ;
     sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ] ;
-    sh:property [ sh:path skos:broader ; sh:nodeKind sh:IRI ] .
+    sh:property [ sh:path skos:broader ; sh:class dt:DataType ] .
 
 dt:DataTypeVersionShape a sh:NodeShape ;
     sh:targetClass dt:DataTypeVersion ;
-    sh:property [ sh:path rim:versionOf ; sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ;
+    sh:property [ sh:path rim:versionOf ; sh:class dt:DataType ; sh:minCount 1 ; sh:maxCount 1 ;
                   sh:message "A data type version must version exactly one dt:DataType." ] ;
     sh:property [
-        sh:path rim:hasAction ;
+        sh:path dt:hasVersionAction ;
         sh:qualifiedValueShape [
+            sh:class rim:RegisterAction ;
             sh:property [ sh:path rim:actionType ; sh:hasValue rim:additionAction ] ,
                         [ sh:path rim:proposer ;   sh:minCount 1 ]
         ] ;

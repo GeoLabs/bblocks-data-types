@@ -1,0 +1,6 @@
+examples:
+  - title: Hostname string
+    content: Canonical concept, version and addition action for this string format.
+    snippets:
+      - language: turtle
+        ref: ontology.ttl

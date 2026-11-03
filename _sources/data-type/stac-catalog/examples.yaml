@@ -1,0 +1,6 @@
+examples:
+  - title: STAC Catalog
+    content: Canonical concept, version and addition action for this data type.
+    snippets:
+      - language: turtle
+        ref: ontology.ttl

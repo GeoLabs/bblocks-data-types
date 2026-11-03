@@ -15,7 +15,7 @@ description: |
   one register and gives it its own governance and lifecycle.
 
   Modelled on the concept plane of the
-  [Registered Item Model](https://nielshoffmann.github.io/registered-item-model/): dt:DataType is a
+  [Registered Item Model](https://ogcincubator.github.io/registered-item-model/): dt:DataType is a
   sub-class of rim:Concept (a unit of meaning), dt:dataTypes is the rim:ConceptSystem that holds
   them, and each type's governed state lives on a rim:ConceptVersion. A data type names the kind of
   data (its meaning); the encoding a concrete process uses is declared at the Implementation Profile
@@ -47,7 +47,7 @@ keywords:
 
 imports:
   - default
-  - https://nielshoffmann.github.io/registered-item-model/build/register.json
+  - https://ogcincubator.github.io/registered-item-model/build/register.json
 
 schema-oas30-downcompile: False
 

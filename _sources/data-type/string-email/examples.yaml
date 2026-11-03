@@ -1,0 +1,6 @@
+examples:
+  - title: Email address string
+    content: The canonical concept, version and addition action for this string format.
+    snippets:
+      - language: turtle
+        ref: ontology.ttl

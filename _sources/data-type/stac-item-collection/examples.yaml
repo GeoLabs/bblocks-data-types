@@ -1,0 +1,6 @@
+examples:
+  - title: STAC Item Collection
+    content: A feature collection of STAC Items, such as a STAC API Item Search response; distinct from a STAC Collection object.
+    snippets:
+      - language: turtle
+        ref: ontology.ttl

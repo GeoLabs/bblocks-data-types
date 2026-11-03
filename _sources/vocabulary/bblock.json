@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
-  "name": "Data Types vocabulary",
-  "abstract": "The data types of process profile inputs and outputs, as a Registered Item Model concept plane: a rim:ConceptSystem of dt:DataType concepts (sub-class of rim:Concept), each with a governed rim:ConceptVersion. Encoding is out of scope.",
+  "name": "Data Types shared concept model",
+  "abstract": "Shared RIM concept-plane model, register metadata, and SHACL rules for the individual data-type Building Blocks in this register.",
   "status": "under-development",
   "dateTimeAddition": "2026-10-26T00:00:00Z",
   "dateOfLastChange": "2026-10-26",
@@ -9,20 +9,84 @@
   "itemClass": "model",
   "register": "data-types",
   "isProfileOf": [
-    "ogc.model.registered-item.rim.concept-version",
-    "ogc.model.registered-item.rim.register"
+    "ogc.rim.schemas.concept-version",
+    "ogc.rim.schemas.register"
   ],
   "dependsOn": [
-    "ogc.model.registered-item.core-ontology",
-    "ogc.model.registered-item.rim.concept-version",
-    "ogc.model.registered-item.rim.register"
+    "ogc.rim.core-ontology",
+    "ogc.rim.schemas.concept-version",
+    "ogc.rim.schemas.register"
   ],
   "shaclShapes": [
     "shapes.shacl"
   ],
+  "shaclClosures": [
+    "../data-type/boolean/ontology.ttl",
+    "../data-type/bounding-box/ontology.ttl",
+    "../data-type/curve/ontology.ttl",
+    "../data-type/elevation-model/ontology.ttl",
+    "../data-type/feature-collection/ontology.ttl",
+    "../data-type/feature/ontology.ttl",
+    "../data-type/geometry-collection/ontology.ttl",
+    "../data-type/geometry/ontology.ttl",
+    "../data-type/line-string/ontology.ttl",
+    "../data-type/multi-curve/ontology.ttl",
+    "../data-type/multi-line-string/ontology.ttl",
+    "../data-type/multi-point/ontology.ttl",
+    "../data-type/multi-polygon/ontology.ttl",
+    "../data-type/multi-surface/ontology.ttl",
+    "../data-type/number/ontology.ttl",
+    "../data-type/point-cloud/ontology.ttl",
+    "../data-type/point/ontology.ttl",
+    "../data-type/polygon/ontology.ttl",
+    "../data-type/raster-multi-band/ontology.ttl",
+    "../data-type/raster-single-band/ontology.ttl",
+    "../data-type/raster/ontology.ttl",
+    "../data-type/stac-catalog/ontology.ttl",
+    "../data-type/stac-collection/ontology.ttl",
+    "../data-type/stac-item-collection/ontology.ttl",
+    "../data-type/stac-item/ontology.ttl",
+    "../data-type/string-date-time/ontology.ttl",
+    "../data-type/string-date/ontology.ttl",
+    "../data-type/string-duration/ontology.ttl",
+    "../data-type/string-email/ontology.ttl",
+    "../data-type/string-hostname/ontology.ttl",
+    "../data-type/string-idn-email/ontology.ttl",
+    "../data-type/string-idn-hostname/ontology.ttl",
+    "../data-type/string-ipv4/ontology.ttl",
+    "../data-type/string-ipv6/ontology.ttl",
+    "../data-type/string-iri-reference/ontology.ttl",
+    "../data-type/string-iri/ontology.ttl",
+    "../data-type/string-json-pointer/ontology.ttl",
+    "../data-type/string-password/ontology.ttl",
+    "../data-type/string-relative-json-pointer/ontology.ttl",
+    "../data-type/string-time/ontology.ttl",
+    "../data-type/string-uri-reference/ontology.ttl",
+    "../data-type/string-uri-template/ontology.ttl",
+    "../data-type/string-uri/ontology.ttl",
+    "../data-type/string-uuid/ontology.ttl",
+    "../data-type/string/ontology.ttl",
+    "../data-type/surface/ontology.ttl",
+    "../data-type/table/ontology.ttl",
+    "../data-type/tin/ontology.ttl"
+  ],
+  "resources": [
+    {
+      "role": "data",
+      "ref": "data.ttl",
+      "format": "text/turtle",
+      "title": "Register metadata (register, owner, system and concept system)"
+    }
+  ],
   "ldContext": "context.jsonld",
   "scope": "dev",
-  "tags": ["data type", "SKOS", "concept plane", "ISO 19135", "register"],
+  "tags": [
+    "data type",
+    "SKOS",
+    "concept plane",
+    "ISO 19135",
+    "register"
+  ],
   "sources": [
     {
       "title": "ISO 19135:2026, Geographic information — Registration and register governance",
@@ -42,6 +106,6 @@
     }
   ],
   "maturity": "development",
-  "highlighted": true,
-  "group": "Data Types"
+  "group": "Shared model",
+  "highlighted": false
 }

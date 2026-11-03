@@ -1,0 +1,6 @@
+examples:
+  - title: Surface
+    content: The canonical concept, governed version and addition action for this data type.
+    snippets:
+      - language: turtle
+        ref: ontology.ttl

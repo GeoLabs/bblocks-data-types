@@ -1,0 +1,6 @@
+examples:
+  - title: MultiPoint
+    content: Canonical concept, version and addition action for this geometry type.
+    snippets:
+      - language: turtle
+        ref: ontology.ttl

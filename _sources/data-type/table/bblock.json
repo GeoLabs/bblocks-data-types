@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Table",
+  "abstract": "Records of attribute values, without geometry.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-08T00:00:00Z",
+  "dateOfLastChange": "2026-11-01",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/table"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "SAGA 7.3.0 Table tools",
+      "link": "https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/table_tools.html"
+    }
+  ],
+  "group": "Other data types",
+  "highlighted": true
+}

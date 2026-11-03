@@ -19,6 +19,7 @@
     "inScheme": { "@id": "skos:inScheme", "@type": "@id" },
     "broader": { "@id": "skos:broader", "@type": "@id" },
     "concepts": { "@reverse": "skos:inScheme" },
+    "conceptSystem": { "@id": "dt:conceptSystem", "@type": "@id" },
 
     "versionOf": { "@id": "rim:versionOf", "@type": "@id" },
     "version": "rim:version",
@@ -31,7 +32,7 @@
     "published": "rim:published",
     "unpublished": "rim:unpublished",
 
-    "hasAction": { "@id": "rim:hasAction", "@type": "@id" },
+    "hasAction": { "@id": "dt:hasVersionAction", "@type": "@id" },
     "appliesTo": { "@id": "rim:appliesTo", "@type": "@id" },
     "proposer": { "@id": "rim:proposer", "@type": "@id" },
     "actionType": { "@id": "rim:actionType", "@type": "@vocab" },

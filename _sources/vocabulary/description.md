@@ -3,7 +3,7 @@ Data types as a Registered Item Model **concept plane**.
 ## What this block is
 
 A vocabulary of the kinds of data that process profile inputs and outputs carry, modelled on the
-concept plane of the [Registered Item Model](https://nielshoffmann.github.io/registered-item-model/)
+concept plane of the [Registered Item Model](https://ogcincubator.github.io/registered-item-model/)
 (ISO 19135:2026):
 
 - `dt:dataTypes` is a `rim:ConceptSystem`;
@@ -14,9 +14,45 @@ concept plane of the [Registered Item Model](https://nielshoffmann.github.io/reg
   object identifier, `validityStatus`, `publicationStatus`, and the `rim:RegisterAction` that
   proposed it.
 
-The sixteen current types: `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model`,
+The `skos:broader` link is canonical in each block's `ontology.ttl`. The register's own graph does
+not carry it, so each block also declares its parent as `isProfileOf` in `bblock.json`; the register
+then publishes it as `prof:isProfileOf`.
+
+Each concept has its own `model` Building Block, with metadata linking the entry to its
+`dt:DataType` IRI. These entries are the individually browsable vocabulary items in the published
+Building Blocks UI. This `data-types.vocabulary` block is their shared model and SHACL profile, not
+a substitute for the individual entries.
+
+## Authoritative register content
+
+The concepts, their `skos:broader` links, versions and addition actions are **registered data**, not
+merely examples. Each individual data-type Building Block contains its canonical RDF
+graph in `ontology.ttl`, autodetected and published as that block's ontology. The shared
+[`data.ttl`](data.ttl) in this support block contains only register metadata: the `rim:Register`,
+register system, owner and `rim:ConceptSystem`. The individual ontologies carry each concept,
+version and proposed-addition action. The JSON example below illustrates one version; the Turtle
+example references the support block's register metadata.
+
+The initial types are `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model`,
 `geometry`, `point`, `curve`, `surface`, `feature-collection`, `point-cloud`, `tin`, `table`,
-`bounding-box`, `number`, `string`, `boolean`.
+`bounding-box`, `number`, `string` and `boolean`. The 19 fixed string formats in
+[`eoap/schemas/string_format.yaml`](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)
+are also registered as individual specializations of `string`: date, date-time, duration, email,
+hostname, idn-email, idn-hostname, ipv4, ipv6, iri, iri-reference, password, json-pointer,
+relative-json-pointer, uuid, uri, uri-reference, uri-template and time. The schema's `Pattern`
+record is not a fixed datatype; it carries a caller-supplied regular expression and is therefore a
+parameterized validation constraint.
+
+The geometry types of OGC Simple Feature Access are represented individually: besides `point`,
+`curve` and `surface`, the `line-string` (under `curve`), `polygon` (under `surface`) and
+`geometry-collection` entries are narrower geometry concepts, and `multi-point`, `multi-curve` and
+`multi-surface` are collections, hence narrower than `geometry-collection`; `multi-line-string` is
+a `multi-curve` and `multi-polygon` a `multi-surface` (OGC CDB 2.0 Core, 23-034, 7.6). A `feature`, which
+wraps a geometry with properties, is a type of its own. Three distinct STAC data types are
+represented from [`radiantearth/stac-spec`](https://github.com/radiantearth/stac-spec): `stac-item`
+specializes `feature`, `stac-collection` specializes `stac-catalog`, and `stac-item-collection`
+specializes `feature-collection` for responses containing arrays of STAC Items (such as Item
+Search). A STAC Collection is metadata for a set of related assets, not an array of STAC Items.
 
 ## Meaning, not encoding
 
@@ -26,9 +62,11 @@ profiled -- an Implementation Profile's own `schema` -- not here. This is the sa
 representation split the concept plane exists for.
 
 That boundary is an intent, not an absolute: a few types are grounded in a standard that happens to
-be a format -- `point-cloud` cites the OGC LAS community standard, `feature-collection` and `string`
-mention GeoJSON / format names in their definitions. Those are the concept's **source**, not an
-encoding asserted on it.
+be a format -- `point-cloud` cites the OGC LAS community standard, and the `string-*` types are named
+after JSON Schema formats. Those are the concept's **source**, not an encoding asserted on it.
+Definitions otherwise avoid naming a format: the geometry types, for example, are defined from
+Simple Feature Access, not from any encoding of them. Descriptions may still show an encoding
+(GeoJSON, JSON Schema `format`) as an illustration only.
 
 ## Governance: a proposed addition, not a status
 
@@ -38,10 +76,11 @@ There is no single lifecycle `status`. Each version records a `rim:RegisterActio
 and `published` (visible). `dt:DataTypeVersionShape` requires that addition and its proposer; a
 later decision is a further action, not an edit of this one.
 
-The action is linked from its version (`rim:hasAction`) but carries no `rim:appliesTo`: in the
-Registered Item Model, `rim:appliesTo` is typed to `rim:RegisterItem` (the content plane), so it
-cannot point at a `rim:ConceptVersion`. Recording a concept-plane addition via `hasAction` only is a
-small gap in the model worth raising with its authors.
+The action is linked from its version with the register-specific `dt:hasVersionAction`. The RIM's
+`rim:hasAction` / `rim:appliesTo` pair is typed for `rim:RegisterItem` in the content plane, not
+`rim:ConceptVersion`; using it here would incorrectly make a concept version look like a content
+item. `dt:hasVersionAction` is the small, explicit extension this concept-plane register needs;
+the addition action itself remains a `rim:RegisterAction`.
 
 ## Relationship to bblocks-generic-profiles
 

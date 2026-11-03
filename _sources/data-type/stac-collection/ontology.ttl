@@ -1,0 +1,10 @@
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "STAC Collection"@en ; skos:definition "A STAC Collection: a Catalog specialization that describes a collection of related spatiotemporal assets with spatial and temporal extents."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog> ; dct:source [ dct:title "STAC Collection JSON Schema"@en ; dct:references <https://github.com/radiantearth/stac-spec/blob/master/collection-spec/json-schema/collection.json> ], [ dct:title "STAC Catalog JSON Schema"@en ; dct:references <https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/json-schema/catalog.json> ] .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/addition> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-02T00:00:00Z"^^xsd:dateTime .

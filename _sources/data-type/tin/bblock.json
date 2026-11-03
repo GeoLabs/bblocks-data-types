@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Triangulated irregular network",
+  "abstract": "A surface represented by a network of triangles over irregularly spaced points.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-08T00:00:00Z",
+  "dateOfLastChange": "2026-11-01",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/tin"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "ISO 19107:2019 Geographic information -- Spatial schema (TIN)"
+    },
+    {
+      "title": "SAGA 7.3.0 TIN tools",
+      "link": "https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html"
+    }
+  ],
+  "group": "Geometry data types",
+  "highlighted": true
+}

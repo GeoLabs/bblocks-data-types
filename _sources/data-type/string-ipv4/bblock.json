@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: String — IPv4 address",
+  "abstract": "A string representing an IPv4 address.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-01T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "isProfileOf": [
+    "data-types.data-type.string"
+  ],
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv4"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "EOAP schemas: string_format.yaml (JSON Schema format: ipv4)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    },
+    {
+      "title": "RFC 791",
+      "link": "https://www.rfc-editor.org/rfc/rfc791.html"
+    }
+  ],
+  "group": "String formats",
+  "highlighted": true
+}

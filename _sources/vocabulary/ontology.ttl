@@ -11,10 +11,11 @@
 # Ontology metadata
 #
 # A profile of the Registered Item Model (ISO 19135:2026) concept plane
-# for a vocabulary of data types. It adds nothing to the register model:
-# it names a concept system, its register and its governance, and a
-# DataType as a kind of concept. Follows the pattern of the Registered
-# Item Model's own activity-type profile.
+# for a vocabulary of data types. This ontology defines the vocabulary's
+# classes and properties; its register and concept system are instances in
+# data.ttl, while each concept, version and action lives in its own Building
+# Block ontology. Follows the pattern of the
+# Registered Item Model's own activity-type profile.
 #################################################################
 
 dt: a owl:Ontology ;
@@ -43,36 +44,19 @@ dt:DataTypeVersion a owl:Class ;
     rdfs:label "Data type version" ;
     rdfs:comment "A governed version of a dt:DataType: carries the object identifier, validity and publication status, and the recorded addition. rim:versionOf points to its dt:DataType." .
 
-#################################################################
-# The register, its system and its concept system
-#
-# A concept register in ISO 19135:2026 terms: it maintains a concept
-# plane. The register is governed by GeoLabs; the concept system holds
-# the data type concepts (skos:inScheme).
-#################################################################
+dt:hasVersionAction a owl:ObjectProperty ;
+    rdfs:isDefinedBy dt: ;
+    rdfs:label "has version action" ;
+    rdfs:comment "Links a concept version to its register action. This extension is needed because rim:hasAction and rim:appliesTo are defined for rim:RegisterItem, not rim:ConceptVersion." ;
+    rdfs:domain rim:ConceptVersion ;
+    rdfs:range rim:RegisterAction .
 
-dt:register a rim:Register ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/register"^^xsd:anyURI ;
-    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
-    dct:title "Data Types"@en ;
-    dct:description "A concept-plane register of the kinds of data that process profile inputs and outputs carry."@en ;
-    rim:registerOwner dt:geolabs ;
-    rim:registerManager dt:geolabs ;
-    rim:runsOn dt:registerSystem .
-
-dt:geolabs a prov:Organization ;
-    rdfs:label "GeoLabs SARL" ;
-    rdfs:seeAlso <https://www.geolabs.fr/> .
-
-dt:registerSystem a rim:RegisterSystem ;
-    rdfs:label "OGC Building Blocks register (bblocks-postprocess, GitHub Pages)" ;
-    rdfs:seeAlso <https://github.com/GeoLabs/bblocks-data-types/> .
-
-dt:dataTypes a rim:ConceptSystem , skos:ConceptScheme ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-types"^^xsd:anyURI ;
-    dct:title "Data types"@en ;
-    skos:prefLabel "Data types"@en ;
-    dct:description "The kinds of data a process profile's inputs and outputs carry. A data type names the kind of data, not its encoding."@en .
+dt:conceptSystem a owl:ObjectProperty ;
+    rdfs:isDefinedBy dt: ;
+    rdfs:label "concept system" ;
+    rdfs:comment "Links this register to the rim:ConceptSystem containing its registered data types." ;
+    rdfs:domain rim:Register ;
+    rdfs:range rim:ConceptSystem .
 
 #################################################################
 # Entry into the register: a proposed addition
