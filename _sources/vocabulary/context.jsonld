@@ -11,6 +11,15 @@
     "type": "@type",
 
     "ConceptSystem": "rim:ConceptSystem",
+    "Concept": "rim:Concept",
+    "RegisterAction": "rim:RegisterAction",
+    "Register": "rim:Register",
+    "RegisterItem": "rim:RegisterItem",
+    "RegisterItemClass": "rim:RegisterItemClass",
+    "DataTypeItem": "dt:DataTypeItem",
+    "itemClass": { "@id": "rim:itemClass", "@type": "@id" },
+    "inRegister": { "@id": "rim:inRegister", "@type": "@id" },
+    "realizes": { "@id": "rim:realizes", "@type": "@id" },
     "DataType": "dt:DataType",
     "DataTypeVersion": "dt:DataTypeVersion",
 

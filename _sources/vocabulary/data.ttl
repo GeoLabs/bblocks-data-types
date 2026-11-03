@@ -18,6 +18,12 @@ dt:register a rim:Register ;
     rim:runsOn dt:registerSystem ;
     dt:conceptSystem dt:dataTypes .
 
+dt:dataTypeItemClass a rim:RegisterItemClass ;
+    dct:title "Data type" ;
+    dct:description "The abstraction every data type item of this register shares: one item per data type, realizing its governed concept version."@en ;
+    rim:definedIn dt:register ;
+    rim:validatedBy dt:DataTypeItemShape .
+
 dt:geolabs a prov:Organization ;
     dct:title "GeoLabs SARL"@en .
 

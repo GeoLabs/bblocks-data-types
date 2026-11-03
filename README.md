@@ -5,7 +5,10 @@ OGC Building Blocks register holding the **data types** of process profile input
 **concept plane**. Identifier prefix: `data-types.`
 
 `dt:dataTypes` is a `rim:ConceptSystem`; each data type is a `dt:DataType` (sub-class of
-`rim:Concept`) with a governed `dt:DataTypeVersion` (sub-class of `rim:ConceptVersion`). A data type
+`rim:Concept`) with a governed `dt:DataTypeVersion` (sub-class of `rim:ConceptVersion`). Each data
+type also has a content-plane `dt:DataTypeItem` (sub-class of `rim:RegisterItem`) of the
+`dt:dataTypeItemClass` item class, which `rim:realizes` that version, with a JSON binding that
+profiles the Registered Item Model's JSON Schemas. A data type
 names the *kind* of data, not its encoding -- the encoding a concrete process uses is declared at the
 Implementation Profile tier, not here. See
 [`_sources/vocabulary/description.md`](_sources/vocabulary/description.md).
@@ -21,6 +24,8 @@ existing (reconciliation of the two IRI namespaces is a later, separate decision
 | Identifier | Tier |
 |---|---|
 | `data-types.vocabulary` | Shared concept model, shapes, and register metadata (support block) |
+| `data-types.register` | The register itself, in JSON; profile of the RIM `register` schema (support block) |
+| `data-types.item-class` | The data type item class, in JSON; profile of the RIM `register-item-class` schema (support block) |
 | `data-types.data-type.raster` | Data type: Raster |
 | `data-types.data-type.raster-single-band` | Data type: Raster (single band) |
 | `data-types.data-type.raster-multi-band` | Data type: Raster (multiple bands) |

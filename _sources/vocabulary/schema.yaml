@@ -1,0 +1,32 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data type item
+description: >-
+  The content-plane record of a data type, in JSON: a profile of the Registered Item Model register
+  item (`type` pinned to `DataTypeItem`) whose `realizes` is the data type's governed version, a
+  profile of the RIM concept version (`type` pinned to `DataTypeVersion`, recorded addition
+  required). The data type is the `versionOf` concept; the concept-version schema fixes the type of
+  an embedded concept to `Concept`, so its `dt:DataType` class comes from the register's ontologies.
+allOf:
+  - $ref: bblocks://ogc.rim.schemas.register-item
+type: object
+required: [realizes]
+properties:
+  type: {const: DataTypeItem}
+  itemClass: {const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass}
+  inRegister: {const: https://geolabs.github.io/bblocks-data-types/def/register}
+  realizes:
+    allOf:
+      - $ref: bblocks://ogc.rim.schemas.concept-version
+    type: object
+    required: [hasAction]
+    properties:
+      type: {const: DataTypeVersion}
+      hasAction:
+        type: object
+        required: [id, actionType, proposer]
+        properties:
+          id: {type: string, format: uri}
+          type: {const: RegisterAction}
+          actionType: {const: addition}
+          proposer: {type: string, format: uri}
+          startedAtTime: {type: string, format: date-time}

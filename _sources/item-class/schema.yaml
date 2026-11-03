@@ -1,0 +1,10 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data type item class
+description: >-
+  The item class every data type item of the register shares, in JSON. It is defined in the
+  data-types register and validated by the vocabulary's `DataTypeItemShape`.
+allOf:
+  - $ref: bblocks://ogc.rim.schemas.register-item-class
+required: [definedIn, validatedBy]
+properties:
+  id: {const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass}

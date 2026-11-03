@@ -10,12 +10,16 @@
   "register": "data-types",
   "isProfileOf": [
     "ogc.rim.schemas.concept-version",
-    "ogc.rim.schemas.register"
+    "ogc.rim.schemas.register",
+    "ogc.rim.schemas.register-item"
   ],
   "dependsOn": [
     "ogc.rim.core-ontology",
     "ogc.rim.schemas.concept-version",
-    "ogc.rim.schemas.register"
+    "ogc.rim.schemas.register",
+    "ogc.rim.schemas.register-item",
+    "data-types.register",
+    "data-types.item-class"
   ],
   "shaclShapes": [
     "shapes.shacl"

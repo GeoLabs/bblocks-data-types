@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Types register",
+  "abstract": "The data-types register itself, in JSON: a profile of the Registered Item Model register, with its system and the roles that govern it.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-03T00:00:00Z",
+  "version": "0.1",
+  "itemClass": "schema",
+  "register": "data-types",
+  "isProfileOf": [
+    "ogc.rim.schemas.register"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register"
+  ],
+  "group": "Register model",
+  "highlighted": true,
+  "shaclClosures": [
+    "../vocabulary/data.ttl"
+  ]
+}

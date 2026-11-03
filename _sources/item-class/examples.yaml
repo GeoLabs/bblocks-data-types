@@ -1,0 +1,15 @@
+examples:
+  - title: The data type item class (JSON)
+    content: >-
+      The abstraction every data type item shares. `validatedBy` names the executable rule set
+      (the SHACL shape of the vocabulary) that expresses its data requirements.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+            "type": "RegisterItemClass",
+            "title": "Data type",
+            "definedIn": "https://geolabs.github.io/bblocks-data-types/def/register",
+            "validatedBy": "https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape"
+          }

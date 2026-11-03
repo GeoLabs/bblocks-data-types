@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type item class",
+  "abstract": "The item class shared by the data type items of this register, in JSON: a profile of the Registered Item Model register item class.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-03T00:00:00Z",
+  "version": "0.1",
+  "itemClass": "schema",
+  "register": "data-types",
+  "isProfileOf": [
+    "ogc.rim.schemas.register-item-class"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register-item-class"
+  ],
+  "group": "Register model",
+  "highlighted": true,
+  "shaclClosures": [
+    "../vocabulary/data.ttl"
+  ]
+}

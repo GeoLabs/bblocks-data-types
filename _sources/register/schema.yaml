@@ -1,0 +1,11 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data Types register
+description: >-
+  The data-types register, in JSON: the governed collection itself, the system it runs on and the
+  roles that govern it. Its one concept system (`dt:conceptSystem`) is declared in the shared
+  vocabulary's `data.ttl`.
+allOf:
+  - $ref: bblocks://ogc.rim.schemas.register
+required: [objectIdentifier, runsOn, registerOwner]
+properties:
+  id: {const: https://geolabs.github.io/bblocks-data-types/def/register}

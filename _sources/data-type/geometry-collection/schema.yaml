@@ -1,0 +1,8 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data type item - GeometryCollection
+description: >-
+  The register item of the GeometryCollection data type, in JSON.
+allOf:
+  - $ref: bblocks://data-types.vocabulary
+properties:
+  id: {const: https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection/item}

@@ -1,6 +1,42 @@
 examples:
   - title: GeometryCollection
-    content: Canonical concept, version and addition action for this geometry type.
+    content: >-
+      The register item of the GeometryCollection data type: it realizes the governed version of the
+      concept and belongs to the register's data type item class.
     snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection/item",
+            "type": "DataTypeItem",
+            "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection/item",
+            "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+            "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+            "realizes": {
+              "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection/v1",
+              "type": "DataTypeVersion",
+              "versionOf": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection",
+                "type": "Concept",
+                "prefLabel": "GeometryCollection",
+                "definition": "A geometry that is a collection of geometry objects, which may be of different types.",
+                "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+              },
+              "version": "1.0",
+              "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection/v1",
+              "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection",
+              "validityStatus": "invalid",
+              "publicationStatus": "published",
+              "hasAction": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+                "startedAtTime": "2026-11-01T00:00:00Z"
+              }
+            },
+            "validityStatus": "invalid",
+            "publicationStatus": "published"
+          }
       - language: turtle
         ref: ontology.ttl

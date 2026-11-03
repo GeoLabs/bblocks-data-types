@@ -1,43 +1,50 @@
 examples:
-  - title: One data type as a concept and its governed version (JSON)
+  - title: One data type as a register item realizing its governed version (JSON)
     content: |
-      The single-band raster data type: the concept (its meaning, label, definition and broader
-      type) and its governed version (object identifier, validity/publication status and the
-      recorded addition proposed by GeoLabs). It names a kind of data, not an encoding.
+      The single-band raster data type: the register item (content plane) of the register's data
+      type item class, realizing the governed version (object identifier, validity/publication
+      status and the recorded addition proposed by GeoLabs) of the concept. It names a kind of data,
+      not an encoding.
     snippets:
       - language: json
         code: |
           {
-            "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
-            "type": "DataTypeVersion",
-            "versionOf": {
-              "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
-              "type": "DataType",
-              "prefLabel": "Raster (single band)",
-              "definition": "A raster with exactly one band: a range type of one field.",
-              "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types",
-              "broader": [
-                "https://geolabs.github.io/bblocks-data-types/def/data-type/raster"
-              ]
+            "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item",
+            "type": "DataTypeItem",
+            "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item",
+            "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+            "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+            "realizes": {
+              "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
+              "type": "DataTypeVersion",
+              "versionOf": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
+                "type": "Concept",
+                "prefLabel": "Raster (single band)",
+                "definition": "A raster with exactly one band: a range type of one field.",
+                "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+              },
+              "version": "1.0",
+              "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
+              "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
+              "validityStatus": "invalid",
+              "publicationStatus": "published",
+              "hasAction": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+                "startedAtTime": "2026-10-08T00:00:00Z"
+              }
             },
-            "version": "1.0",
-            "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
-            "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
             "validityStatus": "invalid",
-            "publicationStatus": "published",
-            "hasAction": {
-              "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition",
-              "type": "RegisterAction",
-              "actionType": "addition",
-              "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-              "startedAtTime": "2026-10-08T00:00:00Z"
-            }
+            "publicationStatus": "published"
           }
   - title: Shared register metadata
     content: |
-      This Turtle graph contains the shared register, register system, owner and concept system.
-      Each data-type Building Block publishes its own canonical concept, version and addition
-      action in its `ontology.ttl`.
+      This Turtle graph contains the shared register, register system, owner, concept system and
+      the data type item class. Each data-type Building Block publishes its own canonical concept,
+      version, addition action and item in its `ontology.ttl`.
     snippets:
       - language: turtle
         ref: data.ttl

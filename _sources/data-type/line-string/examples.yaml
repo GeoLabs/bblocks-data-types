@@ -1,6 +1,42 @@
 examples:
   - title: LineString
-    content: Canonical concept, version and addition action for this geometry type.
+    content: >-
+      The register item of the LineString data type: it realizes the governed version of the
+      concept and belongs to the register's data type item class.
     snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item",
+            "type": "DataTypeItem",
+            "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item",
+            "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+            "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+            "realizes": {
+              "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1",
+              "type": "DataTypeVersion",
+              "versionOf": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string",
+                "type": "Concept",
+                "prefLabel": "LineString",
+                "definition": "A connected sequence of two or more points joined by straight line segments, forming a one-dimensional geometry.",
+                "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+              },
+              "version": "1.0",
+              "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1",
+              "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string",
+              "validityStatus": "invalid",
+              "publicationStatus": "published",
+              "hasAction": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+                "startedAtTime": "2026-11-01T00:00:00Z"
+              }
+            },
+            "validityStatus": "invalid",
+            "publicationStatus": "published"
+          }
       - language: turtle
         ref: ontology.ttl

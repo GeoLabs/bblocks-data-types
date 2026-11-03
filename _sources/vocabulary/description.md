@@ -1,4 +1,4 @@
-Data types as a Registered Item Model **concept plane**.
+Data types as a Registered Item Model **concept plane**, with a content-plane item per data type.
 
 ## What this block is
 
@@ -30,7 +30,7 @@ merely examples. Each individual data-type Building Block contains its canonical
 graph in `ontology.ttl`, autodetected and published as that block's ontology. The shared
 [`data.ttl`](data.ttl) in this support block contains only register metadata: the `rim:Register`,
 register system, owner and `rim:ConceptSystem`. The individual ontologies carry each concept,
-version and proposed-addition action. The JSON example below illustrates one version; the Turtle
+version and proposed-addition action. The JSON example below illustrates one item and the version it realizes; the Turtle
 example references the support block's register metadata.
 
 The initial types are `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model`,
@@ -53,6 +53,35 @@ represented from [`radiantearth/stac-spec`](https://github.com/radiantearth/stac
 specializes `feature`, `stac-collection` specializes `stac-catalog`, and `stac-item-collection`
 specializes `feature-collection` for responses containing arrays of STAC Items (such as Item
 Search). A STAC Collection is metadata for a set of related assets, not an array of STAC Items.
+
+## Content plane and JSON binding
+
+Each data type is also a register item in the Registered Item Model's content plane. Its
+`dt:DataTypeItem` (a sub-class of `rim:RegisterItem`) is of the `dt:dataTypeItemClass` item class,
+is in `dt:register`, and `rim:realizes` the data type's `dt:DataTypeVersion`; `dt:DataTypeItemShape`
+checks this and is the class's `rim:validatedBy`.
+
+The RIM publishes a JSON binding of its core: one JSON Schema and JSON-LD context per class. This
+register conforms to it layer by layer, each block depending on the one below it, as the RIM's own
+`register-item` depends on `register`, `register-item-class` and `concept-version`:
+
+- [`data-types.register`](../register/) profiles `ogc.rim.schemas.register`: the register, its
+  system and the roles that govern it.
+- [`data-types.item-class`](../item-class/) profiles `ogc.rim.schemas.register-item-class`: the item
+  class every data type item shares, defined in the register and validated by
+  `dt:DataTypeItemShape`.
+- `schema.yaml` of this block (it depends on both blocks) profiles `ogc.rim.schemas.register-item`
+  (`type` is `DataTypeItem`, `itemClass` and `inRegister` are fixed to that item class and register)
+  and its `realizes` profiles `ogc.rim.schemas.concept-version` (`type` is `DataTypeVersion`, with
+  the recorded addition required).
+- Each data-type block profiles this schema again and fixes the item's `id`.
+
+The register and item class blocks take the register metadata of this block's `data.ttl` as SHACL
+closure, so their JSON examples do not repeat it.
+
+The item class and register nodes that `data.ttl` and each `ontology.ttl` already declare are not
+repeated in the JSON examples: the SHACL closure supplies them, and a second value for a
+single-valued property such as `dct:title` would be a violation.
 
 ## Meaning, not encoding
 

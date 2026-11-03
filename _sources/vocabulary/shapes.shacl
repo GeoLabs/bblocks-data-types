@@ -27,6 +27,15 @@ dt:DataTypeShape a sh:NodeShape ;
     sh:property [ sh:path skos:prefLabel ; sh:minCount 1 ] ;
     sh:property [ sh:path skos:broader ; sh:class dt:DataType ] .
 
+dt:DataTypeItemShape a sh:NodeShape ;
+    sh:targetClass dt:DataTypeItem ;
+    sh:property [ sh:path rim:itemClass ; sh:hasValue dt:dataTypeItemClass ;
+                  sh:message "A data type item must be of the dt:dataTypeItemClass item class." ] ;
+    sh:property [ sh:path rim:inRegister ; sh:hasValue dt:register ; sh:minCount 1 ;
+                  sh:message "A data type item must be in the dt:register register." ] ;
+    sh:property [ sh:path rim:realizes ; sh:class dt:DataTypeVersion ; sh:minCount 1 ;
+                  sh:message "A data type item must realize a dt:DataTypeVersion." ] .
+
 dt:DataTypeVersionShape a sh:NodeShape ;
     sh:targetClass dt:DataTypeVersion ;
     sh:property [ sh:path rim:versionOf ; sh:class dt:DataType ; sh:minCount 1 ; sh:maxCount 1 ;

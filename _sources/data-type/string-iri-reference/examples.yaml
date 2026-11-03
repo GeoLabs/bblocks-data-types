@@ -1,6 +1,42 @@
 examples:
   - title: IRI reference string
-    content: Canonical concept, version and addition action for this string format.
+    content: >-
+      The register item of the IRI reference string data type: it realizes the governed version of the
+      concept and belongs to the register's data type item class.
     snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/item",
+            "type": "DataTypeItem",
+            "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/item",
+            "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+            "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+            "realizes": {
+              "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/v1",
+              "type": "DataTypeVersion",
+              "versionOf": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference",
+                "type": "Concept",
+                "prefLabel": "IRI reference string",
+                "definition": "A string representing an IRI reference as defined by RFC 3987.",
+                "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+              },
+              "version": "1.0",
+              "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/v1",
+              "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference",
+              "validityStatus": "invalid",
+              "publicationStatus": "published",
+              "hasAction": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+                "startedAtTime": "2026-11-01T00:00:00Z"
+              }
+            },
+            "validityStatus": "invalid",
+            "publicationStatus": "published"
+          }
       - language: turtle
         ref: ontology.ttl
