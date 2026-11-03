@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Data type item - Number",
+  "description": "The register item of the Number data type, in JSON.",
+  "allOf": [
+    {
+      "$ref": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.json"
+    }
+  ],
+  "properties": {
+    "id": {
+      "const": "https://geolabs.github.io/bblocks-data-types/def/data-type/number/item"
+    }
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "data-types.data-type.number",
+    "register": "https://geolabs.github.io/bblocks-data-types/build/register.json",
+    "version": "1.0",
+    "dateOfLastChange": "2026-11-03"
+  }
+}

@@ -29,6 +29,18 @@ and that register is pointed here. Nothing in bblocks-generic-profiles is change
 
 ## Building Blocks
 
+### `data-types.register` — Data Types register
+
+**Type:** schema
+
+The data-types register itself, in JSON: a profile of the Registered Item Model register, with its system and the roles that govern it.
+
+### `data-types.item-class` — Data type item class
+
+**Type:** schema
+
+The item class shared by the data type items of this register, in JSON: a profile of the Registered Item Model register item class.
+
 ### `data-types.vocabulary` — Data Types shared concept model
 
 **Type:** model

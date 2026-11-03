@@ -1,0 +1,33 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/context.jsonld",
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item",
+  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "realizes": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6",
+      "type": "Concept",
+      "prefLabel": "IPv6 address string",
+      "definition": "A string representing an IPv6 address.",
+      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1",
+    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "startedAtTime": "2026-11-01T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

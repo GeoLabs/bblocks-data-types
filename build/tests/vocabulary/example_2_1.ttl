@@ -5,6 +5,18 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dt:dataTypeItemClass a rim:RegisterItemClass ;
+    dct:description "The abstraction every data type item of this register shares: one item per data type, realizing its governed concept version."@en ;
+    dct:title "Data type" ;
+    rim:definedIn dt:register ;
+    rim:validatedBy dt:DataTypeItemShape .
+
+dt:dataTypes a skos:ConceptScheme,
+        rim:ConceptSystem ;
+    dct:description "The kinds of data a process profile's inputs and outputs carry, independent of encoding."@en ;
+    dct:title "Data types"@en ;
+    skos:prefLabel "Data types"@en .
+
 dt:register a rim:Register ;
     dct:description "A concept-plane register of the kinds of data that process profile inputs and outputs carry."@en ;
     dct:title "Data Types"@en ;
@@ -14,12 +26,6 @@ dt:register a rim:Register ;
     rim:registerManager dt:geolabs ;
     rim:registerOwner dt:geolabs ;
     rim:runsOn dt:registerSystem .
-
-dt:dataTypes a skos:ConceptScheme,
-        rim:ConceptSystem ;
-    dct:description "The kinds of data a process profile's inputs and outputs carry, independent of encoding."@en ;
-    dct:title "Data types"@en ;
-    skos:prefLabel "Data types"@en .
 
 dt:registerSystem a rim:RegisterSystem ;
     dct:title "OGC Building Blocks register (bblocks-postprocess, GitHub Pages)"@en .

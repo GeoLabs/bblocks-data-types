@@ -1,0 +1,32 @@
+{
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/item",
+  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "realizes": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item",
+      "type": "Concept",
+      "prefLabel": "STAC Item",
+      "definition": "A STAC Item: a feature with STAC identity, links, assets, version and spatiotemporal metadata.",
+      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/v1",
+    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "startedAtTime": "2026-11-02T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

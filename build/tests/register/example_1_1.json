@@ -1,0 +1,9 @@
+{
+  "id": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "type": "Register",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
+  "runsOn": "https://geolabs.github.io/bblocks-data-types/def/registerSystem",
+  "registerOwner": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs"
+}

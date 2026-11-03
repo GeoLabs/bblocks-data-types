@@ -213,7 +213,7 @@
   "name": "Building Blocks - Data Types",
   "abstract": "A concept-plane register (ISO 19135:2026, via the Registered Item Model) of the kinds of data\nthat process profile inputs and outputs carry -- raster (by band count), elevation model,\ngeometry (by type), feature collection, point cloud, TIN, table, bounding box and the literals.\nEach data type is a rim:Concept in a rim:ConceptSystem, with a governed rim:ConceptVersion.\nA data type names the *kind* of data, not its encoding: the encoding a concrete process uses is\ndeclared where that process is profiled (an Implementation Profile's schema).\n",
   "description": "This register holds, as a Registered Item Model **concept plane**, the vocabulary first drafted\ninline in [GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)\nas its generic-profiles.data-type block. Extracting it makes the vocabulary reusable beyond that\none register and gives it its own governance and lifecycle.\n\nModelled on the concept plane of the\n[Registered Item Model](https://ogcincubator.github.io/registered-item-model/): dt:DataType is a\nsub-class of rim:Concept (a unit of meaning), dt:dataTypes is the rim:ConceptSystem that holds\nthem, and each type's governed state lives on a rim:ConceptVersion. A data type names the kind of\ndata (its meaning); the encoding a concrete process uses is declared at the Implementation Profile\ntier, not here. Some types are nonetheless grounded in a standard that happens to be a format\n(e.g. point cloud in the OGC LAS community standard) -- that is their source, not their encoding.\n\nIdentifiers: this register mints its own IRIs\n(https://geolabs.github.io/bblocks-data-types/def/data-type/...). The original inline block in\nbblocks-generic-profiles keeps its own until a permanent, register-independent namespace is agreed\nand that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.\n",
-  "modified": "2026-11-03T20:27:20.706878",
+  "modified": "2026-11-03T21:54:35.153751",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"373c26d1cdf143759ae2c602c0713e98e6af6fc9",
@@ -263,6 +263,186 @@
   "skos:prefLabel": "Building Blocks - Data Types",
   "hasConcepts": [
     {
+      "itemIdentifier": "data-types.register",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "Data Types register",
+      "abstract": "The data-types register itself, in JSON: a profile of the Registered Item Model register, with its system and the roles that govern it.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-03T00:00:00Z",
+      "version": "0.1",
+      "itemClass": "schema",
+      "register": "data-types",
+      "isProfileOf": [
+        "bblocks://ogc.rim.schemas.register"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.rim.schemas.register"
+      ],
+      "group": "Register model",
+      "highlighted": true,
+      "shaclClosures": [
+        "../vocabulary/data.ttl"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "license": {
+        "name": "Apache-2.0"
+      },
+      "dateOfLastChange": "2026-11-03",
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/register/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/resolvedProperties.json",
+      "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/register/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/register/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/markdown/register/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/json-full/register/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geolabs.github.io/bblocks-data-types/bblock/data-types.register"
+        }
+      },
+      "@id": "bblocks://data-types.register",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Data Types register",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "skos:topConceptOf": {
+        "@id": "https://geolabs.github.io/bblocks-data-types/"
+      }
+    },
+    {
+      "itemIdentifier": "data-types.item-class",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "Data type item class",
+      "abstract": "The item class shared by the data type items of this register, in JSON: a profile of the Registered Item Model register item class.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-03T00:00:00Z",
+      "version": "0.1",
+      "itemClass": "schema",
+      "register": "data-types",
+      "isProfileOf": [
+        "bblocks://ogc.rim.schemas.register-item-class"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.rim.schemas.register-item-class"
+      ],
+      "group": "Register model",
+      "highlighted": true,
+      "shaclClosures": [
+        "../vocabulary/data.ttl"
+      ],
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "license": {
+        "name": "Apache-2.0"
+      },
+      "dateOfLastChange": "2026-11-03",
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/item-class/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/resolvedProperties.json",
+      "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/item-class/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/item-class/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/markdown/item-class/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/json-full/item-class/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geolabs.github.io/bblocks-data-types/bblock/data-types.item-class"
+        }
+      },
+      "@id": "bblocks://data-types.item-class",
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Data type item class",
+      "openAPIDocument": null,
+      "ontology": null,
+      "rdfData": [],
+      "skos:topConceptOf": {
+        "@id": "https://geolabs.github.io/bblocks-data-types/"
+      }
+    },
+    {
       "itemIdentifier": "data-types.vocabulary",
       "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
       "name": "Data Types shared concept model",
@@ -275,12 +455,16 @@
       "register": "data-types",
       "isProfileOf": [
         "bblocks://ogc.rim.schemas.concept-version",
-        "bblocks://ogc.rim.schemas.register"
+        "bblocks://ogc.rim.schemas.register",
+        "bblocks://ogc.rim.schemas.register-item"
       ],
       "dependsOn": [
+        "bblocks://data-types.item-class",
+        "bblocks://data-types.register",
         "bblocks://ogc.rim.core-ontology",
         "bblocks://ogc.rim.schemas.concept-version",
-        "bblocks://ogc.rim.schemas.register"
+        "bblocks://ogc.rim.schemas.register",
+        "bblocks://ogc.rim.schemas.register-item"
       ],
       "shaclShapes": [
         {
@@ -361,7 +545,7 @@
         }
       ],
       "ldContext": {
-        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/context.jsonld",
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/context.jsonld",
         "prof:hasRole": "role:mapping",
         "dct:format": "application/ld+json",
         "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
@@ -404,7 +588,23 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
-      "sourceLdContext": "https://geolabs.github.io/bblocks-data-types/context.jsonld",
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/schema.yaml",
+      "sourceLdContext": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/vocabulary/",
@@ -430,7 +630,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data Types shared concept model",
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -494,6 +693,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/boolean/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/boolean/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/boolean/",
@@ -519,8 +740,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Boolean",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -585,6 +804,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/bounding-box/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/bounding-box/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/bounding-box/",
@@ -610,8 +851,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Bounding box",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -679,6 +918,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/curve/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/curve/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/curve/",
@@ -704,8 +965,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Curve",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -776,6 +1035,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/elevation-model/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/elevation-model/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/elevation-model/",
@@ -801,8 +1082,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Elevation model",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -869,6 +1148,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/feature/",
@@ -894,8 +1195,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Feature",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -960,6 +1259,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature-collection/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature-collection/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/feature-collection/",
@@ -985,8 +1306,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Feature collection",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -1051,6 +1370,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/geometry/",
@@ -1076,8 +1417,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Geometry",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -1145,6 +1484,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry-collection/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry-collection/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/geometry-collection/",
@@ -1170,8 +1531,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: GeometryCollection",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -1238,6 +1597,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/line-string/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/line-string/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/line-string/",
@@ -1263,8 +1644,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: LineString",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -1335,6 +1714,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-curve/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-curve/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-curve/",
@@ -1360,8 +1761,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: MultiCurve",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -1432,6 +1831,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-line-string/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-line-string/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-line-string/",
@@ -1457,8 +1878,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: MultiLineString",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -1529,6 +1948,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-point/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-point/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-point/",
@@ -1554,8 +1995,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: MultiPoint",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -1626,6 +2065,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-polygon/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-polygon/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-polygon/",
@@ -1651,8 +2112,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: MultiPolygon",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -1723,6 +2182,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-surface/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-surface/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-surface/",
@@ -1748,8 +2229,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: MultiSurface",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -1813,6 +2292,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/number/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/number/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/number/",
@@ -1838,8 +2339,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Number",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -1907,6 +2406,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/point/",
@@ -1932,8 +2453,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Point",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -1997,6 +2516,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point-cloud/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point-cloud/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/point-cloud/",
@@ -2022,8 +2563,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Point cloud",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -2091,6 +2630,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/polygon/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/polygon/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/polygon/",
@@ -2116,8 +2677,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Polygon",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -2181,6 +2740,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster/",
@@ -2206,8 +2787,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Raster",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -2275,6 +2854,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-multi-band/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-multi-band/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster-multi-band/",
@@ -2300,8 +2901,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Raster (multiple bands)",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -2368,6 +2967,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-single-band/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-single-band/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster-single-band/",
@@ -2393,8 +3014,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Raster (single band)",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -2458,6 +3077,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-catalog/",
@@ -2483,8 +3124,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: STAC Catalog",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -2556,6 +3195,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-collection/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-collection/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-collection/",
@@ -2581,8 +3242,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: STAC Collection",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -2649,6 +3308,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-item/",
@@ -2674,8 +3355,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: STAC Item",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -2750,6 +3429,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item-collection/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item-collection/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-item-collection/",
@@ -2775,8 +3476,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: STAC Item Collection",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -2840,6 +3539,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string/",
@@ -2865,8 +3586,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -2934,6 +3653,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-date/",
@@ -2959,8 +3700,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 date",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3027,6 +3766,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date-time/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date-time/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-date-time/",
@@ -3052,8 +3813,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 date-time",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3120,6 +3879,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-duration/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-duration/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-duration/",
@@ -3145,8 +3926,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 duration",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3217,6 +3996,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-email/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-email/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-email/",
@@ -3242,8 +4043,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 email",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3314,6 +4113,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-hostname/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-hostname/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-hostname/",
@@ -3339,8 +4160,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 hostname",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3407,6 +4226,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-email/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-email/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-idn-email/",
@@ -3432,8 +4273,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 internationalized email",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3500,6 +4339,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-hostname/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-hostname/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-idn-hostname/",
@@ -3525,8 +4386,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 internationalized hostname",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3597,6 +4456,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv4/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv4/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-ipv4/",
@@ -3622,8 +4503,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 IPv4 address",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3694,6 +4573,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv6/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv6/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-ipv6/",
@@ -3719,8 +4620,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 IPv6 address",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3791,6 +4690,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-iri/",
@@ -3816,8 +4737,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 IRI",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3888,6 +4807,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri-reference/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri-reference/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-iri-reference/",
@@ -3913,8 +4854,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 IRI reference",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -3985,6 +4924,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-json-pointer/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-json-pointer/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-json-pointer/",
@@ -4010,8 +4971,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 JSON Pointer",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4078,6 +5037,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-password/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-password/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-password/",
@@ -4103,8 +5084,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 password",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4175,6 +5154,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-relative-json-pointer/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-relative-json-pointer/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-relative-json-pointer/",
@@ -4200,8 +5201,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 relative JSON Pointer",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4268,6 +5267,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-time/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-time/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-time/",
@@ -4293,8 +5314,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 time",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4365,6 +5384,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri/",
@@ -4390,8 +5431,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 URI",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4462,6 +5501,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-reference/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-reference/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri-reference/",
@@ -4487,8 +5548,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 URI reference",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4559,6 +5618,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-template/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-template/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri-template/",
@@ -4584,8 +5665,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 URI template",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4656,6 +5735,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uuid/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uuid/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uuid/",
@@ -4681,8 +5782,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: String \u2014 UUID",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4749,6 +5848,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/surface/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/surface/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/surface/",
@@ -4774,8 +5895,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Surface",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "skos:topConceptOf": {
@@ -4839,6 +5958,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/table/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/table/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/table/",
@@ -4864,8 +6005,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Table",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -4933,6 +6072,28 @@
         "dct:format": "text/turtle",
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/tin/",
@@ -4958,8 +6119,6 @@
         "bblocks:BBlock"
       ],
       "skos:prefLabel": "Data type: Triangulated irregular network",
-      "ldContext": null,
-      "schema": null,
       "openAPIDocument": null,
       "rdfData": [],
       "isProfileOf": null,
@@ -4969,6 +6128,12 @@
     }
   ],
   "skos:hasTopConcept": [
+    {
+      "@id": "bblocks://data-types.register"
+    },
+    {
+      "@id": "bblocks://data-types.item-class"
+    },
     {
       "@id": "bblocks://data-types.vocabulary"
     },

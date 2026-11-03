@@ -1,0 +1,44 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/item> a dt:DataTypeItem,
+        rim:RegisterItem ;
+    dct:title "URI reference string"@en ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/item"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/v1> ;
+    rim:validityStatus rim:invalid .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference> a skos:Concept,
+        dt:DataType,
+        rim:Concept ;
+    dct:source [ dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+            dct:title "EOAP schemas: string_format.yaml (JSON Schema format: uri-reference)"@en ],
+        [ dct:references <https://datatracker.ietf.org/doc/html/rfc3986> ;
+            dct:title "RFC 3986"@en ] ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/string> ;
+    skos:definition "A string representing a URI reference as defined by RFC 3986."@en ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "URI reference string"@en .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/v1> a dt:DataTypeVersion,
+        rim:ConceptVersion ;
+    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/actions/addition> ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference> .
+

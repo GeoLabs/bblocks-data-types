@@ -5,15 +5,15 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/v1> a dt:DataTypeVersion,
-        rim:ConceptVersion ;
-    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/actions/addition> ;
-    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon"^^xsd:anyURI ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/v1"^^xsd:anyURI ;
+<https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/item> a dt:DataTypeItem,
+        rim:RegisterItem ;
+    dct:title "MultiPolygon"@en ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/item"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
-    rim:validityStatus rim:invalid ;
-    rim:version "1.0" ;
-    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon> .
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/v1> ;
+    rim:validityStatus rim:invalid .
 
 <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon> a skos:Concept,
         dt:DataType,
@@ -31,4 +31,14 @@
     prov:startedAtTime "2026-11-01T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/v1> a dt:DataTypeVersion,
+        rim:ConceptVersion ;
+    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/actions/addition> ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon> .
 

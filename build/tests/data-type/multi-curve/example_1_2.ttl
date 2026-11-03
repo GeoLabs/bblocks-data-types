@@ -1,0 +1,44 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve/item> a dt:DataTypeItem,
+        rim:RegisterItem ;
+    dct:title "MultiCurve"@en ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve/item"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve/v1> ;
+    rim:validityStatus rim:invalid .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve> a skos:Concept,
+        dt:DataType,
+        rim:Concept ;
+    dct:source [ dct:references <https://www.ogc.org/standards/sfa/> ;
+            dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ],
+        [ dct:references <https://docs.ogc.org/is/23-034/23-034.html> ;
+            dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ] ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection> ;
+    skos:definition "A 1-dimensional geometry collection whose elements are curves."@en ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "MultiCurve"@en .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-03T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve/v1> a dt:DataTypeVersion,
+        rim:ConceptVersion ;
+    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve/actions/addition> ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-curve> .
+

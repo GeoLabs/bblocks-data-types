@@ -1,0 +1,33 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/context.jsonld",
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item",
+  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "realizes": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection",
+      "type": "Concept",
+      "prefLabel": "STAC Collection",
+      "definition": "A STAC Collection: a Catalog specialization that describes a collection of related spatiotemporal assets with spatial and temporal extents.",
+      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1",
+    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "startedAtTime": "2026-11-02T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

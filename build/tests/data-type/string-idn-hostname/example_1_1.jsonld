@@ -1,0 +1,33 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/context.jsonld",
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-hostname/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-hostname/item",
+  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "realizes": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-hostname/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-hostname",
+      "type": "Concept",
+      "prefLabel": "Internationalized hostname string",
+      "definition": "A string representing a valid internationalized domain name hostname.",
+      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-hostname/v1",
+    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-hostname",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-hostname/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "startedAtTime": "2026-11-01T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

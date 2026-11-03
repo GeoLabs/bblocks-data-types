@@ -1,0 +1,13 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data type item - Bounding box
+description: The register item of the Bounding box data type, in JSON.
+allOf:
+- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
+properties:
+  id:
+    const: https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/item
+x-bblocks-metadata:
+  itemIdentifier: data-types.data-type.bounding-box
+  register: https://geolabs.github.io/bblocks-data-types/build/register.json
+  version: '1.0'
+  dateOfLastChange: '2026-11-03'

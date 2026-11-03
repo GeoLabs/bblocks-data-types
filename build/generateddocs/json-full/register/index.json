@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "data-types.register",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data Types register",
+  "abstract": "The data-types register itself, in JSON: a profile of the Registered Item Model register, with its system and the roles that govern it.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-03T00:00:00Z",
+  "version": "0.1",
+  "itemClass": "schema",
+  "register": "data-types",
+  "isProfileOf": [
+    "ogc.rim.schemas.register"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register"
+  ],
+  "group": "Register model",
+  "highlighted": true,
+  "shaclClosures": [
+    "../vocabulary/data.ttl"
+  ],
+  "shaclShapes": {
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-03",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/register/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/register/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/register/",
+  "description": "The data-types register as a Registered Item Model **register**, in JSON.\n\n## Definition\n\nA profile of the RIM `register` schema: the governed collection of data types, distinct from the\nregister system it runs on (`runsOn`) and from the roles that govern it (`registerOwner`,\n`registerManager`). Its title, description and concept system (`dt:conceptSystem`) are declared in\nthe `data.ttl` of the [shared vocabulary](../vocabulary/), which the SHACL closure of this block\nincludes.\n\n## Content of this block\n\n- `schema.yaml`: a profile of `ogc.rim.schemas.register`; `id` is fixed to the register's IRI and\n  its identifier, system and owner are required.\n- `examples.yaml`: the register in JSON, validated against the schema, uplifted to RDF and checked\n  against the shapes of the vocabulary.\n\n## Sources\n\n- [ISO 19135:2026, Geographic information \u2014 Registration and register governance](https://www.iso.org/standard/86261.html)\n- [Registered Item Model](https://ogcincubator.github.io/registered-item-model/)\n",
+  "examples": [
+    {
+      "title": "The data-types register (JSON)",
+      "content": "The register, the system it runs on and its owner and manager. Its title, description and concept system are in the shared vocabulary's `data.ttl`.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/register/example_1_1.json",
+          "sizeBytes": 491,
+          "code": "{\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"type\": \"Register\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/\",\n  \"runsOn\": \"https://geolabs.github.io/bblocks-data-types/def/registerSystem\",\n  \"registerOwner\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n  \"registerManager\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/register/example_1_1.jsonld",
+          "sizeBytes": 592,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/register/context.jsonld\",\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"type\": \"Register\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/\",\n  \"runsOn\": \"https://geolabs.github.io/bblocks-data-types/def/registerSystem\",\n  \"registerOwner\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n  \"registerManager\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/register/example_1_1.ttl",
+          "sizeBytes": 614,
+          "code": "@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/register> a rim:Register ;\n    rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/\"^^xsd:anyURI ;\n    rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/register\"^^xsd:anyURI ;\n    rim:registerManager <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;\n    rim:registerOwner <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;\n    rim:runsOn <https://geolabs.github.io/bblocks-data-types/def/registerSystem> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data Types register\ndescription: 'The data-types register, in JSON: the governed collection itself, the\n  system it runs on and the roles that govern it. Its one concept system (`dt:conceptSystem`)\n  is declared in the shared vocabulary''s `data.ttl`.'\nallOf:\n- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register/schema.yaml\nrequired:\n- objectIdentifier\n- runsOn\n- registerOwner\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/register\nx-bblocks-metadata:\n  itemIdentifier: data-types.register\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-03'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/register"
+}

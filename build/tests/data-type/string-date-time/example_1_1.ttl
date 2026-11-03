@@ -1,12 +1,28 @@
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/v1> a dt:DataTypeVersion,
-        rim:ConceptVersion ;
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/item> a dt:DataTypeItem ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/item"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/v1> ;
+    rim:validityStatus rim:invalid .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time> a rim:Concept ;
+    skos:definition "A string representing a date and time in the YYYY-MM-DDThh:mm:ss.sTZD format." ;
+    skos:inScheme dt:data-types ;
+    skos:prefLabel "Date-time string" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/v1> a dt:DataTypeVersion ;
     dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/actions/addition> ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time"^^xsd:anyURI ;
     rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/v1"^^xsd:anyURI ;
@@ -14,19 +30,4 @@
     rim:validityStatus rim:invalid ;
     rim:version "1.0" ;
     rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time> .
-
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time> a skos:Concept,
-        dt:DataType,
-        rim:Concept ;
-    dct:source [ dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
-            dct:title "EOAP schemas: string_format.yaml (JSON Schema format: date-time)"@en ] ;
-    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/string> ;
-    skos:definition "A string representing a date and time in the YYYY-MM-DDThh:mm:ss.sTZD format."@en ;
-    skos:inScheme dt:dataTypes ;
-    skos:prefLabel "Date-time string"@en .
-
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/actions/addition> a rim:RegisterAction ;
-    prov:startedAtTime "2026-11-01T00:00:00+00:00"^^xsd:dateTime ;
-    rim:actionType rim:additionAction ;
-    rim:proposer dt:geolabs .
 

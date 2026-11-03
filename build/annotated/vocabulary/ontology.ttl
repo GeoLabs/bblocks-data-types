@@ -10,6 +10,12 @@ dt:DataType a owl:Class ;
     rdfs:isDefinedBy dt: ;
     rdfs:subClassOf rim:Concept .
 
+dt:DataTypeItem a owl:Class ;
+    rdfs:label "Data type item" ;
+    rdfs:comment "The content-plane record of a data type in this register: a rim:RegisterItem of the dt:dataTypeItemClass item class that rim:realizes the data type's dt:DataTypeVersion." ;
+    rdfs:isDefinedBy dt: ;
+    rdfs:subClassOf rim:RegisterItem .
+
 dt:DataTypeVersion a owl:Class ;
     rdfs:label "Data type version" ;
     rdfs:comment "A governed version of a dt:DataType: carries the object identifier, validity and publication status, and the recorded addition. rim:versionOf points to its dt:DataType." ;

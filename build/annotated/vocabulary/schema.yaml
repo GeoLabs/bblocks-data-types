@@ -1,0 +1,131 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data type item
+description: 'The content-plane record of a data type, in JSON: a profile of the Registered
+  Item Model register item (`type` pinned to `DataTypeItem`) whose `realizes` is the
+  data type''s governed version, a profile of the RIM concept version (`type` pinned
+  to `DataTypeVersion`, recorded addition required). The data type is the `versionOf`
+  concept; the concept-version schema fixes the type of an embedded concept to `Concept`,
+  so its `dt:DataType` class comes from the register''s ontologies.'
+allOf:
+- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item/schema.yaml
+type: object
+required:
+- realizes
+properties:
+  type:
+    const: DataTypeItem
+    x-jsonld-id: '@type'
+  itemClass:
+    const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass
+    x-jsonld-id: https://w3id.org/ogc/rim/itemClass
+    x-jsonld-type: '@id'
+  inRegister:
+    const: https://geolabs.github.io/bblocks-data-types/def/register
+    x-jsonld-id: https://w3id.org/ogc/rim/inRegister
+    x-jsonld-type: '@id'
+  realizes:
+    allOf:
+    - $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/concept-version/schema.yaml
+    type: object
+    required:
+    - hasAction
+    properties:
+      type:
+        const: DataTypeVersion
+        x-jsonld-id: '@type'
+      hasAction:
+        type: object
+        required:
+        - id
+        - actionType
+        - proposer
+        properties:
+          id:
+            type: string
+            format: uri
+            x-jsonld-id: '@id'
+          type:
+            const: RegisterAction
+            x-jsonld-id: '@type'
+          actionType:
+            const: addition
+            x-jsonld-id: https://w3id.org/ogc/rim/actionType
+            x-jsonld-type: '@vocab'
+          proposer:
+            type: string
+            format: uri
+            x-jsonld-id: https://w3id.org/ogc/rim/proposer
+            x-jsonld-type: '@id'
+          startedAtTime:
+            type: string
+            format: date-time
+            x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime
+            x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
+        x-jsonld-id: https://geolabs.github.io/bblocks-data-types/def/hasVersionAction
+        x-jsonld-type: '@id'
+    x-jsonld-id: https://w3id.org/ogc/rim/realizes
+    x-jsonld-type: '@id'
+x-jsonld-extra-terms:
+  ConceptSystem: https://w3id.org/ogc/rim/ConceptSystem
+  Concept: https://w3id.org/ogc/rim/Concept
+  RegisterAction: https://w3id.org/ogc/rim/RegisterAction
+  Register: https://w3id.org/ogc/rim/Register
+  RegisterItem: https://w3id.org/ogc/rim/RegisterItem
+  RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass
+  DataTypeItem: https://geolabs.github.io/bblocks-data-types/def/DataTypeItem
+  DataType: https://geolabs.github.io/bblocks-data-types/def/DataType
+  DataTypeVersion: https://geolabs.github.io/bblocks-data-types/def/DataTypeVersion
+  prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel
+  definition: http://www.w3.org/2004/02/skos/core#definition
+  inScheme:
+    x-jsonld-id: http://www.w3.org/2004/02/skos/core#inScheme
+    x-jsonld-type: '@id'
+  broader:
+    x-jsonld-id: http://www.w3.org/2004/02/skos/core#broader
+    x-jsonld-type: '@id'
+  concepts:
+    x-jsonld-reverse: skos:inScheme
+  conceptSystem:
+    x-jsonld-id: https://geolabs.github.io/bblocks-data-types/def/conceptSystem
+    x-jsonld-type: '@id'
+  versionOf:
+    x-jsonld-id: https://w3id.org/ogc/rim/versionOf
+    x-jsonld-type: '@id'
+  version: https://w3id.org/ogc/rim/version
+  objectIdentifier:
+    x-jsonld-id: https://w3id.org/ogc/rim/objectIdentifier
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  functionalIdentifier:
+    x-jsonld-id: https://w3id.org/ogc/rim/functionalIdentifier
+    x-jsonld-type: http://www.w3.org/2001/XMLSchema#anyURI
+  validityStatus:
+    x-jsonld-id: https://w3id.org/ogc/rim/validityStatus
+    x-jsonld-type: '@vocab'
+  publicationStatus:
+    x-jsonld-id: https://w3id.org/ogc/rim/publicationStatus
+    x-jsonld-type: '@vocab'
+  valid: https://w3id.org/ogc/rim/valid
+  invalid: https://w3id.org/ogc/rim/invalid
+  published: https://w3id.org/ogc/rim/published
+  unpublished: https://w3id.org/ogc/rim/unpublished
+  appliesTo:
+    x-jsonld-id: https://w3id.org/ogc/rim/appliesTo
+    x-jsonld-type: '@id'
+  addition: https://w3id.org/ogc/rim/additionAction
+  source: http://purl.org/dc/terms/source
+  title: http://purl.org/dc/terms/title
+  link:
+    x-jsonld-id: http://purl.org/dc/terms/references
+    x-jsonld-type: '@id'
+x-jsonld-prefixes:
+  rim: https://w3id.org/ogc/rim/
+  dt: https://geolabs.github.io/bblocks-data-types/def/
+  skos: http://www.w3.org/2004/02/skos/core#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  prov: http://www.w3.org/ns/prov#
+  dct: http://purl.org/dc/terms/
+x-bblocks-metadata:
+  itemIdentifier: data-types.vocabulary
+  register: https://geolabs.github.io/bblocks-data-types/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-11-03'

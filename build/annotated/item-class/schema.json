@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Data type item class",
+  "description": "The item class every data type item of the register shares, in JSON. It is defined in the data-types register and validated by the vocabulary's `DataTypeItemShape`.",
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.json"
+    }
+  ],
+  "required": [
+    "definedIn",
+    "validatedBy"
+  ],
+  "properties": {
+    "id": {
+      "const": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass"
+    }
+  },
+  "x-bblocks-metadata": {
+    "itemIdentifier": "data-types.item-class",
+    "register": "https://geolabs.github.io/bblocks-data-types/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-11-03"
+  }
+}

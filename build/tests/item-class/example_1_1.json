@@ -1,0 +1,7 @@
+{
+  "id": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "type": "RegisterItemClass",
+  "title": "Data type",
+  "definedIn": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "validatedBy": "https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape"
+}

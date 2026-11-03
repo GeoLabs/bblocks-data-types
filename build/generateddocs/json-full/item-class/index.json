@@ -1,0 +1,73 @@
+
+
+{
+  "itemIdentifier": "data-types.item-class",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type item class",
+  "abstract": "The item class shared by the data type items of this register, in JSON: a profile of the Registered Item Model register item class.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-03T00:00:00Z",
+  "version": "0.1",
+  "itemClass": "schema",
+  "register": "data-types",
+  "isProfileOf": [
+    "ogc.rim.schemas.register-item-class"
+  ],
+  "dependsOn": [
+    "ogc.rim.schemas.register-item-class"
+  ],
+  "group": "Register model",
+  "highlighted": true,
+  "shaclClosures": [
+    "../vocabulary/data.ttl"
+  ],
+  "shaclShapes": {
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-03",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/item-class/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/item-class/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/item-class/",
+  "description": "The item class of the data type items, as a Registered Item Model **register item class**, in JSON.\n\n## Definition\n\nA profile of the RIM `register-item-class` schema: the abstraction every data type item of the\nregister shares (`dt:dataTypeItemClass`), defined in the register (`definedIn`) and validated by the\n`dt:DataTypeItemShape` of the [shared vocabulary](../vocabulary/) (`validatedBy`).\n\n## Content of this block\n\n- `schema.yaml`: a profile of `ogc.rim.schemas.register-item-class`; `id` is fixed to the item\n  class IRI, and `definedIn` and `validatedBy` are required.\n- `examples.yaml`: the item class in JSON, validated against the schema, uplifted to RDF and checked\n  against the shapes of the vocabulary.\n\n## Sources\n\n- [ISO 19135:2026, Geographic information \u2014 Registration and register governance](https://www.iso.org/standard/86261.html)\n- [Registered Item Model](https://ogcincubator.github.io/registered-item-model/)\n",
+  "examples": [
+    {
+      "title": "The data type item class (JSON)",
+      "content": "The abstraction every data type item shares. `validatedBy` names the executable rule set (the SHACL shape of the vocabulary) that expresses its data requirements.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/item-class/example_1_1.json",
+          "sizeBytes": 299,
+          "code": "{\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Data type\",\n  \"definedIn\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"validatedBy\": \"https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape\"\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/item-class/example_1_1.jsonld",
+          "sizeBytes": 402,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/context.jsonld\",\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Data type\",\n  \"definedIn\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"validatedBy\": \"https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape\"\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/item-class/example_1_1.ttl",
+          "sizeBytes": 382,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n\n<https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass> a rim:RegisterItemClass ;\n    dct:title \"Data type\" ;\n    rim:definedIn <https://geolabs.github.io/bblocks-data-types/def/register> ;\n    rim:validatedBy <https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape> .\n\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item class\ndescription: The item class every data type item of the register shares, in JSON.\n  It is defined in the data-types register and validated by the vocabulary's `DataTypeItemShape`.\nallOf:\n- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml\nrequired:\n- definedIn\n- validatedBy\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\nx-bblocks-metadata:\n  itemIdentifier: data-types.item-class\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-03'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/item-class"
+}

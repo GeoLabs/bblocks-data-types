@@ -1,0 +1,10 @@
+path	@id	schema
+/id	@id	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml
+/type	@type	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml
+/objectIdentifier	https://w3id.org/ogc/rim/objectIdentifier	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml
+/functionalIdentifier	https://w3id.org/ogc/rim/functionalIdentifier	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml
+/title	http://purl.org/dc/terms/title	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml
+/description	http://purl.org/dc/terms/description	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml
+/definedIn	https://w3id.org/ogc/rim/definedIn	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml
+/definedIn/_oneOf/1/id	@id	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml
+/validatedBy	https://w3id.org/ogc/rim/validatedBy	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml

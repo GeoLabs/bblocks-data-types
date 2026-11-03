@@ -1,0 +1,33 @@
+{
+  "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/context.jsonld",
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/item",
+  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "realizes": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon",
+      "type": "Concept",
+      "prefLabel": "MultiPolygon",
+      "definition": "A multi-surface whose elements are polygons.",
+      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/v1",
+    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/multi-polygon/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "startedAtTime": "2026-11-01T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

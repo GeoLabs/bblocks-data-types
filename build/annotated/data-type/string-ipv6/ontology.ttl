@@ -5,15 +5,15 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1> a dt:DataTypeVersion,
-        rim:ConceptVersion ;
-    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/actions/addition> ;
-    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6"^^xsd:anyURI ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1"^^xsd:anyURI ;
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item> a dt:DataTypeItem,
+        rim:RegisterItem ;
+    dct:title "IPv6 address string"@en ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
-    rim:validityStatus rim:invalid ;
-    rim:version "1.0" ;
-    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6> .
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1> ;
+    rim:validityStatus rim:invalid .
 
 <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6> a skos:Concept,
         dt:DataType,
@@ -31,4 +31,14 @@
     prov:startedAtTime "2026-11-01T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1> a dt:DataTypeVersion,
+        rim:ConceptVersion ;
+    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/actions/addition> ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6> .
 

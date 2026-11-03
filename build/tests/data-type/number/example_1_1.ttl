@@ -1,12 +1,28 @@
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1> a dt:DataTypeVersion,
-        rim:ConceptVersion ;
+<https://geolabs.github.io/bblocks-data-types/def/data-type/number/item> a dt:DataTypeItem ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/number/item"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1> ;
+    rim:validityStatus rim:invalid .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/number> a rim:Concept ;
+    skos:definition "A literal number." ;
+    skos:inScheme dt:data-types ;
+    skos:prefLabel "Number" .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1> a dt:DataTypeVersion ;
     dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition> ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/number"^^xsd:anyURI ;
     rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1"^^xsd:anyURI ;
@@ -14,18 +30,4 @@
     rim:validityStatus rim:invalid ;
     rim:version "1.0" ;
     rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/number> .
-
-<https://geolabs.github.io/bblocks-data-types/def/data-type/number> a skos:Concept,
-        dt:DataType,
-        rim:Concept ;
-    dct:source [ dct:references <https://docs.ogc.org/is/18-062r2/18-062r2.html> ;
-            dct:title "OGC 18-062r2 OGC API - Processes - Part 1: Core (inputs/outputs schema, JSON Schema)"@en ] ;
-    skos:definition "A literal number."@en ;
-    skos:inScheme dt:dataTypes ;
-    skos:prefLabel "Number"@en .
-
-<https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition> a rim:RegisterAction ;
-    prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
-    rim:actionType rim:additionAction ;
-    rim:proposer dt:geolabs .
 

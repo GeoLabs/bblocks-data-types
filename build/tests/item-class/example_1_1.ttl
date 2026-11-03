@@ -1,0 +1,8 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+
+<https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass> a rim:RegisterItemClass ;
+    dct:title "Data type" ;
+    rim:definedIn <https://geolabs.github.io/bblocks-data-types/def/register> ;
+    rim:validatedBy <https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape> .
+

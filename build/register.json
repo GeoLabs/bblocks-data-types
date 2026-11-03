@@ -3,7 +3,7 @@
   "name": "Data Types",
   "abstract": "A concept-plane register (ISO 19135:2026, via the Registered Item Model) of the kinds of data\nthat process profile inputs and outputs carry -- raster (by band count), elevation model,\ngeometry (by type), feature collection, point cloud, TIN, table, bounding box and the literals.\nEach data type is a rim:Concept in a rim:ConceptSystem, with a governed rim:ConceptVersion.\nA data type names the *kind* of data, not its encoding: the encoding a concrete process uses is\ndeclared where that process is profiled (an Implementation Profile's schema).\n",
   "description": "This register holds, as a Registered Item Model **concept plane**, the vocabulary first drafted\ninline in [GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)\nas its generic-profiles.data-type block. Extracting it makes the vocabulary reusable beyond that\none register and gives it its own governance and lifecycle.\n\nModelled on the concept plane of the\n[Registered Item Model](https://ogcincubator.github.io/registered-item-model/): dt:DataType is a\nsub-class of rim:Concept (a unit of meaning), dt:dataTypes is the rim:ConceptSystem that holds\nthem, and each type's governed state lives on a rim:ConceptVersion. A data type names the kind of\ndata (its meaning); the encoding a concrete process uses is declared at the Implementation Profile\ntier, not here. Some types are nonetheless grounded in a standard that happens to be a format\n(e.g. point cloud in the OGC LAS community standard) -- that is their source, not their encoding.\n\nIdentifiers: this register mints its own IRIs\n(https://geolabs.github.io/bblocks-data-types/def/data-type/...). The original inline block in\nbblocks-generic-profiles keeps its own until a permanent, register-independent namespace is agreed\nand that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.\n",
-  "modified": "2026-11-03T20:27:20.706878",
+  "modified": "2026-11-03T21:54:35.153751",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"373c26d1cdf143759ae2c602c0713e98e6af6fc9",
@@ -26,6 +26,116 @@
   ],
   "bblocks": [
     {
+      "itemIdentifier": "data-types.register",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "Data Types register",
+      "abstract": "The data-types register itself, in JSON: a profile of the Registered Item Model register, with its system and the roles that govern it.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-03T00:00:00Z",
+      "version": "0.1",
+      "itemClass": "schema",
+      "register": "data-types",
+      "isProfileOf": [
+        "bblocks://ogc.rim.schemas.register"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.rim.schemas.register"
+      ],
+      "group": "Register model",
+      "highlighted": true,
+      "shaclClosures": [
+        "../vocabulary/data.ttl"
+      ],
+      "shaclShapes": {
+        "ogc.rim.core-ontology": [
+          "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+        ]
+      },
+      "license": {
+        "name": "Apache-2.0"
+      },
+      "dateOfLastChange": "2026-11-03",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/register/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/resolvedProperties.json",
+      "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/register/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/register/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/markdown/register/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/json-full/register/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geolabs.github.io/bblocks-data-types/bblock/data-types.register"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "data-types.item-class",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "Data type item class",
+      "abstract": "The item class shared by the data type items of this register, in JSON: a profile of the Registered Item Model register item class.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-03T00:00:00Z",
+      "version": "0.1",
+      "itemClass": "schema",
+      "register": "data-types",
+      "isProfileOf": [
+        "bblocks://ogc.rim.schemas.register-item-class"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.rim.schemas.register-item-class"
+      ],
+      "group": "Register model",
+      "highlighted": true,
+      "shaclClosures": [
+        "../vocabulary/data.ttl"
+      ],
+      "shaclShapes": {
+        "ogc.rim.core-ontology": [
+          "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+        ]
+      },
+      "license": {
+        "name": "Apache-2.0"
+      },
+      "dateOfLastChange": "2026-11-03",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/item-class/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/resolvedProperties.json",
+      "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/item-class/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/item-class/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/markdown/item-class/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/json-full/item-class/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geolabs.github.io/bblocks-data-types/bblock/data-types.item-class"
+        }
+      }
+    },
+    {
       "itemIdentifier": "data-types.vocabulary",
       "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
       "name": "Data Types shared concept model",
@@ -38,12 +148,16 @@
       "register": "data-types",
       "isProfileOf": [
         "bblocks://ogc.rim.schemas.concept-version",
-        "bblocks://ogc.rim.schemas.register"
+        "bblocks://ogc.rim.schemas.register",
+        "bblocks://ogc.rim.schemas.register-item"
       ],
       "dependsOn": [
+        "bblocks://data-types.item-class",
+        "bblocks://data-types.register",
         "bblocks://ogc.rim.core-ontology",
         "bblocks://ogc.rim.schemas.concept-version",
-        "bblocks://ogc.rim.schemas.register"
+        "bblocks://ogc.rim.schemas.register",
+        "bblocks://ogc.rim.schemas.register-item"
       ],
       "shaclShapes": {
         "data-types.vocabulary": [
@@ -111,7 +225,7 @@
           "title": "Register metadata (register, owner, system and concept system)"
         }
       ],
-      "ldContext": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/context.jsonld",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/context.jsonld",
       "scope": "dev",
       "tags": [
         "data type",
@@ -145,7 +259,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/ontology.ttl",
-      "sourceLdContext": "https://geolabs.github.io/bblocks-data-types/context.jsonld",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/schema.yaml",
+      "sourceLdContext": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/vocabulary/",
@@ -204,6 +324,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/boolean/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/boolean/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/boolean/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/boolean/",
@@ -262,6 +389,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/bounding-box/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/bounding-box/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/bounding-box/",
@@ -323,6 +457,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/curve/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/curve/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/curve/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/curve/",
@@ -388,6 +529,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/elevation-model/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/elevation-model/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/elevation-model/",
@@ -449,6 +597,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/feature/",
@@ -507,6 +662,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature-collection/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature-collection/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/feature-collection/",
@@ -565,6 +727,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/geometry/",
@@ -626,6 +795,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry-collection/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry-collection/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/geometry-collection/",
@@ -687,6 +863,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/line-string/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/line-string/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/line-string/",
@@ -752,6 +935,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-curve/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-curve/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-curve/",
@@ -817,6 +1007,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-line-string/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-line-string/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-line-string/",
@@ -882,6 +1079,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-point/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-point/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-point/",
@@ -947,6 +1151,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-polygon/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-polygon/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-polygon/",
@@ -1012,6 +1223,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-surface/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-surface/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-surface/",
@@ -1070,6 +1288,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/number/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/number/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/number/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/number/",
@@ -1131,6 +1356,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/point/",
@@ -1189,6 +1421,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point-cloud/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/point-cloud/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point-cloud/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/point-cloud/",
@@ -1250,6 +1489,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/polygon/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/polygon/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/polygon/",
@@ -1308,6 +1554,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster/",
@@ -1369,6 +1622,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-multi-band/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-multi-band/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-multi-band/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster-multi-band/",
@@ -1430,6 +1690,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-single-band/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/raster-single-band/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-single-band/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster-single-band/",
@@ -1488,6 +1755,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-catalog/",
@@ -1553,6 +1827,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-collection/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-collection/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-collection/",
@@ -1614,6 +1895,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-item/",
@@ -1683,6 +1971,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item-collection/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item-collection/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-item-collection/",
@@ -1741,6 +2036,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string/",
@@ -1802,6 +2104,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-date/",
@@ -1863,6 +2172,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date-time/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date-time/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-date-time/",
@@ -1924,6 +2240,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-duration/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-duration/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-duration/",
@@ -1989,6 +2312,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-email/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-email/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-email/",
@@ -2054,6 +2384,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-hostname/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-hostname/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-hostname/",
@@ -2115,6 +2452,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-email/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-email/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-idn-email/",
@@ -2176,6 +2520,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-hostname/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-hostname/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-idn-hostname/",
@@ -2241,6 +2592,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv4/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv4/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-ipv4/",
@@ -2306,6 +2664,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv6/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv6/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-ipv6/",
@@ -2371,6 +2736,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-iri/",
@@ -2436,6 +2808,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri-reference/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri-reference/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-iri-reference/",
@@ -2501,6 +2880,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-json-pointer/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-json-pointer/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-json-pointer/",
@@ -2562,6 +2948,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-password/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-password/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-password/",
@@ -2627,6 +3020,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-relative-json-pointer/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-relative-json-pointer/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-relative-json-pointer/",
@@ -2688,6 +3088,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-time/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-time/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-time/",
@@ -2753,6 +3160,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri/",
@@ -2818,6 +3232,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-reference/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-reference/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri-reference/",
@@ -2883,6 +3304,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-template/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-template/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri-template/",
@@ -2948,6 +3376,13 @@
       },
       "dateOfLastChange": "2026-11-03",
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uuid/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uuid/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uuid/",
@@ -3009,6 +3444,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/surface/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/surface/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/surface/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/surface/",
@@ -3067,6 +3509,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/table/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/table/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/table/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/table/",
@@ -3128,6 +3577,13 @@
         "name": "Apache-2.0"
       },
       "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/ontology.ttl",
+      "schema": {
+        "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/schema.yaml",
+        "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/schema.json"
+      },
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/schema.yaml",
+      "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/context.jsonld",
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/tin/resolvedProperties.json",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/",
       "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/tin/",
