@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
   "name": "Data type: Polygon",
-  "abstract": "A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes.",
+  "abstract": "A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.",
   "status": "under-development",
   "dateTimeAddition": "2026-11-01T00:00:00Z",
   "version": "1.0",
@@ -23,6 +23,10 @@
     {
       "title": "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture",
       "link": "https://www.ogc.org/standards/sfa/"
+    },
+    {
+      "title": "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry",
+      "link": "https://docs.ogc.org/is/23-034/23-034.html"
     }
   ],
   "group": "Geometry data types",

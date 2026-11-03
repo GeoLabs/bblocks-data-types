@@ -6,7 +6,7 @@ A surface represented by a network of triangles over irregularly spaced points.
 
 ## Hierarchy
 
-- Broader: none (top-level data type)
+- Broader: [PolyhedralSurface](../polyhedral-surface/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)
 - Narrower: none
 
 ## Content of this block
@@ -19,3 +19,5 @@ A surface represented by a network of triangles over irregularly spaced points.
 
 - ISO 19107:2019 Geographic information -- Spatial schema (TIN)
 - [SAGA 7.3.0 TIN tools](https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html)
+- [OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture](https://www.ogc.org/standards/sfa/)
+- [OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry](https://docs.ogc.org/is/23-034/23-034.html)

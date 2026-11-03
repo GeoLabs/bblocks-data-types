@@ -19,7 +19,7 @@ examples:
                 "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string",
                 "type": "Concept",
                 "prefLabel": "LineString",
-                "definition": "A connected sequence of two or more points joined by straight line segments, forming a one-dimensional geometry.",
+                "definition": "A curve with linear interpolation between points: each consecutive pair of points defines a line segment.",
                 "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
               },
               "version": "1.0",

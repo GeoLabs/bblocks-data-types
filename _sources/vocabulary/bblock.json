@@ -34,6 +34,8 @@
     "../data-type/geometry-collection/ontology.ttl",
     "../data-type/geometry/ontology.ttl",
     "../data-type/line-string/ontology.ttl",
+    "../data-type/line/ontology.ttl",
+    "../data-type/linear-ring/ontology.ttl",
     "../data-type/multi-curve/ontology.ttl",
     "../data-type/multi-line-string/ontology.ttl",
     "../data-type/multi-point/ontology.ttl",
@@ -43,6 +45,7 @@
     "../data-type/point-cloud/ontology.ttl",
     "../data-type/point/ontology.ttl",
     "../data-type/polygon/ontology.ttl",
+    "../data-type/polyhedral-surface/ontology.ttl",
     "../data-type/raster-multi-band/ontology.ttl",
     "../data-type/raster-single-band/ontology.ttl",
     "../data-type/raster/ontology.ttl",
@@ -72,7 +75,8 @@
     "../data-type/string/ontology.ttl",
     "../data-type/surface/ontology.ttl",
     "../data-type/table/ontology.ttl",
-    "../data-type/tin/ontology.ttl"
+    "../data-type/tin/ontology.ttl",
+    "../data-type/triangle/ontology.ttl"
   ],
   "resources": [
     {

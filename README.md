@@ -33,7 +33,11 @@ existing (reconciliation of the two IRI namespaces is a later, separate decision
 | `data-types.data-type.geometry` | Data type: Geometry |
 | `data-types.data-type.feature` | Data type: Feature |
 | `data-types.data-type.line-string` | Data type: LineString |
+| `data-types.data-type.line` | Data type: Line |
+| `data-types.data-type.linear-ring` | Data type: LinearRing |
 | `data-types.data-type.polygon` | Data type: Polygon |
+| `data-types.data-type.triangle` | Data type: Triangle |
+| `data-types.data-type.polyhedral-surface` | Data type: PolyhedralSurface |
 | `data-types.data-type.multi-point` | Data type: MultiPoint |
 | `data-types.data-type.multi-curve` | Data type: MultiCurve |
 | `data-types.data-type.multi-line-string` | Data type: MultiLineString |
@@ -85,7 +89,9 @@ properties. `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, `MultiPoly
 `curve` and `Polygon` specializes `surface`, while `MultiPoint`, `MultiCurve` and `MultiSurface`
 are collections and specialize `GeometryCollection`; `MultiLineString` specializes `MultiCurve` and
 `MultiPolygon` specializes `MultiSurface`, as in OGC CDB 2.0 Core (23-034, 7.6) and Simple Feature
-Access. `STAC
+Access. `Line` and `LinearRing` specialize `LineString`, `Triangle` specializes `Polygon`, and
+`PolyhedralSurface` specializes `Surface`, with the triangulated irregular network (`tin`) under
+it, as in the geometry model of 23-034 (7.6.1). `STAC
 Item` specializes `Feature`; `STAC Collection` specializes `STAC Catalog`; and
 `STAC Item Collection` specializes `feature-collection`. The latter is a collection of items, not a
 STAC `Collection` metadata object.

@@ -1,4 +1,4 @@
-A planar surface geometry bounded by one exterior ring and, optionally, interior rings that form holes.
+A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.
 
 ## Definition
 
@@ -19,7 +19,7 @@ Illustration only: the data type does not depend on any encoding. Here is one po
 ## Hierarchy
 
 - Broader: [Surface](../surface/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)
-- Narrower: none
+- Narrower: [Triangle](../triangle/)
 
 ## Content of this block
 
@@ -30,3 +30,4 @@ Illustration only: the data type does not depend on any encoding. Here is one po
 ## Sources
 
 - [OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture](https://www.ogc.org/standards/sfa/)
+- [OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry](https://docs.ogc.org/is/23-034/23-034.html)

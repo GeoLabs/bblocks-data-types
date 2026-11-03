@@ -8,6 +8,9 @@
   "version": "1.0",
   "itemClass": "model",
   "register": "data-types",
+  "isProfileOf": [
+    "data-types.data-type.polyhedral-surface"
+  ],
   "dependsOn": [
     "data-types.vocabulary"
   ],
@@ -24,6 +27,14 @@
     {
       "title": "SAGA 7.3.0 TIN tools",
       "link": "https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/tin_tools.html"
+    },
+    {
+      "title": "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture",
+      "link": "https://www.ogc.org/standards/sfa/"
+    },
+    {
+      "title": "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry",
+      "link": "https://docs.ogc.org/is/23-034/23-034.html"
     }
   ],
   "group": "Geometry data types",

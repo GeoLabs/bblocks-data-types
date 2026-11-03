@@ -47,7 +47,9 @@ The geometry types of OGC Simple Feature Access are represented individually: be
 `curve` and `surface`, the `line-string` (under `curve`), `polygon` (under `surface`) and
 `geometry-collection` entries are narrower geometry concepts, and `multi-point`, `multi-curve` and
 `multi-surface` are collections, hence narrower than `geometry-collection`; `multi-line-string` is
-a `multi-curve` and `multi-polygon` a `multi-surface` (OGC CDB 2.0 Core, 23-034, 7.6). A `feature`, which
+a `multi-curve` and `multi-polygon` a `multi-surface` (OGC CDB 2.0 Core, 23-034, 7.6). `line` and
+`linear-ring` are narrower than `line-string`, `triangle` than `polygon`, and `polyhedral-surface`
+than `surface`; `tin` is a `polyhedral-surface` (geometry model of 23-034, 7.6.1). A `feature`, which
 wraps a geometry with properties, is a type of its own. Three distinct STAC data types are
 represented from [`radiantearth/stac-spec`](https://github.com/radiantearth/stac-spec): `stac-item`
 specializes `feature`, `stac-collection` specializes `stac-catalog`, and `stac-item-collection`

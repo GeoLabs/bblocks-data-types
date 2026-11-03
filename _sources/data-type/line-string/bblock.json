@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
   "name": "Data type: LineString",
-  "abstract": "A connected sequence of two or more points joined by straight line segments, forming a one-dimensional geometry.",
+  "abstract": "A curve with linear interpolation between points: each consecutive pair of points defines a line segment.",
   "status": "under-development",
   "dateTimeAddition": "2026-11-01T00:00:00Z",
   "version": "1.0",
@@ -23,6 +23,10 @@
     {
       "title": "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture",
       "link": "https://www.ogc.org/standards/sfa/"
+    },
+    {
+      "title": "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry",
+      "link": "https://docs.ogc.org/is/23-034/23-034.html"
     }
   ],
   "group": "Geometry data types",
