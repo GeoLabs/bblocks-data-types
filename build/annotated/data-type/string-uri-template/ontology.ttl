@@ -1,0 +1,34 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template/v1> a dt:DataTypeVersion,
+        rim:ConceptVersion ;
+    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template/actions/addition> ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template> a skos:Concept,
+        dt:DataType,
+        rim:Concept ;
+    dct:source [ dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ;
+            dct:title "EOAP schemas: string_format.yaml (JSON Schema format: uri-template)"@en ],
+        [ dct:references <https://datatracker.ietf.org/doc/html/rfc6570> ;
+            dct:title "RFC 6570"@en ] ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/string> ;
+    skos:definition "A string representing a URI template as defined by RFC 6570."@en ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "URI template string"@en .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-01T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+

@@ -1,0 +1,68 @@
+
+
+{
+  "itemIdentifier": "data-types.data-type.stac-item",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: STAC Item",
+  "abstract": "A STAC Item: a feature with STAC identity, links, assets, version and spatiotemporal metadata.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-02T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "isProfileOf": [
+    "data-types.data-type.feature"
+  ],
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "STAC Item JSON Schema",
+      "link": "https://github.com/radiantearth/stac-spec/blob/master/item-spec/json-schema/item.json"
+    }
+  ],
+  "group": "STAC data types",
+  "highlighted": true,
+  "shaclShapes": {
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-03",
+  "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/ontology.ttl",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/",
+  "validationPassed": false,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-item/",
+  "description": "A STAC Item: a feature with STAC identity, links, assets, version and spatiotemporal metadata.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Usage\n\nA STAC Item is a Feature (see Feature). In the STAC 1.1.0 JSON Schema it must have:\n\n- `stac_version`, `id`, `links`, `assets` and `properties`;\n- a `geometry`, and a `bbox` when the geometry is not `null`;\n- `properties.datetime`, which may be `null` only if `start_datetime` and `end_datetime` are given;\n- a `collection` identifier if, and only if, its `links` contain a `collection` relation.\n\nIt describes one spatiotemporal asset (for example a satellite scene) and points to its files through `assets`.\n\n## Hierarchy\n\n- Broader: [Feature](../feature/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [STAC Item JSON Schema](https://github.com/radiantearth/stac-spec/blob/master/item-spec/json-schema/item.json)\n",
+  "examples": [
+    {
+      "title": "STAC Item",
+      "content": "Canonical concept, version and addition action for this data type.",
+      "snippets": [
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/stac-item/example_1_1.ttl",
+          "sizeBytes": 1695,
+          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"STAC Item\"@en ; skos:definition \"A STAC Item: a feature with STAC identity, links, assets, version and spatiotemporal metadata.\"@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/feature> ; dct:source [ dct:title \"STAC Item JSON Schema\"@en ; dct:references <https://github.com/radiantearth/stac-spec/blob/master/item-spec/json-schema/item.json> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-11-02T00:00:00Z\"^^xsd:dateTime .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/data-type/stac-item"
+}

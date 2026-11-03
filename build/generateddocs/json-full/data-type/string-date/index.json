@@ -1,0 +1,68 @@
+
+
+{
+  "itemIdentifier": "data-types.data-type.string-date",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: String \u2014 date",
+  "abstract": "A string representing a calendar date in the YYYY-MM-DD format.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-01T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "isProfileOf": [
+    "data-types.data-type.string"
+  ],
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "EOAP schemas: string_format.yaml (JSON Schema format: date)",
+      "link": "https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml"
+    }
+  ],
+  "group": "String formats",
+  "highlighted": true,
+  "shaclShapes": {
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-03",
+  "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/ontology.ttl",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/",
+  "validationPassed": false,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-date/",
+  "description": "A string representing a calendar date in the YYYY-MM-DD format.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/string-date` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Usage\n\nAn Implementation Profile can express this type as:\n\n```json\n{ \"type\": \"string\", \"format\": \"date\" }\n```\n\nValid values: `2026-11-03`.\n\nThis is the RFC 3339 `full-date` (`YYYY-MM-DD`): a date without a time of day. For an instant use String \u2014 date-time.\n\nAs with any JSON Schema `format`, whether a value is actually checked depends on the validator.\n\n## Hierarchy\n\n- Broader: [String](../string/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [EOAP schemas: string_format.yaml (JSON Schema format: date)](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)\n",
+  "examples": [
+    {
+      "title": "Date string",
+      "content": "Canonical concept, version and addition action for this string format.",
+      "snippets": [
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/string-date/example_1_1.ttl",
+          "sizeBytes": 1702,
+          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"Date string\"@en ; skos:definition \"A string representing a calendar date in the YYYY-MM-DD format.\"@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/string> ; dct:source [ dct:title \"EOAP schemas: string_format.yaml (JSON Schema format: date)\"@en ; dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-date> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/string-date/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/string-date\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-date/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/string-date/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-11-01T00:00:00Z\"^^xsd:dateTime .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/data-type/string-date"
+}

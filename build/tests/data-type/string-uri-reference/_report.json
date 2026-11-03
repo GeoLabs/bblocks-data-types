@@ -1,0 +1,146 @@
+{
+  "title": "Validation report for data-types.data-type.string-uri-reference - Data type: String \u2014 URI reference",
+  "bblockName": "Data type: String \u2014 URI reference",
+  "bblockId": "data-types.data-type.string-uri-reference",
+  "generated": "2026-11-03T18:57:04.327366+00:00",
+  "result": false,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/data-type/string-uri-reference/example_1_1.ttl",
+        "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/string-uri-reference/example_1_1.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": false,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using ontology.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 26,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Error processing closure source /github/workspace/_sources/vocabulary/data.ttl: [Errno 2] No such file or directory: '/github/workspace/_sources/vocabulary/data.ttl' - SHACL validation will run against an incomplete closure graph"
+            },
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/feature-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-point/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-date-time/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-password/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/bounding-box/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string/ontology.ttl\n - /github/workspace/_sources/data-type/string/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/elevation-model/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-idn-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-iri/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/raster/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/surface/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/stac-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/point-cloud/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/geometry-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-curve/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/boolean/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-relative-json-pointer/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/feature/ontology.ttl\n - /github/workspace/_sources/vocabulary/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-uri/ontology.ttl\n - /github/workspace/_sources/data-type/string-uri-reference/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/stac-item/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-surface/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-hostname/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-polygon/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-iri-reference/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-line-string/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-time/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/stac-item-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/point/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-json-pointer/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/table/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/line-string/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/number/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-duration/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-uri-reference/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-ipv4/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-date/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/geometry/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-uri-template/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/tin/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-ipv6/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-idn-hostname/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/raster-single-band/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/raster-multi-band/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/curve/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-uuid/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/stac-catalog/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/polygon/ontology.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/vocabulary/shapes.shacl",
+              "graph": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode dt:register ;\n            sh:resultMessage \"The data-types register must identify its one rim:ConceptSystem.\" ;\n            sh:resultPath dt:conceptSystem ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:class rim:ConceptSystem ;\n                    sh:maxCount 1 ;\n                    sh:message \"The data-types register must identify its one rim:ConceptSystem.\" ;\n                    sh:minCount 1 ;\n                    sh:path dt:conceptSystem ] ] .\n\n",
+              "isError": true,
+              "message": "Validation result for _sources/vocabulary/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:class rim:ConceptSystem ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"The data-types register must identify its one rim:ConceptSystem.\") ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dt:conceptSystem ]\n  \tFocus Node: dt:register\n  \tResult Path: dt:conceptSystem\n  \tMessage: The data-types register must identify its one rim:ConceptSystem.\n  "
+            },
+            {
+              "shaclFile": "_sources/vocabulary/shapes.shacl",
+              "focusNodes": {
+                "dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape": {
+                  "nodes": []
+                },
+                "dt:DataTypeVersionShape": {
+                  "nodes": [
+                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/v1>"
+                  ]
+                },
+                "dt:DataTypeShape": {
+                  "nodes": [
+                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference>"
+                  ]
+                },
+                "dt:RegisterShape": {
+                  "nodes": [
+                    "dt:register"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/vocabulary/shapes.shacl:\n - Shape dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape dt:DataTypeVersionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/v1>\n - Shape dt:DataTypeShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference>\n - Shape dt:RegisterShape: dt:register\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "focusNodes": {
+                "rim:RegisterActionShape": {
+                  "nodes": [
+                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/actions/addition>"
+                  ]
+                },
+                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
+                  "nodes": []
+                },
+                "rim:RegisterSpecificationShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemShape": {
+                  "nodes": []
+                },
+                "rim:CommitmentShape": {
+                  "nodes": []
+                },
+                "rim:ConceptShape": {
+                  "nodes": [
+                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference>"
+                  ]
+                },
+                "rim:ConceptVersionShape": {
+                  "nodes": [
+                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/v1>"
+                  ]
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterActionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/actions/addition>\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:ConceptShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference>\n - Shape rim:ConceptVersionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-reference/v1>\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  }
+}

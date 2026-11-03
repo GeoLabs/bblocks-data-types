@@ -1,0 +1,65 @@
+
+
+{
+  "itemIdentifier": "data-types.data-type.stac-catalog",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: STAC Catalog",
+  "abstract": "A STAC Catalog: a linked metadata object organizing STAC Items, Collections or child Catalogs.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-02T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "STAC Catalog JSON Schema",
+      "link": "https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/json-schema/catalog.json"
+    }
+  ],
+  "group": "STAC data types",
+  "highlighted": true,
+  "shaclShapes": {
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-03",
+  "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/ontology.ttl",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/",
+  "validationPassed": false,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-catalog/",
+  "description": "A STAC Catalog: a linked metadata object organizing STAC Items, Collections or child Catalogs.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Usage\n\nA STAC Catalog organises other STAC objects through its `links`. In the STAC 1.1.0 JSON Schema it must have `stac_version`, `type: \"Catalog\"`, `id`, `description` and `links`; `title` and `stac_extensions` are optional.\n\nIt carries no assets and no extent: those are added by STAC Collection.\n\n## Hierarchy\n\n- Broader: none (top-level data type)\n- Narrower: [STAC Collection](../stac-collection/)\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [STAC Catalog JSON Schema](https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/json-schema/catalog.json)\n",
+  "examples": [
+    {
+      "title": "STAC Catalog",
+      "content": "Canonical concept, version and addition action for this data type.",
+      "snippets": [
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/stac-catalog/example_1_1.ttl",
+          "sizeBytes": 1644,
+          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"STAC Catalog\"@en ; skos:definition \"A STAC Catalog: a linked metadata object organizing STAC Items, Collections or child Catalogs.\"@en ; dct:source [ dct:title \"STAC Catalog JSON Schema\"@en ; dct:references <https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/json-schema/catalog.json> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-11-02T00:00:00Z\"^^xsd:dateTime .\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/data-type/stac-catalog"
+}

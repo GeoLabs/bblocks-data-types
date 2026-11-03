@@ -1,0 +1,34 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1> a dt:DataTypeVersion,
+        rim:ConceptVersion ;
+    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/addition> ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection> a skos:Concept,
+        dt:DataType,
+        rim:Concept ;
+    dct:source [ dct:references <https://github.com/radiantearth/stac-spec/blob/master/collection-spec/json-schema/collection.json> ;
+            dct:title "STAC Collection JSON Schema"@en ],
+        [ dct:references <https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/json-schema/catalog.json> ;
+            dct:title "STAC Catalog JSON Schema"@en ] ;
+    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog> ;
+    skos:definition "A STAC Collection: a Catalog specialization that describes a collection of related spatiotemporal assets with spatial and temporal extents."@en ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "STAC Collection"@en .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-02T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+

@@ -1,9 +1,9 @@
 {
-  "title": "Validation report for data-types.vocabulary - Data Types vocabulary",
-  "bblockName": "Data Types vocabulary",
+  "title": "Validation report for data-types.vocabulary - Data Types shared concept model",
+  "bblockName": "Data Types shared concept model",
   "bblockId": "data-types.vocabulary",
-  "generated": "2026-10-27T12:57:17.477159+00:00",
-  "result": true,
+  "generated": "2026-11-03T18:56:52.951647+00:00",
+  "result": false,
   "items": [
     {
       "source": {
@@ -42,18 +42,27 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl\n - /github/workspace/_sources/vocabulary/ontology.ttl"
+              "message": "Error processing closure source /github/workspace/_sources/vocabulary/data.ttl: [Errno 2] No such file or directory: '/github/workspace/_sources/vocabulary/data.ttl' - SHACL validation will run against an incomplete closure graph"
+            },
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/feature-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-point/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-date-time/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-password/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/bounding-box/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/elevation-model/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-idn-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-iri/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/raster/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/surface/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/stac-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/point-cloud/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/geometry-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-curve/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/boolean/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-relative-json-pointer/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/feature/ontology.ttl\n - /github/workspace/_sources/vocabulary/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-email/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-uri/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/stac-item/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-surface/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-hostname/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-polygon/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-iri-reference/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/multi-line-string/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-time/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/stac-item-collection/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/point/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-json-pointer/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/table/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/line-string/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/number/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-duration/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-uri-reference/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-ipv4/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-date/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/geometry/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-uri-template/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/tin/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-ipv6/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-idn-hostname/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/raster-single-band/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/raster-multi-band/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/curve/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/string-uuid/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/stac-catalog/ontology.ttl\n - /github/workspace/_sources/vocabulary/../data-type/polygon/ontology.ttl"
             },
             {
               "op": "shacl-report",
               "shaclFile": "_sources/vocabulary/shapes.shacl",
-              "graph": "@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1> ;\n            sh:resultMessage \"A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer.\" ;\n            sh:resultPath rim:hasAction ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:message \"A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer.\" ;\n                    sh:minCount 1 ;\n                    sh:path rim:hasAction ;\n                    sh:qualifiedMinCount 1 ;\n                    sh:qualifiedValueShape [ sh:property [ sh:minCount 1 ;\n                                    sh:path rim:proposer ],\n                                [ sh:hasValue rim:additionAction ;\n                                    sh:path rim:actionType ] ] ] ] .\n\n",
+              "graph": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1> ;\n            sh:resultMessage \"A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer.\" ;\n            sh:resultPath dt:hasVersionAction ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:message \"A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer.\" ;\n                    sh:minCount 1 ;\n                    sh:path dt:hasVersionAction ;\n                    sh:qualifiedMinCount 1 ;\n                    sh:qualifiedValueShape [ sh:class rim:RegisterAction ;\n                            sh:property [ sh:hasValue rim:additionAction ;\n                                    sh:path rim:actionType ],\n                                [ sh:minCount 1 ;\n                                    sh:path rim:proposer ] ] ] ],\n        [ a sh:ValidationResult ;\n            sh:focusNode dt:register ;\n            sh:resultMessage \"The data-types register must identify its one rim:ConceptSystem.\" ;\n            sh:resultPath dt:conceptSystem ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:class rim:ConceptSystem ;\n                    sh:maxCount 1 ;\n                    sh:message \"The data-types register must identify its one rim:ConceptSystem.\" ;\n                    sh:minCount 1 ;\n                    sh:path dt:conceptSystem ] ] .\n\n",
               "isError": true,
-              "message": "Validation result for _sources/vocabulary/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:message Literal(\"A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer.\") ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rim:hasAction ; sh:qualifiedMinCount Literal(\"1\", datatype=xsd:integer) ; sh:qualifiedValueShape [ sh:property [ sh:hasValue rim:additionAction ; sh:path rim:actionType ], [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rim:proposer ] ] ]\n  \tFocus Node: <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1>\n  \tResult Path: rim:hasAction\n  \tMessage: A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer.\n  "
+              "message": "Validation result for _sources/vocabulary/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (2):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:message Literal(\"A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer.\") ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dt:hasVersionAction ; sh:qualifiedMinCount Literal(\"1\", datatype=xsd:integer) ; sh:qualifiedValueShape [ sh:class rim:RegisterAction ; sh:property [ sh:hasValue rim:additionAction ; sh:path rim:actionType ], [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path rim:proposer ] ] ]\n  \tFocus Node: <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1>\n  \tResult Path: dt:hasVersionAction\n  \tMessage: A data type version must record its addition: a rim:hasAction of type rim:additionAction with a rim:proposer.\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:class rim:ConceptSystem ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"The data-types register must identify its one rim:ConceptSystem.\") ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path dt:conceptSystem ]\n  \tFocus Node: dt:register\n  \tResult Path: dt:conceptSystem\n  \tMessage: The data-types register must identify its one rim:ConceptSystem.\n  "
             },
             {
               "shaclFile": "_sources/vocabulary/shapes.shacl",
               "focusNodes": {
+                "dt:DataTypeVersionShape": {
+                  "nodes": [
+                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1>"
+                  ]
+                },
                 "dt:DataTypeShape": {
                   "nodes": [
                     "<https://geolabs.github.io/bblocks-data-types/def/data-type/never-added>"
@@ -62,61 +71,61 @@
                 "dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape": {
                   "nodes": []
                 },
-                "dt:DataTypeVersionShape": {
+                "dt:RegisterShape": {
                   "nodes": [
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1>"
+                    "dt:register"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/vocabulary/shapes.shacl:\n - Shape dt:DataTypeShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added>\n - Shape dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape dt:DataTypeVersionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1>\n"
+              "message": "Focus nodes for _sources/vocabulary/shapes.shacl:\n - Shape dt:DataTypeVersionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added/v1>\n - Shape dt:DataTypeShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/never-added>\n - Shape dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape dt:RegisterShape: dt:register\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
+              "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:ConceptVersionShape": {
-                  "nodes": []
-                },
-                "rim:TextShape": {
-                  "nodes": []
-                },
-                "rim:RegisterItemClassShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "rim:RegisterShape": {
+                "rim:RegisterActionShape": {
                   "nodes": []
                 },
                 "rim:TextShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "rim:RegisterItemShape": {
+                "rim:TextShape": {
+                  "nodes": []
+                },
+                "rim:TextShape/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "rim:RegisterItemClassShape": {
                   "nodes": []
                 },
                 "rim:RegisterSpecificationShape": {
                   "nodes": []
                 },
-                "rim:ConceptShape": {
-                  "nodes": []
-                },
-                "rim:RegisterActionShape": {
+                "rim:RegisterItemShape": {
                   "nodes": []
                 },
                 "rim:CommitmentShape": {
                   "nodes": []
+                },
+                "rim:ConceptShape": {
+                  "nodes": []
+                },
+                "rim:ConceptVersionShape": {
+                  "nodes": []
+                },
+                "rim:RegisterShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:CommitmentShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterShape: *none*\n"
             }
           ]
         }
@@ -154,156 +163,18 @@
         "url": "https://geolabs.github.io/bblocks-data-types/build/tests/vocabulary/example_2_1.ttl",
         "exampleIndex": 2,
         "snippetIndex": 1,
-        "language": "text/turtle"
+        "language": "turtle",
+        "sourceUrl": "data.ttl"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
           "title": "Files",
           "entries": [
             {
-              "isError": false,
-              "message": "Using example_2_1.ttl from examples"
-            },
-            {
-              "op": "ttl-create",
-              "empty": false,
-              "filename": "example_2_1.ttl",
-              "size": 265,
-              "isError": false,
-              "message": "Output Turtle example_2_1.ttl created"
-            }
-          ]
-        },
-        {
-          "name": "SHACL",
-          "title": "SHACL",
-          "entries": [
-            {
-              "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://nielshoffmann.github.io/registered-item-model/build/annotated/model/registered-item/core-ontology/ontology.ttl\n - /github/workspace/_sources/vocabulary/ontology.ttl"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/vocabulary/shapes.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/vocabulary/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/vocabulary/shapes.shacl",
-              "focusNodes": {
-                "dt:DataTypeShape": {
-                  "nodes": [
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/point>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/surface>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/table>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/number>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/curve>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/string>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/tin>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band>"
-                  ]
-                },
-                "dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape": {
-                  "nodes": []
-                },
-                "dt:DataTypeVersionShape": {
-                  "nodes": [
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/point/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/table/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/string/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/v1>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1>"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/vocabulary/shapes.shacl:\n - Shape dt:DataTypeShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number>,<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box>,<https://geolabs.github.io/bblocks-data-types/def/data-type/tin>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band>,<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band>\n - Shape dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape: *none*\n - Shape dt:DataTypeVersionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/v1>,<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/v1>\n"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
-              "focusNodes": {
-                "rim:ConceptVersionShape": {
-                  "nodes": []
-                },
-                "rim:TextShape": {
-                  "nodes": []
-                },
-                "rim:RegisterItemClassShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "rim:RegisterShape": {
-                  "nodes": []
-                },
-                "rim:TextShape/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "rim:RegisterItemShape": {
-                  "nodes": []
-                },
-                "rim:RegisterSpecificationShape": {
-                  "nodes": []
-                },
-                "rim:ConceptShape": {
-                  "nodes": []
-                },
-                "rim:RegisterActionShape": {
-                  "nodes": [
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/table/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/string/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/point/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition>",
-                    "<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/actions/addition>"
-                  ]
-                },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for https://nielshoffmann.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterItemClassShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:RegisterActionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point-cloud/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/boolean/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/number/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/raster/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/table/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/string/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/geometry/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/point/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/curve/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/tin/actions/addition>,<https://geolabs.github.io/bblocks-data-types/def/data-type/surface/actions/addition>\n - Shape rim:CommitmentShape: *none*\n"
+              "isError": true,
+              "message": "Resource not accessible: data.ttl ([Errno 2] No such file or directory: '/github/workspace/_sources/vocabulary/data.ttl')"
             }
           ]
         }
@@ -313,7 +184,7 @@
   "globalErrors": {},
   "counts": {
     "total": 3,
-    "passed": 3,
-    "failed": 0
+    "passed": 2,
+    "failed": 1
   }
 }
