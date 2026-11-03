@@ -48,7 +48,7 @@
   "dateOfLastChange": "2026-11-03",
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/ontology.ttl",
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uuid/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uuid/",
   "description": "A string representation of a universally unique identifier (UUID).\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/string-uuid` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Usage\n\nAn Implementation Profile can express this type as:\n\n```json\n{ \"type\": \"string\", \"format\": \"uuid\" }\n```\n\nValid values: `123e4567-e89b-12d3-a456-426614174000`.\n\nAs with any JSON Schema `format`, whether a value is actually checked depends on the validator.\n\n## Hierarchy\n\n- Broader: [String](../string/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [EOAP schemas: string_format.yaml (JSON Schema format: uuid)](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)\n- [UUID specification references](https://www.rfc-editor.org/rfc/rfc9562.html)\n",
   "examples": [

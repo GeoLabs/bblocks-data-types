@@ -48,7 +48,7 @@
   },
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/elevation-model/ontology.ttl",
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/elevation-model/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/elevation-model/",
   "description": "A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM).\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Hierarchy\n\n- Broader: [Raster (single band)](../raster-single-band/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [OGC 09-146r8 CIS 1.1.1, \u00a76.5 RangeType](https://docs.ogc.org/is/09-146r8/09-146r8.html)\n- [SAGA 7.3.0 Terrain Analysis tools, Elevation grid inputs](https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html)\n",
   "examples": [

@@ -44,7 +44,7 @@
   "dateOfLastChange": "2026-11-03",
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/ontology.ttl",
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-item/",
   "description": "A STAC Item: a feature with STAC identity, links, assets, version and spatiotemporal metadata.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Usage\n\nA STAC Item is a Feature (see Feature). In the STAC 1.1.0 JSON Schema it must have:\n\n- `stac_version`, `id`, `links`, `assets` and `properties`;\n- a `geometry`, and a `bbox` when the geometry is not `null`;\n- `properties.datetime`, which may be `null` only if `start_datetime` and `end_datetime` are given;\n- a `collection` identifier if, and only if, its `links` contain a `collection` relation.\n\nIt describes one spatiotemporal asset (for example a satellite scene) and points to its files through `assets`.\n\n## Hierarchy\n\n- Broader: [Feature](../feature/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [STAC Item JSON Schema](https://github.com/radiantearth/stac-spec/blob/master/item-spec/json-schema/item.json)\n",
   "examples": [

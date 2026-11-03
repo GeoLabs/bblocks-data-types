@@ -41,7 +41,7 @@
   },
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry/ontology.ttl",
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/geometry/",
   "description": "A geometric object of the Simple Feature Access geometry model.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/geometry` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Hierarchy\n\n- Broader: none (top-level data type)\n- Narrower: [Curve](../curve/), [GeometryCollection](../geometry-collection/), [Point](../point/), [Surface](../surface/)\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture](https://www.ogc.org/standards/sfa/)\n",
   "examples": [

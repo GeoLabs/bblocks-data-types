@@ -41,7 +41,7 @@
   },
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature-collection/ontology.ttl",
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature-collection/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/feature-collection/",
   "description": "A set of features, each with a geometry and attributes -- e.g. a SAGA shapes layer or an OGC API - Features feature collection.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Hierarchy\n\n- Broader: none (top-level data type)\n- Narrower: [STAC Item Collection](../stac-item-collection/)\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [OGC 17-069r4 OGC API - Features - Part 1: Core](https://docs.ogc.org/is/17-069r4/17-069r4.html)\n",
   "examples": [

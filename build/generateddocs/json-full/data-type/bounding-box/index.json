@@ -41,7 +41,7 @@
   },
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/bounding-box/ontology.ttl",
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/bounding-box/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/bounding-box/",
   "description": "An axis-aligned extent given by its corners, with its CRS.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Hierarchy\n\n- Broader: none (top-level data type)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [ogc.api.processes.v1.schemas.bbox, after OGC 17-069r4 \u00a77.15.3 bbox](https://docs.ogc.org/is/17-069r4/17-069r4.html)\n",
   "examples": [

@@ -1,0 +1,29 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dt:register a rim:Register ;
+    dct:description "A concept-plane register of the kinds of data that process profile inputs and outputs carry."@en ;
+    dct:title "Data Types"@en ;
+    dt:conceptSystem dt:dataTypes ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/register"^^xsd:anyURI ;
+    rim:registerManager dt:geolabs ;
+    rim:registerOwner dt:geolabs ;
+    rim:runsOn dt:registerSystem .
+
+dt:dataTypes a skos:ConceptScheme,
+        rim:ConceptSystem ;
+    dct:description "The kinds of data a process profile's inputs and outputs carry, independent of encoding."@en ;
+    dct:title "Data types"@en ;
+    skos:prefLabel "Data types"@en .
+
+dt:registerSystem a rim:RegisterSystem ;
+    dct:title "OGC Building Blocks register (bblocks-postprocess, GitHub Pages)"@en .
+
+dt:geolabs a prov:Organization ;
+    dct:title "GeoLabs SARL"@en .
+

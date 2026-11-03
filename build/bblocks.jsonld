@@ -213,7 +213,7 @@
   "name": "Building Blocks - Data Types",
   "abstract": "A concept-plane register (ISO 19135:2026, via the Registered Item Model) of the kinds of data\nthat process profile inputs and outputs carry -- raster (by band count), elevation model,\ngeometry (by type), feature collection, point cloud, TIN, table, bounding box and the literals.\nEach data type is a rim:Concept in a rim:ConceptSystem, with a governed rim:ConceptVersion.\nA data type names the *kind* of data, not its encoding: the encoding a concrete process uses is\ndeclared where that process is profiled (an Implementation Profile's schema).\n",
   "description": "This register holds, as a Registered Item Model **concept plane**, the vocabulary first drafted\ninline in [GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)\nas its generic-profiles.data-type block. Extracting it makes the vocabulary reusable beyond that\none register and gives it its own governance and lifecycle.\n\nModelled on the concept plane of the\n[Registered Item Model](https://ogcincubator.github.io/registered-item-model/): dt:DataType is a\nsub-class of rim:Concept (a unit of meaning), dt:dataTypes is the rim:ConceptSystem that holds\nthem, and each type's governed state lives on a rim:ConceptVersion. A data type names the kind of\ndata (its meaning); the encoding a concrete process uses is declared at the Implementation Profile\ntier, not here. Some types are nonetheless grounded in a standard that happens to be a format\n(e.g. point cloud in the OGC LAS community standard) -- that is their source, not their encoding.\n\nIdentifiers: this register mints its own IRIs\n(https://geolabs.github.io/bblocks-data-types/def/data-type/...). The original inline block in\nbblocks-generic-profiles keeps its own until a permanent, register-independent namespace is agreed\nand that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.\n",
-  "modified": "2026-11-03T18:56:50.046051",
+  "modified": "2026-11-03T20:27:20.706878",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"373c26d1cdf143759ae2c602c0713e98e6af6fc9",
@@ -406,7 +406,7 @@
       },
       "sourceLdContext": "https://geolabs.github.io/bblocks-data-types/context.jsonld",
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/vocabulary/",
       "documentation": {
         "markdown": {
@@ -495,7 +495,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/boolean/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/boolean/",
       "documentation": {
         "markdown": {
@@ -586,7 +586,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/bounding-box/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/bounding-box/",
       "documentation": {
         "markdown": {
@@ -680,7 +680,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/curve/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/curve/",
       "documentation": {
         "markdown": {
@@ -777,7 +777,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/elevation-model/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/elevation-model/",
       "documentation": {
         "markdown": {
@@ -870,7 +870,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/feature/",
       "documentation": {
         "markdown": {
@@ -961,7 +961,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/feature-collection/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/feature-collection/",
       "documentation": {
         "markdown": {
@@ -1052,7 +1052,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/geometry/",
       "documentation": {
         "markdown": {
@@ -1146,7 +1146,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/geometry-collection/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/geometry-collection/",
       "documentation": {
         "markdown": {
@@ -1239,7 +1239,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/line-string/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/line-string/",
       "documentation": {
         "markdown": {
@@ -1336,7 +1336,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-curve/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-curve/",
       "documentation": {
         "markdown": {
@@ -1433,7 +1433,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-line-string/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-line-string/",
       "documentation": {
         "markdown": {
@@ -1530,7 +1530,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-point/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-point/",
       "documentation": {
         "markdown": {
@@ -1627,7 +1627,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-polygon/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-polygon/",
       "documentation": {
         "markdown": {
@@ -1724,7 +1724,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/multi-surface/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/multi-surface/",
       "documentation": {
         "markdown": {
@@ -1814,7 +1814,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/number/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/number/",
       "documentation": {
         "markdown": {
@@ -1908,7 +1908,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/point/",
       "documentation": {
         "markdown": {
@@ -1998,7 +1998,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/point-cloud/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/point-cloud/",
       "documentation": {
         "markdown": {
@@ -2092,7 +2092,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/polygon/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/polygon/",
       "documentation": {
         "markdown": {
@@ -2182,7 +2182,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster/",
       "documentation": {
         "markdown": {
@@ -2276,7 +2276,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-multi-band/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster-multi-band/",
       "documentation": {
         "markdown": {
@@ -2369,7 +2369,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/raster-single-band/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/raster-single-band/",
       "documentation": {
         "markdown": {
@@ -2459,7 +2459,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-catalog/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-catalog/",
       "documentation": {
         "markdown": {
@@ -2557,7 +2557,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-collection/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-collection/",
       "documentation": {
         "markdown": {
@@ -2650,7 +2650,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-item/",
       "documentation": {
         "markdown": {
@@ -2751,7 +2751,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/stac-item-collection/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/stac-item-collection/",
       "documentation": {
         "markdown": {
@@ -2841,7 +2841,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string/",
       "documentation": {
         "markdown": {
@@ -2935,7 +2935,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-date/",
       "documentation": {
         "markdown": {
@@ -3028,7 +3028,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date-time/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-date-time/",
       "documentation": {
         "markdown": {
@@ -3121,7 +3121,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-duration/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-duration/",
       "documentation": {
         "markdown": {
@@ -3218,7 +3218,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-email/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-email/",
       "documentation": {
         "markdown": {
@@ -3315,7 +3315,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-hostname/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-hostname/",
       "documentation": {
         "markdown": {
@@ -3408,7 +3408,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-email/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-idn-email/",
       "documentation": {
         "markdown": {
@@ -3501,7 +3501,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-idn-hostname/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-idn-hostname/",
       "documentation": {
         "markdown": {
@@ -3598,7 +3598,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv4/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-ipv4/",
       "documentation": {
         "markdown": {
@@ -3695,7 +3695,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-ipv6/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-ipv6/",
       "documentation": {
         "markdown": {
@@ -3792,7 +3792,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-iri/",
       "documentation": {
         "markdown": {
@@ -3889,7 +3889,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-iri-reference/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-iri-reference/",
       "documentation": {
         "markdown": {
@@ -3986,7 +3986,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-json-pointer/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-json-pointer/",
       "documentation": {
         "markdown": {
@@ -4079,7 +4079,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-password/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-password/",
       "documentation": {
         "markdown": {
@@ -4176,7 +4176,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-relative-json-pointer/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-relative-json-pointer/",
       "documentation": {
         "markdown": {
@@ -4269,7 +4269,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-time/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-time/",
       "documentation": {
         "markdown": {
@@ -4366,7 +4366,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri/",
       "documentation": {
         "markdown": {
@@ -4463,7 +4463,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-reference/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri-reference/",
       "documentation": {
         "markdown": {
@@ -4560,7 +4560,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-template/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri-template/",
       "documentation": {
         "markdown": {
@@ -4657,7 +4657,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uuid/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uuid/",
       "documentation": {
         "markdown": {
@@ -4750,7 +4750,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/surface/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/surface/",
       "documentation": {
         "markdown": {
@@ -4840,7 +4840,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/table/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/table/",
       "documentation": {
         "markdown": {
@@ -4934,7 +4934,7 @@
         "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
       },
       "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/tin/",
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/tin/",
       "documentation": {
         "markdown": {

@@ -48,7 +48,7 @@
   "dateOfLastChange": "2026-11-03",
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/ontology.ttl",
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-uri-template/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-uri-template/",
   "description": "A string representing a URI template as defined by RFC 6570.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/string-uri-template` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Usage\n\nAn Implementation Profile can express this type as:\n\n```json\n{ \"type\": \"string\", \"format\": \"uri-template\" }\n```\n\nValid values: `https://example.org/collections/{collectionId}/items{?limit}`.\n\nA template to be expanded with variables, not yet a usable URI.\n\nAs with any JSON Schema `format`, whether a value is actually checked depends on the validator.\n\n## Hierarchy\n\n- Broader: [String](../string/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [EOAP schemas: string_format.yaml (JSON Schema format: uri-template)](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)\n- [RFC 6570](https://datatracker.ietf.org/doc/html/rfc6570)\n",
   "examples": [

@@ -44,7 +44,7 @@
   "dateOfLastChange": "2026-11-03",
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/ontology.ttl",
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/string-date-time/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/string-date-time/",
   "description": "A string representing a date and time in the YYYY-MM-DDThh:mm:ss.sTZD format.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Usage\n\nAn Implementation Profile can express this type as:\n\n```json\n{ \"type\": \"string\", \"format\": \"date-time\" }\n```\n\nValid values: `2026-11-03T12:30:00Z`, `2026-11-03T13:30:00.5+01:00`.\n\nA time zone offset or `Z` is required (RFC 3339 `date-time`).\n\nAs with any JSON Schema `format`, whether a value is actually checked depends on the validator.\n\n## Hierarchy\n\n- Broader: [String](../string/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion` and the proposed addition action (canonical source).\n- `examples.yaml`: the same graph shown as a Turtle example.\n\n## Sources\n\n- [EOAP schemas: string_format.yaml (JSON Schema format: date-time)](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)\n",
   "examples": [
