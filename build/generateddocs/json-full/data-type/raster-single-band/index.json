@@ -7,7 +7,7 @@
   "abstract": "A raster with exactly one band: a range type of one field.",
   "status": "under-development",
   "dateTimeAddition": "2026-10-08T00:00:00Z",
-  "dateOfLastChange": "2026-11-03",
+  "dateOfLastChange": "2026-11-04",
   "version": "1.0",
   "itemClass": "model",
   "register": "data-types",
@@ -81,7 +81,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Raster (single band)\ndescription: The register item of the Raster (single band) data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.raster-single-band\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-03'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Raster (single band)\ndescription: The register item of the Raster (single band) data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.raster-single-band\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-04'\n",
   "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
   "gitPath": "_sources/data-type/raster-single-band"
 }

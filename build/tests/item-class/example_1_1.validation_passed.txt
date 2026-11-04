@@ -1,5 +1,5 @@
 Validation report for data-types.item-class - Data type item class
-Generated 2026-11-03T22:28:39.423653+00:00
+Generated 2026-11-04T10:40:56.947010+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -20,17 +20,17 @@ Validation result for https://ogcincubator.github.io/registered-item-model/_sour
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:
- - Shape rim:RegisterActionShape: *none*
- - Shape rim:RegisterShape: *none*
- - Shape rim:RegisterItemClassShape: <https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass>
- - Shape rim:TextShape: *none*
  - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:ConceptVersionShape: *none*
+ - Shape rim:RegisterItemShape: *none*
+ - Shape rim:RegisterItemClassShape: <https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass>
+ - Shape rim:ConceptShape: *none*
+ - Shape rim:CommitmentShape: *none*
  - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
  - Shape rim:RegisterSpecificationShape: *none*
- - Shape rim:ConceptShape: *none*
- - Shape rim:ConceptVersionShape: *none*
- - Shape rim:CommitmentShape: *none*
- - Shape rim:RegisterItemShape: *none*
+ - Shape rim:RegisterShape: *none*
+ - Shape rim:TextShape: *none*
+ - Shape rim:RegisterActionShape: *none*
 
 === End SHACL ===
 

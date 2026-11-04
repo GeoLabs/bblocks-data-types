@@ -45,7 +45,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-03",
+  "dateOfLastChange": "2026-11-04",
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/schema.yaml",

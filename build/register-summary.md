@@ -171,7 +171,7 @@ A planar surface defined by one exterior boundary and zero or more interior boun
 
 **Type:** model
 
-A simple surface consisting of a number of polygon patches, or facets.
+A contiguous collection of polygons that share common boundary segments.
 
 ### `data-types.data-type.raster` — Data type: Raster
 
@@ -351,7 +351,7 @@ Records of attribute values, without geometry.
 
 **Type:** model
 
-A surface represented by a network of triangles over irregularly spaced points.
+A polyhedral surface consisting only of triangle patches.
 
 ### `data-types.data-type.triangle` — Data type: Triangle
 

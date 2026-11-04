@@ -433,7 +433,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.vocabulary
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-03'
+  dateOfLastChange: '2026-11-04'
 
 ```
 

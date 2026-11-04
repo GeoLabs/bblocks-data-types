@@ -25,7 +25,7 @@
         [ dct:references <https://docs.ogc.org/is/06-103r3/06-103r3.pdf> ;
             dct:title "OGC 06-103r3 Simple Feature Access - Part 1: Common Architecture"@en ] ;
     skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/surface> ;
-    skos:definition "A simple surface consisting of a number of polygon patches, or facets."@en ;
+    skos:definition "A contiguous collection of polygons that share common boundary segments."@en ;
     skos:inScheme dt:dataTypes ;
     skos:prefLabel "PolyhedralSurface"@en .
 

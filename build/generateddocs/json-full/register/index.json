@@ -29,7 +29,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-03",
+  "dateOfLastChange": "2026-11-04",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.yaml",
     "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.json"

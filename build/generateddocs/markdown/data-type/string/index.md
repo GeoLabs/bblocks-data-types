@@ -145,7 +145,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.string
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-03'
+  dateOfLastChange: '2026-11-04'
 
 ```
 

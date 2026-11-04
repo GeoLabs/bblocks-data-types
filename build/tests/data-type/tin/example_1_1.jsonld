@@ -12,7 +12,7 @@
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/tin",
       "type": "Concept",
       "prefLabel": "Triangulated irregular network",
-      "definition": "A surface represented by a network of triangles over irregularly spaced points.",
+      "definition": "A polyhedral surface consisting only of triangle patches.",
       "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
     },
     "version": "1.0",

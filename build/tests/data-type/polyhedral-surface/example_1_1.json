@@ -11,7 +11,7 @@
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface",
       "type": "Concept",
       "prefLabel": "PolyhedralSurface",
-      "definition": "A simple surface consisting of a number of polygon patches, or facets.",
+      "definition": "A contiguous collection of polygons that share common boundary segments.",
       "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
     },
     "version": "1.0",

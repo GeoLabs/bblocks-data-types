@@ -3,13 +3,37 @@
 
 `data-types.data-type.polyhedral-surface` *v1.0*
 
-A simple surface consisting of a number of polygon patches, or facets.
+A contiguous collection of polygons that share common boundary segments.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
+A contiguous collection of polygons that share common boundary segments.
 
+## Definition
+
+`https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+
+## Usage
+
+For each pair of polygons that touch, the common boundary is a finite collection of line strings, each part of the boundary of at most two polygon patches, and the polygons are consistently oriented. If every such line string bounds exactly two patches, the polyhedral surface is simple and closed, and it bounds a solid; a multi-surface of closed polyhedral surfaces can represent a solid with holes. A triangulated irregular network is the polyhedral surface consisting only of triangle patches.
+
+## Hierarchy
+
+- Broader: [Surface](../surface/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)
+- Narrower: [Triangulated irregular network](../tin/)
+
+## Content of this block
+
+- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).
+- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.
+- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.
+
+## Sources
+
+- [OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture](https://www.ogc.org/standards/sfa/)
+- [OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry](https://docs.ogc.org/is/23-034/23-034.html)
 - [OGC 06-103r3 Simple Feature Access - Part 1: Common Architecture](https://docs.ogc.org/is/06-103r3/06-103r3.pdf)
 
 ## Examples
@@ -31,7 +55,7 @@ The register item of the PolyhedralSurface data type: it realizes the governed v
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface",
       "type": "Concept",
       "prefLabel": "PolyhedralSurface",
-      "definition": "A simple surface consisting of a number of polygon patches, or facets.",
+      "definition": "A contiguous collection of polygons that share common boundary segments.",
       "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
     },
     "version": "1.0",
@@ -62,7 +86,7 @@ The register item of the PolyhedralSurface data type: it realizes the governed v
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "PolyhedralSurface"@en ; skos:definition "A simple surface consisting of a number of polygon patches, or facets."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/surface> ; dct:source [ dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://www.ogc.org/standards/sfa/> ], [ dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ; dct:references <https://docs.ogc.org/is/23-034/23-034.html> ], [ dct:title "OGC 06-103r3 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://docs.ogc.org/is/06-103r3/06-103r3.pdf> ] .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "PolyhedralSurface"@en ; skos:definition "A contiguous collection of polygons that share common boundary segments."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/surface> ; dct:source [ dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://www.ogc.org/standards/sfa/> ], [ dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ; dct:references <https://docs.ogc.org/is/23-034/23-034.html> ], [ dct:title "OGC 06-103r3 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://docs.ogc.org/is/06-103r3/06-103r3.pdf> ] .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface/actions/addition> .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-03T00:00:00Z"^^xsd:dateTime .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "PolyhedralSurface"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
@@ -85,7 +109,7 @@ The register item of the PolyhedralSurface data type: it realizes the governed v
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface",
       "type": "Concept",
       "prefLabel": "PolyhedralSurface",
-      "definition": "A simple surface consisting of a number of polygon patches, or facets.",
+      "definition": "A contiguous collection of polygons that share common boundary segments.",
       "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
     },
     "version": "1.0",

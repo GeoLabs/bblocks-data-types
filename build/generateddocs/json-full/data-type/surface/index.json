@@ -7,7 +7,7 @@
   "abstract": "A 2-dimensional geometry, e.g. a Polygon.",
   "status": "under-development",
   "dateTimeAddition": "2026-10-08T00:00:00Z",
-  "dateOfLastChange": "2026-11-03",
+  "dateOfLastChange": "2026-11-04",
   "version": "1.0",
   "itemClass": "model",
   "register": "data-types",
@@ -57,7 +57,7 @@
   "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/surface/",
   "validationPassed": true,
   "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/surface/",
-  "description": "\n- [OGC 06-103r3 Simple Feature Access - Part 1: Common Architecture](https://docs.ogc.org/is/06-103r3/06-103r3.pdf)\n",
+  "description": "A 2-dimensional geometry, e.g. a Polygon.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/surface` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\n## Usage\n\nThe only instantiable kinds of surface in Simple Feature Access are the polygon and the polyhedral surface.\n\n## Hierarchy\n\n- Broader: [Geometry](../geometry/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)\n- Narrower: [Polygon](../polygon/), [PolyhedralSurface](../polyhedral-surface/)\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).\n- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.\n- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.\n\n## Sources\n\n- [OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture](https://www.ogc.org/standards/sfa/)\n- [OGC 06-103r3 Simple Feature Access - Part 1: Common Architecture](https://docs.ogc.org/is/06-103r3/06-103r3.pdf)\n",
   "examples": [
     {
       "title": "Surface",
@@ -85,7 +85,7 @@
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Surface\ndescription: The register item of the Surface data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/data-type/surface/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.surface\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-03'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Surface\ndescription: The register item of the Surface data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/data-type/surface/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.surface\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-04'\n",
   "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
   "gitPath": "_sources/data-type/surface"
 }

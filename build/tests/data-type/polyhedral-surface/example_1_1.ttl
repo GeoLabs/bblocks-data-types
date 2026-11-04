@@ -13,7 +13,7 @@
     rim:validityStatus rim:invalid .
 
 <https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface> a rim:Concept ;
-    skos:definition "A simple surface consisting of a number of polygon patches, or facets." ;
+    skos:definition "A contiguous collection of polygons that share common boundary segments." ;
     skos:inScheme dt:data-types ;
     skos:prefLabel "PolyhedralSurface" .
 

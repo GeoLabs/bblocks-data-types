@@ -2,7 +2,7 @@
   "title": "Validation report for data-types.item-class - Data type item class",
   "bblockName": "Data type item class",
   "bblockId": "data-types.item-class",
-  "generated": "2026-11-03T22:28:39.423726+00:00",
+  "generated": "2026-11-04T10:40:56.947098+00:00",
   "result": true,
   "items": [
     {
@@ -76,10 +76,13 @@
             {
               "shaclFile": "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl",
               "focusNodes": {
-                "rim:RegisterActionShape": {
+                "rim:TextShape/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "rim:RegisterShape": {
+                "rim:ConceptVersionShape": {
+                  "nodes": []
+                },
+                "rim:RegisterItemShape": {
                   "nodes": []
                 },
                 "rim:RegisterItemClassShape": {
@@ -87,10 +90,10 @@
                     "<https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass>"
                   ]
                 },
-                "rim:TextShape": {
+                "rim:ConceptShape": {
                   "nodes": []
                 },
-                "rim:TextShape/sh:or/rdf:first": {
+                "rim:CommitmentShape": {
                   "nodes": []
                 },
                 "rim:TextShape/sh:or/rdf:rest/rdf:first": {
@@ -99,21 +102,18 @@
                 "rim:RegisterSpecificationShape": {
                   "nodes": []
                 },
-                "rim:ConceptShape": {
+                "rim:RegisterShape": {
                   "nodes": []
                 },
-                "rim:ConceptVersionShape": {
+                "rim:TextShape": {
                   "nodes": []
                 },
-                "rim:CommitmentShape": {
-                  "nodes": []
-                },
-                "rim:RegisterItemShape": {
+                "rim:RegisterActionShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:RegisterActionShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:RegisterItemClassShape: <https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass>\n - Shape rim:TextShape: *none*\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:ConceptShape: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:RegisterItemShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:\n - Shape rim:TextShape/sh:or/rdf:first: *none*\n - Shape rim:ConceptVersionShape: *none*\n - Shape rim:RegisterItemShape: *none*\n - Shape rim:RegisterItemClassShape: <https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass>\n - Shape rim:ConceptShape: *none*\n - Shape rim:CommitmentShape: *none*\n - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape rim:RegisterSpecificationShape: *none*\n - Shape rim:RegisterShape: *none*\n - Shape rim:TextShape: *none*\n - Shape rim:RegisterActionShape: *none*\n"
             }
           ]
         }

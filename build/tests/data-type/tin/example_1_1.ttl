@@ -13,7 +13,7 @@
     rim:validityStatus rim:invalid .
 
 <https://geolabs.github.io/bblocks-data-types/def/data-type/tin> a rim:Concept ;
-    skos:definition "A surface represented by a network of triangles over irregularly spaced points." ;
+    skos:definition "A polyhedral surface consisting only of triangle patches." ;
     skos:inScheme dt:data-types ;
     skos:prefLabel "Triangulated irregular network" .
 
