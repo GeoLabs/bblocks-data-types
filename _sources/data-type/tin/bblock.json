@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
   "name": "Data type: Triangulated irregular network",
-  "abstract": "A surface represented by a network of triangles over irregularly spaced points.",
+  "abstract": "A polyhedral surface consisting only of triangle patches.",
   "status": "under-development",
   "dateTimeAddition": "2026-10-08T00:00:00Z",
   "dateOfLastChange": "2026-11-01",
@@ -35,6 +35,10 @@
     {
       "title": "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry",
       "link": "https://docs.ogc.org/is/23-034/23-034.html"
+    },
+    {
+      "title": "OGC 06-103r3 Simple Feature Access - Part 1: Common Architecture",
+      "link": "https://docs.ogc.org/is/06-103r3/06-103r3.pdf"
     }
   ],
   "group": "Geometry data types",
