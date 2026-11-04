@@ -14,6 +14,7 @@
     "data-types.data-type.surface"
   ],
   "dependsOn": [
+    "data-types.data-type.surface",
     "data-types.vocabulary"
   ],
   "concept": [

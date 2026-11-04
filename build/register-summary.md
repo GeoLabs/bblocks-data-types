@@ -59,18 +59,6 @@ A literal truth value.
 
 An axis-aligned extent given by its corners, with its CRS.
 
-### `data-types.data-type.curve` — Data type: Curve
-
-**Type:** model
-
-A 1-dimensional geometry, e.g. a LineString.
-
-### `data-types.data-type.elevation-model` — Data type: Elevation model
-
-**Type:** model
-
-A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM).
-
 ### `data-types.data-type.feature` — Data type: Feature
 
 **Type:** model
@@ -89,71 +77,11 @@ A set of features, each with a geometry and attributes; e.g. an OGC API - Featur
 
 A geometric object of the Simple Feature Access geometry model.
 
-### `data-types.data-type.geometry-collection` — Data type: GeometryCollection
-
-**Type:** model
-
-A geometry that is a collection of geometry objects, which may be of different types.
-
-### `data-types.data-type.line` — Data type: Line
-
-**Type:** model
-
-A line string with exactly two points, hence a single straight line segment.
-
-### `data-types.data-type.line-string` — Data type: LineString
-
-**Type:** model
-
-A curve with linear interpolation between points: each consecutive pair of points defines a line segment.
-
-### `data-types.data-type.linear-ring` — Data type: LinearRing
-
-**Type:** model
-
-A line string that is both closed and simple.
-
-### `data-types.data-type.multi-curve` — Data type: MultiCurve
-
-**Type:** model
-
-A 1-dimensional geometry collection whose elements are curves.
-
-### `data-types.data-type.multi-line-string` — Data type: MultiLineString
-
-**Type:** model
-
-A multi-curve whose elements are line strings.
-
-### `data-types.data-type.multi-point` — Data type: MultiPoint
-
-**Type:** model
-
-A 0-dimensional geometry collection whose elements are points.
-
-### `data-types.data-type.multi-polygon` — Data type: MultiPolygon
-
-**Type:** model
-
-A multi-surface whose elements are polygons.
-
-### `data-types.data-type.multi-surface` — Data type: MultiSurface
-
-**Type:** model
-
-A 2-dimensional geometry collection whose elements are surfaces. The interiors of any two of its surfaces do not intersect.
-
 ### `data-types.data-type.number` — Data type: Number
 
 **Type:** model
 
 A literal number.
-
-### `data-types.data-type.point` — Data type: Point
-
-**Type:** model
-
-A 0-dimensional geometry, a single location.
 
 ### `data-types.data-type.point-cloud` — Data type: Point cloud
 
@@ -161,35 +89,11 @@ A 0-dimensional geometry, a single location.
 
 A set of three-dimensional points, each with its own attributes (intensity, classification, ...), typically from LiDAR.
 
-### `data-types.data-type.polygon` — Data type: Polygon
-
-**Type:** model
-
-A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.
-
-### `data-types.data-type.polyhedral-surface` — Data type: PolyhedralSurface
-
-**Type:** model
-
-A contiguous collection of polygons that share common boundary segments.
-
 ### `data-types.data-type.raster` — Data type: Raster
 
 **Type:** model
 
 A coverage on a regular grid of cells, each cell carrying one value per band; its band structure is its range type.
-
-### `data-types.data-type.raster-multi-band` — Data type: Raster (multiple bands)
-
-**Type:** model
-
-A raster with more than one band: a range type of several fields.
-
-### `data-types.data-type.raster-single-band` — Data type: Raster (single band)
-
-**Type:** model
-
-A raster with exactly one band: a range type of one field.
 
 ### `data-types.data-type.stac-catalog` — Data type: STAC Catalog
 
@@ -197,11 +101,17 @@ A raster with exactly one band: a range type of one field.
 
 A STAC Catalog: a linked metadata object organizing STAC Items, Collections or child Catalogs.
 
-### `data-types.data-type.stac-collection` — Data type: STAC Collection
+### `data-types.data-type.string` — Data type: String
 
 **Type:** model
 
-A STAC Collection: a Catalog specialization that describes a collection of related spatiotemporal assets with spatial and temporal extents.
+A literal character string, e.g. an expression, a CRS identifier or a format name.
+
+### `data-types.data-type.table` — Data type: Table
+
+**Type:** model
+
+Records of attribute values, without geometry.
 
 ### `data-types.data-type.stac-item` — Data type: STAC Item
 
@@ -215,11 +125,47 @@ A STAC Item: a feature with STAC identity, links, assets, version and spatiotemp
 
 A feature collection whose features are STAC Items, such as a STAC API Item Search response; distinct from a STAC Collection object.
 
-### `data-types.data-type.string` — Data type: String
+### `data-types.data-type.curve` — Data type: Curve
 
 **Type:** model
 
-A literal character string, e.g. an expression, a CRS identifier or a format name.
+A 1-dimensional geometry, e.g. a LineString.
+
+### `data-types.data-type.geometry-collection` — Data type: GeometryCollection
+
+**Type:** model
+
+A geometry that is a collection of geometry objects, which may be of different types.
+
+### `data-types.data-type.point` — Data type: Point
+
+**Type:** model
+
+A 0-dimensional geometry, a single location.
+
+### `data-types.data-type.surface` — Data type: Surface
+
+**Type:** model
+
+A 2-dimensional geometry, e.g. a Polygon.
+
+### `data-types.data-type.raster-multi-band` — Data type: Raster (multiple bands)
+
+**Type:** model
+
+A raster with more than one band: a range type of several fields.
+
+### `data-types.data-type.raster-single-band` — Data type: Raster (single band)
+
+**Type:** model
+
+A raster with exactly one band: a range type of one field.
+
+### `data-types.data-type.stac-collection` — Data type: STAC Collection
+
+**Type:** model
+
+A STAC Collection: a Catalog specialization that describes a collection of related spatiotemporal assets with spatial and temporal extents.
 
 ### `data-types.data-type.string-date` — Data type: String — date
 
@@ -335,27 +281,81 @@ A string representing a URI template as defined by RFC 6570.
 
 A string representation of a universally unique identifier (UUID).
 
-### `data-types.data-type.surface` — Data type: Surface
+### `data-types.data-type.line-string` — Data type: LineString
 
 **Type:** model
 
-A 2-dimensional geometry, e.g. a Polygon.
+A curve with linear interpolation between points: each consecutive pair of points defines a line segment.
 
-### `data-types.data-type.table` — Data type: Table
-
-**Type:** model
-
-Records of attribute values, without geometry.
-
-### `data-types.data-type.tin` — Data type: Triangulated irregular network
+### `data-types.data-type.multi-curve` — Data type: MultiCurve
 
 **Type:** model
 
-A polyhedral surface consisting only of triangle patches.
+A 1-dimensional geometry collection whose elements are curves.
+
+### `data-types.data-type.multi-point` — Data type: MultiPoint
+
+**Type:** model
+
+A 0-dimensional geometry collection whose elements are points.
+
+### `data-types.data-type.multi-surface` — Data type: MultiSurface
+
+**Type:** model
+
+A 2-dimensional geometry collection whose elements are surfaces. The interiors of any two of its surfaces do not intersect.
+
+### `data-types.data-type.polygon` — Data type: Polygon
+
+**Type:** model
+
+A planar surface defined by one exterior boundary and zero or more interior boundaries; each interior boundary defines a hole in the polygon.
+
+### `data-types.data-type.polyhedral-surface` — Data type: PolyhedralSurface
+
+**Type:** model
+
+A contiguous collection of polygons that share common boundary segments.
+
+### `data-types.data-type.elevation-model` — Data type: Elevation model
+
+**Type:** model
+
+A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM).
+
+### `data-types.data-type.line` — Data type: Line
+
+**Type:** model
+
+A line string with exactly two points, hence a single straight line segment.
+
+### `data-types.data-type.linear-ring` — Data type: LinearRing
+
+**Type:** model
+
+A line string that is both closed and simple.
+
+### `data-types.data-type.multi-line-string` — Data type: MultiLineString
+
+**Type:** model
+
+A multi-curve whose elements are line strings.
+
+### `data-types.data-type.multi-polygon` — Data type: MultiPolygon
+
+**Type:** model
+
+A multi-surface whose elements are polygons.
 
 ### `data-types.data-type.triangle` — Data type: Triangle
 
 **Type:** model
 
 A polygon with three distinct, non-collinear vertices and no interior boundary.
+
+### `data-types.data-type.tin` — Data type: Triangulated irregular network
+
+**Type:** model
+
+A polyhedral surface consisting only of triangle patches.
 

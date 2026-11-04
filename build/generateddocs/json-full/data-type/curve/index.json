@@ -15,6 +15,7 @@
     "data-types.data-type.geometry"
   ],
   "dependsOn": [
+    "data-types.data-type.geometry",
     "data-types.vocabulary"
   ],
   "concept": [

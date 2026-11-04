@@ -15,6 +15,7 @@
     "data-types.data-type.raster-single-band"
   ],
   "dependsOn": [
+    "data-types.data-type.raster-single-band",
     "data-types.vocabulary"
   ],
   "concept": [

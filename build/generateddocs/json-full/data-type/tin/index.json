@@ -15,6 +15,7 @@
     "data-types.data-type.polyhedral-surface"
   ],
   "dependsOn": [
+    "data-types.data-type.polyhedral-surface",
     "data-types.vocabulary"
   ],
   "concept": [

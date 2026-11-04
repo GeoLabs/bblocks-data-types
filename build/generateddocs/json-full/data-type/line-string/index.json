@@ -14,6 +14,7 @@
     "data-types.data-type.curve"
   ],
   "dependsOn": [
+    "data-types.data-type.curve",
     "data-types.vocabulary"
   ],
   "concept": [

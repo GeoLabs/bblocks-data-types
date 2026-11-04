@@ -14,6 +14,7 @@
     "data-types.data-type.multi-curve"
   ],
   "dependsOn": [
+    "data-types.data-type.multi-curve",
     "data-types.vocabulary"
   ],
   "concept": [

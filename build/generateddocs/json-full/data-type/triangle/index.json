@@ -14,6 +14,7 @@
     "data-types.data-type.polygon"
   ],
   "dependsOn": [
+    "data-types.data-type.polygon",
     "data-types.vocabulary"
   ],
   "concept": [

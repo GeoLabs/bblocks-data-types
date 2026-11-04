@@ -14,6 +14,7 @@
     "data-types.data-type.string"
   ],
   "dependsOn": [
+    "data-types.data-type.string",
     "data-types.vocabulary"
   ],
   "concept": [

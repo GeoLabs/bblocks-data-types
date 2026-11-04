@@ -15,6 +15,7 @@
     "data-types.data-type.raster"
   ],
   "dependsOn": [
+    "data-types.data-type.raster",
     "data-types.vocabulary"
   ],
   "concept": [
