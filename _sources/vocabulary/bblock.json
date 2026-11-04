@@ -84,6 +84,318 @@
       "ref": "data.ttl",
       "format": "text/turtle",
       "title": "Register metadata (register, owner, system and concept system)"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/boolean/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Boolean data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/bounding-box/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Bounding box data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/curve/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Curve data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/elevation-model/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Elevation model data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/feature-collection/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Feature collection data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/feature/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Feature data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/geometry-collection/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the GeometryCollection data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/geometry/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Geometry data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/line-string/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the LineString data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/line/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Line data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/linear-ring/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the LinearRing data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/multi-curve/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the MultiCurve data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/multi-line-string/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the MultiLineString data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/multi-point/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the MultiPoint data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/multi-polygon/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the MultiPolygon data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/multi-surface/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the MultiSurface data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/number/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Number data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/point-cloud/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Point cloud data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/point/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Point data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/polygon/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Polygon data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/polyhedral-surface/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the PolyhedralSurface data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/raster-multi-band/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Raster (multiple bands) data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/raster-single-band/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Raster (single band) data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/raster/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Raster data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/stac-catalog/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the STAC Catalog data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/stac-collection/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the STAC Collection data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/stac-item-collection/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the STAC Item Collection data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/stac-item/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the STAC Item data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-date-time/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Date-time string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-date/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Date string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-duration/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Duration string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-email/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Email address string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-hostname/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Hostname string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-idn-email/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Internationalized email address string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-idn-hostname/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Internationalized hostname string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-ipv4/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the IPv4 address string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-ipv6/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the IPv6 address string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-iri-reference/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the IRI reference string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-iri/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the IRI string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-json-pointer/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the JSON Pointer string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-password/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Password string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-relative-json-pointer/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Relative JSON Pointer string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-time/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Time string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-uri-reference/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the URI reference string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-uri-template/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the URI template string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-uri/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the URI string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string-uuid/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the UUID string data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/string/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the String data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/surface/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Surface data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/table/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Table data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/tin/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Triangulated irregular network data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/triangle/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Triangle data type"
     }
   ],
   "ldContext": "context.jsonld",
