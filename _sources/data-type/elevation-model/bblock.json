@@ -4,7 +4,7 @@
   "abstract": "A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM).",
   "status": "under-development",
   "dateTimeAddition": "2026-10-08T00:00:00Z",
-  "dateOfLastChange": "2026-11-01",
+  "dateOfLastChange": "2026-11-09",
   "version": "1.0",
   "itemClass": "model",
   "register": "data-types",
@@ -26,8 +26,8 @@
       "link": "https://docs.ogc.org/is/09-146r8/09-146r8.html"
     },
     {
-      "title": "SAGA 7.3.0 Terrain Analysis tools, Elevation grid inputs",
-      "link": "https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html"
+      "title": "INSPIRE D2.8.II.1 Data Specification on Elevation – Technical Guidelines (2024-01-31), Executive Summary: Digital Elevation Model, Digital Terrain Model, Digital Surface Model",
+      "link": "https://inspire.ec.europa.eu/id/document/tg/el"
     }
   ],
   "group": "Raster data types",
