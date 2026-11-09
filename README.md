@@ -9,9 +9,22 @@ OGC Building Blocks register holding the **data types** of process profile input
 type also has a content-plane `dt:DataTypeItem` (sub-class of `rim:RegisterItem`) of the
 `dt:dataTypeItemClass` item class, which `rim:realizes` that version, with a JSON binding that
 profiles the Registered Item Model's JSON Schemas. A data type
-names the *kind* of data, not its encoding -- the encoding a concrete process uses is declared at the
-Implementation Profile tier, not here. See
+names the *kind* of data, not its encoding. Encodings are the content plane of the data axis, held by
+a separate register, [`GeoLabs/bblocks-data-formats`](https://github.com/GeoLabs/bblocks-data-formats)
+(namespace `https://w3id.org/geolabs-ospd/data-formats/`, prefix `df:`): a `df:Format` is an
+encoding, and a `df:Representation` realizes (`rim:realizes`) one `dt:DataTypeVersion` of this
+register in one format. That register depends on this one; this one never depends on it. See
 [`_sources/vocabulary/description.md`](_sources/vocabulary/description.md).
+
+## Register specification
+
+`dt:specification` (in [`_sources/vocabulary/data.ttl`](_sources/vocabulary/data.ttl)) is the
+`rim:RegisterSpecification` of the register: a concept register, GeoLabs SARL as owner, manager and,
+for now, control body, with the intention to delegate that role to the OGC or to an OSPD working
+group. It holds the definition of a substantive change (`rim:definesSubstantiveChange`), the table of
+substantive and clarifying changes for data types, the version rule, the rule for proposals and
+`dt:amendmentAction`, the action type of an in-place change to a proposal. No eligibility criteria
+and no commitments are set.
 
 This vocabulary was first drafted inline in
 [`GeoLabs/bblocks-generic-profiles`](https://github.com/GeoLabs/bblocks-generic-profiles) as its
@@ -85,9 +98,12 @@ existing (reconciliation of the two IRI namespaces is a later, separate decision
 
 Each vocabulary concept has its own `model` Building Block, linked to the corresponding
 `dt:DataType` IRI. Each block contains its own `ontology.ttl`, which is autodetected and published
-as that entry's ontology in the Building Blocks UI. The 19 EOAP string formats are specialized
-types of `string`; `Pattern` is omitted because it is a parameterized validation constraint rather
-than a fixed data type. `Feature` is distinct from `Geometry`: a feature contains a geometry and
+as that entry's ontology in the Building Blocks UI. The 19 EOAP string formats are still registered
+here as specialized types of `string`, as proposals. They are formats, not data types: the
+data-formats register holds all 20 EOAP formats, `Pattern` included, and their withdrawal from this
+register is pending a decision on how to record it (see `docs/work-summary.md`).
+`coordinate-reference-system`, `expression`, `format-identifier` and `radiometric-index` are the
+types of four Generic Profile roles that declare `string` today; they have no broader type. `Feature` is distinct from `Geometry`: a feature contains a geometry and
 properties. `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, `MultiPolygon` and
 `GeometryCollection` are geometry types of OGC Simple Feature Access: `LineString` specializes
 `curve` and `Polygon` specializes `surface`, while `MultiPoint`, `MultiCurve` and `MultiSurface`
@@ -111,7 +127,7 @@ The registered concepts, their broader links, governed versions and proposed-add
 canonical in the `ontology.ttl` of their respective Building Blocks under
 [`_sources/data-type/`](_sources/data-type/). Each ontology is published with its own entry.
 [`_sources/vocabulary/data.ttl`](_sources/vocabulary/data.ttl) contains only shared register
-metadata: the `rim:Register`, register system, owner and concept system. Concept versions link to
+metadata: the `rim:Register`, its specification, register system, owner and concept system. Concept versions link to
 their addition actions with the register-specific `dt:hasVersionAction`: the RIM's
 `rim:hasAction` / `rim:appliesTo` pair currently applies only to content-plane `rim:RegisterItem`s,
 not concept-plane `rim:ConceptVersion`s.
@@ -119,8 +135,10 @@ not concept-plane `rim:ConceptVersion`s.
 ## Building locally
 
 Imports the published Registered Item Model
-([Geonovum-labs/registered-item-model](https://github.com/Geonovum-labs/registered-item-model)); no
-local mapping is needed.
+([ogcincubator/registered-item-model](https://ogcincubator.github.io/registered-item-model/)); no
+local mapping is needed. A register that imports this one before it is published maps
+`https://geolabs.github.io/bblocks-data-types/` to a local build with `url-mappings` in its
+`bblocks-config-local.yml`.
 
 ```bash
 ./build.sh   # process and validate (Docker)

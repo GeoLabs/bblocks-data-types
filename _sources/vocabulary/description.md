@@ -29,19 +29,26 @@ The concepts, their `skos:broader` links, versions and addition actions are **re
 merely examples. Each individual data-type Building Block contains its canonical RDF
 graph in `ontology.ttl`, autodetected and published as that block's ontology. The shared
 [`data.ttl`](data.ttl) in this support block contains only register metadata: the `rim:Register`,
-register system, owner and `rim:ConceptSystem`. The individual ontologies carry each concept,
+register specification, register system, owner and `rim:ConceptSystem`. The individual ontologies carry each concept,
 version and proposed-addition action. The JSON example below illustrates one item and the version it realizes; the Turtle
 example references the support block's register metadata.
 
 The initial types are `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model`,
 `geometry`, `point`, `curve`, `surface`, `feature-collection`, `point-cloud`, `tin`, `table`,
-`bounding-box`, `number`, `string` and `boolean`. The 19 fixed string formats in
+`bounding-box`, `number`, `string` and `boolean`. `coordinate-reference-system`, `expression`,
+`format-identifier` and `radiometric-index` were added for four Generic Profile roles of
+`bblocks-generic-profiles` that declare `string` for something that is not a character string
+(`raster-reprojection/targetCRS`, `raster-band-math/expression`,
+`raster-format-conversion/targetFormat`, `radiometric-index/index`); each names the role that
+requests it and has no broader type.
+
+The 19 fixed string formats in
 [`eoap/schemas/string_format.yaml`](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)
-are also registered as individual specializations of `string`: date, date-time, duration, email,
-hostname, idn-email, idn-hostname, ipv4, ipv6, iri, iri-reference, password, json-pointer,
-relative-json-pointer, uuid, uri, uri-reference, uri-template and time. The schema's `Pattern`
-record is not a fixed datatype; it carries a caller-supplied regular expression and is therefore a
-parameterized validation constraint.
+are still registered as individual specializations of `string`, as proposals: date, date-time,
+duration, email, hostname, idn-email, idn-hostname, ipv4, ipv6, iri, iri-reference, password,
+json-pointer, relative-json-pointer, uuid, uri, uri-reference, uri-template and time. They are
+formats, not kinds of data: the data-formats register holds them, with `Pattern`, as `df:Format`
+items (`df:format/string-*`). Their withdrawal from this register is pending: see "Content plane".
 
 The geometry types of OGC Simple Feature Access are represented individually: besides `point`,
 `curve` and `surface`, the `line-string` (under `curve`), `polygon` (under `surface`) and
@@ -61,7 +68,21 @@ Search). A STAC Collection is metadata for a set of related assets, not an array
 Each data type is also a register item in the Registered Item Model's content plane. Its
 `dt:DataTypeItem` (a sub-class of `rim:RegisterItem`) is of the `dt:dataTypeItemClass` item class,
 is in `dt:register`, and `rim:realizes` the data type's `dt:DataTypeVersion`; `dt:DataTypeItemShape`
-checks this and is the class's `rim:validatedBy`.
+checks this and is the class's `rim:validatedBy`. This item is the record of the type in this
+register; it says nothing about an encoding.
+
+Encodings are held by the data-formats register
+([`GeoLabs/bblocks-data-formats`](https://github.com/GeoLabs/bblocks-data-formats), prefix `df:`).
+A `df:Format` is an encoding and realizes no version; a `df:Representation` realizes
+(`rim:realizes`) at most one `dt:DataTypeVersion` of this register and points to one format, e.g.
+`df:representation/raster-geotiff` realizes `raster/v1`. A version of this register may therefore be
+realized by its own `dt:DataTypeItem` and by representations of data-formats (the Registered Item
+Model limits `rim:realizes` per item, not per version). data-formats depends on this register; this
+register never depends on data-formats.
+
+The 19 `string-*` types are to leave this register for the `df:format/string-*` formats. That
+withdrawal is not recorded yet: an item of this register can only be `rim:supersededBy` an item
+typed in its own graph (`rim:RegisterItemShape`), and this register does not depend on data-formats.
 
 The RIM publishes a JSON binding of its core: one JSON Schema and JSON-LD context per class. This
 register conforms to it layer by layer, each block depending on the one below it, as the RIM's own
@@ -94,9 +115,9 @@ single-valued property such as `dct:title` would be a violation.
 ## Meaning, not encoding
 
 A data type names the **kind** of data, not its **encoding**. The byte format a concrete process
-uses (GML, GeoTIFF, the OGC API - Processes `bbox` schema, ...) is declared where that process is
-profiled -- an Implementation Profile's own `schema` -- not here. This is the same meaning /
-representation split the concept plane exists for.
+uses is a `df:Format` of the data-formats register, bound to a data type by a `df:Representation`;
+an Implementation Profile still declares it in its own `schema` until it points to a
+representation. This is the same meaning / representation split the concept plane exists for.
 
 That boundary is an intent, not an absolute: a few types are grounded in a standard that happens to
 be a format -- `point-cloud` cites the OGC LAS community standard, and the `string-*` types are named
@@ -106,6 +127,12 @@ Simple Feature Access, not from any encoding of them. Descriptions may still sho
 (GeoJSON, JSON Schema `format`) as an illustration only.
 
 ## Governance: a proposed addition, not a status
+
+The rules are those of the register specification, `dt:specification` in [`data.ttl`](data.ttl): a
+concept register, GeoLabs as owner, manager and, for now, control body, with the intention to
+delegate that role; the definition of a substantive change and the table of substantive and
+clarifying changes; the rule for proposals, which are amended in place with a classified action of
+type `dt:amendmentAction`. No eligibility criteria and no commitments are set.
 
 There is no single lifecycle `status`. Each version records a `rim:RegisterAction` of type
 `addition`, proposed by GeoLabs, at the date the vocabulary was first drafted (2026-10-08, inline in

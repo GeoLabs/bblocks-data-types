@@ -1,6 +1,7 @@
 # Work summary: bblocks-data-types
 
-State as of 2026-11-04. Last verified build: 55/55 tests passing, locally and on CI.
+State as of 2026-11-09 (branch `planes/phase-2`, local commits only). Last verified build: 59/59
+blocks passing, locally, in a scratch copy (not on CI: nothing is pushed).
 
 ## Purpose
 
@@ -8,20 +9,24 @@ An OGC Building Blocks register (identifier prefix `data-types.`) of the kinds o
 inputs and outputs carry. It is modelled on the
 [Registered Item Model](https://ogcincubator.github.io/registered-item-model/) (RIM, ISO 19135:2026).
 
-A data type names the **kind** of data, not its **encoding**. The encoding a concrete process uses is
-declared where that process is profiled. Descriptions may show GeoJSON or JSON Schema as an
+A data type names the **kind** of data, not its **encoding**. Encodings are the content plane of the
+data axis and live in a separate register, `bblocks-data-formats` (namespace
+`https://w3id.org/geolabs-ospd/data-formats/`, prefix `df:`, not resolved yet), which depends on this
+one; this register never depends on it. Descriptions may show GeoJSON or JSON Schema as an
 illustration only.
 
 The vocabulary was first drafted inline in `bblocks-generic-profiles`; this register extracts it so it
-can be reused and governed on its own. `bblocks-generic-profiles` is not changed by this register.
+can be reused and governed on its own. The Generic and Implementation Profiles of
+`bblocks-generic-profiles` now use this register's IRIs as `dataType`; it imports this register.
 
-## Content: 55 Building Blocks
+## Content: 59 Building Blocks
 
 | Group | Blocks |
 |---|---|
 | Geometry (17) | `geometry`, `point`, `curve`, `surface`, `line-string`, `line`, `linear-ring`, `polygon`, `triangle`, `polyhedral-surface`, `tin`, `geometry-collection`, `multi-point`, `multi-curve`, `multi-surface`, `multi-line-string`, `multi-polygon` |
 | Features (2) and STAC (4) | `feature`, `feature-collection`, `stac-item`, `stac-collection`, `stac-catalog`, `stac-item-collection` |
-| Literals (22) | `string`, 19 `string-*` formats from the EOAP schemas, `number`, `boolean` |
+| Literals (22) | `string`, 19 `string-*` formats from the EOAP schemas (to be withdrawn, see below), `number`, `boolean` |
+| Parameters (4) | `coordinate-reference-system`, `expression`, `format-identifier`, `radiometric-index` |
 | Raster (4) | `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model` |
 | Other (3) | `point-cloud`, `table`, `bounding-box` |
 | Support (3) | `vocabulary`, `register`, `item-class` |
@@ -35,14 +40,34 @@ and `rim:published`: a proposed addition awaiting a decision.
 
 **Content plane.** Each data type also has a `dt:DataTypeItem` (a sub-class of `rim:RegisterItem`) of
 the `dt:dataTypeItemClass` item class, in `dt:register`, that `rim:realizes` its version.
-`dt:DataTypeItemShape` checks this and is the item class's `rim:validatedBy`.
+`dt:DataTypeItemShape` checks this and is the item class's `rim:validatedBy`. This item is kept: it
+records the type in this register and says nothing about an encoding.
+
+**Formats and representations** are items of `bblocks-data-formats`, not of this register:
+
+| Class | Realizes | Example |
+|---|---|---|
+| `df:Format` | nothing | `df:format/geotiff`, `df:format/string-date-time` |
+| `df:Representation` | one `dt:DataTypeVersion` of this register (`sh:maxCount 1`) | `df:representation/raster-geotiff` realizes `raster/v1` |
+
+A version of this register may thus be realized by its own item and by representations. The
+Registered Item Model limits `rim:realizes` per item, not per version; the text of ISO 19135:2026 was
+not read on this point.
+
+**Register specification.** `dt:specification` in `data.ttl` (`rim:hasSpecification`): a concept
+register; GeoLabs is owner, manager and, for now, control body, with the intention to delegate that
+role to the OGC or to an OSPD working group. It carries the validated definition of a substantive
+change, the table of substantive and clarifying changes (verbatim in French, with an English
+rendering), the version rule, the rule for proposals and `dt:amendmentAction`, the action type of an
+in-place change to a proposal. No eligibility criteria and no commitments are set.
 
 **Hierarchy.** It is expressed twice, and both must be kept in sync:
 
 - `skos:broader` in the block's `ontology.ttl` (canonical);
 - `isProfileOf` in `bblock.json`, which the register publishes as `prof:isProfileOf`.
 
-A check that compares the two currently finds 41 relations and no gap.
+A check that compares the two found 41 relations and no gap on 2026-11-09. 19 of them are
+`string-*` -> `string`; the four parameter types have no broader type.
 
 **Each type block contains:** `bblock.json`, `ontology.ttl` (concept, version, action and item),
 `schema.yaml`, `examples.yaml` (JSON item and Turtle) and `description.md`.
@@ -60,8 +85,17 @@ This register conforms to it, layer by layer, as the RIM's own `register-item` d
    `ogc.rim.schemas.concept-version` (`type` is `DataTypeVersion`, with the recorded addition required).
 4. Each data-type block depends on `vocabulary` and fixes the item's `id`.
 
-`register` and `item-class` take `../vocabulary/data.ttl` as SHACL closure rather than depending on
-`vocabulary`, which would make a cycle.
+`register` and `item-class` take `../vocabulary/data.ttl` as a data resource rather than depending
+on `vocabulary`, which would make a cycle.
+
+**SHACL closure.** The closure of a block is the data resources (`resources` with role `data`) of the
+block and of its dependencies, plus their `shaclClosures`. A register publishes `resources` as
+absolute URLs but `shaclClosures` as written, so relative closures cannot be loaded by an importing
+register: until 2026-11-09 every block of `bblocks-generic-profiles` reported 53 "Error processing
+closure source" warnings (52 data type ontologies and `data.ttl`). The register therefore declares no
+`shaclClosures`: `vocabulary` lists `data.ttl` and every data type ontology as data resources, and
+`register` and `item-class` list `data.ttl`. Measured: same closure sources per block in this
+register, and 0 closure errors, with no source lost, in `bblocks-generic-profiles`.
 
 ## Geometry hierarchy
 
@@ -98,7 +132,11 @@ The definitions of `Line`, `LinearRing`, `Triangle`, `LineString`, `Polygon`, `P
   validated graph, so a second plain-string `dct:title` next to a language-tagged one would violate
   `maxCount 1`. The register, item class and item class title in `data.ttl` are the single source.
 - **Definitions avoid naming a format.** Sources that are formats (the LAS standard for point clouds,
-  JSON Schema formats for `string-*`) are cited as sources, not asserted as encodings.
+  JSON Schema formats for `string-*`) are cited as sources, not asserted as encodings. Two `string-*`
+  definitions (`string-date`, `string-time`) still quote a syntax: they leave with the other
+  `string-*`.
+- **A new type is requested by a role.** The four parameter types each name the Generic Profile role
+  that needs them.
 - **Concept version, not concept, carries the status.** The embedded concept in JSON has `type: Concept`
   because the RIM schema fixes it; its `dt:DataType` class comes from the ontologies in the closure.
 
@@ -109,12 +147,22 @@ The definitions of `Line`, `LinearRing`, `Triangle`, `LineString`, `Polygon`, `P
 ./view.sh    # preview in the bblocks viewer
 ```
 
-To add a type, create a block under `_sources/data-type/<slug>/` with the five files above, then:
+To add a type, check first that an existing role needs it and that it is a kind of data, not an
+encoding (an encoding is a `df:Format` of `bblocks-data-formats`). Then create a block under
+`_sources/data-type/<slug>/` with the five files above, as a proposal (addition by GeoLabs,
+`rim:invalid`, `rim:published`), and:
 
-1. add `../data-type/<slug>/ontology.ttl` to `shaclClosures` in `_sources/vocabulary/bblock.json`;
+1. add `../data-type/<slug>/ontology.ttl` to the `resources` (role `data`) of
+   `_sources/vocabulary/bblock.json`; do not add a `shaclClosures` entry;
 2. add its row to the README table;
-3. update the `Hierarchy` lines of its parent and children (broader, narrower);
-4. run the build and the `isProfileOf` against `skos:broader` check.
+3. update the `Hierarchy` lines of its parent and children (broader, narrower); give no
+   `skos:broader string` to a type whose values are not character strings;
+4. name the requesting role in its `description.md`;
+5. run the build, the `isProfileOf` against `skos:broader` check, and the build of
+   `bblocks-generic-profiles` against this one (`url-mappings`).
+
+A change to an existing type is a `rim:RegisterAction` classified against the specification's table;
+while the type is a proposal, it is an in-place action of type `dt:amendmentAction`.
 
 Check `git status` before pushing: an untracked `_sources/vocabulary/data.ttl` once made every test fail on CI.
 `description.md` files are not covered by the tests; check them by hand after bulk edits.
@@ -127,5 +175,25 @@ Check `git status` before pushing: an untracked `_sources/vocabulary/data.ttl` o
   schema blocks. The effect on the published register was not checked.
 - `dt:RegisterShape` no longer applies to `register` and `item-class`; only the RIM core shapes do.
   It is still checked in `vocabulary`.
-- `bblocks-generic-profiles` still points to its own inline vocabulary; redirecting it to this register
-  is an open decision.
+- **Withdrawal of the 19 `string-*` (D2) not recorded.** D2 asks for a `rim:RegisterAction` and
+  `rim:supersededBy` to the `df:format/string-*` formats. `rim:RegisterItemShape` requires the target
+  of `rim:supersededBy` to be typed `rim:RegisterItem` in the validated graph; this register does not
+  load data-formats (and must not depend on it), so the link is rejected (observed in a scratch
+  build, 2026-11-09). The way to record it is a decision to take.
+- **Proposals, not applied** (each needs a decision; a withdrawal or a new `skos:broader` is
+  substantive in the specification's table):
+  - STAC (`stac-item`, `stac-item-collection`, `stac-catalog`, `stac-collection`): no Generic or
+    Implementation Profile role uses them; 6 testbed outputs (kindgrove, water-bodies) serve a STAC
+    Catalog JSON schema. Their definitions and usage describe the STAC JSON objects, an encoding.
+    Proposal: `stac-item` and `stac-item-collection` become `df:Format` items of data-formats
+    (STAC Item, STAC API ItemCollection), bound to `feature` and `feature-collection` by
+    representations once a role needs them, and leave this register; `stac-catalog` and
+    `stac-collection` are replaced by format-free concepts (a catalogue of metadata records, a
+    described collection) only if a role needs them, with STAC Catalog and STAC Collection as
+    formats.
+  - `elevation-model`: used by 2 Generic and 4 Implementation Profile roles; its definition names no
+    format. Proposal: keep it under `raster-single-band`, and replace its source "SAGA 7.3.0 Terrain
+    Analysis tools", a tool, by a non-tool source (clarifying, in place with `dt:amendmentAction`).
+    Generalising it to non-gridded elevation models (TIN, point cloud) would change its
+    `skos:broader`, a substantive change, and no role needs it today.
+- The four parameter types are not used yet: the Generic Profile roles still declare `string`.
