@@ -25,7 +25,7 @@ can be reused and governed on its own. The Generic and Implementation Profiles o
 |---|---|
 | Geometry (17) | `geometry`, `point`, `curve`, `surface`, `line-string`, `line`, `linear-ring`, `polygon`, `triangle`, `polyhedral-surface`, `tin`, `geometry-collection`, `multi-point`, `multi-curve`, `multi-surface`, `multi-line-string`, `multi-polygon` |
 | Features (2) and STAC (4) | `feature`, `feature-collection`, `stac-item`, `stac-collection`, `stac-catalog`, `stac-item-collection` |
-| Literals (22) | `string`, 19 `string-*` formats from the EOAP schemas (to be withdrawn, see below), `number`, `boolean` |
+| Literals (22) | `string`, 19 `string-*` formats from the EOAP schemas (withdrawn, unpublished), `number`, `boolean` |
 | Parameters (4) | `coordinate-reference-system`, `expression`, `format-identifier`, `radiometric-index` |
 | Raster (4) | `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model` |
 | Other (3) | `point-cloud`, `table`, `bounding-box` |
@@ -94,8 +94,10 @@ absolute URLs but `shaclClosures` as written, so relative closures cannot be loa
 register: until 2026-11-09 every block of `bblocks-generic-profiles` reported 53 "Error processing
 closure source" warnings (52 data type ontologies and `data.ttl`). The register therefore declares no
 `shaclClosures`: `vocabulary` lists `data.ttl` and every data type ontology as data resources, and
-`register` and `item-class` list `data.ttl`. Measured: same closure sources per block in this
-register, and 0 closure errors, with no source lost, in `bblocks-generic-profiles`.
+`register` and `item-class` list `data.ttl`. The same files were already loaded, as absolute URLs,
+through those data resources: the closure was complete, and only the relative duplicates failed.
+Measured: same closure sources per block in this register; in `bblocks-generic-profiles`, the 3,551
+load errors are gone and the closure sources are the same.
 
 ## Geometry hierarchy
 
@@ -133,8 +135,9 @@ The definitions of `Line`, `LinearRing`, `Triangle`, `LineString`, `Polygon`, `P
   `maxCount 1`. The register, item class and item class title in `data.ttl` are the single source.
 - **Definitions avoid naming a format.** Sources that are formats (the LAS standard for point clouds,
   JSON Schema formats for `string-*`) are cited as sources, not asserted as encodings. Two `string-*`
-  definitions (`string-date`, `string-time`) still quote a syntax: they leave with the other
-  `string-*`.
+  definitions (`string-date`, `string-time`) still quote a syntax. These types are withdrawn and their
+  definitions are kept as recorded; the audit invariant "no format in a concept definition" still
+  reads them, and what to do about it is a decision for GeoLabs.
 - **A new type is requested by a role.** The four parameter types each name the Generic Profile role
   that needs them.
 - **Concept version, not concept, carries the status.** The embedded concept in JSON has `type: Concept`
@@ -175,13 +178,14 @@ Check `git status` before pushing: an untracked `_sources/vocabulary/data.ttl` o
   schema blocks. The effect on the published register was not checked.
 - `dt:RegisterShape` no longer applies to `register` and `item-class`; only the RIM core shapes do.
   It is still checked in `vocabulary`.
-- **Withdrawal of the 19 `string-*` (D2) not recorded.** D2 asks for a `rim:RegisterAction` and
-  `rim:supersededBy` to the `df:format/string-*` formats. `rim:RegisterItemShape` requires the target
-  of `rim:supersededBy` to be typed `rim:RegisterItem` in the validated graph; this register does not
-  load data-formats (and must not depend on it), so the link is rejected (observed in a scratch
-  build, 2026-11-09). The way to record it is a decision to take.
-- **Proposals, not applied** (each needs a decision; a withdrawal or a new `skos:broader` is
-  substantive in the specification's table):
+- **Withdrawal of the 19 `string-*` (D2, recorded 2026-11-09).** D2 asked for `rim:supersededBy`
+  towards the formats; `rim:RegisterItemShape` rejects it towards an item this register does not type
+  (observed in a scratch build), and this register must not depend on data-formats. GeoLabs chose
+  option c: `dct:isReplacedBy` here, `rim:supersedes` on the data-formats side, unpublication
+  classified substantive. Which way `rim:supersedes` points is read from its label only; the question
+  is asked to the model maintainers. The bblock `status` of the withdrawn blocks is still
+  `under-development`: the Building Blocks register keeps listing them.
+- **Proposals:**
   - STAC (`stac-item`, `stac-item-collection`, `stac-catalog`, `stac-collection`): no Generic or
     Implementation Profile role uses them; 6 testbed outputs (kindgrove, water-bodies) serve a STAC
     Catalog JSON schema. Their definitions and usage describe the STAC JSON objects, an encoding.
@@ -191,9 +195,9 @@ Check `git status` before pushing: an untracked `_sources/vocabulary/data.ttl` o
     `stac-collection` are replaced by format-free concepts (a catalogue of metadata records, a
     described collection) only if a role needs them, with STAC Catalog and STAC Collection as
     formats.
-  - `elevation-model`: used by 2 Generic and 4 Implementation Profile roles; its definition names no
-    format. Proposal: keep it under `raster-single-band`, and replace its source "SAGA 7.3.0 Terrain
-    Analysis tools", a tool, by a non-tool source (clarifying, in place with `dt:amendmentAction`).
-    Generalising it to non-gridded elevation models (TIN, point cloud) would change its
+    Decision (2026-11-09): nothing until a role needs them.
+  - `elevation-model`: its tool source "SAGA 7.3.0 Terrain Analysis tools" was replaced on 2026-11-09
+    by the INSPIRE Data Specification on Elevation, in place, by a `dt:amendmentAction` classified
+    clarifying. Generalising it to non-gridded elevation models (TIN, point cloud) would change its
     `skos:broader`, a substantive change, and no role needs it today.
 - The four parameter types are not used yet: the Generic Profile roles still declare `string`.

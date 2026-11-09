@@ -23,8 +23,9 @@ register in one format. That register depends on this one; this one never depend
 for now, control body, with the intention to delegate that role to the OGC or to an OSPD working
 group. It holds the definition of a substantive change (`rim:definesSubstantiveChange`), the table of
 substantive and clarifying changes for data types, the version rule, the rule for proposals and
-`dt:amendmentAction`, the action type of an in-place change to a proposal. No eligibility criteria
-and no commitments are set.
+`dt:amendmentAction`, the action type of an in-place change to a proposal, and the rule for
+withdrawing a type (unpublication, `dct:isReplacedBy`). No eligibility criteria and no commitments
+are set.
 
 This vocabulary was first drafted inline in
 [`GeoLabs/bblocks-generic-profiles`](https://github.com/GeoLabs/bblocks-generic-profiles) as its
@@ -98,10 +99,15 @@ existing (reconciliation of the two IRI namespaces is a later, separate decision
 
 Each vocabulary concept has its own `model` Building Block, linked to the corresponding
 `dt:DataType` IRI. Each block contains its own `ontology.ttl`, which is autodetected and published
-as that entry's ontology in the Building Blocks UI. The 19 EOAP string formats are still registered
+as that entry's ontology in the Building Blocks UI. The 19 EOAP string formats were registered
 here as specialized types of `string`, as proposals. They are formats, not data types: the
-data-formats register holds all 20 EOAP formats, `Pattern` included, and their withdrawal from this
-register is pending a decision on how to record it (see `docs/work-summary.md`).
+data-formats register holds all 20 EOAP formats, `Pattern` included, and the 19 types are
+withdrawn (2026-11-09): each item and its version are `rim:unpublished` and stay `rim:invalid`, with
+an action of type `rim:unpublishAction` classified `rim:substantiveChange` next to the addition, and
+the item carries `dct:isReplacedBy` towards the matching `df:format/string-*`. The Registered Item
+Model link, `rim:supersedes`, is carried by the format in data-formats, because `rim:RegisterItemShape`
+rejects a `rim:supersededBy` towards an item this register does not type, and this register does not
+depend on data-formats. Nothing is deleted and no IRI changes.
 `coordinate-reference-system`, `expression`, `format-identifier` and `radiometric-index` are the
 types of four Generic Profile roles that declare `string` today; they have no broader type. `Feature` is distinct from `Geometry`: a feature contains a geometry and
 properties. `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, `MultiPolygon` and

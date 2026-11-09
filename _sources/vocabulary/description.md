@@ -44,11 +44,11 @@ requests it and has no broader type.
 
 The 19 fixed string formats in
 [`eoap/schemas/string_format.yaml`](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)
-are still registered as individual specializations of `string`, as proposals: date, date-time,
+were registered as individual specializations of `string`, as proposals: date, date-time,
 duration, email, hostname, idn-email, idn-hostname, ipv4, ipv6, iri, iri-reference, password,
 json-pointer, relative-json-pointer, uuid, uri, uri-reference, uri-template and time. They are
 formats, not kinds of data: the data-formats register holds them, with `Pattern`, as `df:Format`
-items (`df:format/string-*`). Their withdrawal from this register is pending: see "Content plane".
+items (`df:format/string-*`), and the 19 types are withdrawn: see "Content plane".
 
 The geometry types of OGC Simple Feature Access are represented individually: besides `point`,
 `curve` and `surface`, the `line-string` (under `curve`), `polygon` (under `surface`) and
@@ -80,9 +80,12 @@ realized by its own `dt:DataTypeItem` and by representations of data-formats (th
 Model limits `rim:realizes` per item, not per version). data-formats depends on this register; this
 register never depends on data-formats.
 
-The 19 `string-*` types are to leave this register for the `df:format/string-*` formats. That
-withdrawal is not recorded yet: an item of this register can only be `rim:supersededBy` an item
-typed in its own graph (`rim:RegisterItemShape`), and this register does not depend on data-formats.
+The 19 `string-*` types are withdrawn (2026-11-09): each item and its version are `rim:unpublished` and stay `rim:invalid`, with
+an action of type `rim:unpublishAction` classified `rim:substantiveChange` next to the addition, and
+the item carries `dct:isReplacedBy` towards the matching `df:format/string-*`. The Registered Item
+Model link, `rim:supersedes`, is carried by the format in data-formats, because `rim:RegisterItemShape`
+rejects a `rim:supersededBy` towards an item this register does not type, and this register does not
+depend on data-formats. Nothing is deleted and no IRI changes.
 
 The RIM publishes a JSON binding of its core: one JSON Schema and JSON-LD context per class. This
 register conforms to it layer by layer, each block depending on the one below it, as the RIM's own
