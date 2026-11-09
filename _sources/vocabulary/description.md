@@ -78,8 +78,14 @@ register conforms to it layer by layer, each block depending on the one below it
   the recorded addition required).
 - Each data-type block profiles this schema again and fixes the item's `id`.
 
-The register and item class blocks take the register metadata of this block's `data.ttl` as SHACL
-closure, so their JSON examples do not repeat it.
+The register and item class blocks load the register metadata of this block's `data.ttl` as a data
+resource, so their JSON examples do not repeat it.
+
+The data resources of a block (`resources` with role `data` in `bblock.json`) are part of the SHACL
+closure of that block and of every block that depends on it, in this register or in a register that
+imports it; their references are published as absolute URLs. This block lists `data.ttl` and the
+`ontology.ttl` of every data type there, and declares no `shaclClosures`: a relative closure path is
+published as is, and fails to load in an importing register.
 
 The item class and register nodes that `data.ttl` and each `ontology.ttl` already declare are not
 repeated in the JSON examples: the SHACL closure supplies them, and a second value for a

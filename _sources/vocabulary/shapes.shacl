@@ -12,7 +12,7 @@
 #   - a dt:DataTypeVersion records its addition, proposed by an agent (as the generic-profiles
 #     register does for its items), and versions exactly one dt:DataType.
 # Each data-type concept is declared in an individual Building Block ontology. The shared block's
-# shaclClosures includes those ontologies, so broader and versionOf links can be checked against
+# data resources include those ontologies, so broader and versionOf links can be checked against
 # the registered concepts.
 
 dt:RegisterShape a sh:NodeShape ;

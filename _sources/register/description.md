@@ -6,7 +6,7 @@ A profile of the RIM `register` schema: the governed collection of data types, d
 register system it runs on (`runsOn`) and from the roles that govern it (`registerOwner`,
 `registerManager`, `controlBody`). Its title, description, concept system (`dt:conceptSystem`) and
 register specification (`hasSpecification`, `dt:specification`) are declared in the `data.ttl` of the
-[shared vocabulary](../vocabulary/), which the SHACL closure of this block includes.
+[shared vocabulary](../vocabulary/), which this block loads as a data resource (SHACL closure).
 
 ## Register specification
 
