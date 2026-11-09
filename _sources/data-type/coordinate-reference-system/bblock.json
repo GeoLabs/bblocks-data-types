@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Coordinate reference system",
+  "abstract": "A coordinate system that is related to an object by a datum.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/coordinate-reference-system"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "OGC 18-005r5 Topic 2 - Referencing by coordinates (ISO 19111:2019), 3.1.9 coordinate reference system",
+      "link": "https://docs.ogc.org/as/18-005r5/18-005r5.html"
+    },
+    {
+      "title": "Generic Profile raster-reprojection (bblocks-generic-profiles), the role that requests this type",
+      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-reprojection/inputs/targetCRS"
+    }
+  ],
+  "group": "Parameter data types",
+  "highlighted": true
+}

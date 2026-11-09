@@ -78,6 +78,10 @@ existing (reconciliation of the two IRI namespaces is a later, separate decision
 | `data-types.data-type.string-uri-template` | Data type: String — URI template |
 | `data-types.data-type.string-uuid` | Data type: String — UUID |
 | `data-types.data-type.boolean` | Data type: Boolean |
+| `data-types.data-type.coordinate-reference-system` | Data type: Coordinate reference system |
+| `data-types.data-type.expression` | Data type: Expression |
+| `data-types.data-type.format-identifier` | Data type: Format identifier |
+| `data-types.data-type.radiometric-index` | Data type: Radiometric index |
 
 Each vocabulary concept has its own `model` Building Block, linked to the corresponding
 `dt:DataType` IRI. Each block contains its own `ontology.ttl`, which is autodetected and published
