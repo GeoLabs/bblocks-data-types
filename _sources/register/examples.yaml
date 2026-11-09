@@ -1,8 +1,9 @@
 examples:
   - title: The data-types register (JSON)
     content: >-
-      The register, the system it runs on and its owner and manager. Its title, description and
-      concept system are in the shared vocabulary's `data.ttl`.
+      The register, the system it runs on, its owner, manager and control body, and its register
+      specification. Its title, description, concept system and the text of its specification are
+      in the shared vocabulary's `data.ttl`.
     snippets:
       - language: json
         code: |
@@ -13,5 +14,7 @@ examples:
             "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
             "runsOn": "https://geolabs.github.io/bblocks-data-types/def/registerSystem",
             "registerOwner": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-            "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs"
+            "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+            "controlBody": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+            "hasSpecification": "https://geolabs.github.io/bblocks-data-types/def/specification"
           }
