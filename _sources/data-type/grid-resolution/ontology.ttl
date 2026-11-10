@@ -1,0 +1,11 @@
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Grid resolution"@en ; skos:definition "The spacing of the cells of a regular grid along each of its axes, in the units of its coordinate reference system."@en ; dct:source [ dct:title "Generic Profile raster-resampling (bblocks-generic-profiles), the role that requests this type"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-resampling/inputs/resolution> ] .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution/actions/addition> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Grid resolution"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .

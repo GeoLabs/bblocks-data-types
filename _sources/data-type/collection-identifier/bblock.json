@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Collection identifier",
+  "abstract": "An identifier that designates a collection of data products held in a catalogue.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type",
+      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/collection"
+    }
+  ],
+  "group": "Parameter data types",
+  "highlighted": true
+}

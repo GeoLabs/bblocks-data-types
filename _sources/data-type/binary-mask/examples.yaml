@@ -1,0 +1,42 @@
+examples:
+  - title: Binary mask
+    content: >-
+      The register item of the Binary mask data type: it realizes the governed version of the
+      concept and belongs to the register's data type item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask/item",
+            "type": "DataTypeItem",
+            "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask/item",
+            "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+            "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+            "realizes": {
+              "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask/v1",
+              "type": "DataTypeVersion",
+              "versionOf": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask",
+                "type": "Concept",
+                "prefLabel": "Binary mask",
+                "definition": "A single-band raster whose cells each state whether the location belongs to a class or not.",
+                "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+              },
+              "version": "1.0",
+              "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask/v1",
+              "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask",
+              "validityStatus": "invalid",
+              "publicationStatus": "published",
+              "hasAction": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+                "startedAtTime": "2026-11-10T00:00:00Z"
+              }
+            },
+            "validityStatus": "invalid",
+            "publicationStatus": "published"
+          }
+      - language: turtle
+        ref: ontology.ttl

@@ -1,0 +1,42 @@
+examples:
+  - title: Earth observation product
+    content: >-
+      The register item of the Earth observation product data type: it realizes the governed version of the
+      concept and belongs to the register's data type item class.
+    snippets:
+      - language: json
+        code: |
+          {
+            "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item",
+            "type": "DataTypeItem",
+            "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item",
+            "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+            "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+            "realizes": {
+              "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1",
+              "type": "DataTypeVersion",
+              "versionOf": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product",
+                "type": "Concept",
+                "prefLabel": "Earth observation product",
+                "definition": "A dataset delivered as one unit by a data provider, typically one acquisition over one area, made of several assets such as spectral bands, masks and metadata, and described by metadata.",
+                "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+              },
+              "version": "1.0",
+              "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1",
+              "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product",
+              "validityStatus": "invalid",
+              "publicationStatus": "published",
+              "hasAction": {
+                "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/actions/addition",
+                "type": "RegisterAction",
+                "actionType": "addition",
+                "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+                "startedAtTime": "2026-11-10T00:00:00Z"
+              }
+            },
+            "validityStatus": "invalid",
+            "publicationStatus": "published"
+          }
+      - language: turtle
+        ref: ontology.ttl

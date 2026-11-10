@@ -96,6 +96,14 @@ existing (reconciliation of the two IRI namespaces is a later, separate decision
 | `data-types.data-type.expression` | Data type: Expression |
 | `data-types.data-type.format-identifier` | Data type: Format identifier |
 | `data-types.data-type.radiometric-index` | Data type: Radiometric index |
+| `data-types.data-type.band-identifier` | Data type: Band identifier |
+| `data-types.data-type.grid-resolution` | Data type: Grid resolution |
+| `data-types.data-type.colour-map` | Data type: Colour map |
+| `data-types.data-type.time-interval` | Data type: Time interval |
+| `data-types.data-type.collection-identifier` | Data type: Collection identifier |
+| `data-types.data-type.binary-mask` | Data type: Binary mask |
+| `data-types.data-type.eo-product` | Data type: Earth observation product |
+| `data-types.data-type.rendered-image` | Data type: Rendered image |
 
 Each vocabulary concept has its own `model` Building Block, linked to the corresponding
 `dt:DataType` IRI. Each block contains its own `ontology.ttl`, which is autodetected and published
@@ -109,7 +117,10 @@ Model link, `rim:supersedes`, is carried by the format in data-formats, because 
 rejects a `rim:supersededBy` towards an item this register does not type, and this register does not
 depend on data-formats. Nothing is deleted and no IRI changes.
 `coordinate-reference-system`, `expression`, `format-identifier` and `radiometric-index` are the
-types of four Generic Profile roles that declare `string` today; they have no broader type. `Feature` is distinct from `Geometry`: a feature contains a geometry and
+types of four Generic Profile roles that declare `string` today; they have no broader type. `band-identifier`, `grid-resolution`, `colour-map`, `time-interval`,
+`collection-identifier`, `binary-mask` (narrower than `raster-single-band`), `eo-product` and
+`rendered-image` were added on 2026-11-10 for the roles of six new process profiles of
+`bblocks-generic-profiles`; each names the role that requests it, and only `binary-mask` has a broader type. `Feature` is distinct from `Geometry`: a feature contains a geometry and
 properties. `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, `MultiPolygon` and
 `GeometryCollection` are geometry types of OGC Simple Feature Access: `LineString` specializes
 `curve` and `Polygon` specializes `surface`, while `MultiPoint`, `MultiCurve` and `MultiSurface`

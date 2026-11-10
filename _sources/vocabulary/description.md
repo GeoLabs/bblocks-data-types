@@ -40,7 +40,11 @@ The initial types are `raster`, `raster-single-band`, `raster-multi-band`, `elev
 `bblocks-generic-profiles` that declare `string` for something that is not a character string
 (`raster-reprojection/targetCRS`, `raster-band-math/expression`,
 `raster-format-conversion/targetFormat`, `radiometric-index/index`); each names the role that
-requests it and has no broader type.
+requests it and has no broader type. `band-identifier`, `eo-product`, `grid-resolution`, `binary-mask`,
+`colour-map`, `rendered-image`, `time-interval` and `collection-identifier` were added on 2026-11-10
+for the roles of six new Generic Profiles of `bblocks-generic-profiles` (band retrieval, product
+selection, raster resampling, thresholding and rendering); each names the role that requests it, and
+only `binary-mask` has a broader type, `raster-single-band`.
 
 The 19 fixed string formats in
 [`eoap/schemas/string_format.yaml`](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)

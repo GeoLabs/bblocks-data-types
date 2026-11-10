@@ -1,6 +1,6 @@
 # Work summary: bblocks-data-types
 
-State as of 2026-11-09 (branch `planes/phase-2`, local commits only). Last verified build: 59/59
+State as of 2026-11-10 (branch `planes/new-profiles`, from `planes/phase-2`, local commits only). Last verified build: 67/67
 blocks passing, locally, in a scratch copy (not on CI: nothing is pushed).
 
 ## Purpose
@@ -19,16 +19,16 @@ The vocabulary was first drafted inline in `bblocks-generic-profiles`; this regi
 can be reused and governed on its own. The Generic and Implementation Profiles of
 `bblocks-generic-profiles` now use this register's IRIs as `dataType`; it imports this register.
 
-## Content: 59 Building Blocks
+## Content: 67 Building Blocks
 
 | Group | Blocks |
 |---|---|
 | Geometry (17) | `geometry`, `point`, `curve`, `surface`, `line-string`, `line`, `linear-ring`, `polygon`, `triangle`, `polyhedral-surface`, `tin`, `geometry-collection`, `multi-point`, `multi-curve`, `multi-surface`, `multi-line-string`, `multi-polygon` |
 | Features (2) and STAC (4) | `feature`, `feature-collection`, `stac-item`, `stac-collection`, `stac-catalog`, `stac-item-collection` |
 | Literals (22) | `string`, 19 `string-*` formats from the EOAP schemas (withdrawn, unpublished), `number`, `boolean` |
-| Parameters (4) | `coordinate-reference-system`, `expression`, `format-identifier`, `radiometric-index` |
-| Raster (4) | `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model` |
-| Other (3) | `point-cloud`, `table`, `bounding-box` |
+| Parameters (9) | `coordinate-reference-system`, `expression`, `format-identifier`, `radiometric-index`, `band-identifier`, `grid-resolution`, `colour-map`, `time-interval`, `collection-identifier` |
+| Raster (5) | `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model`, `binary-mask` |
+| Other (5) | `point-cloud`, `table`, `bounding-box`, `eo-product`, `rendered-image` |
 | Support (3) | `vocabulary`, `register`, `item-class` |
 
 ## Model
