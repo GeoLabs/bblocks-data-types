@@ -1,6 +1,6 @@
 # Work summary: bblocks-data-types
 
-State as of 2026-11-10 (branch `planes/new-profiles`, from `planes/phase-2`, local commits only). Last verified build: 67/67
+State as of 2026-11-11 (branch `planes/new-profiles`, from `planes/phase-2`, local commits only). Last verified build: 67/67
 blocks passing, locally, in a scratch copy (not on CI: nothing is pushed).
 
 ## Purpose
@@ -24,7 +24,7 @@ can be reused and governed on its own. The Generic and Implementation Profiles o
 | Group | Blocks |
 |---|---|
 | Geometry (17) | `geometry`, `point`, `curve`, `surface`, `line-string`, `line`, `linear-ring`, `polygon`, `triangle`, `polyhedral-surface`, `tin`, `geometry-collection`, `multi-point`, `multi-curve`, `multi-surface`, `multi-line-string`, `multi-polygon` |
-| Features (2) and STAC (4) | `feature`, `feature-collection`, `stac-item`, `stac-collection`, `stac-catalog`, `stac-item-collection` |
+| Features (2) and STAC (4) | `feature`, `feature-collection`, 4 STAC types `stac-item`, `stac-collection`, `stac-catalog`, `stac-item-collection` (withdrawn, unpublished) |
 | Literals (22) | `string`, 19 `string-*` formats from the EOAP schemas (withdrawn, unpublished), `number`, `boolean` |
 | Parameters (9) | `coordinate-reference-system`, `expression`, `format-identifier`, `radiometric-index`, `band-identifier`, `grid-resolution`, `colour-map`, `time-interval`, `collection-identifier` |
 | Raster (5) | `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model`, `binary-mask` |
@@ -67,7 +67,8 @@ in-place change to a proposal. No eligibility criteria and no commitments are se
 - `isProfileOf` in `bblock.json`, which the register publishes as `prof:isProfileOf`.
 
 A check that compares the two found 41 relations and no gap on 2026-11-09. 19 of them are
-`string-*` -> `string`; the four parameter types have no broader type.
+`string-*` -> `string`; the four parameter types have no broader type. Withdrawn types keep their
+`skos:broader` and `isProfileOf` as recorded (19 `string-*`, and 3 of the 4 `stac-*`).
 
 **Each type block contains:** `bblock.json`, `ontology.ttl` (concept, version, action and item),
 `schema.yaml`, `examples.yaml` (JSON item and Turtle) and `description.md`.
@@ -187,15 +188,13 @@ Check `git status` before pushing: an untracked `_sources/vocabulary/data.ttl` o
   `under-development`: the Building Blocks register keeps listing them.
 - **Proposals:**
   - STAC (`stac-item`, `stac-item-collection`, `stac-catalog`, `stac-collection`): no Generic or
-    Implementation Profile role uses them; 6 testbed outputs (kindgrove, water-bodies) serve a STAC
-    Catalog JSON schema. Their definitions and usage describe the STAC JSON objects, an encoding.
-    Proposal: `stac-item` and `stac-item-collection` become `df:Format` items of data-formats
-    (STAC Item, STAC API ItemCollection), bound to `feature` and `feature-collection` by
-    representations once a role needs them, and leave this register; `stac-catalog` and
-    `stac-collection` are replaced by format-free concepts (a catalogue of metadata records, a
-    described collection) only if a role needs them, with STAC Catalog and STAC Collection as
-    formats.
-    Decision (2026-11-09): nothing until a role needs them.
+    Implementation Profile role uses them, and their definitions and usage describe the STAC JSON
+    objects, an encoding. Decision of 2026-11-09: nothing until a role needs them. Decision Q4,
+    option b, of 2026-11-11: withdrawn as the `string-*` were, each item and version unpublished by
+    an action classified substantive, with `dct:isReplacedBy` towards the formats
+    `df:format/stac-item`, `stac-item-collection`, `stac-collection` and `stac-catalog`, which carry
+    `rim:supersedes`. Format-free concepts (a catalogue of metadata records, a described collection)
+    are created only if a role needs them.
   - `elevation-model`: its tool source "SAGA 7.3.0 Terrain Analysis tools" was replaced on 2026-11-09
     by the INSPIRE Data Specification on Elevation, in place, by a `dt:amendmentAction` classified
     clarifying. Generalising it to non-gridded elevation models (TIN, point cloud) would change its

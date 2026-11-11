@@ -128,10 +128,14 @@ are collections and specialize `GeometryCollection`; `MultiLineString` specializ
 `MultiPolygon` specializes `MultiSurface`, as in OGC CDB 2.0 Core (23-034, 7.6) and Simple Feature
 Access. `Line` and `LinearRing` specialize `LineString`, `Triangle` specializes `Polygon`, and
 `PolyhedralSurface` specializes `Surface`, with the triangulated irregular network (`tin`) under
-it, as in the geometry model of 23-034 (7.6.1). `STAC
-Item` specializes `Feature`; `STAC Collection` specializes `STAC Catalog`; and
-`STAC Item Collection` specializes `feature-collection`. The latter is a collection of items, not a
-STAC `Collection` metadata object.
+it, as in the geometry model of 23-034 (7.6.1). The four STAC types
+(`stac-item` under `feature`, `stac-item-collection` under `feature-collection`, `stac-collection`
+under `stac-catalog`, and `stac-catalog`) were proposals that no role uses. They describe STAC JSON
+objects, which are encodings, and are withdrawn (2026-11-11, decision Q4, option b) as the `string-*`
+types were: each item and its version are `rim:unpublished` and stay `rim:invalid`, with an action of
+type `rim:unpublishAction` classified `rim:substantiveChange`, and the item carries
+`dct:isReplacedBy` towards the `df:format/stac-*` of the same name, which carries `rim:supersedes`.
+Their `skos:broader` links are kept as recorded. Nothing is deleted and no IRI changes.
 
 The hierarchy between types is expressed twice: as `skos:broader` in each block's `ontology.ttl`
 (the canonical source), and as `isProfileOf` towards the parent block in its `bblock.json`, so that

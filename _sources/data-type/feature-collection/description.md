@@ -7,7 +7,7 @@ A set of features, each with a geometry and attributes -- e.g. a SAGA shapes lay
 ## Hierarchy
 
 - Broader: none (top-level data type)
-- Narrower: [STAC Item Collection](../stac-item-collection/)
+- Narrower (withdrawn): [STAC Item Collection](../stac-item-collection/)
 
 ## Content of this block
 

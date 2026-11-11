@@ -61,11 +61,14 @@ The geometry types of OGC Simple Feature Access are represented individually: be
 a `multi-curve` and `multi-polygon` a `multi-surface` (OGC CDB 2.0 Core, 23-034, 7.6). `line` and
 `linear-ring` are narrower than `line-string`, `triangle` than `polygon`, and `polyhedral-surface`
 than `surface`; `tin` is a `polyhedral-surface` (geometry model of 23-034, 7.6.1). A `feature`, which
-wraps a geometry with properties, is a type of its own. Three distinct STAC data types are
-represented from [`radiantearth/stac-spec`](https://github.com/radiantearth/stac-spec): `stac-item`
-specializes `feature`, `stac-collection` specializes `stac-catalog`, and `stac-item-collection`
-specializes `feature-collection` for responses containing arrays of STAC Items (such as Item
-Search). A STAC Collection is metadata for a set of related assets, not an array of STAC Items.
+wraps a geometry with properties, is a type of its own. Four STAC types were registered from
+[`radiantearth/stac-spec`](https://github.com/radiantearth/stac-spec), as proposals: `stac-item`
+under `feature`, `stac-item-collection` under `feature-collection`, `stac-collection` under
+`stac-catalog`, and `stac-catalog`. No role uses them, and their definitions describe STAC JSON
+objects, which are encodings. They are withdrawn (2026-11-11, decision Q4, option b) like the
+`string-*` types: each item and its version are unpublished, with an unpublication action classified
+substantive, and the item carries `dct:isReplacedBy` towards the format `df:format/stac-*` of the same
+name, which carries `rim:supersedes`. Their `skos:broader` links are kept as recorded.
 
 ## Content plane and JSON binding
 
@@ -84,9 +87,9 @@ realized by its own `dt:DataTypeItem` and by representations of data-formats (th
 Model limits `rim:realizes` per item, not per version). data-formats depends on this register; this
 register never depends on data-formats.
 
-The 19 `string-*` types are withdrawn (2026-11-09): each item and its version are `rim:unpublished` and stay `rim:invalid`, with
+The 19 `string-*` types (2026-11-09) and the four `stac-*` types (2026-11-11) are withdrawn: each item and its version are `rim:unpublished` and stay `rim:invalid`, with
 an action of type `rim:unpublishAction` classified `rim:substantiveChange` next to the addition, and
-the item carries `dct:isReplacedBy` towards the matching `df:format/string-*`. The Registered Item
+the item carries `dct:isReplacedBy` towards the matching `df:format/string-*` or `df:format/stac-*`. The Registered Item
 Model link, `rim:supersedes`, is carried by the format in data-formats, because `rim:RegisterItemShape`
 rejects a `rim:supersededBy` towards an item this register does not type, and this register does not
 depend on data-formats. Nothing is deleted and no IRI changes.
