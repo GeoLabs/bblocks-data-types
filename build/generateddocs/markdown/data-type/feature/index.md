@@ -32,7 +32,7 @@ Illustration only: the data type does not depend on any encoding. Here is one po
 ## Hierarchy
 
 - Broader: none (top-level data type)
-- Narrower: [STAC Item](../stac-item/)
+- Narrower (withdrawn): [STAC Item](../stac-item/)
 
 ## Content of this block
 
@@ -363,6 +363,10 @@ Links to the schema:
     "source": "dct:source",
     "link": {
       "@id": "dct:references",
+      "@type": "@id"
+    },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
       "@type": "@id"
     },
     "rim": "https://w3id.org/ogc/rim/",

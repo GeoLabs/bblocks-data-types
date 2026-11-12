@@ -363,6 +363,10 @@ Links to the schema:
       "@id": "dct:references",
       "@type": "@id"
     },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
+      "@type": "@id"
+    },
     "rim": "https://w3id.org/ogc/rim/",
     "prov": "http://www.w3.org/ns/prov#",
     "dct": "http://purl.org/dc/terms/",

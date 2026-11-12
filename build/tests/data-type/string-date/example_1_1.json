@@ -18,7 +18,7 @@
     "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date/v1",
     "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date",
     "validityStatus": "invalid",
-    "publicationStatus": "published",
+    "publicationStatus": "unpublished",
     "hasAction": {
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date/actions/addition",
       "type": "RegisterAction",
@@ -28,5 +28,6 @@
     }
   },
   "validityStatus": "invalid",
-  "publicationStatus": "published"
+  "publicationStatus": "unpublished",
+  "isReplacedBy": "https://w3id.org/geolabs/ospd/data-formats/format/string-date"
 }

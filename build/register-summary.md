@@ -47,6 +47,12 @@ The item class shared by the data type items of this register, in JSON: a profil
 
 Shared RIM concept-plane model, register metadata, and SHACL rules for the individual data-type Building Blocks in this register.
 
+### `data-types.data-type.band-identifier` — Data type: Band identifier
+
+**Type:** model
+
+An identifier that designates one band or asset of a multi-band product, either by the provider's band code or by a common band name.
+
 ### `data-types.data-type.boolean` — Data type: Boolean
 
 **Type:** model
@@ -58,6 +64,36 @@ A literal truth value.
 **Type:** model
 
 An axis-aligned extent given by its corners, with its CRS.
+
+### `data-types.data-type.collection-identifier` — Data type: Collection identifier
+
+**Type:** model
+
+An identifier that designates a collection of data products held in a catalogue.
+
+### `data-types.data-type.colour-map` — Data type: Colour map
+
+**Type:** model
+
+An association of data values, or of classes of values, with colours, used to depict data as an image.
+
+### `data-types.data-type.coordinate-reference-system` — Data type: Coordinate reference system
+
+**Type:** model
+
+A coordinate system that is related to an object by a datum.
+
+### `data-types.data-type.eo-product` — Data type: Earth observation product
+
+**Type:** model
+
+A dataset delivered as one unit by a data provider, typically one acquisition over one area, made of several assets such as spectral bands, masks and metadata, and described by metadata.
+
+### `data-types.data-type.expression` — Data type: Expression
+
+**Type:** model
+
+A formula that combines references to input values, constants, operators and functions, and whose evaluation computes a value.
 
 ### `data-types.data-type.feature` — Data type: Feature
 
@@ -71,11 +107,23 @@ A representation of a real-world phenomenon, with a geometry and properties, opt
 
 A set of features, each with a geometry and attributes; e.g. an OGC API - Features feature collection.
 
+### `data-types.data-type.format-identifier` — Data type: Format identifier
+
+**Type:** model
+
+An identifier that designates a data format, used to tell a process which format to read or produce.
+
 ### `data-types.data-type.geometry` — Data type: Geometry
 
 **Type:** model
 
 A geometric object of the Simple Feature Access geometry model.
+
+### `data-types.data-type.grid-resolution` — Data type: Grid resolution
+
+**Type:** model
+
+The spacing of the cells of a regular grid along each of its axes, in the units of its coordinate reference system.
 
 ### `data-types.data-type.number` — Data type: Number
 
@@ -89,11 +137,23 @@ A literal number.
 
 A set of three-dimensional points, each with its own attributes (intensity, classification, ...), typically from LiDAR.
 
+### `data-types.data-type.radiometric-index` — Data type: Radiometric index
+
+**Type:** model
+
+A quantity derived by combining the radiometric values of several spectral bands, designed to highlight a property of the observed surface such as vegetation or water.
+
 ### `data-types.data-type.raster` — Data type: Raster
 
 **Type:** model
 
 A coverage on a regular grid of cells, each cell carrying one value per band; its band structure is its range type.
+
+### `data-types.data-type.rendered-image` — Data type: Rendered image
+
+**Type:** model
+
+A picture of data made for viewing: a grid of colour values produced by applying a colour map or a style to data, with or without georeferencing.
 
 ### `data-types.data-type.stac-catalog` — Data type: STAC Catalog
 
@@ -112,6 +172,12 @@ A literal character string, e.g. an expression, a CRS identifier or a format nam
 **Type:** model
 
 Records of attribute values, without geometry.
+
+### `data-types.data-type.time-interval` — Data type: Time interval
+
+**Type:** model
+
+A period of time between two instants, either of which may be unbounded.
 
 ### `data-types.data-type.stac-item` — Data type: STAC Item
 
@@ -316,6 +382,12 @@ A planar surface defined by one exterior boundary and zero or more interior boun
 **Type:** model
 
 A contiguous collection of polygons that share common boundary segments.
+
+### `data-types.data-type.binary-mask` — Data type: Binary mask
+
+**Type:** model
+
+A single-band raster whose cells each state whether the location belongs to a class or not.
 
 ### `data-types.data-type.elevation-model` — Data type: Elevation model
 

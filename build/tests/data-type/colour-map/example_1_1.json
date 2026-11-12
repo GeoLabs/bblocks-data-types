@@ -1,0 +1,32 @@
+{
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/colour-map/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/colour-map/item",
+  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "realizes": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/colour-map/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/colour-map",
+      "type": "Concept",
+      "prefLabel": "Colour map",
+      "definition": "An association of data values, or of classes of values, with colours, used to depict data as an image.",
+      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/colour-map/v1",
+    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/colour-map",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/colour-map/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "startedAtTime": "2026-11-10T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

@@ -1,0 +1,13 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data type item - Coordinate reference system
+description: The register item of the Coordinate reference system data type, in JSON.
+allOf:
+- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
+properties:
+  id:
+    const: https://geolabs.github.io/bblocks-data-types/def/data-type/coordinate-reference-system/item
+x-bblocks-metadata:
+  itemIdentifier: data-types.data-type.coordinate-reference-system
+  register: https://geolabs.github.io/bblocks-data-types/build/register.json
+  version: '1.0'
+  dateOfLastChange: '2026-11-09'

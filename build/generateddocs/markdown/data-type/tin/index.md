@@ -144,7 +144,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.tin
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-12'
 
 ```
 
@@ -353,6 +353,10 @@ Links to the schema:
     "source": "dct:source",
     "link": {
       "@id": "dct:references",
+      "@type": "@id"
+    },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
       "@type": "@id"
     },
     "rim": "https://w3id.org/ogc/rim/",

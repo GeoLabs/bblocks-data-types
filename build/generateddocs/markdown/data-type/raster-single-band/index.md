@@ -18,7 +18,7 @@ A raster with exactly one band: a range type of one field.
 ## Hierarchy
 
 - Broader: [Raster](../raster/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)
-- Narrower: [Elevation model](../elevation-model/)
+- Narrower: [Elevation model](../elevation-model/), [Binary mask](../binary-mask/)
 
 ## Content of this block
 
@@ -83,7 +83,8 @@ The register item of the Raster (single band) data type: it realizes the governe
 <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Raster (single band)"@en ; skos:definition "A raster with exactly one band: a range type of one field."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/raster> ; dct:source [ dct:title "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType"@en ; dct:references <https://docs.ogc.org/is/09-146r8/09-146r8.html> ] .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition> .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-10-08T00:00:00Z"^^xsd:dateTime .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Raster (single band)"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Raster (single band)"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/amendment-relations> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/amendment-relations> a rim:RegisterAction ; rim:actionType dt:amendmentAction ; rim:changeClassification rim:clarifyingChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item> ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime ; dct:description "In-place amendment of a proposal: the Relations text of the block now lists Binary mask among the narrower data types, besides Elevation model, since binary-mask (added 2026-11-10) has this type as skos:broader. The definition and skos:broader of this type are unchanged. Classified clarifying: a documentary text; the type covers the same data."@en .
 
 ```
 
@@ -139,7 +140,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.raster-single-band
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-12'
 
 ```
 
@@ -348,6 +349,10 @@ Links to the schema:
     "source": "dct:source",
     "link": {
       "@id": "dct:references",
+      "@type": "@id"
+    },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
       "@type": "@id"
     },
     "rim": "https://w3id.org/ogc/rim/",

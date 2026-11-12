@@ -1,0 +1,11 @@
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Radiometric index"@en ; skos:definition "A quantity derived by combining the radiometric values of several spectral bands, designed to highlight a property of the observed surface such as vegetation or water."@en ; dct:source [ dct:title "Generic Profile radiometric-index (bblocks-generic-profiles), the role that requests this type"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/radiometric-index/inputs/index> ] .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/actions/addition> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Radiometric index"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .

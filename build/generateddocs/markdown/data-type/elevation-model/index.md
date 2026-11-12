@@ -15,6 +15,14 @@ A single-band raster whose values are elevations of the terrain or of a surface 
 
 `https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
+INSPIRE also admits vector and TIN representations of an elevation model; this type covers the grid one.
+
+## Amendment
+
+On 2026-11-09 the source "SAGA 7.3.0 Terrain Analysis tools, Elevation grid inputs", a tool, was replaced by the INSPIRE Data Specification on Elevation, whose executive summary defines the digital elevation, terrain and surface models (DEM, DTM, DSM). The definition is unchanged. The action, `https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/amendment-source`, is of type `dt:amendmentAction` and classified `rim:clarifyingChange`: an in-place change to a proposal.
+
+A second clarifying amendment of the same day, `https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/amendment-inspire-version` (`dt:amendmentAction`, `rim:clarifyingChange`, affected properties `dct:source` and `skos:scopeNote`), gives the version of the INSPIRE specification, D2.8.II.1_v3.3.0, cites its term definitions (§2.4, (6) to (8)) and adds the scope note above. The definition and the broader type are unchanged.
+
 ## Hierarchy
 
 - Broader: [Raster (single band)](../raster-single-band/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)
@@ -29,7 +37,7 @@ A single-band raster whose values are elevations of the terrain or of a surface 
 ## Sources
 
 - [OGC 09-146r8 CIS 1.1.1, §6.5 RangeType](https://docs.ogc.org/is/09-146r8/09-146r8.html)
-- [SAGA 7.3.0 Terrain Analysis tools, Elevation grid inputs](https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html)
+- [INSPIRE D2.8.II.1 Data Specification on Elevation – Technical Guidelines, D2.8.II.1_v3.3.0 (2024-01-31): Executive Summary, and §2.4 Terms and definitions, (6) Digital Elevation Model, (7) Digital Surface Model, (8) Digital Terrain Model](https://inspire.ec.europa.eu/id/document/tg/el)
 
 ## Examples
 
@@ -81,10 +89,12 @@ The register item of the Elevation model data type: it realizes the governed ver
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Elevation model"@en ; skos:definition "A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM)."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> ; dct:source [ dct:title "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType"@en ; dct:references <https://docs.ogc.org/is/09-146r8/09-146r8.html> ], [ dct:title "SAGA 7.3.0 Terrain Analysis tools, Elevation grid inputs"@en ; dct:references <https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html> ] .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Elevation model"@en ; skos:definition "A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM)."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> ; dct:source [ dct:title "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType"@en ; dct:references <https://docs.ogc.org/is/09-146r8/09-146r8.html> ], [ dct:title "INSPIRE D2.8.II.1 Data Specification on Elevation – Technical Guidelines, D2.8.II.1_v3.3.0 (2024-01-31): Executive Summary, and §2.4 Terms and definitions, (6) Digital Elevation Model, (7) Digital Surface Model, (8) Digital Terrain Model"@en ; dct:references <https://inspire.ec.europa.eu/id/document/tg/el> ]; skos:scopeNote "INSPIRE also admits vector and TIN representations of an elevation model; this type covers the grid one."@en .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition>, <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/amendment-source>, <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/amendment-inspire-version> .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-10-08T00:00:00Z"^^xsd:dateTime .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Elevation model"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Elevation model"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published; rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/amendment-source>, <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/amendment-inspire-version> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/amendment-source> a rim:RegisterAction ; rim:actionType dt:amendmentAction ; rim:changeClassification rim:clarifyingChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/item> ; rim:affectedProperty dct:source ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "In-place amendment of a proposal: the source SAGA 7.3.0 Terrain Analysis tools, a tool, is replaced by the INSPIRE Data Specification on Elevation, which defines digital elevation, terrain and surface models. The definition is unchanged. Classified clarifying: a source changes and the type covers the same data."@en .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/actions/amendment-inspire-version> a rim:RegisterAction ; rim:actionType dt:amendmentAction ; rim:changeClassification rim:clarifyingChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://geolabs.github.io/bblocks-data-types/def/data-type/elevation-model/item> ; rim:affectedProperty dct:source, skos:scopeNote ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "In-place amendment of a proposal: the INSPIRE source now gives its version, D2.8.II.1_v3.3.0, and cites the term definitions of its section 2.4, (6) to (8), besides the executive summary; a scope note says that INSPIRE also admits vector and TIN representations and that this type covers the grid one. The definition and skos:broader are unchanged. Classified clarifying: the type covers the same data."@en .
 
 ```
 
@@ -140,7 +150,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.elevation-model
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-12'
 
 ```
 
@@ -351,6 +361,10 @@ Links to the schema:
       "@id": "dct:references",
       "@type": "@id"
     },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
+      "@type": "@id"
+    },
     "rim": "https://w3id.org/ogc/rim/",
     "prov": "http://www.w3.org/ns/prov#",
     "dct": "http://purl.org/dc/terms/",
@@ -369,7 +383,7 @@ You can find the full JSON-LD context here:
 ## Sources
 
 * [OGC 09-146r8 CIS 1.1.1, §6.5 RangeType](https://docs.ogc.org/is/09-146r8/09-146r8.html)
-* [SAGA 7.3.0 Terrain Analysis tools, Elevation grid inputs](https://saga-gis.sourceforge.io/saga_tool_doc/7.3.0/ta_morphometry.html)
+* [INSPIRE D2.8.II.1 Data Specification on Elevation – Technical Guidelines, D2.8.II.1_v3.3.0 (2024-01-31): Executive Summary, and §2.4 Terms and definitions, (6) Digital Elevation Model, (7) Digital Surface Model, (8) Digital Terrain Model](https://inspire.ec.europa.eu/id/document/tg/el)
 
 # For developers
 

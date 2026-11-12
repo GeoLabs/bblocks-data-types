@@ -146,6 +146,10 @@
     "link": {
       "x-jsonld-id": "http://purl.org/dc/terms/references",
       "x-jsonld-type": "@id"
+    },
+    "isReplacedBy": {
+      "x-jsonld-id": "http://purl.org/dc/terms/isReplacedBy",
+      "x-jsonld-type": "@id"
     }
   },
   "x-jsonld-prefixes": {
@@ -160,6 +164,6 @@
     "itemIdentifier": "data-types.vocabulary",
     "register": "https://geolabs.github.io/bblocks-data-types/build/register.json",
     "version": "0.1",
-    "dateOfLastChange": "2026-11-04"
+    "dateOfLastChange": "2026-11-12"
   }
 }

@@ -19,7 +19,7 @@
     "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/v1",
     "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog",
     "validityStatus": "invalid",
-    "publicationStatus": "published",
+    "publicationStatus": "unpublished",
     "hasAction": {
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog/actions/addition",
       "type": "RegisterAction",
@@ -29,5 +29,6 @@
     }
   },
   "validityStatus": "invalid",
-  "publicationStatus": "published"
+  "publicationStatus": "unpublished",
+  "isReplacedBy": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog"
 }

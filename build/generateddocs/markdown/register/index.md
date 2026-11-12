@@ -15,9 +15,23 @@ The data-types register as a Registered Item Model **register**, in JSON.
 
 A profile of the RIM `register` schema: the governed collection of data types, distinct from the
 register system it runs on (`runsOn`) and from the roles that govern it (`registerOwner`,
-`registerManager`). Its title, description and concept system (`dt:conceptSystem`) are declared in
-the `data.ttl` of the [shared vocabulary](../vocabulary/), which the SHACL closure of this block
-includes.
+`registerManager`, `controlBody`). Its title, description, concept system (`dt:conceptSystem`) and
+register specification (`hasSpecification`, `dt:specification`) are declared in the `data.ttl` of the
+[shared vocabulary](../vocabulary/), which this block loads as a data resource (SHACL closure).
+
+## Register specification
+
+`dt:specification` is a `rim:RegisterSpecification`. It records:
+
+- the register type: a concept register, as the Registered Item Model uses the term;
+- the roles: GeoLabs SARL is owner, manager and, for now, control body, with the written intention
+  to delegate the control body role to the OGC or to an OSPD working group;
+- the `rim:realizes` link with the data-formats register: a `df:Representation` realizes at most one
+  `dt:DataTypeVersion`, and data-formats depends on this register, never the reverse;
+- the definition of a substantive change (`rim:definesSubstantiveChange`), the table of substantive
+  and clarifying changes for data types, the version rule and the rule for proposals;
+- `dt:amendmentAction`, the action type of an in-place change to a proposal;
+- that no eligibility criteria and no commitments have been set.
 
 ## Content of this block
 
@@ -34,7 +48,7 @@ includes.
 ## Examples
 
 ### The data-types register (JSON)
-The register, the system it runs on and its owner and manager. Its title, description and concept system are in the shared vocabulary's `data.ttl`.
+The register, the system it runs on, its owner, manager and control body, and its register specification. Its title, description, concept system and the text of its specification are in the shared vocabulary's `data.ttl`.
 #### json
 ```json
 {
@@ -44,7 +58,9 @@ The register, the system it runs on and its owner and manager. Its title, descri
   "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
   "runsOn": "https://geolabs.github.io/bblocks-data-types/def/registerSystem",
   "registerOwner": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs"
+  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+  "controlBody": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+  "hasSpecification": "https://geolabs.github.io/bblocks-data-types/def/specification"
 }
 
 ```
@@ -59,7 +75,9 @@ The register, the system it runs on and its owner and manager. Its title, descri
   "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
   "runsOn": "https://geolabs.github.io/bblocks-data-types/def/registerSystem",
   "registerOwner": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs"
+  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+  "controlBody": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+  "hasSpecification": "https://geolabs.github.io/bblocks-data-types/def/specification"
 }
 ```
 
@@ -69,7 +87,9 @@ The register, the system it runs on and its owner and manager. Its title, descri
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://geolabs.github.io/bblocks-data-types/def/register> a rim:Register ;
+    rim:controlBody <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
+    rim:hasSpecification <https://geolabs.github.io/bblocks-data-types/def/specification> ;
     rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/register"^^xsd:anyURI ;
     rim:registerManager <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;
     rim:registerOwner <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;

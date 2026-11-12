@@ -1,0 +1,84 @@
+
+
+{
+  "itemIdentifier": "data-types.data-type.expression",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Expression",
+  "abstract": "A formula that combines references to input values, constants, operators and functions, and whose evaluation computes a value.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/expression"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "Generic Profile raster-band-math (bblocks-generic-profiles), the role that requests this type",
+      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/inputs/expression"
+    }
+  ],
+  "group": "Parameter data types",
+  "highlighted": true,
+  "shaclShapes": {
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/expression/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/expression/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/expression/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/expression/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/expression/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/expression/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/expression/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/expression/",
+  "description": "A formula that combines references to input values, constants, operators and functions, and whose evaluation computes a value.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/expression` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\nThe syntax of the formula is a representation, not part of the type.\n\n## Requested by\n\nAdded because existing roles of `bblocks-generic-profiles` need it. They declare the data type\n`string` today (branch `planes/phase-1-docs`, `b0da6aa`); pointing them to this type is a change of\nthat register, not made here.\n\n- [`generic-profile/raster-band-math/inputs/expression`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/inputs/expression): the per-pixel mathematical expression\n- [`implementation-profile/raster-band-math/inputs/expression`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math/inputs/expression)\n- [`implementation-profile/raster-band-math-multiband/inputs/expression`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math-multiband/inputs/expression)\n\n## Hierarchy\n\n- Broader: none (top-level data type). It is not a narrower type of String: what it names is not a\n  character string, even if a string can represent it.\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).\n- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.\n- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.\n\n## Sources\n\n- [Generic Profile raster-band-math (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/inputs/expression)\n",
+  "examples": [
+    {
+      "title": "Expression",
+      "content": "The register item of the Expression data type: it realizes the governed version of the concept and belongs to the register's data type item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/expression/example_1_1.json",
+          "sizeBytes": 1590,
+          "code": "{\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/item\",\n  \"itemClass\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"inRegister\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"realizes\": {\n    \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Expression\",\n      \"definition\": \"A formula that combines references to input values, constants, operators and functions, and whose evaluation computes a value.\",\n      \"inScheme\": \"https://geolabs.github.io/bblocks-data-types/def/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/v1\",\n    \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n      \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/expression/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/expression/example_1_2.ttl",
+          "sizeBytes": 2225,
+          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/expression> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"Expression\"@en ; skos:definition \"A formula that combines references to input values, constants, operators and functions, and whose evaluation computes a value.\"@en ; dct:source [ dct:title \"Generic Profile raster-band-math (bblocks-generic-profiles), the role that requests this type\"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/inputs/expression> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/expression/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/expression> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/expression/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/expression/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-11-09T00:00:00Z\"^^xsd:dateTime .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/expression/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title \"Expression\"@en ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/item\"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/expression/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/expression/example_1_1.jsonld",
+          "sizeBytes": 1703,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/expression/context.jsonld\",\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/item\",\n  \"itemClass\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"inRegister\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"realizes\": {\n    \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Expression\",\n      \"definition\": \"A formula that combines references to input values, constants, operators and functions, and whose evaluation computes a value.\",\n      \"inScheme\": \"https://geolabs.github.io/bblocks-data-types/def/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/v1\",\n    \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/expression/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n      \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Expression\ndescription: The register item of the Expression data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/data-type/expression/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.expression\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/data-type/expression"
+}

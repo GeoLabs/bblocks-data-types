@@ -1,0 +1,41 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/item> a dt:DataTypeItem,
+        rim:RegisterItem ;
+    dct:title "Band identifier"@en ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/item"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/v1> ;
+    rim:validityStatus rim:invalid .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier> a skos:Concept,
+        dt:DataType,
+        rim:Concept ;
+    dct:source [ dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/band> ;
+            dct:title "Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type"@en ] ;
+    skos:definition "An identifier that designates one band or asset of a multi-band product, either by the provider's band code or by a common band name."@en ;
+    skos:inScheme dt:dataTypes ;
+    skos:prefLabel "Band identifier"@en .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/v1> a dt:DataTypeVersion,
+        rim:ConceptVersion ;
+    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/actions/addition> ;
+    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier"^^xsd:anyURI ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier> .
+

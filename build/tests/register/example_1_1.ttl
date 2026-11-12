@@ -2,7 +2,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://geolabs.github.io/bblocks-data-types/def/register> a rim:Register ;
+    rim:controlBody <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
+    rim:hasSpecification <https://geolabs.github.io/bblocks-data-types/def/specification> ;
     rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/register"^^xsd:anyURI ;
     rim:registerManager <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;
     rim:registerOwner <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;

@@ -1,0 +1,32 @@
+{
+  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item",
+  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "realizes": {
+    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image",
+      "type": "Concept",
+      "prefLabel": "Rendered image",
+      "definition": "A picture of data made for viewing: a grid of colour values produced by applying a colour map or a style to data, with or without georeferencing.",
+      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1",
+    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "startedAtTime": "2026-11-10T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

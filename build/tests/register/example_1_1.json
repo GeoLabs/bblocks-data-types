@@ -5,5 +5,7 @@
   "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
   "runsOn": "https://geolabs.github.io/bblocks-data-types/def/registerSystem",
   "registerOwner": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs"
+  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+  "controlBody": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+  "hasSpecification": "https://geolabs.github.io/bblocks-data-types/def/specification"
 }

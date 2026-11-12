@@ -11,6 +11,13 @@ A string designated to carry a password value; the source schema does not define
 
 A string designated to carry a password value; the source schema does not define a password-strength constraint.
 
+## Withdrawn
+
+This type was a proposal and is withdrawn (2026-11-09): it is a format, not a kind of data. Its item and its version are `rim:unpublished` and stay `rim:invalid`; nothing is deleted and no IRI changes.
+
+- Replacement: the format [`https://w3id.org/geolabs/ospd/data-formats/format/string-password`](https://w3id.org/geolabs/ospd/data-formats/format/string-password) of the data-formats register (`dct:isReplacedBy` on the item). The Registered Item Model link, `rim:supersedes`, is carried by that format, because this register does not depend on data-formats.
+- Action: `https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/unpublication`, of type `rim:unpublishAction`, classified `rim:substantiveChange` (the retirement of a type), next to the addition, which is unchanged.
+
 ## Definition
 
 `https://geolabs.github.io/bblocks-data-types/def/data-type/string-password` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
@@ -34,7 +41,7 @@ As with any JSON Schema `format`, whether a value is actually checked depends on
 
 ## Content of this block
 
-- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).
+- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition and the unpublication actions and the register item that realizes the version (canonical source).
 - `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.
 - `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.
 
@@ -45,7 +52,7 @@ As with any JSON Schema `format`, whether a value is actually checked depends on
 ## Examples
 
 ### Password string
-The register item of the Password string data type: it realizes the governed version of the concept and belongs to the register's data type item class.
+The register item of the Password string data type: it realizes the governed version of the concept and belongs to the register's data type item class. The type is withdrawn: item and version are unpublished, and the item is replaced by a format of the data-formats register.
 #### json
 ```json
 {
@@ -68,7 +75,7 @@ The register item of the Password string data type: it realizes the governed ver
     "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1",
     "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password",
     "validityStatus": "invalid",
-    "publicationStatus": "published",
+    "publicationStatus": "unpublished",
     "hasAction": {
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/addition",
       "type": "RegisterAction",
@@ -78,7 +85,8 @@ The register item of the Password string data type: it realizes the governed ver
     }
   },
   "validityStatus": "invalid",
-  "publicationStatus": "published"
+  "publicationStatus": "unpublished",
+  "isReplacedBy": "https://w3id.org/geolabs/ospd/data-formats/format/string-password"
 }
 
 ```
@@ -93,9 +101,10 @@ The register item of the Password string data type: it realizes the governed ver
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Password string"@en ; skos:definition "A string designated to carry a password value; the source schema does not define a password-strength constraint."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/string> ; dct:source [ dct:title "EOAP schemas: string_format.yaml (JSON Schema format: password)"@en ; dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ] .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/addition> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/addition>, <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/unpublication> .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Password string"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Password string"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/string-password> ; rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/unpublication> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-password of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
 
 ```
 
@@ -122,7 +131,7 @@ The register item of the Password string data type: it realizes the governed ver
     "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1",
     "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password",
     "validityStatus": "invalid",
-    "publicationStatus": "published",
+    "publicationStatus": "unpublished",
     "hasAction": {
       "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/actions/addition",
       "type": "RegisterAction",
@@ -132,7 +141,8 @@ The register item of the Password string data type: it realizes the governed ver
     }
   },
   "validityStatus": "invalid",
-  "publicationStatus": "published"
+  "publicationStatus": "unpublished",
+  "isReplacedBy": "https://w3id.org/geolabs/ospd/data-formats/format/string-password"
 }
 ```
 
@@ -360,6 +370,10 @@ Links to the schema:
     "source": "dct:source",
     "link": {
       "@id": "dct:references",
+      "@type": "@id"
+    },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
       "@type": "@id"
     },
     "rim": "https://w3id.org/ogc/rim/",

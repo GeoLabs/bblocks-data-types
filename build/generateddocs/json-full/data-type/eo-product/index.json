@@ -1,0 +1,88 @@
+
+
+{
+  "itemIdentifier": "data-types.data-type.eo-product",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Earth observation product",
+  "abstract": "A dataset delivered as one unit by a data provider, typically one acquisition over one area, made of several assets such as spectral bands, masks and metadata, and described by metadata.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type",
+      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/product"
+    },
+    {
+      "title": "Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type",
+      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/outputs/products"
+    }
+  ],
+  "group": "Other data types",
+  "highlighted": true,
+  "shaclShapes": {
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/eo-product/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/eo-product/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/eo-product/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/eo-product/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/eo-product/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/eo-product/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/eo-product/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/eo-product/",
+  "description": "A dataset delivered as one unit by a data provider, typically one acquisition over one area, made of several assets such as spectral bands, masks and metadata, and described by metadata.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\nA product is the data and its description together. The record that describes it, or the package that delivers it, is a representation of the product, not part of the type.\n\n## Requested by\n\nAdded on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-profiles` (branch\n`planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can\nattach at tier 4. No standard source is given: none was read for this definition.\n\n- [`generic-profile/band-retrieval/inputs/product`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/product): the product from which a band is retrieved\n- [`generic-profile/product-selection/outputs/products`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/outputs/products): the products selected\n\n## Hierarchy\n\n- Broader: none (top-level data type).\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).\n- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.\n- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.\n\n## Sources\n\n- [Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/product)\n- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/outputs/products)\n",
+  "examples": [
+    {
+      "title": "Earth observation product",
+      "content": "The register item of the Earth observation product data type: it realizes the governed version of the concept and belongs to the register's data type item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/eo-product/example_1_1.json",
+          "sizeBytes": 1665,
+          "code": "{\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item\",\n  \"itemClass\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"inRegister\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"realizes\": {\n    \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Earth observation product\",\n      \"definition\": \"A dataset delivered as one unit by a data provider, typically one acquisition over one area, made of several assets such as spectral bands, masks and metadata, and described by metadata.\",\n      \"inScheme\": \"https://geolabs.github.io/bblocks-data-types/def/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1\",\n    \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n      \"startedAtTime\": \"2026-11-10T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/eo-product/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/eo-product/example_1_2.ttl",
+          "sizeBytes": 2560,
+          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"Earth observation product\"@en ; skos:definition \"A dataset delivered as one unit by a data provider, typically one acquisition over one area, made of several assets such as spectral bands, masks and metadata, and described by metadata.\"@en ; dct:source [ dct:title \"Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type\"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/product> ] ; dct:source [ dct:title \"Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type\"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/outputs/products> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-11-10T00:00:00Z\"^^xsd:dateTime .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title \"Earth observation product\"@en ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item\"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/eo-product/example_1_1.jsonld",
+          "sizeBytes": 1778,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/eo-product/context.jsonld\",\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item\",\n  \"itemClass\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"inRegister\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"realizes\": {\n    \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Earth observation product\",\n      \"definition\": \"A dataset delivered as one unit by a data provider, typically one acquisition over one area, made of several assets such as spectral bands, masks and metadata, and described by metadata.\",\n      \"inScheme\": \"https://geolabs.github.io/bblocks-data-types/def/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1\",\n    \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n      \"startedAtTime\": \"2026-11-10T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Earth observation product\ndescription: The register item of the Earth observation product data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.eo-product\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-10'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/data-type/eo-product"
+}

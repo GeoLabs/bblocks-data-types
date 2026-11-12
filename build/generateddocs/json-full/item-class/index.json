@@ -18,8 +18,13 @@
   ],
   "group": "Register model",
   "highlighted": true,
-  "shaclClosures": [
-    "../vocabulary/data.ttl"
+  "resources": [
+    {
+      "role": "data",
+      "ref": "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/data.ttl",
+      "format": "text/turtle",
+      "title": "Register metadata (register, specification, owner, system, concept system and item class)"
+    }
   ],
   "shaclShapes": {
     "ogc.rim.core-ontology": [
@@ -29,7 +34,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-04",
+  "dateOfLastChange": "2026-11-12",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.yaml",
     "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.json"

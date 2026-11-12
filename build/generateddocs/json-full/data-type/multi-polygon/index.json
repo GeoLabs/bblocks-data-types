@@ -46,7 +46,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-04",
+  "dateOfLastChange": "2026-11-12",
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/schema.yaml",

@@ -5,16 +5,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item> a dt:DataTypeItem,
-        rim:RegisterItem ;
-    dct:title "IPv6 address string"@en ;
-    rim:inRegister dt:register ;
-    rim:itemClass dt:dataTypeItemClass ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item"^^xsd:anyURI ;
-    rim:publicationStatus rim:published ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1> ;
-    rim:validityStatus rim:invalid .
-
 <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6> a skos:Concept,
         dt:DataType,
         rim:Concept ;
@@ -32,13 +22,34 @@
     rim:actionType rim:additionAction ;
     rim:proposer dt:geolabs .
 
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item> a dt:DataTypeItem,
+        rim:RegisterItem ;
+    dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/string-ipv6> ;
+    dct:title "IPv6 address string"@en ;
+    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/actions/unpublication> ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item"^^xsd:anyURI ;
+    rim:publicationStatus rim:unpublished ;
+    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1> ;
+    rim:validityStatus rim:invalid .
+
 <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1> a dt:DataTypeVersion,
         rim:ConceptVersion ;
-    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/actions/addition> ;
+    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/actions/addition>,
+        <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/actions/unpublication> ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6"^^xsd:anyURI ;
     rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/v1"^^xsd:anyURI ;
-    rim:publicationStatus rim:published ;
+    rim:publicationStatus rim:unpublished ;
     rim:validityStatus rim:invalid ;
     rim:version "1.0" ;
     rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/actions/unpublication> a rim:RegisterAction ;
+    dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-ipv6 of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en ;
+    prov:startedAtTime "2026-11-09T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:unpublishAction ;
+    rim:appliesTo <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv6/item> ;
+    rim:changeClassification rim:substantiveChange ;
+    rim:proposer dt:geolabs .
 

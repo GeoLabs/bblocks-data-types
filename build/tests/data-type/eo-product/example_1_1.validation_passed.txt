@@ -1,0 +1,109 @@
+Validation report for data-types.data-type.eo-product - Data type: Earth observation product
+Generated 2026-11-12T14:32:31.603445+00:00
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - /github/workspace/_sources/vocabulary/../data-type/string-json-pointer/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/coordinate-reference-system/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/feature-collection/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-uri/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-time/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/linear-ring/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-uri-template/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/surface/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/point/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/collection-identifier/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/rendered-image/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/binary-mask/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-duration/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-relative-json-pointer/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-iri-reference/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-iri/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/multi-surface/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/raster/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/raster-single-band/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/expression/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/polyhedral-surface/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-date-time/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-hostname/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/multi-curve/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/point-cloud/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/stac-item/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-idn-email/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string/ontology.ttl
+ - /github/workspace/_sources/data-type/eo-product/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-date/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/table/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/triangle/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/feature/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-uuid/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/multi-line-string/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/stac-catalog/ontology.ttl
+ - https://ogcincubator.github.io/registered-item-model/build/annotated/rim/core-ontology/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/stac-collection/ontology.ttl
+ - /github/workspace/_sources/item-class/../vocabulary/data.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/geometry/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/geometry-collection/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-idn-hostname/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/boolean/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-email/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/radiometric-index/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/raster-multi-band/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-uri-reference/ontology.ttl
+ - /github/workspace/_sources/vocabulary/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/stac-item-collection/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/elevation-model/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/time-interval/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/colour-map/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-ipv4/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/curve/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/eo-product/ontology.ttl
+ - /github/workspace/_sources/register/../vocabulary/data.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/line/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-ipv6/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/grid-resolution/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/format-identifier/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/bounding-box/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/line-string/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/tin/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/multi-polygon/ontology.ttl
+ - /github/workspace/_sources/vocabulary/data.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/number/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/polygon/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/multi-point/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/band-identifier/ontology.ttl
+ - /github/workspace/_sources/vocabulary/../data-type/string-password/ontology.ttl
+Validation result for _sources/vocabulary/shapes.shacl: no results
+Focus nodes for _sources/vocabulary/shapes.shacl:
+ - Shape dt:DataTypeShape: *none*
+ - Shape dt:DataTypeVersionShape/sh:property/sh:qualifiedValueShape: *none*
+ - Shape dt:DataTypeItemShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/item>
+ - Shape dt:RegisterShape: dt:register
+ - Shape dt:DataTypeVersionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/v1>
+
+Validation result for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl: no results
+Focus nodes for https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl:
+ - Shape rim:RegisterItemClassShape: *none*
+ - Shape rim:RegisterShape: *none*
+ - Shape rim:TextShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape rim:RegisterItemShape: *none*
+ - Shape rim:ConceptVersionShape: *none*
+ - Shape rim:ConceptShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product>
+ - Shape rim:TextShape/sh:or/rdf:first: *none*
+ - Shape rim:RegisterSpecificationShape: *none*
+ - Shape rim:CommitmentShape: *none*
+ - Shape rim:TextShape: *none*
+ - Shape rim:RegisterActionShape: <https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product/actions/addition>
+
+=== End SHACL ===
+

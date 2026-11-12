@@ -1,0 +1,84 @@
+
+
+{
+  "itemIdentifier": "data-types.data-type.rendered-image",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Rendered image",
+  "abstract": "A picture of data made for viewing: a grid of colour values produced by applying a colour map or a style to data, with or without georeferencing.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-10T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "Generic Profile raster-rendering (bblocks-generic-profiles), the role that requests this type",
+      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-rendering/outputs/image"
+    }
+  ],
+  "group": "Other data types",
+  "highlighted": true,
+  "shaclShapes": {
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/rendered-image/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/rendered-image/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/rendered-image/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/rendered-image/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/rendered-image/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/rendered-image/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/rendered-image/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/rendered-image/",
+  "description": "A picture of data made for viewing: a grid of colour values produced by applying a colour map or a style to data, with or without georeferencing.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\nIts cells hold colours, not measured values: it is not a narrower type of Raster, whose cells hold the values of a coverage.\n\n## Requested by\n\nAdded on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-profiles` (branch\n`planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can\nattach at tier 4. No standard source is given: none was read for this definition.\n\n- [`generic-profile/raster-rendering/outputs/image`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-rendering/outputs/image): the rendering of the raster\n\n## Hierarchy\n\n- Broader: none (top-level data type).\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).\n- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.\n- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.\n\n## Sources\n\n- [Generic Profile raster-rendering (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-rendering/outputs/image)\n",
+  "examples": [
+    {
+      "title": "Rendered image",
+      "content": "The register item of the Rendered image data type: it realizes the governed version of the concept and belongs to the register's data type item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/rendered-image/example_1_1.json",
+          "sizeBytes": 1641,
+          "code": "{\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item\",\n  \"itemClass\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"inRegister\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"realizes\": {\n    \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Rendered image\",\n      \"definition\": \"A picture of data made for viewing: a grid of colour values produced by applying a colour map or a style to data, with or without georeferencing.\",\n      \"inScheme\": \"https://geolabs.github.io/bblocks-data-types/def/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1\",\n    \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n      \"startedAtTime\": \"2026-11-10T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/rendered-image/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/rendered-image/example_1_2.ttl",
+          "sizeBytes": 2288,
+          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"Rendered image\"@en ; skos:definition \"A picture of data made for viewing: a grid of colour values produced by applying a colour map or a style to data, with or without georeferencing.\"@en ; dct:source [ dct:title \"Generic Profile raster-rendering (bblocks-generic-profiles), the role that requests this type\"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-rendering/outputs/image> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-11-10T00:00:00Z\"^^xsd:dateTime .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title \"Rendered image\"@en ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item\"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/rendered-image/example_1_1.jsonld",
+          "sizeBytes": 1758,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/rendered-image/context.jsonld\",\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item\",\n  \"itemClass\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"inRegister\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"realizes\": {\n    \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Rendered image\",\n      \"definition\": \"A picture of data made for viewing: a grid of colour values produced by applying a colour map or a style to data, with or without georeferencing.\",\n      \"inScheme\": \"https://geolabs.github.io/bblocks-data-types/def/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/v1\",\n    \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n      \"startedAtTime\": \"2026-11-10T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Rendered image\ndescription: The register item of the Rendered image data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.rendered-image\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-10'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/data-type/rendered-image"
+}

@@ -28,7 +28,7 @@ An axis-aligned extent given by its corners, with its CRS.
 
 ## Sources
 
-- [ogc.api.processes.v1.schemas.bbox, after OGC 17-069r4 §7.15.3 bbox](https://docs.ogc.org/is/17-069r4/17-069r4.html)
+- [ogc.api.processes.part1.v1.schemas.bbox, after OGC 17-069r4 §7.15.3 bbox](https://docs.ogc.org/is/17-069r4/17-069r4.html)
 
 ## Examples
 
@@ -80,10 +80,11 @@ The register item of the Bounding box data type: it realizes the governed versio
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Bounding box"@en ; skos:definition "An axis-aligned extent given by its corners, with its CRS."@en ; dct:source [ dct:title "ogc.api.processes.v1.schemas.bbox, after OGC 17-069r4 §7.15.3 bbox"@en ; dct:references <https://docs.ogc.org/is/17-069r4/17-069r4.html> ] .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Bounding box"@en ; skos:definition "An axis-aligned extent given by its corners, with its CRS."@en ; dct:source [ dct:title "ogc.api.processes.part1.v1.schemas.bbox, after OGC 17-069r4 §7.15.3 bbox"@en ; dct:references <https://docs.ogc.org/is/17-069r4/17-069r4.html> ] .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/addition> .
 <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-10-08T00:00:00Z"^^xsd:dateTime .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Bounding box"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Bounding box"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/amendment-source-title> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/actions/amendment-source-title> a rim:RegisterAction ; rim:actionType dt:amendmentAction ; rim:changeClassification rim:clarifyingChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/item> ; rim:affectedProperty dct:source ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime ; dct:description "In-place amendment of a proposal: the title of the source that names the OGC API - Processes bbox building block follows its renaming by GeoLabs on 2026-11-10, from ogc.api.processes.v1.schemas.bbox to ogc.api.processes.part1.v1.schemas.bbox (Part 1, edition 1.0). The source, the definition and skos:broader are unchanged. Classified clarifying: the type covers the same data."@en .
 
 ```
 
@@ -139,7 +140,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.bounding-box
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-12'
 
 ```
 
@@ -350,6 +351,10 @@ Links to the schema:
       "@id": "dct:references",
       "@type": "@id"
     },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
+      "@type": "@id"
+    },
     "rim": "https://w3id.org/ogc/rim/",
     "prov": "http://www.w3.org/ns/prov#",
     "dct": "http://purl.org/dc/terms/",
@@ -367,7 +372,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [ogc.api.processes.v1.schemas.bbox, after OGC 17-069r4 §7.15.3 bbox](https://docs.ogc.org/is/17-069r4/17-069r4.html)
+* [ogc.api.processes.part1.v1.schemas.bbox, after OGC 17-069r4 §7.15.3 bbox](https://docs.ogc.org/is/17-069r4/17-069r4.html)
 
 # For developers
 

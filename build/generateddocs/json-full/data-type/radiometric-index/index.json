@@ -1,0 +1,84 @@
+
+
+{
+  "itemIdentifier": "data-types.data-type.radiometric-index",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Radiometric index",
+  "abstract": "A quantity derived by combining the radiometric values of several spectral bands, designed to highlight a property of the observed surface such as vegetation or water.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-09T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index"
+  ],
+  "rdfType": [
+    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+  ],
+  "sources": [
+    {
+      "title": "Generic Profile radiometric-index (bblocks-generic-profiles), the role that requests this type",
+      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/radiometric-index/inputs/index"
+    }
+  ],
+  "group": "Parameter data types",
+  "highlighted": true,
+  "shaclShapes": {
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-12",
+  "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/radiometric-index/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/radiometric-index/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/radiometric-index/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/radiometric-index/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/radiometric-index/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/radiometric-index/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/radiometric-index/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/radiometric-index/",
+  "description": "A quantity derived by combining the radiometric values of several spectral bands, designed to highlight a property of the observed surface such as vegetation or water.\n\n## Definition\n\n`https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\nA value of this type designates one such index (for example NDVI); how it is named is a representation, not part of the type.\n\n## Requested by\n\nAdded because existing roles of `bblocks-generic-profiles` need it. They declare the data type\n`string` today (branch `planes/phase-1-docs`, `b0da6aa`); pointing them to this type is a change of\nthat register, not made here.\n\n- [`generic-profile/radiometric-index/inputs/index`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/radiometric-index/inputs/index): the name of the radiometric index (or indices) to compute\n- [`implementation-profile/radiometric-index/inputs/index`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/radiometric-index/inputs/index)\n\n## Hierarchy\n\n- Broader: none (top-level data type). It is not a narrower type of String: what it names is not a\n  character string, even if a string can represent it.\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).\n- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.\n- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.\n\n## Sources\n\n- [Generic Profile radiometric-index (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/radiometric-index/inputs/index)\n",
+  "examples": [
+    {
+      "title": "Radiometric index",
+      "content": "The register item of the Radiometric index data type: it realizes the governed version of the concept and belongs to the register's data type item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/radiometric-index/example_1_1.json",
+          "sizeBytes": 1687,
+          "code": "{\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item\",\n  \"itemClass\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"inRegister\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"realizes\": {\n    \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Radiometric index\",\n      \"definition\": \"A quantity derived by combining the radiometric values of several spectral bands, designed to highlight a property of the observed surface such as vegetation or water.\",\n      \"inScheme\": \"https://geolabs.github.io/bblocks-data-types/def/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1\",\n    \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n      \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/radiometric-index/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/radiometric-index/example_1_2.ttl",
+          "sizeBytes": 2347,
+          "code": "@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"Radiometric index\"@en ; skos:definition \"A quantity derived by combining the radiometric values of several spectral bands, designed to highlight a property of the observed surface such as vegetation or water.\"@en ; dct:source [ dct:title \"Generic Profile radiometric-index (bblocks-generic-profiles), the role that requests this type\"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/radiometric-index/inputs/index> ] .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/actions/addition> .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-11-09T00:00:00Z\"^^xsd:dateTime .\n<https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title \"Radiometric index\"@en ; rim:objectIdentifier \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item\"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/radiometric-index/example_1_1.jsonld",
+          "sizeBytes": 1807,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/radiometric-index/context.jsonld\",\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item\",\n  \"itemClass\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"inRegister\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"realizes\": {\n    \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Radiometric index\",\n      \"definition\": \"A quantity derived by combining the radiometric values of several spectral bands, designed to highlight a property of the observed surface such as vegetation or water.\",\n      \"inScheme\": \"https://geolabs.github.io/bblocks-data-types/def/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1\",\n    \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://geolabs.github.io/bblocks-data-types/def/geolabs\",\n      \"startedAtTime\": \"2026-11-09T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Radiometric index\ndescription: The register item of the Radiometric index data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.radiometric-index\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-09'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/data-type/radiometric-index"
+}

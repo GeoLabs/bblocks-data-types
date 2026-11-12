@@ -18,7 +18,7 @@ A set of features, each with a geometry and attributes -- e.g. a SAGA shapes lay
 ## Hierarchy
 
 - Broader: none (top-level data type)
-- Narrower: [STAC Item Collection](../stac-item-collection/)
+- Narrower (withdrawn): [STAC Item Collection](../stac-item-collection/)
 
 ## Content of this block
 
@@ -139,7 +139,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.feature-collection
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-04'
+  dateOfLastChange: '2026-11-12'
 
 ```
 
@@ -348,6 +348,10 @@ Links to the schema:
     "source": "dct:source",
     "link": {
       "@id": "dct:references",
+      "@type": "@id"
+    },
+    "isReplacedBy": {
+      "@id": "dct:isReplacedBy",
       "@type": "@id"
     },
     "rim": "https://w3id.org/ogc/rim/",
