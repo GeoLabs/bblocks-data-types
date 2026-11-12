@@ -21,7 +21,7 @@ Illustration only: the data type does not depend on any encoding. Here is one po
 ## Hierarchy
 
 - Broader: none (top-level data type)
-- Narrower: [STAC Item](../stac-item/)
+- Narrower (withdrawn): [STAC Item](../stac-item/)
 
 ## Content of this block
 

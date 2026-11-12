@@ -1,0 +1,11 @@
+@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Format identifier"@en ; skos:definition "An identifier that designates a data format, used to tell a process which format to read or produce."@en ; dct:source [ dct:title "Generic Profile raster-format-conversion (bblocks-generic-profiles), the role that requests this type"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-format-conversion/inputs/targetFormat> ] .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier/actions/addition> .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime .
+<https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Format identifier"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .

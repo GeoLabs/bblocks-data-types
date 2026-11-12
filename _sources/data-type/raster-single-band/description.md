@@ -7,7 +7,7 @@ A raster with exactly one band: a range type of one field.
 ## Hierarchy
 
 - Broader: [Raster](../raster/) (`skos:broader` in `ontology.ttl`, published as `isProfileOf` in `bblock.json`)
-- Narrower: [Elevation model](../elevation-model/)
+- Narrower: [Elevation model](../elevation-model/), [Binary mask](../binary-mask/)
 
 ## Content of this block
 

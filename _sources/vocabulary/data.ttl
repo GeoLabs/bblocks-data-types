@@ -4,6 +4,7 @@
 @prefix dct:  <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 # Register-level metadata only. Each data-type concept, version and addition action is canonical
 # in the ontology.ttl of its own data-type Building Block.
@@ -15,8 +16,41 @@ dt:register a rim:Register ;
     dct:description "A concept-plane register of the kinds of data that process profile inputs and outputs carry."@en ;
     rim:registerOwner dt:geolabs ;
     rim:registerManager dt:geolabs ;
+    rim:controlBody dt:geolabs ;
+    rim:hasSpecification dt:specification ;
     rim:runsOn dt:registerSystem ;
     dt:conceptSystem dt:dataTypes .
+
+# The register specification. rim:definesSubstantiveChange, the rule for proposals and the table of
+# substantive and clarifying changes are the texts validated by GeoLabs on 2026-11-05, word for word;
+# the table was validated in French and is given verbatim, followed by an English rendering.
+# vocabulary/tests/specification-without-title-fail.ttl proves that rim:RegisterSpecificationShape
+# runs on this register.
+dt:specification a rim:RegisterSpecification ;
+    dct:title "Data Types register specification"@en ;
+    dct:description
+        "Scope. This register holds the data types of process profile inputs and outputs: the kinds of data they carry, named independently of any encoding. Formats and representations are not items of this register; they are held by the data-formats register (https://w3id.org/geolabs/ospd/data-formats/)."@en ,
+        "Register type. A concept register, as the Registered Item Model uses the term. Each data type is a dt:DataType, a rim:Concept of the dt:dataTypes concept system, and its governed state is a dt:DataTypeVersion. Each version is realized (rim:realizes) by one dt:DataTypeItem of this register."@en ,
+        "Relation with the data-formats register. A df:Representation item of the data-formats register realizes (rim:realizes) at most one dt:DataTypeVersion of this register and points to a df:Format. The Registered Item Model allows a version of this register to be realized by items of both registers: it limits rim:realizes to one version per item (rim:RegisterItemShape), not to one item per version. The data-formats register depends on this register; this register never depends on the data-formats register."@en ,
+        "Roles. GeoLabs SARL is the register owner, the register manager and, for now, the control body. GeoLabs intends to delegate the control body role to the OGC or to an OSPD working group."@en ,
+        "Identifiers. The object identifier of a data type is its IRI, https://geolabs.github.io/bblocks-data-types/def/data-type/<name>; its version is <name>/v1 and its register item <name>/item. The functional identifier of a version is the IRI of its data type. An object identifier never redirects; only a functional identifier may. The identifier of a published item changes only by an explicit decision."@en ,
+        "Versions. An addition is an action of type addition, with no classification. A substantive change creates a new item or a new version, linked by rim:supersededBy, with an action classified substantive. A clarifying change keeps the item and its version, with an action classified clarifying. This version rule is specific to the registers of this project and does not come from ISO 19135. The classification correctional is not available. An item is retired by unpublishing it, not by deleting it."@en ,
+        "Ce qui est substantiel ici (tableau validé le 2026-11-05, repris tel quel). Substantiel : Définition qui change ce que le type recouvre, `skos:broader` modifié, retrait d'un type. Clarification : Coquille, reformulation de même sens, source ajoutée."@fr ,
+        "What is substantive here (English rendering of the validated table above). Substantive: a definition that changes what the type covers, a modified skos:broader, the retirement of a type. Clarifying: a typo, a rewording with the same meaning, an added source."@en ,
+        "Withdrawal of a type. A type is withdrawn by unpublishing its item and its version, with an action of type rim:unpublishAction classified substantive; nothing is deleted. When the item is replaced by an item of the data-formats register, the item of this register carries dct:isReplacedBy towards it, and the Registered Item Model link rim:supersedes is carried by the data-formats item, because this register does not depend on data-formats."@en ,
+        "Proposals. While an item is a proposal, with no control-body decision recorded, it is amended in place, with a classified `rim:RegisterAction`. The substantive rule applies once it has been accepted."@en ,
+        "Amendment. dt:amendmentAction is the action type of an in-place change to a proposal, an item with no control-body decision recorded. Such an action is always classified, clarifying or substantive: it is the classified rim:RegisterAction of the rule for proposals. This type is specific to this register and will be replaced if the Registered Item Model defines one."@en ,
+        "Eligibility. No eligibility criteria for proposers have been set. GeoLabs is the only proposer recorded so far."@en ,
+        "Commitments. No commitment to register users has been set."@en ;
+    rim:definesSubstantiveChange "A change is substantive when a register user may have to change their data, profiles or processes because of it, or when it changes what an item means. Any other change to an existing item is clarifying." .
+
+# rim:actionType is required and the Registered Item Model has no type for an in-place change of a
+# proposal; it lets a register specification define further action types. Defined by
+# dt:specification, specific to this register.
+dt:amendmentAction a rim:RegisterActionType , skos:Concept ;
+    rdfs:isDefinedBy dt: ;
+    skos:prefLabel "amendment"@en ;
+    skos:definition "An in-place change to a proposal, an item with no control-body decision recorded. Always classified, clarifying or substantive."@en .
 
 dt:dataTypeItemClass a rim:RegisterItemClass ;
     dct:title "Data type" ;

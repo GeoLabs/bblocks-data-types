@@ -15,7 +15,12 @@
   ],
   "group": "Register model",
   "highlighted": true,
-  "shaclClosures": [
-    "../vocabulary/data.ttl"
+  "resources": [
+    {
+      "role": "data",
+      "ref": "../vocabulary/data.ttl",
+      "format": "text/turtle",
+      "title": "Register metadata (register, specification, owner, system, concept system and item class)"
+    }
   ]
 }

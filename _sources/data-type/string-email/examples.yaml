@@ -2,7 +2,9 @@ examples:
   - title: Email address string
     content: >-
       The register item of the Email address string data type: it realizes the governed version of the
-      concept and belongs to the register's data type item class.
+      concept and belongs to the register's data type item class. The type is withdrawn:
+      item and version are unpublished, and the item is replaced by a format of the
+      data-formats register.
     snippets:
       - language: json
         code: |
@@ -26,7 +28,7 @@ examples:
               "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/v1",
               "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-email",
               "validityStatus": "invalid",
-              "publicationStatus": "published",
+              "publicationStatus": "unpublished",
               "hasAction": {
                 "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/actions/addition",
                 "type": "RegisterAction",
@@ -36,7 +38,8 @@ examples:
               }
             },
             "validityStatus": "invalid",
-            "publicationStatus": "published"
+            "publicationStatus": "unpublished",
+            "isReplacedBy": "https://w3id.org/geolabs/ospd/data-formats/format/string-email"
           }
       - language: turtle
         ref: ontology.ttl

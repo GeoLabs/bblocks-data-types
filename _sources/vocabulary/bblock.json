@@ -24,66 +24,24 @@
   "shaclShapes": [
     "shapes.shacl"
   ],
-  "shaclClosures": [
-    "../data-type/boolean/ontology.ttl",
-    "../data-type/bounding-box/ontology.ttl",
-    "../data-type/curve/ontology.ttl",
-    "../data-type/elevation-model/ontology.ttl",
-    "../data-type/feature-collection/ontology.ttl",
-    "../data-type/feature/ontology.ttl",
-    "../data-type/geometry-collection/ontology.ttl",
-    "../data-type/geometry/ontology.ttl",
-    "../data-type/line-string/ontology.ttl",
-    "../data-type/line/ontology.ttl",
-    "../data-type/linear-ring/ontology.ttl",
-    "../data-type/multi-curve/ontology.ttl",
-    "../data-type/multi-line-string/ontology.ttl",
-    "../data-type/multi-point/ontology.ttl",
-    "../data-type/multi-polygon/ontology.ttl",
-    "../data-type/multi-surface/ontology.ttl",
-    "../data-type/number/ontology.ttl",
-    "../data-type/point-cloud/ontology.ttl",
-    "../data-type/point/ontology.ttl",
-    "../data-type/polygon/ontology.ttl",
-    "../data-type/polyhedral-surface/ontology.ttl",
-    "../data-type/raster-multi-band/ontology.ttl",
-    "../data-type/raster-single-band/ontology.ttl",
-    "../data-type/raster/ontology.ttl",
-    "../data-type/stac-catalog/ontology.ttl",
-    "../data-type/stac-collection/ontology.ttl",
-    "../data-type/stac-item-collection/ontology.ttl",
-    "../data-type/stac-item/ontology.ttl",
-    "../data-type/string-date-time/ontology.ttl",
-    "../data-type/string-date/ontology.ttl",
-    "../data-type/string-duration/ontology.ttl",
-    "../data-type/string-email/ontology.ttl",
-    "../data-type/string-hostname/ontology.ttl",
-    "../data-type/string-idn-email/ontology.ttl",
-    "../data-type/string-idn-hostname/ontology.ttl",
-    "../data-type/string-ipv4/ontology.ttl",
-    "../data-type/string-ipv6/ontology.ttl",
-    "../data-type/string-iri-reference/ontology.ttl",
-    "../data-type/string-iri/ontology.ttl",
-    "../data-type/string-json-pointer/ontology.ttl",
-    "../data-type/string-password/ontology.ttl",
-    "../data-type/string-relative-json-pointer/ontology.ttl",
-    "../data-type/string-time/ontology.ttl",
-    "../data-type/string-uri-reference/ontology.ttl",
-    "../data-type/string-uri-template/ontology.ttl",
-    "../data-type/string-uri/ontology.ttl",
-    "../data-type/string-uuid/ontology.ttl",
-    "../data-type/string/ontology.ttl",
-    "../data-type/surface/ontology.ttl",
-    "../data-type/table/ontology.ttl",
-    "../data-type/tin/ontology.ttl",
-    "../data-type/triangle/ontology.ttl"
-  ],
   "resources": [
     {
       "role": "data",
       "ref": "data.ttl",
       "format": "text/turtle",
       "title": "Register metadata (register, owner, system and concept system)"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/band-identifier/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Band identifier data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/binary-mask/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Binary mask data type"
     },
     {
       "role": "data",
@@ -99,6 +57,24 @@
     },
     {
       "role": "data",
+      "ref": "../data-type/collection-identifier/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Collection identifier data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/colour-map/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Colour map data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/coordinate-reference-system/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Coordinate reference system data type"
+    },
+    {
+      "role": "data",
       "ref": "../data-type/curve/ontology.ttl",
       "format": "text/turtle",
       "title": "Ontology of the Curve data type"
@@ -108,6 +84,18 @@
       "ref": "../data-type/elevation-model/ontology.ttl",
       "format": "text/turtle",
       "title": "Ontology of the Elevation model data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/eo-product/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Earth observation product data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/expression/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Expression data type"
     },
     {
       "role": "data",
@@ -123,6 +111,12 @@
     },
     {
       "role": "data",
+      "ref": "../data-type/format-identifier/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Format identifier data type"
+    },
+    {
+      "role": "data",
       "ref": "../data-type/geometry-collection/ontology.ttl",
       "format": "text/turtle",
       "title": "Ontology of the GeometryCollection data type"
@@ -132,6 +126,12 @@
       "ref": "../data-type/geometry/ontology.ttl",
       "format": "text/turtle",
       "title": "Ontology of the Geometry data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/grid-resolution/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Grid resolution data type"
     },
     {
       "role": "data",
@@ -213,6 +213,12 @@
     },
     {
       "role": "data",
+      "ref": "../data-type/radiometric-index/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Radiometric index data type"
+    },
+    {
+      "role": "data",
       "ref": "../data-type/raster-multi-band/ontology.ttl",
       "format": "text/turtle",
       "title": "Ontology of the Raster (multiple bands) data type"
@@ -228,6 +234,12 @@
       "ref": "../data-type/raster/ontology.ttl",
       "format": "text/turtle",
       "title": "Ontology of the Raster data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/rendered-image/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Rendered image data type"
     },
     {
       "role": "data",
@@ -384,6 +396,12 @@
       "ref": "../data-type/table/ontology.ttl",
       "format": "text/turtle",
       "title": "Ontology of the Table data type"
+    },
+    {
+      "role": "data",
+      "ref": "../data-type/time-interval/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Time interval data type"
     },
     {
       "role": "data",

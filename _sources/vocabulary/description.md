@@ -29,19 +29,30 @@ The concepts, their `skos:broader` links, versions and addition actions are **re
 merely examples. Each individual data-type Building Block contains its canonical RDF
 graph in `ontology.ttl`, autodetected and published as that block's ontology. The shared
 [`data.ttl`](data.ttl) in this support block contains only register metadata: the `rim:Register`,
-register system, owner and `rim:ConceptSystem`. The individual ontologies carry each concept,
+register specification, register system, owner and `rim:ConceptSystem`. The individual ontologies carry each concept,
 version and proposed-addition action. The JSON example below illustrates one item and the version it realizes; the Turtle
 example references the support block's register metadata.
 
 The initial types are `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model`,
 `geometry`, `point`, `curve`, `surface`, `feature-collection`, `point-cloud`, `tin`, `table`,
-`bounding-box`, `number`, `string` and `boolean`. The 19 fixed string formats in
+`bounding-box`, `number`, `string` and `boolean`. `coordinate-reference-system`, `expression`,
+`format-identifier` and `radiometric-index` were added for four Generic Profile roles of
+`bblocks-generic-profiles` that declare `string` for something that is not a character string
+(`raster-reprojection/targetCRS`, `raster-band-math/expression`,
+`raster-format-conversion/targetFormat`, `radiometric-index/index`); each names the role that
+requests it and has no broader type. `band-identifier`, `eo-product`, `grid-resolution`, `binary-mask`,
+`colour-map`, `rendered-image`, `time-interval` and `collection-identifier` were added on 2026-11-10
+for the roles of six new Generic Profiles of `bblocks-generic-profiles` (band retrieval, product
+selection, raster resampling, thresholding and rendering); each names the role that requests it, and
+only `binary-mask` has a broader type, `raster-single-band`.
+
+The 19 fixed string formats in
 [`eoap/schemas/string_format.yaml`](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)
-are also registered as individual specializations of `string`: date, date-time, duration, email,
-hostname, idn-email, idn-hostname, ipv4, ipv6, iri, iri-reference, password, json-pointer,
-relative-json-pointer, uuid, uri, uri-reference, uri-template and time. The schema's `Pattern`
-record is not a fixed datatype; it carries a caller-supplied regular expression and is therefore a
-parameterized validation constraint.
+were registered as individual specializations of `string`, as proposals: date, date-time,
+duration, email, hostname, idn-email, idn-hostname, ipv4, ipv6, iri, iri-reference, password,
+json-pointer, relative-json-pointer, uuid, uri, uri-reference, uri-template and time. They are
+formats, not kinds of data: the data-formats register holds them, with `Pattern`, as `df:Format`
+items (`df:format/string-*`), and the 19 types are withdrawn: see "Content plane".
 
 The geometry types of OGC Simple Feature Access are represented individually: besides `point`,
 `curve` and `surface`, the `line-string` (under `curve`), `polygon` (under `surface`) and
@@ -50,18 +61,38 @@ The geometry types of OGC Simple Feature Access are represented individually: be
 a `multi-curve` and `multi-polygon` a `multi-surface` (OGC CDB 2.0 Core, 23-034, 7.6). `line` and
 `linear-ring` are narrower than `line-string`, `triangle` than `polygon`, and `polyhedral-surface`
 than `surface`; `tin` is a `polyhedral-surface` (geometry model of 23-034, 7.6.1). A `feature`, which
-wraps a geometry with properties, is a type of its own. Three distinct STAC data types are
-represented from [`radiantearth/stac-spec`](https://github.com/radiantearth/stac-spec): `stac-item`
-specializes `feature`, `stac-collection` specializes `stac-catalog`, and `stac-item-collection`
-specializes `feature-collection` for responses containing arrays of STAC Items (such as Item
-Search). A STAC Collection is metadata for a set of related assets, not an array of STAC Items.
+wraps a geometry with properties, is a type of its own. Four STAC types were registered from
+[`radiantearth/stac-spec`](https://github.com/radiantearth/stac-spec), as proposals: `stac-item`
+under `feature`, `stac-item-collection` under `feature-collection`, `stac-collection` under
+`stac-catalog`, and `stac-catalog`. No role uses them, and their definitions describe STAC JSON
+objects, which are encodings. They are withdrawn (2026-11-11, decision Q4, option b) like the
+`string-*` types: each item and its version are unpublished, with an unpublication action classified
+substantive, and the item carries `dct:isReplacedBy` towards the format `df:format/stac-*` of the same
+name, which carries `rim:supersedes`. Their `skos:broader` links are kept as recorded.
 
 ## Content plane and JSON binding
 
 Each data type is also a register item in the Registered Item Model's content plane. Its
 `dt:DataTypeItem` (a sub-class of `rim:RegisterItem`) is of the `dt:dataTypeItemClass` item class,
 is in `dt:register`, and `rim:realizes` the data type's `dt:DataTypeVersion`; `dt:DataTypeItemShape`
-checks this and is the class's `rim:validatedBy`.
+checks this and is the class's `rim:validatedBy`. This item is the record of the type in this
+register; it says nothing about an encoding.
+
+Encodings are held by the data-formats register
+([`GeoLabs/bblocks-data-formats`](https://github.com/GeoLabs/bblocks-data-formats), prefix `df:`).
+A `df:Format` is an encoding and realizes no version; a `df:Representation` realizes
+(`rim:realizes`) at most one `dt:DataTypeVersion` of this register and points to one format, e.g.
+`df:representation/raster-geotiff` realizes `raster/v1`. A version of this register may therefore be
+realized by its own `dt:DataTypeItem` and by representations of data-formats (the Registered Item
+Model limits `rim:realizes` per item, not per version). data-formats depends on this register; this
+register never depends on data-formats.
+
+The 19 `string-*` types (2026-11-09) and the four `stac-*` types (2026-11-11) are withdrawn: each item and its version are `rim:unpublished` and stay `rim:invalid`, with
+an action of type `rim:unpublishAction` classified `rim:substantiveChange` next to the addition, and
+the item carries `dct:isReplacedBy` towards the matching `df:format/string-*` or `df:format/stac-*`. The Registered Item
+Model link, `rim:supersedes`, is carried by the format in data-formats, because `rim:RegisterItemShape`
+rejects a `rim:supersededBy` towards an item this register does not type, and this register does not
+depend on data-formats. Nothing is deleted and no IRI changes.
 
 The RIM publishes a JSON binding of its core: one JSON Schema and JSON-LD context per class. This
 register conforms to it layer by layer, each block depending on the one below it, as the RIM's own
@@ -78,8 +109,14 @@ register conforms to it layer by layer, each block depending on the one below it
   the recorded addition required).
 - Each data-type block profiles this schema again and fixes the item's `id`.
 
-The register and item class blocks take the register metadata of this block's `data.ttl` as SHACL
-closure, so their JSON examples do not repeat it.
+The register and item class blocks load the register metadata of this block's `data.ttl` as a data
+resource, so their JSON examples do not repeat it.
+
+The data resources of a block (`resources` with role `data` in `bblock.json`) are part of the SHACL
+closure of that block and of every block that depends on it, in this register or in a register that
+imports it; their references are published as absolute URLs. This block lists `data.ttl` and the
+`ontology.ttl` of every data type there, and declares no `shaclClosures`: a relative closure path is
+published as is, and fails to load in an importing register.
 
 The item class and register nodes that `data.ttl` and each `ontology.ttl` already declare are not
 repeated in the JSON examples: the SHACL closure supplies them, and a second value for a
@@ -88,9 +125,9 @@ single-valued property such as `dct:title` would be a violation.
 ## Meaning, not encoding
 
 A data type names the **kind** of data, not its **encoding**. The byte format a concrete process
-uses (GML, GeoTIFF, the OGC API - Processes `bbox` schema, ...) is declared where that process is
-profiled -- an Implementation Profile's own `schema` -- not here. This is the same meaning /
-representation split the concept plane exists for.
+uses is a `df:Format` of the data-formats register, bound to a data type by a `df:Representation`;
+an Implementation Profile still declares it in its own `schema` until it points to a
+representation. This is the same meaning / representation split the concept plane exists for.
 
 That boundary is an intent, not an absolute: a few types are grounded in a standard that happens to
 be a format -- `point-cloud` cites the OGC LAS community standard, and the `string-*` types are named
@@ -100,6 +137,12 @@ Simple Feature Access, not from any encoding of them. Descriptions may still sho
 (GeoJSON, JSON Schema `format`) as an illustration only.
 
 ## Governance: a proposed addition, not a status
+
+The rules are those of the register specification, `dt:specification` in [`data.ttl`](data.ttl): a
+concept register, GeoLabs as owner, manager and, for now, control body, with the intention to
+delegate that role; the definition of a substantive change and the table of substantive and
+clarifying changes; the rule for proposals, which are amended in place with a classified action of
+type `dt:amendmentAction`. No eligibility criteria and no commitments are set.
 
 There is no single lifecycle `status`. Each version records a `rim:RegisterAction` of type
 `addition`, proposed by GeoLabs, at the date the vocabulary was first drafted (2026-10-08, inline in

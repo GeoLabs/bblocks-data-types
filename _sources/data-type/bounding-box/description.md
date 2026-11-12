@@ -17,4 +17,4 @@ An axis-aligned extent given by its corners, with its CRS.
 
 ## Sources
 
-- [ogc.api.processes.v1.schemas.bbox, after OGC 17-069r4 §7.15.3 bbox](https://docs.ogc.org/is/17-069r4/17-069r4.html)
+- [ogc.api.processes.part1.v1.schemas.bbox, after OGC 17-069r4 §7.15.3 bbox](https://docs.ogc.org/is/17-069r4/17-069r4.html)
