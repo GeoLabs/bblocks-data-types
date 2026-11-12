@@ -11,7 +11,7 @@ inputs and outputs carry. It is modelled on the
 
 A data type names the **kind** of data, not its **encoding**. Encodings are the content plane of the
 data axis and live in a separate register, `bblocks-data-formats` (namespace
-`https://w3id.org/geolabs-ospd/data-formats/`, prefix `df:`, not resolved yet), which depends on this
+`https://w3id.org/geolabs/ospd/data-formats/`, prefix `df:`, not resolved yet), which depends on this
 one; this register never depends on it. Descriptions may show GeoJSON or JSON Schema as an
 illustration only.
 

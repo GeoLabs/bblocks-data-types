@@ -6,7 +6,7 @@ A literal character string, e.g. an expression, a CRS identifier or a format nam
 
 ## Usage
 
-Use this type for a character string. A recognised syntax for the string (date-time, URI, email, ...) is a format, not a narrower data type: the 20 formats of the EOAP `string_format.yaml`, `Pattern` included, are `df:Format` items of the data-formats register (`https://w3id.org/geolabs-ospd/data-formats/format/string-*`).
+Use this type for a character string. A recognised syntax for the string (date-time, URI, email, ...) is a format, not a narrower data type: the 20 formats of the EOAP `string_format.yaml`, `Pattern` included, are `df:Format` items of the data-formats register (`https://w3id.org/geolabs/ospd/data-formats/format/string-*`).
 
 The 19 narrower types below were registered here as proposals and are withdrawn (2026-11-09): their items and versions are unpublished, each item is replaced (`dct:isReplacedBy`) by the matching format, and nothing is deleted. Their `skos:broader` link to this type is kept as recorded.
 

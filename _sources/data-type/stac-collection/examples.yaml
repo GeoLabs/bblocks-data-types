@@ -39,7 +39,7 @@ examples:
             },
             "validityStatus": "invalid",
             "publicationStatus": "unpublished",
-            "isReplacedBy": "https://w3id.org/geolabs-ospd/data-formats/format/stac-collection"
+            "isReplacedBy": "https://w3id.org/geolabs/ospd/data-formats/format/stac-collection"
           }
       - language: turtle
         ref: ontology.ttl

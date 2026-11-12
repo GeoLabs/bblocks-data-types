@@ -4,7 +4,7 @@ A string representing a calendar date in the YYYY-MM-DD format.
 
 This type was a proposal and is withdrawn (2026-11-09): it is a format, not a kind of data. Its item and its version are `rim:unpublished` and stay `rim:invalid`; nothing is deleted and no IRI changes.
 
-- Replacement: the format [`https://w3id.org/geolabs-ospd/data-formats/format/string-date`](https://w3id.org/geolabs-ospd/data-formats/format/string-date) of the data-formats register (`dct:isReplacedBy` on the item). The Registered Item Model link, `rim:supersedes`, is carried by that format, because this register does not depend on data-formats.
+- Replacement: the format [`https://w3id.org/geolabs/ospd/data-formats/format/string-date`](https://w3id.org/geolabs/ospd/data-formats/format/string-date) of the data-formats register (`dct:isReplacedBy` on the item). The Registered Item Model link, `rim:supersedes`, is carried by that format, because this register does not depend on data-formats.
 - Action: `https://geolabs.github.io/bblocks-data-types/def/data-type/string-date/actions/unpublication`, of type `rim:unpublishAction`, classified `rim:substantiveChange` (the retirement of a type), next to the addition, which is unchanged.
 
 ## Definition

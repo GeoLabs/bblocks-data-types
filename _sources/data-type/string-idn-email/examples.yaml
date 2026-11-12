@@ -39,7 +39,7 @@ examples:
             },
             "validityStatus": "invalid",
             "publicationStatus": "unpublished",
-            "isReplacedBy": "https://w3id.org/geolabs-ospd/data-formats/format/string-idn-email"
+            "isReplacedBy": "https://w3id.org/geolabs/ospd/data-formats/format/string-idn-email"
           }
       - language: turtle
         ref: ontology.ttl

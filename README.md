@@ -11,7 +11,7 @@ type also has a content-plane `dt:DataTypeItem` (sub-class of `rim:RegisterItem`
 profiles the Registered Item Model's JSON Schemas. A data type
 names the *kind* of data, not its encoding. Encodings are the content plane of the data axis, held by
 a separate register, [`GeoLabs/bblocks-data-formats`](https://github.com/GeoLabs/bblocks-data-formats)
-(namespace `https://w3id.org/geolabs-ospd/data-formats/`, prefix `df:`): a `df:Format` is an
+(namespace `https://w3id.org/geolabs/ospd/data-formats/`, prefix `df:`): a `df:Format` is an
 encoding, and a `df:Representation` realizes (`rim:realizes`) one `dt:DataTypeVersion` of this
 register in one format. That register depends on this one; this one never depends on it. See
 [`_sources/vocabulary/description.md`](_sources/vocabulary/description.md).
