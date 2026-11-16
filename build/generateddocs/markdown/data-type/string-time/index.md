@@ -5,7 +5,7 @@
 
 A string representing a time of day in the hh:mm:ss.sTZD format.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

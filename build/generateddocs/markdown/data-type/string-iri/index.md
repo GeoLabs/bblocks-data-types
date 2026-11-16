@@ -5,7 +5,7 @@
 
 A string representing an Internationalized Resource Identifier (IRI) as defined by RFC 3987.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

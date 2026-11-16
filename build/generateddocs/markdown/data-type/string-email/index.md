@@ -5,7 +5,7 @@
 
 A string representing a valid e-mail address as defined by RFC 5322.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

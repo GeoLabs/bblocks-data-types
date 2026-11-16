@@ -5,7 +5,7 @@
 
 A STAC Collection: a Catalog specialization that describes a collection of related spatiotemporal assets with spatial and temporal extents.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

@@ -140,7 +140,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.bounding-box
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-12'
+  dateOfLastChange: '2026-11-16'
 
 ```
 

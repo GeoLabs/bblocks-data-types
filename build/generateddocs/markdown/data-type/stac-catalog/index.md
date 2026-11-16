@@ -5,7 +5,7 @@
 
 A STAC Catalog: a linked metadata object organizing STAC Items, Collections or child Catalogs.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

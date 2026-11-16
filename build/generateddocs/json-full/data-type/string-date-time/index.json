@@ -5,7 +5,8 @@
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
   "name": "Data type: String \u2014 date-time",
   "abstract": "A string representing a date and time in the YYYY-MM-DDThh:mm:ss.sTZD format.",
-  "status": "under-development",
+  "status": "superseded",
+  "successor": "https://w3id.org/geolabs/ospd/data-formats/format/string-date-time",
   "dateTimeAddition": "2026-11-01T00:00:00Z",
   "version": "1.0",
   "itemClass": "model",
@@ -30,7 +31,7 @@
     }
   ],
   "group": "String formats",
-  "highlighted": true,
+  "highlighted": false,
   "shaclShapes": {
     "data-types.vocabulary": [
       "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
@@ -42,7 +43,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-12",
+  "dateOfLastChange": "2026-11-16",
   "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/ontology.ttl",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/schema.yaml",

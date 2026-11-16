@@ -5,7 +5,7 @@
 
 A string representing a calendar date in the YYYY-MM-DD format.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

@@ -5,7 +5,7 @@
 
 A string representation of a universally unique identifier (UUID).
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

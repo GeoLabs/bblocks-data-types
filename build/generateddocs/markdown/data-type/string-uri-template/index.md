@@ -5,7 +5,7 @@
 
 A string representing a URI template as defined by RFC 6570.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

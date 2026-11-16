@@ -5,7 +5,7 @@
 
 A string representing a valid internationalized e-mail address.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

@@ -5,7 +5,7 @@
 
 A string representing a relative JSON Pointer as defined by the JSON Pointer specification.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

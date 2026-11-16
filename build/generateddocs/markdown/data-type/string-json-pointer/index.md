@@ -5,7 +5,7 @@
 
 A string representing an absolute JSON Pointer as defined by RFC 6901.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

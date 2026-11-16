@@ -5,7 +5,7 @@
 
 A string designated to carry a password value; the source schema does not define a password-strength constraint.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

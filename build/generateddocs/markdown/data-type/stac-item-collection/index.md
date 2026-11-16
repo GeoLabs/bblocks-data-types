@@ -5,7 +5,7 @@
 
 A feature collection whose features are STAC Items, such as a STAC API Item Search response; distinct from a STAC Collection object.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

@@ -5,7 +5,7 @@
 
 A string representing a URI reference as defined by RFC 3986.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

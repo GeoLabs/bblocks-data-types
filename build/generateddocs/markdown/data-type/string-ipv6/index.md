@@ -5,7 +5,7 @@
 
 A string representing an IPv6 address.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

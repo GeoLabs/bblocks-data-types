@@ -5,7 +5,7 @@
 
 A string representing a valid hostname as defined by RFC 1123.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

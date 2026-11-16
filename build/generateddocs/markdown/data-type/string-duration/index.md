@@ -5,7 +5,7 @@
 
 A string representing a duration as specified by ISO 8601.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 

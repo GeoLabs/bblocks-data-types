@@ -5,7 +5,7 @@
 
 A STAC Item: a feature with STAC identity, links, assets, version and spatiotemporal metadata.
 
-[*Status*](http://www.opengis.net/def/status): Under development
+[*Status*](http://www.opengis.net/def/status): Superseded
 
 ## Description
 
