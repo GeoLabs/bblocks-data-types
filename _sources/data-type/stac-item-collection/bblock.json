@@ -2,7 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
   "name": "Data type: STAC Item Collection",
   "abstract": "A feature collection whose features are STAC Items, such as a STAC API Item Search response; distinct from a STAC Collection object.",
-  "status": "under-development",
+  "status": "superseded",
+  "successor": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection",
   "dateTimeAddition": "2026-11-01T00:00:00Z",
   "version": "1.0",
   "itemClass": "model",
@@ -34,5 +35,5 @@
     }
   ],
   "group": "Feature data types",
-  "highlighted": true
+  "highlighted": false
 }
