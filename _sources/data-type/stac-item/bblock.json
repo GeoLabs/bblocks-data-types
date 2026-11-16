@@ -2,7 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
   "name": "Data type: STAC Item",
   "abstract": "A STAC Item: a feature with STAC identity, links, assets, version and spatiotemporal metadata.",
-  "status": "under-development",
+  "status": "superseded",
+  "successor": "https://w3id.org/geolabs/ospd/data-formats/format/stac-item",
   "dateTimeAddition": "2026-11-02T00:00:00Z",
   "version": "1.0",
   "itemClass": "model",
@@ -26,5 +27,5 @@
     }
   ],
   "group": "STAC data types",
-  "highlighted": true
+  "highlighted": false
 }

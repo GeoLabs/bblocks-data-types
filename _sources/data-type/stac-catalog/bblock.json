@@ -2,7 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
   "name": "Data type: STAC Catalog",
   "abstract": "A STAC Catalog: a linked metadata object organizing STAC Items, Collections or child Catalogs.",
-  "status": "under-development",
+  "status": "superseded",
+  "successor": "https://w3id.org/geolabs/ospd/data-formats/format/stac-catalog",
   "dateTimeAddition": "2026-11-02T00:00:00Z",
   "version": "1.0",
   "itemClass": "model",
@@ -23,5 +24,5 @@
     }
   ],
   "group": "STAC data types",
-  "highlighted": true
+  "highlighted": false
 }
