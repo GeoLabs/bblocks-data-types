@@ -11,10 +11,10 @@
     "data-types.vocabulary"
   ],
   "concept": [
-    "https://geolabs.github.io/bblocks-data-types/def/data-type/coordinate-reference-system"
+    "https://w3id.org/geolabs/ospd/data-types/data-type/coordinate-reference-system"
   ],
   "rdfType": [
-    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
   ],
   "sources": [
     {
@@ -23,7 +23,7 @@
     },
     {
       "title": "Generic Profile raster-reprojection (bblocks-generic-profiles), the role that requests this type",
-      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-reprojection/inputs/targetCRS"
+      "link": "https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-reprojection/inputs/targetCRS"
     }
   ],
   "group": "Parameter data types",

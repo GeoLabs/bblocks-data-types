@@ -2,7 +2,7 @@ A literal character string, e.g. an expression, a CRS identifier or a format nam
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/string` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/string` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Usage
 

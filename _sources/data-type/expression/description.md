@@ -2,7 +2,7 @@ A formula that combines references to input values, constants, operators and fun
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/expression` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/expression` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 The syntax of the formula is a representation, not part of the type.
 
@@ -12,9 +12,9 @@ Added because existing roles of `bblocks-generic-profiles` need it. They declare
 `string` today (branch `planes/phase-1-docs`, `b0da6aa`); pointing them to this type is a change of
 that register, not made here.
 
-- [`generic-profile/raster-band-math/inputs/expression`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/inputs/expression): the per-pixel mathematical expression
-- [`implementation-profile/raster-band-math/inputs/expression`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math/inputs/expression)
-- [`implementation-profile/raster-band-math-multiband/inputs/expression`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-band-math-multiband/inputs/expression)
+- [`generic-profile/raster-band-math/inputs/expression`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-band-math/inputs/expression): the per-pixel mathematical expression
+- [`implementation-profile/raster-band-math/inputs/expression`](https://w3id.org/geolabs/ospd/generic-profiles/implementation-profile/raster-band-math/inputs/expression)
+- [`implementation-profile/raster-band-math-multiband/inputs/expression`](https://w3id.org/geolabs/ospd/generic-profiles/implementation-profile/raster-band-math-multiband/inputs/expression)
 
 ## Hierarchy
 
@@ -30,4 +30,4 @@ that register, not made here.
 
 ## Sources
 
-- [Generic Profile raster-band-math (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/inputs/expression)
+- [Generic Profile raster-band-math (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-band-math/inputs/expression)

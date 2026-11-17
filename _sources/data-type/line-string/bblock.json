@@ -14,10 +14,10 @@
     "data-types.vocabulary"
   ],
   "concept": [
-    "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string"
+    "https://w3id.org/geolabs/ospd/data-types/data-type/line-string"
   ],
   "rdfType": [
-    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
   ],
   "sources": [
     {

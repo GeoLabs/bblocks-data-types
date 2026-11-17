@@ -2,7 +2,7 @@ An identifier that designates one band or asset of a multi-band product, either 
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 A value of this type designates one band (for example the provider's code B03, or the common name green); how it is spelled is a representation, not part of the type.
 
@@ -12,7 +12,7 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/band-retrieval/inputs/band`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/band): the band to retrieve from the product
+- [`generic-profile/band-retrieval/inputs/band`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/band-retrieval/inputs/band): the band to retrieve from the product
 
 ## Hierarchy
 
@@ -27,4 +27,4 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/band)
+- [Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/band-retrieval/inputs/band)

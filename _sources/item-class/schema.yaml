@@ -7,4 +7,4 @@ allOf:
   - $ref: bblocks://ogc.rim.schemas.register-item-class
 required: [definedIn, validatedBy]
 properties:
-  id: {const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass}
+  id: {const: https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass}

@@ -2,7 +2,7 @@ The spacing of the cells of a regular grid along each of its axes, in the units 
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/grid-resolution` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/grid-resolution` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 A value of this type gives one spacing per axis of the grid.
 
@@ -12,7 +12,7 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/raster-resampling/inputs/resolution`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-resampling/inputs/resolution): the cell size of the resampled raster
+- [`generic-profile/raster-resampling/inputs/resolution`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-resampling/inputs/resolution): the cell size of the resampled raster
 
 ## Hierarchy
 
@@ -27,4 +27,4 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile raster-resampling (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-resampling/inputs/resolution)
+- [Generic Profile raster-resampling (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-resampling/inputs/resolution)

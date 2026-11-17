@@ -2,7 +2,7 @@ An identifier that designates a data format, used to tell a process which format
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/format-identifier` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/format-identifier` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 The formats themselves are items of the data-formats register; this type is the identification of one of them passed as a value.
 
@@ -12,8 +12,8 @@ Added because existing roles of `bblocks-generic-profiles` need it. They declare
 `string` today (branch `planes/phase-1-docs`, `b0da6aa`); pointing them to this type is a change of
 that register, not made here.
 
-- [`generic-profile/raster-format-conversion/inputs/targetFormat`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-format-conversion/inputs/targetFormat): the target raster encoding
-- [`implementation-profile/raster-format-conversion/inputs/targetFormat`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-format-conversion/inputs/targetFormat)
+- [`generic-profile/raster-format-conversion/inputs/targetFormat`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-format-conversion/inputs/targetFormat): the target raster encoding
+- [`implementation-profile/raster-format-conversion/inputs/targetFormat`](https://w3id.org/geolabs/ospd/generic-profiles/implementation-profile/raster-format-conversion/inputs/targetFormat)
 
 ## Hierarchy
 
@@ -29,4 +29,4 @@ that register, not made here.
 
 ## Sources
 
-- [Generic Profile raster-format-conversion (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-format-conversion/inputs/targetFormat)
+- [Generic Profile raster-format-conversion (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-format-conversion/inputs/targetFormat)

@@ -2,7 +2,7 @@ A geometry that is a collection of geometry objects, which may be of different t
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/geometry-collection` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/geometry-collection` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Usage
 

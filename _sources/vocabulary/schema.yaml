@@ -12,8 +12,8 @@ type: object
 required: [realizes]
 properties:
   type: {const: DataTypeItem}
-  itemClass: {const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass}
-  inRegister: {const: https://geolabs.github.io/bblocks-data-types/def/register}
+  itemClass: {const: https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass}
+  inRegister: {const: https://w3id.org/geolabs/ospd/data-types/register}
   realizes:
     allOf:
       - $ref: bblocks://ogc.rim.schemas.concept-version

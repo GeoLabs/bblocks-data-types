@@ -2,7 +2,7 @@ A dataset delivered as one unit by a data provider, typically one acquisition ov
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/eo-product` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 A product is the data and its description together. The record that describes it, or the package that delivers it, is a representation of the product, not part of the type.
 
@@ -12,8 +12,8 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/band-retrieval/inputs/product`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/product): the product from which a band is retrieved
-- [`generic-profile/product-selection/outputs/products`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/outputs/products): the products selected
+- [`generic-profile/band-retrieval/inputs/product`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/band-retrieval/inputs/product): the product from which a band is retrieved
+- [`generic-profile/product-selection/outputs/products`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/outputs/products): the products selected
 
 ## Hierarchy
 
@@ -28,5 +28,5 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/product)
-- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/outputs/products)
+- [Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/band-retrieval/inputs/product)
+- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/outputs/products)

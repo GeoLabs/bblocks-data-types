@@ -2,7 +2,7 @@ A picture of data made for viewing: a grid of colour values produced by applying
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/rendered-image` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/rendered-image` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 Its cells hold colours, not measured values: it is not a narrower type of Raster, whose cells hold the values of a coverage.
 
@@ -12,7 +12,7 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/raster-rendering/outputs/image`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-rendering/outputs/image): the rendering of the raster
+- [`generic-profile/raster-rendering/outputs/image`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-rendering/outputs/image): the rendering of the raster
 
 ## Hierarchy
 
@@ -27,4 +27,4 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile raster-rendering (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-rendering/outputs/image)
+- [Generic Profile raster-rendering (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-rendering/outputs/image)

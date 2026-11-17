@@ -2,7 +2,7 @@ A coordinate system that is related to an object by a datum.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/coordinate-reference-system` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/coordinate-reference-system` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 The definition is the term definition of OGC 18-005r5, 3.1.9. A value of this type identifies or describes one coordinate reference system; how it is written (a code, a URI, a WKT string) is a representation, not part of the type.
 
@@ -12,8 +12,8 @@ Added because existing roles of `bblocks-generic-profiles` need it. They declare
 `string` today (branch `planes/phase-1-docs`, `b0da6aa`); pointing them to this type is a change of
 that register, not made here.
 
-- [`generic-profile/raster-reprojection/inputs/targetCRS`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-reprojection/inputs/targetCRS): the target coordinate reference system identifier
-- [`implementation-profile/raster-reprojection/inputs/targetCRS`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/raster-reprojection/inputs/targetCRS)
+- [`generic-profile/raster-reprojection/inputs/targetCRS`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-reprojection/inputs/targetCRS): the target coordinate reference system identifier
+- [`implementation-profile/raster-reprojection/inputs/targetCRS`](https://w3id.org/geolabs/ospd/generic-profiles/implementation-profile/raster-reprojection/inputs/targetCRS)
 
 ## Hierarchy
 
@@ -30,4 +30,4 @@ that register, not made here.
 ## Sources
 
 - [OGC 18-005r5 Topic 2 - Referencing by coordinates (ISO 19111:2019), 3.1.9 coordinate reference system](https://docs.ogc.org/as/18-005r5/18-005r5.html)
-- [Generic Profile raster-reprojection (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-reprojection/inputs/targetCRS)
+- [Generic Profile raster-reprojection (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-reprojection/inputs/targetCRS)

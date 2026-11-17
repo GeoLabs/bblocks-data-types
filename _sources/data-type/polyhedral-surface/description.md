@@ -2,7 +2,7 @@ A contiguous collection of polygons that share common boundary segments.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/polyhedral-surface` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/polyhedral-surface` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Usage
 

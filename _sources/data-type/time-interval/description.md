@@ -2,7 +2,7 @@ A period of time between two instants, either of which may be unbounded.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/time-interval` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/time-interval` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 How the interval is written (two dates, a date and a duration) is a representation, not part of the type.
 
@@ -12,7 +12,7 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/product-selection/inputs/timeInterval`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/timeInterval): the acquisition period of the products
+- [`generic-profile/product-selection/inputs/timeInterval`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/inputs/timeInterval): the acquisition period of the products
 
 ## Hierarchy
 
@@ -27,4 +27,4 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/timeInterval)
+- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/inputs/timeInterval)

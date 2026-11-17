@@ -2,7 +2,7 @@ A coverage on a regular grid of cells, each cell carrying one value per band; ho
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/raster` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/raster` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Hierarchy
 

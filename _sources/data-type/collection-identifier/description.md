@@ -2,7 +2,7 @@ An identifier that designates a collection of data products held in a catalogue.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 A value of this type designates one collection; it is not the description of the collection.
 
@@ -12,7 +12,7 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/product-selection/inputs/collection`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/collection): the collection the products are selected from
+- [`generic-profile/product-selection/inputs/collection`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/inputs/collection): the collection the products are selected from
 
 ## Hierarchy
 
@@ -27,4 +27,4 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/collection)
+- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/inputs/collection)

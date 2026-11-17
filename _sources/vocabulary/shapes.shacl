@@ -1,5 +1,5 @@
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 

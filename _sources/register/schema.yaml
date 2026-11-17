@@ -8,4 +8,4 @@ allOf:
   - $ref: bblocks://ogc.rim.schemas.register
 required: [objectIdentifier, runsOn, registerOwner]
 properties:
-  id: {const: https://geolabs.github.io/bblocks-data-types/def/register}
+  id: {const: https://w3id.org/geolabs/ospd/data-types/register}

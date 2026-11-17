@@ -11,15 +11,15 @@
     "data-types.vocabulary"
   ],
   "concept": [
-    "https://geolabs.github.io/bblocks-data-types/def/data-type/expression"
+    "https://w3id.org/geolabs/ospd/data-types/data-type/expression"
   ],
   "rdfType": [
-    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
   ],
   "sources": [
     {
       "title": "Generic Profile raster-band-math (bblocks-generic-profiles), the role that requests this type",
-      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-band-math/inputs/expression"
+      "link": "https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-band-math/inputs/expression"
     }
   ],
   "group": "Parameter data types",

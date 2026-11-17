@@ -2,7 +2,7 @@ An association of data values, or of classes of values, with colours, used to de
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/colour-map` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/colour-map` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 How a colour map is written (a list of value and colour pairs, a style document) is a representation, not part of the type.
 
@@ -12,7 +12,7 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/raster-rendering/inputs/colourMap`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-rendering/inputs/colourMap): the colours given to the values of the raster
+- [`generic-profile/raster-rendering/inputs/colourMap`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-rendering/inputs/colourMap): the colours given to the values of the raster
 
 ## Hierarchy
 
@@ -27,4 +27,4 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile raster-rendering (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-rendering/inputs/colourMap)
+- [Generic Profile raster-rendering (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-rendering/inputs/colourMap)
