@@ -15,10 +15,10 @@
     "data-types.vocabulary"
   ],
   "concept": [
-    "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date"
+    "https://w3id.org/geolabs/ospd/data-types/data-type/string-date"
   ],
   "rdfType": [
-    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
   ],
   "sources": [
     {

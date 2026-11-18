@@ -2,7 +2,7 @@ A line string with exactly two points, hence a single straight line segment.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/line` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/line` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Usage
 

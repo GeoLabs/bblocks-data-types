@@ -5,11 +5,11 @@ A feature collection whose features are STAC Items, such as a STAC API Item Sear
 This type was a proposal and is withdrawn (2026-11-11, decision Q4, option b): it describes an encoding, a STAC JSON object, not a kind of data, and no role uses it. Its item and its version are `rim:unpublished` and stay `rim:invalid`; nothing is deleted and no IRI changes.
 
 - Replacement: the format [`https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection`](https://w3id.org/geolabs/ospd/data-formats/format/stac-item-collection) of the data-formats register (`dct:isReplacedBy` on the item). The Registered Item Model link, `rim:supersedes`, is carried by that format, because this register does not depend on data-formats.
-- Action: `https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item-collection/actions/unpublication`, of type `rim:unpublishAction`, classified `rim:substantiveChange` (the retirement of a type), next to the addition, which is unchanged.
+- Action: `https://w3id.org/geolabs/ospd/data-types/data-type/stac-item-collection/actions/unpublication`, of type `rim:unpublishAction`, classified `rim:substantiveChange` (the retirement of a type), next to the addition, which is unchanged.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/stac-item-collection` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/stac-item-collection` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Usage
 

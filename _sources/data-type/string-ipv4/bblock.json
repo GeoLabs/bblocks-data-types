@@ -15,10 +15,10 @@
     "data-types.vocabulary"
   ],
   "concept": [
-    "https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv4"
+    "https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4"
   ],
   "rdfType": [
-    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
   ],
   "sources": [
     {

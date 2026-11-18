@@ -11,15 +11,15 @@
     "data-types.vocabulary"
   ],
   "concept": [
-    "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier"
+    "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier"
   ],
   "rdfType": [
-    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
   ],
   "sources": [
     {
       "title": "Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type",
-      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/band"
+      "link": "https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/band-retrieval/inputs/band"
     }
   ],
   "group": "Parameter data types",

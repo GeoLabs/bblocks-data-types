@@ -2,7 +2,7 @@ A curve with linear interpolation between points: each consecutive pair of point
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/line-string` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/line-string` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Usage
 

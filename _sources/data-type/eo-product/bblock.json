@@ -11,19 +11,19 @@
     "data-types.vocabulary"
   ],
   "concept": [
-    "https://geolabs.github.io/bblocks-data-types/def/data-type/eo-product"
+    "https://w3id.org/geolabs/ospd/data-types/data-type/eo-product"
   ],
   "rdfType": [
-    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
   ],
   "sources": [
     {
       "title": "Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type",
-      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/band-retrieval/inputs/product"
+      "link": "https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/band-retrieval/inputs/product"
     },
     {
       "title": "Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type",
-      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/outputs/products"
+      "link": "https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/outputs/products"
     }
   ],
   "group": "Other data types",

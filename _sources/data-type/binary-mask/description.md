@@ -2,7 +2,7 @@ A single-band raster whose cells each state whether the location belongs to a cl
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/binary-mask` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 How the two states are coded (for example 1 and 0, or 1 and no data) is a property of the data, not part of the type.
 
@@ -12,7 +12,7 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/raster-thresholding/outputs/mask`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-thresholding/outputs/mask): the cells above the threshold
+- [`generic-profile/raster-thresholding/outputs/mask`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-thresholding/outputs/mask): the cells above the threshold
 
 ## Hierarchy
 
@@ -27,4 +27,4 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile raster-thresholding (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-thresholding/outputs/mask)
+- [Generic Profile raster-thresholding (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-thresholding/outputs/mask)

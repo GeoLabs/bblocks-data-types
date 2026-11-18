@@ -2,7 +2,7 @@ A 0-dimensional geometry, a single location.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/point` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/point` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Hierarchy
 

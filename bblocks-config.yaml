@@ -23,7 +23,7 @@ description: |
   (e.g. point cloud in the OGC LAS community standard) -- that is their source, not their encoding.
 
   Identifiers: this register mints its own IRIs
-  (https://geolabs.github.io/bblocks-data-types/def/data-type/...). The original inline block in
+  (https://w3id.org/geolabs/ospd/data-types/data-type/...). The original inline block in
   bblocks-generic-profiles keeps its own until a permanent, register-independent namespace is agreed
   and that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.
 

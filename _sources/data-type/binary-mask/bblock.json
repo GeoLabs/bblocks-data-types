@@ -14,15 +14,15 @@
     "data-types.vocabulary"
   ],
   "concept": [
-    "https://geolabs.github.io/bblocks-data-types/def/data-type/binary-mask"
+    "https://w3id.org/geolabs/ospd/data-types/data-type/binary-mask"
   ],
   "rdfType": [
-    "https://geolabs.github.io/bblocks-data-types/def/DataType"
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
   ],
   "sources": [
     {
       "title": "Generic Profile raster-thresholding (bblocks-generic-profiles), the role that requests this type",
-      "link": "https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/raster-thresholding/outputs/mask"
+      "link": "https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/raster-thresholding/outputs/mask"
     }
   ],
   "group": "Raster data types",

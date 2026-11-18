@@ -5,4 +5,4 @@ description: >-
 allOf:
   - $ref: bblocks://data-types.vocabulary
 properties:
-  id: {const: https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item}
+  id: {const: https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item}

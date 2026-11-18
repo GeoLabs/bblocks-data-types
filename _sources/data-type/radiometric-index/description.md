@@ -2,7 +2,7 @@ A quantity derived by combining the radiometric values of several spectral bands
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/radiometric-index` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 A value of this type designates one such index (for example NDVI); how it is named is a representation, not part of the type.
 
@@ -12,8 +12,8 @@ Added because existing roles of `bblocks-generic-profiles` need it. They declare
 `string` today (branch `planes/phase-1-docs`, `b0da6aa`); pointing them to this type is a change of
 that register, not made here.
 
-- [`generic-profile/radiometric-index/inputs/index`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/radiometric-index/inputs/index): the name of the radiometric index (or indices) to compute
-- [`implementation-profile/radiometric-index/inputs/index`](https://geolabs.github.io/bblocks-generic-profiles/def/implementation-profile/radiometric-index/inputs/index)
+- [`generic-profile/radiometric-index/inputs/index`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/radiometric-index/inputs/index): the name of the radiometric index (or indices) to compute
+- [`implementation-profile/radiometric-index/inputs/index`](https://w3id.org/geolabs/ospd/generic-profiles/implementation-profile/radiometric-index/inputs/index)
 
 ## Hierarchy
 
@@ -29,4 +29,4 @@ that register, not made here.
 
 ## Sources
 
-- [Generic Profile radiometric-index (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/radiometric-index/inputs/index)
+- [Generic Profile radiometric-index (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/radiometric-index/inputs/index)

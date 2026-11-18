@@ -2,7 +2,7 @@ A set of features, each with a geometry and attributes -- e.g. a SAGA shapes lay
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/feature-collection` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/feature-collection` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Hierarchy
 

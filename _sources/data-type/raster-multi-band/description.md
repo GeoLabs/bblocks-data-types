@@ -2,7 +2,7 @@ A raster with more than one band: a range type of several fields.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/raster-multi-band` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/raster-multi-band` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Hierarchy
 
