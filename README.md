@@ -100,6 +100,7 @@ existing (reconciliation of the two IRI namespaces is a later, separate decision
 | `data-types.data-type.grid-resolution` | Data type: Grid resolution |
 | `data-types.data-type.colour-map` | Data type: Colour map |
 | `data-types.data-type.time-interval` | Data type: Time interval |
+| `data-types.data-type.date` | Data type: Date |
 | `data-types.data-type.collection-identifier` | Data type: Collection identifier |
 | `data-types.data-type.binary-mask` | Data type: Binary mask |
 | `data-types.data-type.eo-product` | Data type: Earth observation product |
@@ -120,7 +121,7 @@ depend on data-formats. Nothing is deleted and no IRI changes.
 types of four Generic Profile roles that declare `string` today; they have no broader type. `band-identifier`, `grid-resolution`, `colour-map`, `time-interval`,
 `collection-identifier`, `binary-mask` (narrower than `raster-single-band`), `eo-product` and
 `rendered-image` were added on 2026-11-10 for the roles of six new process profiles of
-`bblocks-generic-profiles`; each names the role that requests it, and only `binary-mask` has a broader type. `Feature` is distinct from `Geometry`: a feature contains a geometry and
+`bblocks-generic-profiles`; each names the role that requests it, and only `binary-mask` has a broader type. `date` was added on 2026-11-18 for the input `DATE_MIN` of the deployed process `terrain/hillshading`, which declares the JSON Schema format `date`; it has no broader type. `Feature` is distinct from `Geometry`: a feature contains a geometry and
 properties. `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, `MultiPolygon` and
 `GeometryCollection` are geometry types of OGC Simple Feature Access: `LineString` specializes
 `curve` and `Polygon` specializes `surface`, while `MultiPoint`, `MultiCurve` and `MultiSurface`

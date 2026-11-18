@@ -81,6 +81,12 @@
     },
     {
       "role": "data",
+      "ref": "../data-type/date/ontology.ttl",
+      "format": "text/turtle",
+      "title": "Ontology of the Date data type"
+    },
+    {
+      "role": "data",
       "ref": "../data-type/elevation-model/ontology.ttl",
       "format": "text/turtle",
       "title": "Ontology of the Elevation model data type"

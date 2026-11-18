@@ -19,14 +19,14 @@ The vocabulary was first drafted inline in `bblocks-generic-profiles`; this regi
 can be reused and governed on its own. The Generic and Implementation Profiles of
 `bblocks-generic-profiles` now use this register's IRIs as `dataType`; it imports this register.
 
-## Content: 67 Building Blocks
+## Content: 68 Building Blocks
 
 | Group | Blocks |
 |---|---|
 | Geometry (17) | `geometry`, `point`, `curve`, `surface`, `line-string`, `line`, `linear-ring`, `polygon`, `triangle`, `polyhedral-surface`, `tin`, `geometry-collection`, `multi-point`, `multi-curve`, `multi-surface`, `multi-line-string`, `multi-polygon` |
 | Features (2) and STAC (4) | `feature`, `feature-collection`, 4 STAC types `stac-item`, `stac-collection`, `stac-catalog`, `stac-item-collection` (withdrawn, unpublished) |
 | Literals (22) | `string`, 19 `string-*` formats from the EOAP schemas (withdrawn, unpublished), `number`, `boolean` |
-| Parameters (9) | `coordinate-reference-system`, `expression`, `format-identifier`, `radiometric-index`, `band-identifier`, `grid-resolution`, `colour-map`, `time-interval`, `collection-identifier` |
+| Parameters (10) | `coordinate-reference-system`, `expression`, `format-identifier`, `radiometric-index`, `band-identifier`, `grid-resolution`, `colour-map`, `time-interval`, `collection-identifier`, `date` |
 | Raster (5) | `raster`, `raster-single-band`, `raster-multi-band`, `elevation-model`, `binary-mask` |
 | Other (5) | `point-cloud`, `table`, `bounding-box`, `eo-product`, `rendered-image` |
 | Support (3) | `vocabulary`, `register`, `item-class` |

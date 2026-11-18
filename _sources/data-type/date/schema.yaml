@@ -1,0 +1,8 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Data type item - Date
+description: >-
+  The register item of the Date data type, in JSON.
+allOf:
+  - $ref: bblocks://data-types.vocabulary
+properties:
+  id: {const: https://w3id.org/geolabs/ospd/data-types/data-type/date/item}
