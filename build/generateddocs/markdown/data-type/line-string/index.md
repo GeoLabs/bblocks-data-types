@@ -13,7 +13,7 @@ A curve with linear interpolation between points: each consecutive pair of point
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/line-string` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/line-string` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Usage
 
@@ -50,31 +50,31 @@ The register item of the LineString data type: it realizes the governed version 
 #### json
 ```json
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string",
       "type": "Concept",
       "prefLabel": "LineString",
       "definition": "A curve with linear interpolation between points: each consecutive pair of points defines a line segment.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string",
     "validityStatus": "invalid",
     "publicationStatus": "published",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },
@@ -86,17 +86,32 @@ The register item of the LineString data type: it realizes the governed version 
 
 #### turtle
 ```turtle
-@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/line-string> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "LineString"@en ; skos:definition "A curve with linear interpolation between points: each consecutive pair of points defines a line segment."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/curve> ; dct:source [ dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://www.ogc.org/standards/sfa/> ], [ dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ; dct:references <https://docs.ogc.org/is/23-034/23-034.html> ] .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/line-string> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/actions/addition> .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "LineString"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
+<https://w3id.org/geolabs/ospd/data-types/data-type/line-string> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "LineString"@en ; skos:definition "A curve with linear interpolation between points: each consecutive pair of points defines a line segment."@en ; skos:broader <https://w3id.org/geolabs/ospd/data-types/data-type/curve> ; dct:source [ dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://www.ogc.org/standards/sfa/> ], [ dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ; dct:references <https://docs.ogc.org/is/23-034/23-034.html> ] .
+<https://w3id.org/geolabs/ospd/data-types/data-type/line-string/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/line-string> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/line-string"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/line-string/actions/addition> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/line-string/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "LineString"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/line-string/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/line-string> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/line-string> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/line-string/v1> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/line-string/actions/identifier-2026-11-17> .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/line-string/actions/identifier-2026-11-17> a rim:RegisterAction ;
+    rim:actionType dt:amendmentAction ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:affectedProperty rim:objectIdentifier ;
+    dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item to https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/line-string/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
+    rim:proposer dt:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item> ;
+    prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
 ```
 
@@ -104,31 +119,31 @@ The register item of the LineString data type: it realizes the governed version 
 ```jsonld
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string",
       "type": "Concept",
       "prefLabel": "LineString",
       "definition": "A curve with linear interpolation between points: each consecutive pair of points defines a line segment.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string",
     "validityStatus": "invalid",
     "publicationStatus": "published",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/line-string/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },
@@ -147,7 +162,7 @@ allOf:
 - $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
 properties:
   id:
-    const: https://geolabs.github.io/bblocks-data-types/def/data-type/line-string/item
+    const: https://w3id.org/geolabs/ospd/data-types/data-type/line-string/item
 x-bblocks-metadata:
   itemIdentifier: data-types.data-type.line-string
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
@@ -373,7 +388,7 @@ Links to the schema:
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

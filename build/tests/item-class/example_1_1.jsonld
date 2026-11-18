@@ -1,8 +1,8 @@
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "id": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
   "type": "RegisterItemClass",
   "title": "Data type",
-  "definedIn": "https://geolabs.github.io/bblocks-data-types/def/register",
-  "validatedBy": "https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape"
+  "definedIn": "https://w3id.org/geolabs/ospd/data-types/register",
+  "validatedBy": "https://w3id.org/geolabs/ospd/data-types/DataTypeItemShape"
 }

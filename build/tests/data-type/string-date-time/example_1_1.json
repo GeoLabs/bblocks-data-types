@@ -1,29 +1,29 @@
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time",
       "type": "Concept",
       "prefLabel": "Date-time string",
       "definition": "A string representing a date and time in the YYYY-MM-DDThh:mm:ss.sTZD format.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time",
     "validityStatus": "invalid",
     "publicationStatus": "unpublished",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },

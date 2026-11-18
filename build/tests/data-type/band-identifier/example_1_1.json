@@ -1,29 +1,29 @@
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier",
       "type": "Concept",
       "prefLabel": "Band identifier",
       "definition": "An identifier that designates one band or asset of a multi-band product, either by the provider's band code or by a common band name.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier",
     "validityStatus": "invalid",
     "publicationStatus": "published",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-10T00:00:00Z"
     }
   },

@@ -187,31 +187,31 @@ not an encoding.
 #### json
 ```json
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band",
       "type": "Concept",
       "prefLabel": "Raster (single band)",
       "definition": "A raster with exactly one band: a range type of one field.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band",
     "validityStatus": "invalid",
     "publicationStatus": "published",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-10-08T00:00:00Z"
     }
   },
@@ -225,31 +225,31 @@ not an encoding.
 ```jsonld
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band",
       "type": "Concept",
       "prefLabel": "Raster (single band)",
       "definition": "A raster with exactly one band: a range type of one field.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band",
     "validityStatus": "invalid",
     "publicationStatus": "published",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-10-08T00:00:00Z"
     }
   },
@@ -260,38 +260,38 @@ not an encoding.
 
 #### ttl
 ```ttl
-@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item> a dt:DataTypeItem ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item> a dt:DataTypeItem ;
     rim:inRegister dt:register ;
     rim:itemClass dt:dataTypeItemClass ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> ;
+    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1> ;
     rim:validityStatus rim:invalid .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> a rim:Concept ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band> a rim:Concept ;
     skos:definition "A raster with exactly one band: a range type of one field." ;
     skos:inScheme dt:data-types ;
     skos:prefLabel "Raster (single band)" .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition> a rim:RegisterAction ;
     prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:proposer dt:geolabs .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> a dt:DataTypeVersion ;
-    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/actions/addition> ;
-    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band"^^xsd:anyURI ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1"^^xsd:anyURI ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1> a dt:DataTypeVersion ;
+    dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition> ;
+    rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1"^^xsd:anyURI ;
     rim:publicationStatus rim:published ;
     rim:validityStatus rim:invalid ;
     rim:version "1.0" ;
-    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> .
+    rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band> .
 
 
 ```
@@ -304,7 +304,7 @@ version, addition action and item in its `ontology.ttl`.
 
 #### turtle
 ```turtle
-@prefix dt:   <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt:   <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim:  <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct:  <http://purl.org/dc/terms/> .
@@ -316,7 +316,7 @@ version, addition action and item in its `ontology.ttl`.
 # in the ontology.ttl of its own data-type Building Block.
 
 dt:register a rim:Register ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/register"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/register"^^xsd:anyURI ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
     dct:title "Data Types"@en ;
     dct:description "A concept-plane register of the kinds of data that process profile inputs and outputs carry."@en ;
@@ -339,7 +339,7 @@ dt:specification a rim:RegisterSpecification ;
         "Register type. A concept register, as the Registered Item Model uses the term. Each data type is a dt:DataType, a rim:Concept of the dt:dataTypes concept system, and its governed state is a dt:DataTypeVersion. Each version is realized (rim:realizes) by one dt:DataTypeItem of this register."@en ,
         "Relation with the data-formats register. A df:Representation item of the data-formats register realizes (rim:realizes) at most one dt:DataTypeVersion of this register and points to a df:Format. The Registered Item Model allows a version of this register to be realized by items of both registers: it limits rim:realizes to one version per item (rim:RegisterItemShape), not to one item per version. The data-formats register depends on this register; this register never depends on the data-formats register."@en ,
         "Roles. GeoLabs SARL is the register owner, the register manager and, for now, the control body. GeoLabs intends to delegate the control body role to the OGC or to an OSPD working group."@en ,
-        "Identifiers. The object identifier of a data type is its IRI, https://geolabs.github.io/bblocks-data-types/def/data-type/<name>; its version is <name>/v1 and its register item <name>/item. The functional identifier of a version is the IRI of its data type. An object identifier never redirects; only a functional identifier may. The identifier of a published item changes only by an explicit decision."@en ,
+        "Identifiers. The object identifier of a data type is its IRI, https://w3id.org/geolabs/ospd/data-types/data-type/<name>; its version is <name>/v1 and its register item <name>/item. The functional identifier of a version is the IRI of its data type. The namespace resolves through w3id.org: an object identifier answers 303 with a document about its data type (Turtle, Markdown, JSON Schema or HTML), never with another data type; only a functional identifier may point to another item. The identifier of a published item changes only by an explicit decision. The data types published before 2026-11-17 had the IRI https://geolabs.github.io/bblocks-data-types/def/data-type/<name>; the data type, its version and its register item keep their old IRIs as owl:sameAs, and the move is recorded by a clarifying amendment of the register item (decision of 2026-11-17)."@en ,
         "Versions. An addition is an action of type addition, with no classification. A substantive change creates a new item or a new version, linked by rim:supersededBy, with an action classified substantive. A clarifying change keeps the item and its version, with an action classified clarifying. This version rule is specific to the registers of this project and does not come from ISO 19135. The classification correctional is not available. An item is retired by unpublishing it, not by deleting it."@en ,
         "Ce qui est substantiel ici (tableau validé le 2026-11-05, repris tel quel). Substantiel : Définition qui change ce que le type recouvre, `skos:broader` modifié, retrait d'un type. Clarification : Coquille, reformulation de même sens, source ajoutée."@fr ,
         "What is substantive here (English rendering of the validated table above). Substantive: a definition that changes what the type covers, a modified skos:broader, the retirement of a type. Clarifying: a typo, a rewording with the same meaning, an added source."@en ,
@@ -398,11 +398,11 @@ properties:
     const: DataTypeItem
     x-jsonld-id: '@type'
   itemClass:
-    const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass
+    const: https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass
     x-jsonld-id: https://w3id.org/ogc/rim/itemClass
     x-jsonld-type: '@id'
   inRegister:
-    const: https://geolabs.github.io/bblocks-data-types/def/register
+    const: https://w3id.org/geolabs/ospd/data-types/register
     x-jsonld-id: https://w3id.org/ogc/rim/inRegister
     x-jsonld-type: '@id'
   realizes:
@@ -443,7 +443,7 @@ properties:
             format: date-time
             x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime
             x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
-        x-jsonld-id: https://geolabs.github.io/bblocks-data-types/def/hasVersionAction
+        x-jsonld-id: https://w3id.org/geolabs/ospd/data-types/hasVersionAction
         x-jsonld-type: '@id'
     x-jsonld-id: https://w3id.org/ogc/rim/realizes
     x-jsonld-type: '@id'
@@ -454,9 +454,9 @@ x-jsonld-extra-terms:
   Register: https://w3id.org/ogc/rim/Register
   RegisterItem: https://w3id.org/ogc/rim/RegisterItem
   RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass
-  DataTypeItem: https://geolabs.github.io/bblocks-data-types/def/DataTypeItem
-  DataType: https://geolabs.github.io/bblocks-data-types/def/DataType
-  DataTypeVersion: https://geolabs.github.io/bblocks-data-types/def/DataTypeVersion
+  DataTypeItem: https://w3id.org/geolabs/ospd/data-types/DataTypeItem
+  DataType: https://w3id.org/geolabs/ospd/data-types/DataType
+  DataTypeVersion: https://w3id.org/geolabs/ospd/data-types/DataTypeVersion
   prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel
   definition: http://www.w3.org/2004/02/skos/core#definition
   inScheme:
@@ -468,7 +468,7 @@ x-jsonld-extra-terms:
   concepts:
     x-jsonld-reverse: skos:inScheme
   conceptSystem:
-    x-jsonld-id: https://geolabs.github.io/bblocks-data-types/def/conceptSystem
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-types/conceptSystem
     x-jsonld-type: '@id'
   versionOf:
     x-jsonld-id: https://w3id.org/ogc/rim/versionOf
@@ -504,7 +504,7 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
   rim: https://w3id.org/ogc/rim/
-  dt: https://geolabs.github.io/bblocks-data-types/def/
+  dt: https://w3id.org/geolabs/ospd/data-types/
   skos: http://www.w3.org/2004/02/skos/core#
   xsd: http://www.w3.org/2001/XMLSchema#
   prov: http://www.w3.org/ns/prov#
@@ -513,7 +513,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.vocabulary
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-16'
+  dateOfLastChange: '2026-11-18'
 
 ```
 
@@ -734,7 +734,7 @@ Links to the schema:
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

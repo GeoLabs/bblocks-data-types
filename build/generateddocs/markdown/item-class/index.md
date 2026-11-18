@@ -36,11 +36,11 @@ The abstraction every data type item shares. `validatedBy` names the executable 
 #### json
 ```json
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "id": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
   "type": "RegisterItemClass",
   "title": "Data type",
-  "definedIn": "https://geolabs.github.io/bblocks-data-types/def/register",
-  "validatedBy": "https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape"
+  "definedIn": "https://w3id.org/geolabs/ospd/data-types/register",
+  "validatedBy": "https://w3id.org/geolabs/ospd/data-types/DataTypeItemShape"
 }
 
 ```
@@ -49,11 +49,11 @@ The abstraction every data type item shares. `validatedBy` names the executable 
 ```jsonld
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
+  "id": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
   "type": "RegisterItemClass",
   "title": "Data type",
-  "definedIn": "https://geolabs.github.io/bblocks-data-types/def/register",
-  "validatedBy": "https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape"
+  "definedIn": "https://w3id.org/geolabs/ospd/data-types/register",
+  "validatedBy": "https://w3id.org/geolabs/ospd/data-types/DataTypeItemShape"
 }
 ```
 
@@ -62,10 +62,10 @@ The abstraction every data type item shares. `validatedBy` names the executable 
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 
-<https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass> a rim:RegisterItemClass ;
+<https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass> a rim:RegisterItemClass ;
     dct:title "Data type" ;
-    rim:definedIn <https://geolabs.github.io/bblocks-data-types/def/register> ;
-    rim:validatedBy <https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape> .
+    rim:definedIn <https://w3id.org/geolabs/ospd/data-types/register> ;
+    rim:validatedBy <https://w3id.org/geolabs/ospd/data-types/DataTypeItemShape> .
 
 
 ```
@@ -84,7 +84,7 @@ required:
 - validatedBy
 properties:
   id:
-    const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass
+    const: https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass
 x-bblocks-metadata:
   itemIdentifier: data-types.item-class
   register: https://geolabs.github.io/bblocks-data-types/build/register.json

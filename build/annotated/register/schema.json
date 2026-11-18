@@ -14,7 +14,7 @@
   ],
   "properties": {
     "id": {
-      "const": "https://geolabs.github.io/bblocks-data-types/def/register"
+      "const": "https://w3id.org/geolabs/ospd/data-types/register"
     }
   },
   "x-bblocks-metadata": {

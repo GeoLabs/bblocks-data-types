@@ -9,7 +9,7 @@
   ],
   "properties": {
     "id": {
-      "const": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-idn-email/item"
+      "const": "https://w3id.org/geolabs/ospd/data-types/data-type/string-idn-email/item"
     }
   },
   "x-bblocks-metadata": {

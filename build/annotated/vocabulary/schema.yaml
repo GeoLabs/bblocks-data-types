@@ -16,11 +16,11 @@ properties:
     const: DataTypeItem
     x-jsonld-id: '@type'
   itemClass:
-    const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass
+    const: https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass
     x-jsonld-id: https://w3id.org/ogc/rim/itemClass
     x-jsonld-type: '@id'
   inRegister:
-    const: https://geolabs.github.io/bblocks-data-types/def/register
+    const: https://w3id.org/geolabs/ospd/data-types/register
     x-jsonld-id: https://w3id.org/ogc/rim/inRegister
     x-jsonld-type: '@id'
   realizes:
@@ -61,7 +61,7 @@ properties:
             format: date-time
             x-jsonld-id: http://www.w3.org/ns/prov#startedAtTime
             x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
-        x-jsonld-id: https://geolabs.github.io/bblocks-data-types/def/hasVersionAction
+        x-jsonld-id: https://w3id.org/geolabs/ospd/data-types/hasVersionAction
         x-jsonld-type: '@id'
     x-jsonld-id: https://w3id.org/ogc/rim/realizes
     x-jsonld-type: '@id'
@@ -72,9 +72,9 @@ x-jsonld-extra-terms:
   Register: https://w3id.org/ogc/rim/Register
   RegisterItem: https://w3id.org/ogc/rim/RegisterItem
   RegisterItemClass: https://w3id.org/ogc/rim/RegisterItemClass
-  DataTypeItem: https://geolabs.github.io/bblocks-data-types/def/DataTypeItem
-  DataType: https://geolabs.github.io/bblocks-data-types/def/DataType
-  DataTypeVersion: https://geolabs.github.io/bblocks-data-types/def/DataTypeVersion
+  DataTypeItem: https://w3id.org/geolabs/ospd/data-types/DataTypeItem
+  DataType: https://w3id.org/geolabs/ospd/data-types/DataType
+  DataTypeVersion: https://w3id.org/geolabs/ospd/data-types/DataTypeVersion
   prefLabel: http://www.w3.org/2004/02/skos/core#prefLabel
   definition: http://www.w3.org/2004/02/skos/core#definition
   inScheme:
@@ -86,7 +86,7 @@ x-jsonld-extra-terms:
   concepts:
     x-jsonld-reverse: skos:inScheme
   conceptSystem:
-    x-jsonld-id: https://geolabs.github.io/bblocks-data-types/def/conceptSystem
+    x-jsonld-id: https://w3id.org/geolabs/ospd/data-types/conceptSystem
     x-jsonld-type: '@id'
   versionOf:
     x-jsonld-id: https://w3id.org/ogc/rim/versionOf
@@ -122,7 +122,7 @@ x-jsonld-extra-terms:
     x-jsonld-type: '@id'
 x-jsonld-prefixes:
   rim: https://w3id.org/ogc/rim/
-  dt: https://geolabs.github.io/bblocks-data-types/def/
+  dt: https://w3id.org/geolabs/ospd/data-types/
   skos: http://www.w3.org/2004/02/skos/core#
   xsd: http://www.w3.org/2001/XMLSchema#
   prov: http://www.w3.org/ns/prov#
@@ -131,4 +131,4 @@ x-bblocks-metadata:
   itemIdentifier: data-types.vocabulary
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-16'
+  dateOfLastChange: '2026-11-18'

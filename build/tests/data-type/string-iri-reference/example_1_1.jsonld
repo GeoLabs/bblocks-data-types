@@ -1,30 +1,30 @@
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-iri-reference/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-iri-reference/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-iri-reference/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-iri-reference",
       "type": "Concept",
       "prefLabel": "IRI reference string",
       "definition": "A string representing an IRI reference as defined by RFC 3987.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-iri-reference/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-iri-reference",
     "validityStatus": "invalid",
     "publicationStatus": "unpublished",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-iri-reference/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-iri-reference/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },

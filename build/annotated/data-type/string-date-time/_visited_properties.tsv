@@ -32,7 +32,7 @@ path	@id	schema
 /realizes/publicationStatus	https://w3id.org/ogc/rim/publicationStatus	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/concept-version/schema.yaml
 /realizes/isRedacted	https://w3id.org/ogc/rim/isRedacted	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/concept-version/schema.yaml
 /realizes/isDeleted	https://w3id.org/ogc/rim/isDeleted	https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/concept-version/schema.yaml
-/realizes/hasAction	https://geolabs.github.io/bblocks-data-types/def/hasVersionAction	https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
+/realizes/hasAction	https://w3id.org/geolabs/ospd/data-types/hasVersionAction	https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
 /realizes/hasAction/id	@id	https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
 /realizes/hasAction/type	@type	https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
 /realizes/hasAction/actionType	https://w3id.org/ogc/rim/actionType	https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml

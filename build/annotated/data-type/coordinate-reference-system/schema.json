@@ -9,7 +9,7 @@
   ],
   "properties": {
     "id": {
-      "const": "https://geolabs.github.io/bblocks-data-types/def/data-type/coordinate-reference-system/item"
+      "const": "https://w3id.org/geolabs/ospd/data-types/data-type/coordinate-reference-system/item"
     }
   },
   "x-bblocks-metadata": {

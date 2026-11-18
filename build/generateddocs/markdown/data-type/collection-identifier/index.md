@@ -13,7 +13,7 @@ An identifier that designates a collection of data products held in a catalogue.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 A value of this type designates one collection; it is not the description of the collection.
 
@@ -23,7 +23,7 @@ Added on 2026-11-10 for a role of a new Generic Profile of `bblocks-generic-prof
 `planes/new-profiles`), one of the six profiles proposed so that unattached OSPD CWL processes can
 attach at tier 4. No standard source is given: none was read for this definition.
 
-- [`generic-profile/product-selection/inputs/collection`](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/collection): the collection the products are selected from
+- [`generic-profile/product-selection/inputs/collection`](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/inputs/collection): the collection the products are selected from
 
 ## Hierarchy
 
@@ -38,7 +38,7 @@ attach at tier 4. No standard source is given: none was read for this definition
 
 ## Sources
 
-- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/collection)
+- [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/inputs/collection)
 
 ## Examples
 
@@ -47,31 +47,31 @@ The register item of the Collection identifier data type: it realizes the govern
 #### json
 ```json
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier",
       "type": "Concept",
       "prefLabel": "Collection identifier",
       "definition": "An identifier that designates a collection of data products held in a catalogue.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier",
     "validityStatus": "invalid",
     "publicationStatus": "published",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-10T00:00:00Z"
     }
   },
@@ -83,17 +83,32 @@ The register item of the Collection identifier data type: it realizes the govern
 
 #### turtle
 ```turtle
-@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Collection identifier"@en ; skos:definition "An identifier that designates a collection of data products held in a catalogue."@en ; dct:source [ dct:title "Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type"@en ; dct:references <https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/collection> ] .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/actions/addition> .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Collection identifier"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
+<https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Collection identifier"@en ; skos:definition "An identifier that designates a collection of data products held in a catalogue."@en ; dct:source [ dct:title "Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type"@en ; dct:references <https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/inputs/collection> ] .
+<https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/actions/addition> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Collection identifier"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/v1> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/v1> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/actions/identifier-2026-11-17> .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/actions/identifier-2026-11-17> a rim:RegisterAction ;
+    rim:actionType dt:amendmentAction ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:affectedProperty rim:objectIdentifier ;
+    dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item to https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
+    rim:proposer dt:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item> ;
+    prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
 ```
 
@@ -101,31 +116,31 @@ The register item of the Collection identifier data type: it realizes the govern
 ```jsonld
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/collection-identifier/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier",
       "type": "Concept",
       "prefLabel": "Collection identifier",
       "definition": "An identifier that designates a collection of data products held in a catalogue.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier",
     "validityStatus": "invalid",
     "publicationStatus": "published",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-10T00:00:00Z"
     }
   },
@@ -144,7 +159,7 @@ allOf:
 - $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
 properties:
   id:
-    const: https://geolabs.github.io/bblocks-data-types/def/data-type/collection-identifier/item
+    const: https://w3id.org/geolabs/ospd/data-types/data-type/collection-identifier/item
 x-bblocks-metadata:
   itemIdentifier: data-types.data-type.collection-identifier
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
@@ -370,7 +385,7 @@ Links to the schema:
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }
@@ -381,7 +396,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://geolabs.github.io/bblocks-generic-profiles/def/generic-profile/product-selection/inputs/collection)
+* [Generic Profile product-selection (bblocks-generic-profiles), the role that requests this type](https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/product-selection/inputs/collection)
 
 # For developers
 

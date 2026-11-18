@@ -1,55 +1,69 @@
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection> a skos:Concept,
+<https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection> a skos:Concept,
         dt:DataType,
         rim:Concept ;
     dct:source [ dct:references <https://github.com/radiantearth/stac-spec/blob/master/collection-spec/json-schema/collection.json> ;
             dct:title "STAC Collection JSON Schema"@en ],
         [ dct:references <https://github.com/radiantearth/stac-spec/blob/master/catalog-spec/json-schema/catalog.json> ;
             dct:title "STAC Catalog JSON Schema"@en ] ;
-    skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-catalog> ;
+    owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection> ;
+    skos:broader <https://w3id.org/geolabs/ospd/data-types/data-type/stac-catalog> ;
     skos:definition "A STAC Collection: a Catalog specialization that describes a collection of related spatiotemporal assets with spatial and temporal extents."@en ;
     skos:inScheme dt:dataTypes ;
     skos:prefLabel "STAC Collection"@en .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/actions/addition> a rim:RegisterAction ;
     prov:startedAtTime "2026-11-02T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:proposer dt:geolabs .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item> a dt:DataTypeItem,
-        rim:RegisterItem ;
-    dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/stac-collection> ;
-    dct:title "STAC Collection"@en ;
-    rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/unpublication> ;
-    rim:inRegister dt:register ;
-    rim:itemClass dt:dataTypeItemClass ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item"^^xsd:anyURI ;
-    rim:publicationStatus rim:unpublished ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1> ;
-    rim:validityStatus rim:invalid .
+<https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/actions/identifier-2026-11-17> a rim:RegisterAction ;
+    dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item to https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
+    prov:startedAtTime "2026-11-17T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType dt:amendmentAction ;
+    rim:affectedProperty rim:objectIdentifier ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item> ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:proposer dt:geolabs .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1> a dt:DataTypeVersion,
+<https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/v1> a dt:DataTypeVersion,
         rim:ConceptVersion ;
-    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/addition>,
-        <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/unpublication> ;
-    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection"^^xsd:anyURI ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1"^^xsd:anyURI ;
+    owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/v1> ;
+    dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/actions/addition>,
+        <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/actions/unpublication> ;
+    rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/v1"^^xsd:anyURI ;
     rim:publicationStatus rim:unpublished ;
     rim:validityStatus rim:invalid ;
     rim:version "1.0" ;
-    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection> .
+    rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/actions/unpublication> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/actions/unpublication> a rim:RegisterAction ;
     dct:description "Withdrawal of the proposal (decision Q4, option b, of 2026-11-11): it describes an encoding, a STAC JSON object, not a kind of data, and no role of the Generic or Implementation Profiles uses it. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/stac-collection of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en ;
     prov:startedAtTime "2026-11-11T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:unpublishAction ;
-    rim:appliesTo <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item> ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item> ;
     rim:changeClassification rim:substantiveChange ;
     rim:proposer dt:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item> a dt:DataTypeItem,
+        rim:RegisterItem ;
+    dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/stac-collection> ;
+    dct:title "STAC Collection"@en ;
+    owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/stac-collection/item> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/actions/identifier-2026-11-17>,
+        <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/actions/unpublication> ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/item"^^xsd:anyURI ;
+    rim:publicationStatus rim:unpublished ;
+    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/stac-collection/v1> ;
+    rim:validityStatus rim:invalid .
 

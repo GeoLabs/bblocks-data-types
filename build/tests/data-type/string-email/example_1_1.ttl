@@ -1,35 +1,35 @@
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/item> a dt:DataTypeItem ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-email/item> a dt:DataTypeItem ;
     dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/string-email> ;
     rim:inRegister dt:register ;
     rim:itemClass dt:dataTypeItemClass ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/item"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-email/item"^^xsd:anyURI ;
     rim:publicationStatus rim:unpublished ;
-    rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/v1> ;
+    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/string-email/v1> ;
     rim:validityStatus rim:invalid .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-email> a rim:Concept ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-email> a rim:Concept ;
     skos:definition "A string representing a valid e-mail address as defined by RFC 5322." ;
     skos:inScheme dt:data-types ;
     skos:prefLabel "Email address string" .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/actions/addition> a rim:RegisterAction ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-email/actions/addition> a rim:RegisterAction ;
     prov:startedAtTime "2026-11-01T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
     rim:proposer dt:geolabs .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/v1> a dt:DataTypeVersion ;
-    dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/actions/addition> ;
-    rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-email"^^xsd:anyURI ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-email/v1"^^xsd:anyURI ;
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-email/v1> a dt:DataTypeVersion ;
+    dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-email/actions/addition> ;
+    rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-email"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-email/v1"^^xsd:anyURI ;
     rim:publicationStatus rim:unpublished ;
     rim:validityStatus rim:invalid ;
     rim:version "1.0" ;
-    rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-email> .
+    rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/string-email> .
 

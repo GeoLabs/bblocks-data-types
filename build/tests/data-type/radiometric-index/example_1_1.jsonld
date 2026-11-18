@@ -1,30 +1,30 @@
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/radiometric-index/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/radiometric-index/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/radiometric-index/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/radiometric-index/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/radiometric-index",
       "type": "Concept",
       "prefLabel": "Radiometric index",
       "definition": "A quantity derived by combining the radiometric values of several spectral bands, designed to highlight a property of the observed surface such as vegetation or water.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/radiometric-index/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/radiometric-index",
     "validityStatus": "invalid",
     "publicationStatus": "published",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/radiometric-index/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/radiometric-index/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-09T00:00:00Z"
     }
   },

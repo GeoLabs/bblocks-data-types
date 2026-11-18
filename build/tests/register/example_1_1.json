@@ -1,11 +1,11 @@
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "id": "https://w3id.org/geolabs/ospd/data-types/register",
   "type": "Register",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/register",
   "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
-  "runsOn": "https://geolabs.github.io/bblocks-data-types/def/registerSystem",
-  "registerOwner": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "controlBody": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "hasSpecification": "https://geolabs.github.io/bblocks-data-types/def/specification"
+  "runsOn": "https://w3id.org/geolabs/ospd/data-types/registerSystem",
+  "registerOwner": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "registerManager": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "controlBody": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "hasSpecification": "https://w3id.org/geolabs/ospd/data-types/specification"
 }

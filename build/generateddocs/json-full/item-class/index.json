@@ -34,7 +34,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-16",
+  "dateOfLastChange": "2026-11-18",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.yaml",
     "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.json"
@@ -54,25 +54,25 @@
         {
           "language": "json",
           "url": "https://geolabs.github.io/bblocks-data-types/build/tests/item-class/example_1_1.json",
-          "sizeBytes": 299,
-          "code": "{\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Data type\",\n  \"definedIn\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"validatedBy\": \"https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape\"\n}\n"
+          "sizeBytes": 275,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Data type\",\n  \"definedIn\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"validatedBy\": \"https://w3id.org/geolabs/ospd/data-types/DataTypeItemShape\"\n}\n"
         },
         {
           "language": "jsonld",
           "url": "https://geolabs.github.io/bblocks-data-types/build/tests/item-class/example_1_1.jsonld",
-          "sizeBytes": 402,
-          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/context.jsonld\",\n  \"id\": \"https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Data type\",\n  \"definedIn\": \"https://geolabs.github.io/bblocks-data-types/def/register\",\n  \"validatedBy\": \"https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape\"\n}"
+          "sizeBytes": 378,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass\",\n  \"type\": \"RegisterItemClass\",\n  \"title\": \"Data type\",\n  \"definedIn\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"validatedBy\": \"https://w3id.org/geolabs/ospd/data-types/DataTypeItemShape\"\n}"
         },
         {
           "language": "ttl",
           "url": "https://geolabs.github.io/bblocks-data-types/build/tests/item-class/example_1_1.ttl",
-          "sizeBytes": 382,
-          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n\n<https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass> a rim:RegisterItemClass ;\n    dct:title \"Data type\" ;\n    rim:definedIn <https://geolabs.github.io/bblocks-data-types/def/register> ;\n    rim:validatedBy <https://geolabs.github.io/bblocks-data-types/def/DataTypeItemShape> .\n\n"
+          "sizeBytes": 358,
+          "code": "@prefix dct: <http://purl.org/dc/terms/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n\n<https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass> a rim:RegisterItemClass ;\n    dct:title \"Data type\" ;\n    rim:definedIn <https://w3id.org/geolabs/ospd/data-types/register> ;\n    rim:validatedBy <https://w3id.org/geolabs/ospd/data-types/DataTypeItemShape> .\n\n"
         }
       ]
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item class\ndescription: The item class every data type item of the register shares, in JSON.\n  It is defined in the data-types register and validated by the vocabulary's `DataTypeItemShape`.\nallOf:\n- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml\nrequired:\n- definedIn\n- validatedBy\nproperties:\n  id:\n    const: https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass\nx-bblocks-metadata:\n  itemIdentifier: data-types.item-class\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-03'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item class\ndescription: The item class every data type item of the register shares, in JSON.\n  It is defined in the data-types register and validated by the vocabulary's `DataTypeItemShape`.\nallOf:\n- $ref: https://ogcincubator.github.io/registered-item-model/build/annotated/rim/schemas/register-item-class/schema.yaml\nrequired:\n- definedIn\n- validatedBy\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass\nx-bblocks-metadata:\n  itemIdentifier: data-types.item-class\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2026-11-03'\n",
   "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
   "gitPath": "_sources/item-class"
 }

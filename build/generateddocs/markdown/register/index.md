@@ -52,15 +52,15 @@ The register, the system it runs on, its owner, manager and control body, and it
 #### json
 ```json
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "id": "https://w3id.org/geolabs/ospd/data-types/register",
   "type": "Register",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/register",
   "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
-  "runsOn": "https://geolabs.github.io/bblocks-data-types/def/registerSystem",
-  "registerOwner": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "controlBody": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "hasSpecification": "https://geolabs.github.io/bblocks-data-types/def/specification"
+  "runsOn": "https://w3id.org/geolabs/ospd/data-types/registerSystem",
+  "registerOwner": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "registerManager": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "controlBody": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "hasSpecification": "https://w3id.org/geolabs/ospd/data-types/specification"
 }
 
 ```
@@ -69,15 +69,15 @@ The register, the system it runs on, its owner, manager and control body, and it
 ```jsonld
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "id": "https://w3id.org/geolabs/ospd/data-types/register",
   "type": "Register",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/register",
   "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
-  "runsOn": "https://geolabs.github.io/bblocks-data-types/def/registerSystem",
-  "registerOwner": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "registerManager": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "controlBody": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
-  "hasSpecification": "https://geolabs.github.io/bblocks-data-types/def/specification"
+  "runsOn": "https://w3id.org/geolabs/ospd/data-types/registerSystem",
+  "registerOwner": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "registerManager": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "controlBody": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "hasSpecification": "https://w3id.org/geolabs/ospd/data-types/specification"
 }
 ```
 
@@ -86,14 +86,14 @@ The register, the system it runs on, its owner, manager and control body, and it
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/register> a rim:Register ;
-    rim:controlBody <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;
+<https://w3id.org/geolabs/ospd/data-types/register> a rim:Register ;
+    rim:controlBody <https://w3id.org/geolabs/ospd/data-types/geolabs> ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
-    rim:hasSpecification <https://geolabs.github.io/bblocks-data-types/def/specification> ;
-    rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/register"^^xsd:anyURI ;
-    rim:registerManager <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;
-    rim:registerOwner <https://geolabs.github.io/bblocks-data-types/def/geolabs> ;
-    rim:runsOn <https://geolabs.github.io/bblocks-data-types/def/registerSystem> .
+    rim:hasSpecification <https://w3id.org/geolabs/ospd/data-types/specification> ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/register"^^xsd:anyURI ;
+    rim:registerManager <https://w3id.org/geolabs/ospd/data-types/geolabs> ;
+    rim:registerOwner <https://w3id.org/geolabs/ospd/data-types/geolabs> ;
+    rim:runsOn <https://w3id.org/geolabs/ospd/data-types/registerSystem> .
 
 
 ```
@@ -114,7 +114,7 @@ required:
 - registerOwner
 properties:
   id:
-    const: https://geolabs.github.io/bblocks-data-types/def/register
+    const: https://w3id.org/geolabs/ospd/data-types/register
 x-bblocks-metadata:
   itemIdentifier: data-types.register
   register: https://geolabs.github.io/bblocks-data-types/build/register.json

@@ -16,11 +16,11 @@ A string representing an absolute JSON Pointer as defined by RFC 6901.
 This type was a proposal and is withdrawn (2026-11-09): it is a format, not a kind of data. Its item and its version are `rim:unpublished` and stay `rim:invalid`; nothing is deleted and no IRI changes.
 
 - Replacement: the format [`https://w3id.org/geolabs/ospd/data-formats/format/string-json-pointer`](https://w3id.org/geolabs/ospd/data-formats/format/string-json-pointer) of the data-formats register (`dct:isReplacedBy` on the item). The Registered Item Model link, `rim:supersedes`, is carried by that format, because this register does not depend on data-formats.
-- Action: `https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/actions/unpublication`, of type `rim:unpublishAction`, classified `rim:substantiveChange` (the retirement of a type), next to the addition, which is unchanged.
+- Action: `https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/unpublication`, of type `rim:unpublishAction`, classified `rim:substantiveChange` (the retirement of a type), next to the addition, which is unchanged.
 
 ## Definition
 
-`https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
+`https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.
 
 ## Usage
 
@@ -59,31 +59,31 @@ The register item of the JSON Pointer string data type: it realizes the governed
 #### json
 ```json
 {
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer",
       "type": "Concept",
       "prefLabel": "JSON Pointer string",
       "definition": "A string representing an absolute JSON Pointer as defined by RFC 6901.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer",
     "validityStatus": "invalid",
     "publicationStatus": "unpublished",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },
@@ -96,18 +96,33 @@ The register item of the JSON Pointer string data type: it realizes the governed
 
 #### turtle
 ```turtle
-@prefix dt: <https://geolabs.github.io/bblocks-data-types/def/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .
 @prefix rim: <https://w3id.org/ogc/rim/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "JSON Pointer string"@en ; skos:definition "A string representing an absolute JSON Pointer as defined by RFC 6901."@en ; skos:broader <https://geolabs.github.io/bblocks-data-types/def/data-type/string> ; dct:source [ dct:title "EOAP schemas: string_format.yaml (JSON Schema format: json-pointer)"@en ; dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ], [ dct:title "RFC 6901"@en ; dct:references <https://datatracker.ietf.org/doc/html/rfc6901> ] .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer> ; rim:version "1.0" ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dt:hasVersionAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/actions/addition>, <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/actions/unpublication> .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "JSON Pointer string"@en ; rim:objectIdentifier "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/string-json-pointer> ; rim:hasAction <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/actions/unpublication> .
-<https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-json-pointer of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "JSON Pointer string"@en ; skos:definition "A string representing an absolute JSON Pointer as defined by RFC 6901."@en ; skos:broader <https://w3id.org/geolabs/ospd/data-types/data-type/string> ; dct:source [ dct:title "EOAP schemas: string_format.yaml (JSON Schema format: json-pointer)"@en ; dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ], [ dct:title "RFC 6901"@en ; dct:references <https://datatracker.ietf.org/doc/html/rfc6901> ] .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/addition>, <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/unpublication> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "JSON Pointer string"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/string-json-pointer> ; rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/unpublication> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-json-pointer of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/v1> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/v1> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item> ;
+    rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/identifier-2026-11-17> .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/identifier-2026-11-17> a rim:RegisterAction ;
+    rim:actionType dt:amendmentAction ;
+    rim:changeClassification rim:clarifyingChange ;
+    rim:affectedProperty rim:objectIdentifier ;
+    dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item to https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
+    rim:proposer dt:geolabs ;
+    rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item> ;
+    prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
 ```
 
@@ -115,31 +130,31 @@ The register item of the JSON Pointer string data type: it realizes the governed
 ```jsonld
 {
   "@context": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/context.jsonld",
-  "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item",
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item",
   "type": "DataTypeItem",
-  "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item",
-  "itemClass": "https://geolabs.github.io/bblocks-data-types/def/dataTypeItemClass",
-  "inRegister": "https://geolabs.github.io/bblocks-data-types/def/register",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
   "realizes": {
-    "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/v1",
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/v1",
     "type": "DataTypeVersion",
     "versionOf": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer",
       "type": "Concept",
       "prefLabel": "JSON Pointer string",
       "definition": "A string representing an absolute JSON Pointer as defined by RFC 6901.",
-      "inScheme": "https://geolabs.github.io/bblocks-data-types/def/data-types"
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
     },
     "version": "1.0",
-    "objectIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/v1",
-    "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer",
     "validityStatus": "invalid",
     "publicationStatus": "unpublished",
     "hasAction": {
-      "id": "https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/actions/addition",
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://geolabs.github.io/bblocks-data-types/def/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },
@@ -159,7 +174,7 @@ allOf:
 - $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml
 properties:
   id:
-    const: https://geolabs.github.io/bblocks-data-types/def/data-type/string-json-pointer/item
+    const: https://w3id.org/geolabs/ospd/data-types/data-type/string-json-pointer/item
 x-bblocks-metadata:
   itemIdentifier: data-types.data-type.string-json-pointer
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
@@ -385,7 +400,7 @@ Links to the schema:
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "dt": "https://geolabs.github.io/bblocks-data-types/def/",
+    "dt": "https://w3id.org/geolabs/ospd/data-types/",
     "@version": 1.1
   }
 }

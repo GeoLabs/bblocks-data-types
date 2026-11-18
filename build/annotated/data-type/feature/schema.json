@@ -9,7 +9,7 @@
   ],
   "properties": {
     "id": {
-      "const": "https://geolabs.github.io/bblocks-data-types/def/data-type/feature/item"
+      "const": "https://w3id.org/geolabs/ospd/data-types/data-type/feature/item"
     }
   },
   "x-bblocks-metadata": {
