@@ -4,7 +4,7 @@
   "abstract": "Shared RIM concept-plane model, register metadata, and SHACL rules for the individual data-type Building Blocks in this register.",
   "status": "under-development",
   "dateTimeAddition": "2026-10-26T00:00:00Z",
-  "dateOfLastChange": "2026-10-26",
+  "dateOfLastChange": "2026-11-19",
   "version": "0.1",
   "itemClass": "model",
   "register": "data-types",
