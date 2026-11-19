@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Date",
+  "abstract": "A calendar day, without a time of day.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://w3id.org/geolabs/ospd/data-types/data-type/date"
+  ],
+  "rdfType": [
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
+  ],
+  "sources": [
+    {
+      "title": "Process type terrain/hillshading (bblocks-process-profiles), input DATE_MIN, the deployed process input that requests this type",
+      "link": "https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading"
+    }
+  ],
+  "group": "Parameter data types",
+  "highlighted": true
+}
