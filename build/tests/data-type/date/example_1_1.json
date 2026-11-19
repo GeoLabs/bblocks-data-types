@@ -1,0 +1,32 @@
+{
+  "id": "https://w3id.org/geolabs/ospd/data-types/data-type/date/item",
+  "type": "DataTypeItem",
+  "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/date/item",
+  "itemClass": "https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass",
+  "inRegister": "https://w3id.org/geolabs/ospd/data-types/register",
+  "realizes": {
+    "id": "https://w3id.org/geolabs/ospd/data-types/data-type/date/v1",
+    "type": "DataTypeVersion",
+    "versionOf": {
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/date",
+      "type": "Concept",
+      "prefLabel": "Date",
+      "definition": "A calendar day, without a time of day.",
+      "inScheme": "https://w3id.org/geolabs/ospd/data-types/data-types"
+    },
+    "version": "1.0",
+    "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/date/v1",
+    "functionalIdentifier": "https://w3id.org/geolabs/ospd/data-types/data-type/date",
+    "validityStatus": "invalid",
+    "publicationStatus": "published",
+    "hasAction": {
+      "id": "https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition",
+      "type": "RegisterAction",
+      "actionType": "addition",
+      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "startedAtTime": "2026-11-18T00:00:00Z"
+    }
+  },
+  "validityStatus": "invalid",
+  "publicationStatus": "published"
+}

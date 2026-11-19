@@ -83,6 +83,12 @@ An association of data values, or of classes of values, with colours, used to de
 
 A coordinate system that is related to an object by a datum.
 
+### `data-types.data-type.date` — Data type: Date
+
+**Type:** model
+
+A calendar day, without a time of day.
+
 ### `data-types.data-type.eo-product` — Data type: Earth observation product
 
 **Type:** model

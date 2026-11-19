@@ -1,0 +1,84 @@
+
+
+{
+  "itemIdentifier": "data-types.data-type.date",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "name": "Data type: Date",
+  "abstract": "A calendar day, without a time of day.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-11-18T00:00:00Z",
+  "version": "1.0",
+  "itemClass": "model",
+  "register": "data-types",
+  "dependsOn": [
+    "data-types.vocabulary"
+  ],
+  "concept": [
+    "https://w3id.org/geolabs/ospd/data-types/data-type/date"
+  ],
+  "rdfType": [
+    "https://w3id.org/geolabs/ospd/data-types/DataType"
+  ],
+  "sources": [
+    {
+      "title": "Process type terrain/hillshading (bblocks-process-profiles), input DATE_MIN, the deployed process input that requests this type",
+      "link": "https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading"
+    }
+  ],
+  "group": "Parameter data types",
+  "highlighted": true,
+  "shaclShapes": {
+    "data-types.vocabulary": [
+      "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+    ],
+    "ogc.rim.core-ontology": [
+      "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+    ]
+  },
+  "license": {
+    "name": "Apache-2.0"
+  },
+  "dateOfLastChange": "2026-11-19",
+  "ontology": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/ontology.ttl",
+  "schema": {
+    "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/schema.yaml",
+    "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/schema.json"
+  },
+  "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/date/schema.yaml",
+  "ldContext": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/context.jsonld",
+  "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/resolvedProperties.json",
+  "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/date/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/date/",
+  "description": "A calendar day, without a time of day.\n\n## Definition\n\n`https://w3id.org/geolabs/ospd/data-types/data-type/date` is a `dt:DataType` in the `dt:dataTypes` concept system. It names a kind of data, not its encoding.\n\nHow the day is written (for instance `YYYY-MM-DD`, the JSON Schema `date` format) is a representation, not part of the type: the data-formats register binds this type to the format `string-date`.\n\n## Requested by\n\nAdded on 2026-11-18 for an input of a deployed process, not for a Generic Profile role: the input\n`DATE_MIN` of the process type `terrain/hillshading` of `bblocks-process-profiles` declares\n`\"type\": \"string\", \"format\": \"date\"`. No standard source is given: none was read for this definition.\n\n- [`process-type/terrain/hillshading`](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading): `DATE_MIN`, the first day of the period\n\nIt is not the withdrawn proposal `string-date`, which was a format registered as a data type.\n\n## Hierarchy\n\n- Broader: none (top-level data type).\n- Narrower: none\n\n## Content of this block\n\n- `ontology.ttl`: the concept, its governed `dt:DataTypeVersion`, the proposed addition action and the register item that realizes the version (canonical source).\n- `schema.yaml`: a profile of the vocabulary's data type item schema (itself a profile of the RIM register item), with `id` fixed to this item.\n- `examples.yaml`: the register item in JSON, validated against the schema, uplifted to RDF and checked against the shapes, and the same graph in Turtle.\n\n## Sources\n\n- [Process type terrain/hillshading (bblocks-process-profiles), input DATE_MIN, the deployed process input that requests this type](https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading)\n",
+  "examples": [
+    {
+      "title": "Date",
+      "content": "The register item of the Date data type: it realizes the governed version of the concept and belongs to the register's data type item class.",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/date/example_1_1.json",
+          "sizeBytes": 1366,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/item\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"realizes\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Date\",\n      \"definition\": \"A calendar day, without a time of day.\",\n      \"inScheme\": \"https://w3id.org/geolabs/ospd/data-types/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/v1\",\n    \"functionalIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://w3id.org/geolabs/ospd/data-types/geolabs\",\n      \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}\n"
+        },
+        {
+          "language": "turtle",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/date/ontology.ttl",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/date/example_1_2.ttl",
+          "sizeBytes": 1985,
+          "code": "@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .\n@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix dct: <http://purl.org/dc/terms/> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://w3id.org/geolabs/ospd/data-types/data-type/date> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel \"Date\"@en ; skos:definition \"A calendar day, without a time of day.\"@en ; dct:source [ dct:title \"Process type terrain/hillshading (bblocks-process-profiles), input DATE_MIN, the deployed process input that requests this type\"@en ; dct:references <https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading> ] .\n<https://w3id.org/geolabs/ospd/data-types/data-type/date/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/date> ; rim:version \"1.0\" ; rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-types/data-type/date/v1\"^^xsd:anyURI ; rim:functionalIdentifier \"https://w3id.org/geolabs/ospd/data-types/data-type/date\"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition> .\n<https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime \"2026-11-18T00:00:00Z\"^^xsd:dateTime .\n<https://w3id.org/geolabs/ospd/data-types/data-type/date/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title \"Date\"@en ; rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-types/data-type/date/item\"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/date/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/tests/data-type/date/example_1_1.jsonld",
+          "sizeBytes": 1473,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/item\",\n  \"type\": \"DataTypeItem\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/item\",\n  \"itemClass\": \"https://w3id.org/geolabs/ospd/data-types/dataTypeItemClass\",\n  \"inRegister\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"realizes\": {\n    \"id\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/v1\",\n    \"type\": \"DataTypeVersion\",\n    \"versionOf\": {\n      \"id\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date\",\n      \"type\": \"Concept\",\n      \"prefLabel\": \"Date\",\n      \"definition\": \"A calendar day, without a time of day.\",\n      \"inScheme\": \"https://w3id.org/geolabs/ospd/data-types/data-types\"\n    },\n    \"version\": \"1.0\",\n    \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/v1\",\n    \"functionalIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date\",\n    \"validityStatus\": \"invalid\",\n    \"publicationStatus\": \"published\",\n    \"hasAction\": {\n      \"id\": \"https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition\",\n      \"type\": \"RegisterAction\",\n      \"actionType\": \"addition\",\n      \"proposer\": \"https://w3id.org/geolabs/ospd/data-types/geolabs\",\n      \"startedAtTime\": \"2026-11-18T00:00:00Z\"\n    }\n  },\n  \"validityStatus\": \"invalid\",\n  \"publicationStatus\": \"published\"\n}"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Data type item - Date\ndescription: The register item of the Date data type, in JSON.\nallOf:\n- $ref: https://geolabs.github.io/bblocks-data-types/build/annotated/vocabulary/schema.yaml\nproperties:\n  id:\n    const: https://w3id.org/geolabs/ospd/data-types/data-type/date/item\nx-bblocks-metadata:\n  itemIdentifier: data-types.data-type.date\n  register: https://geolabs.github.io/bblocks-data-types/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2026-11-18'\n",
+  "gitRepository": "https://github.com/GeoLabs/bblocks-data-types",
+  "gitPath": "_sources/data-type/date"
+}

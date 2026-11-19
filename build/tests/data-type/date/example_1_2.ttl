@@ -1,0 +1,11 @@
+@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/date> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Date"@en ; skos:definition "A calendar day, without a time of day."@en ; dct:source [ dct:title "Process type terrain/hillshading (bblocks-process-profiles), input DATE_MIN, the deployed process input that requests this type"@en ; dct:references <https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading> ] .
+<https://w3id.org/geolabs/ospd/data-types/data-type/date/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/date> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/date/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/date"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition> .
+<https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-18T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/date/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Date"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/date/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/date/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .

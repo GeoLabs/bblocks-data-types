@@ -55,7 +55,10 @@ requests it and has no broader type. `band-identifier`, `eo-product`, `grid-reso
 `colour-map`, `rendered-image`, `time-interval` and `collection-identifier` were added on 2026-11-10
 for the roles of six new Generic Profiles of `bblocks-generic-profiles` (band retrieval, product
 selection, raster resampling, thresholding and rendering); each names the role that requests it, and
-only `binary-mask` has a broader type, `raster-single-band`.
+only `binary-mask` has a broader type, `raster-single-band`. `date` was added on 2026-11-18 for the input `DATE_MIN` of the deployed process
+`terrain/hillshading` of `bblocks-process-profiles`, which declares the JSON Schema format `date`; it
+names that process type as its source and has no broader type. The data-formats register binds it to
+the format `string-date`.
 
 The 19 fixed string formats in
 [`eoap/schemas/string_format.yaml`](https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml)
@@ -513,7 +516,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.vocabulary
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-18'
+  dateOfLastChange: '2026-11-19'
 
 ```
 

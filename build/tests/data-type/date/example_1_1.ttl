@@ -1,0 +1,33 @@
+@prefix dt: <https://w3id.org/geolabs/ospd/data-types/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rim: <https://w3id.org/ogc/rim/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/date/item> a dt:DataTypeItem ;
+    rim:inRegister dt:register ;
+    rim:itemClass dt:dataTypeItemClass ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/date/item"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/date/v1> ;
+    rim:validityStatus rim:invalid .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/date> a rim:Concept ;
+    skos:definition "A calendar day, without a time of day." ;
+    skos:inScheme dt:data-types ;
+    skos:prefLabel "Date" .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition> a rim:RegisterAction ;
+    prov:startedAtTime "2026-11-18T00:00:00+00:00"^^xsd:dateTime ;
+    rim:actionType rim:additionAction ;
+    rim:proposer dt:geolabs .
+
+<https://w3id.org/geolabs/ospd/data-types/data-type/date/v1> a dt:DataTypeVersion ;
+    dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition> ;
+    rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/date"^^xsd:anyURI ;
+    rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/date/v1"^^xsd:anyURI ;
+    rim:publicationStatus rim:published ;
+    rim:validityStatus rim:invalid ;
+    rim:version "1.0" ;
+    rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/date> .
+

@@ -217,7 +217,7 @@
   "name": "Building Blocks - Data Types",
   "abstract": "A concept-plane register (ISO 19135:2026, via the Registered Item Model) of the kinds of data\nthat process profile inputs and outputs carry -- raster (by band count), elevation model,\ngeometry (by type), feature collection, point cloud, TIN, table, bounding box and the literals.\nEach data type is a rim:Concept in a rim:ConceptSystem, with a governed rim:ConceptVersion.\nA data type names the *kind* of data, not its encoding: the encoding a concrete process uses is\ndeclared where that process is profiled (an Implementation Profile's schema).\n",
   "description": "This register holds, as a Registered Item Model **concept plane**, the vocabulary first drafted\ninline in [GeoLabs/bblocks-generic-profiles](https://github.com/GeoLabs/bblocks-generic-profiles)\nas its generic-profiles.data-type block. Extracting it makes the vocabulary reusable beyond that\none register and gives it its own governance and lifecycle.\n\nModelled on the concept plane of the\n[Registered Item Model](https://ogcincubator.github.io/registered-item-model/): dt:DataType is a\nsub-class of rim:Concept (a unit of meaning), dt:dataTypes is the rim:ConceptSystem that holds\nthem, and each type's governed state lives on a rim:ConceptVersion. A data type names the kind of\ndata (its meaning); the encoding a concrete process uses is declared at the Implementation Profile\ntier, not here. Some types are nonetheless grounded in a standard that happens to be a format\n(e.g. point cloud in the OGC LAS community standard) -- that is their source, not their encoding.\n\nIdentifiers: this register mints its own IRIs\n(https://w3id.org/geolabs/ospd/data-types/data-type/...). The original inline block in\nbblocks-generic-profiles keeps its own until a permanent, register-independent namespace is agreed\nand that register is pointed here. Nothing in bblocks-generic-profiles is changed by this register.\n",
-  "modified": "2026-11-18T16:53:41.124390",
+  "modified": "2026-11-19T10:36:26.095179",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"2deb5c60331691186d997e4f6ae9aab18b548ce5",
@@ -306,7 +306,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "schema": [
         {
           "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.yaml",
@@ -402,7 +402,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "schema": [
         {
           "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/item-class/schema.yaml",
@@ -465,7 +465,7 @@
       "abstract": "Shared RIM concept-plane model, register metadata, and SHACL rules for the individual data-type Building Blocks in this register.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-26T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "0.1",
       "itemClass": "model",
       "register": "data-types",
@@ -556,6 +556,12 @@
           "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/curve/ontology.ttl",
           "format": "text/turtle",
           "title": "Ontology of the Curve data type"
+        },
+        {
+          "role": "data",
+          "ref": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/date/ontology.ttl",
+          "format": "text/turtle",
+          "title": "Ontology of the Date data type"
         },
         {
           "role": "data",
@@ -1037,7 +1043,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/band-identifier/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1106,7 +1112,7 @@
       "abstract": "A literal truth value.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -1218,7 +1224,7 @@
       "abstract": "An axis-aligned extent given by its corners, with its CRS.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -1373,7 +1379,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/collection-identifier/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1485,7 +1491,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/colour-map/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1601,7 +1607,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/coordinate-reference-system/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1664,6 +1670,118 @@
       }
     },
     {
+      "itemIdentifier": "data-types.data-type.date",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+      "name": "Data type: Date",
+      "abstract": "A calendar day, without a time of day.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-11-18T00:00:00Z",
+      "version": "1.0",
+      "itemClass": "model",
+      "register": "data-types",
+      "dependsOn": [
+        "bblocks://data-types.vocabulary"
+      ],
+      "concept": [
+        "https://w3id.org/geolabs/ospd/data-types/data-type/date"
+      ],
+      "rdfType": [
+        "https://w3id.org/geolabs/ospd/data-types/DataType"
+      ],
+      "sources": [
+        {
+          "title": "Process type terrain/hillshading (bblocks-process-profiles), input DATE_MIN, the deployed process input that requests this type",
+          "link": "https://w3id.org/geolabs/ospd/process-profiles/process-type/terrain/hillshading"
+        }
+      ],
+      "group": "Parameter data types",
+      "highlighted": true,
+      "shaclShapes": [
+        {
+          "prof:hasArtifact": [
+            "https://geolabs.github.io/bblocks-data-types/_sources/vocabulary/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://data-types.vocabulary",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        },
+        {
+          "prof:hasArtifact": [
+            "https://ogcincubator.github.io/registered-item-model/_sources/core-ontology/shapes.shacl"
+          ],
+          "rdfs:seeAlso": "bblocks://ogc.rim.core-ontology",
+          "prof:hasRole": "role:validation",
+          "dct:format": "text/turtle",
+          "dct:conformsTo": "shacl:"
+        }
+      ],
+      "license": {
+        "name": "Apache-2.0"
+      },
+      "dateOfLastChange": "2026-11-19",
+      "ontology": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/ontology.ttl",
+        "prof:hasRole": "role:specification",
+        "dct:format": "text/turtle",
+        "dct:conformsTo": "http://www.w3.org/2002/07/owl#Ontology"
+      },
+      "schema": [
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/schema.yaml",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/yaml",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        },
+        {
+          "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/schema.json",
+          "prof:hasRole": "role:schema",
+          "dct:format": "application/json",
+          "dct:conformsTo": "https://json-schema.org/draft/2020-12/schema"
+        }
+      ],
+      "sourceSchema": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/date/schema.yaml",
+      "ldContext": {
+        "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/context.jsonld",
+        "prof:hasRole": "role:mapping",
+        "dct:format": "application/ld+json",
+        "dct:conformsTo": "https://www.w3.org/TR/json-ld11/"
+      },
+      "resolvedSchemaProperties": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/date/resolvedProperties.json",
+      "sourceFiles": "https://geolabs.github.io/bblocks-data-types/_sources/data-type/date/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/GeoLabs/bblocks-data-types/blob/master/build/tests/data-type/date/",
+      "documentation": {
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/json-full/data-type/date/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://geolabs.github.io/bblocks-data-types/build/generateddocs/markdown/data-type/date/index.md"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://geolabs.github.io/bblocks-data-types/bblock/data-types.data-type.date"
+        }
+      },
+      "@id": "bblocks://data-types.data-type.date",
+      "@type": [
+        "bblocks:Model",
+        "skos:Concept",
+        "dcat:Dataset",
+        "bblocks:BBlock"
+      ],
+      "skos:prefLabel": "Data type: Date",
+      "openAPIDocument": null,
+      "rdfData": [],
+      "isProfileOf": null,
+      "isDescribedBy": null,
+      "skos:topConceptOf": {
+        "@id": "https://geolabs.github.io/bblocks-data-types/"
+      }
+    },
+    {
       "itemIdentifier": "data-types.data-type.eo-product",
       "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
       "name": "Data type: Earth observation product",
@@ -1717,7 +1835,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/eo-product/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1829,7 +1947,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/expression/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1944,7 +2062,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/feature/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -2013,7 +2131,7 @@
       "abstract": "A set of features, each with a geometry and attributes; e.g. an OGC API - Features feature collection.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -2168,7 +2286,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/format-identifier/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -2237,7 +2355,7 @@
       "abstract": "A geometric object of the Simple Feature Access geometry model.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -2392,7 +2510,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/grid-resolution/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -2461,7 +2579,7 @@
       "abstract": "A literal number.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -2573,7 +2691,7 @@
       "abstract": "A set of three-dimensional points, each with its own attributes (intensity, classification, ...), typically from LiDAR.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -2728,7 +2846,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/radiometric-index/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -2797,7 +2915,7 @@
       "abstract": "A coverage on a regular grid of cells, each cell carrying one value per band; its band structure is its range type.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -2952,7 +3070,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/rendered-image/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -3065,7 +3183,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-catalog/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -3134,7 +3252,7 @@
       "abstract": "A literal character string, e.g. an expression, a CRS identifier or a format name.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -3246,7 +3364,7 @@
       "abstract": "Records of attribute values, without geometry.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -3401,7 +3519,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/time-interval/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -3518,7 +3636,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -3642,7 +3760,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-item-collection/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -3710,7 +3828,7 @@
       "abstract": "A 1-dimensional geometry, e.g. a LineString.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -3872,7 +3990,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/geometry-collection/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -3940,7 +4058,7 @@
       "abstract": "A 0-dimensional geometry, a single location.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -4055,7 +4173,7 @@
       "abstract": "A 2-dimensional geometry, e.g. a Polygon.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -4174,7 +4292,7 @@
       "abstract": "A raster with more than one band: a range type of several fields.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -4289,7 +4407,7 @@
       "abstract": "A raster with exactly one band: a range type of one field.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -4456,7 +4574,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/stac-collection/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -4572,7 +4690,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -4688,7 +4806,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-date-time/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -4804,7 +4922,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-duration/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -4924,7 +5042,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-email/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5044,7 +5162,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-hostname/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5160,7 +5278,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-email/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5276,7 +5394,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-idn-hostname/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5396,7 +5514,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv4/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5516,7 +5634,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-ipv6/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5636,7 +5754,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5756,7 +5874,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-iri-reference/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5876,7 +5994,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-json-pointer/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -5992,7 +6110,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-password/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -6112,7 +6230,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-relative-json-pointer/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -6228,7 +6346,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-time/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -6348,7 +6466,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -6468,7 +6586,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-reference/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -6588,7 +6706,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uri-template/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -6708,7 +6826,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/string-uuid/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -6827,7 +6945,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line-string/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -6946,7 +7064,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-curve/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -7065,7 +7183,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-point/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -7184,7 +7302,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-surface/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -7303,7 +7421,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polygon/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -7426,7 +7544,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/polyhedral-surface/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -7541,7 +7659,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/binary-mask/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -7609,7 +7727,7 @@
       "abstract": "A single-band raster whose values are elevations of the terrain or of a surface (DEM, DTM, DSM).",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -7779,7 +7897,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/line/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -7898,7 +8016,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/linear-ring/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -8017,7 +8135,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-line-string/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -8136,7 +8254,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/multi-polygon/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -8255,7 +8373,7 @@
       "license": {
         "name": "Apache-2.0"
       },
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "ontology": {
         "prof:hasArtifact": "https://geolabs.github.io/bblocks-data-types/build/annotated/data-type/triangle/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -8323,7 +8441,7 @@
       "abstract": "A polyhedral surface consisting only of triangle patches.",
       "status": "under-development",
       "dateTimeAddition": "2026-10-08T00:00:00Z",
-      "dateOfLastChange": "2026-11-18",
+      "dateOfLastChange": "2026-11-19",
       "version": "1.0",
       "itemClass": "model",
       "register": "data-types",
@@ -8474,6 +8592,9 @@
     },
     {
       "@id": "bblocks://data-types.data-type.coordinate-reference-system"
+    },
+    {
+      "@id": "bblocks://data-types.data-type.date"
     },
     {
       "@id": "bblocks://data-types.data-type.eo-product"

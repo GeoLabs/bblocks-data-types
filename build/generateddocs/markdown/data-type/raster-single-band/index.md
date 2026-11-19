@@ -155,7 +155,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.raster-single-band
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-18'
+  dateOfLastChange: '2026-11-19'
 
 ```
 
