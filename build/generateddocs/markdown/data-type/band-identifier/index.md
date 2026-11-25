@@ -71,7 +71,7 @@ The register item of the Band identifier data type: it realizes the governed ver
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-10T00:00:00Z"
     }
   },
@@ -93,7 +93,7 @@ The register item of the Band identifier data type: it realizes the governed ver
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Band identifier"@en ; skos:definition "An identifier that designates one band or asset of a multi-band product, either by the provider's band code or by a common band name."@en ; dct:source [ dct:title "Generic Profile band-retrieval (bblocks-generic-profiles), the role that requests this type"@en ; dct:references <https://w3id.org/geolabs/ospd/generic-profiles/generic-profile/band-retrieval/inputs/band> ] .
 <https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/actions/addition> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime .
 <https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Band identifier"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier> .
@@ -106,7 +106,7 @@ The register item of the Band identifier data type: it realizes the governed ver
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:objectIdentifier ;
     dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/band-identifier/item to https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
-    rim:proposer dt:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/item> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -140,7 +140,7 @@ The register item of the Band identifier data type: it realizes the governed ver
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/band-identifier/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-10T00:00:00Z"
     }
   },

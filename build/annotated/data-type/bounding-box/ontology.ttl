@@ -19,7 +19,7 @@
 <https://w3id.org/geolabs/ospd/data-types/data-type/bounding-box/actions/addition> a rim:RegisterAction ;
     prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
-    rim:proposer dt:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/bounding-box/actions/amendment-source-title> a rim:RegisterAction ;
     dct:description "In-place amendment of a proposal: the title of the source that names the OGC API - Processes bbox building block follows its renaming by GeoLabs on 2026-11-10, from ogc.api.processes.v1.schemas.bbox to ogc.api.processes.part1.v1.schemas.bbox (Part 1, edition 1.0). The source, the definition and skos:broader are unchanged. Classified clarifying: the type covers the same data."@en ;
@@ -28,7 +28,7 @@
     rim:affectedProperty dct:source ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/bounding-box/item> ;
     rim:changeClassification rim:clarifyingChange ;
-    rim:proposer dt:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/bounding-box/actions/identifier-2026-11-17> a rim:RegisterAction ;
     dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/bounding-box/item to https://w3id.org/geolabs/ospd/data-types/data-type/bounding-box/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/bounding-box/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
@@ -37,7 +37,7 @@
     rim:affectedProperty rim:objectIdentifier ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/bounding-box/item> ;
     rim:changeClassification rim:clarifyingChange ;
-    rim:proposer dt:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/bounding-box/v1> a dt:DataTypeVersion,
         rim:ConceptVersion ;

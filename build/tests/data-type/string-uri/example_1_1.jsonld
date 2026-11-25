@@ -24,7 +24,7 @@
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-uri/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },

@@ -5,8 +5,8 @@
   "objectIdentifier": "https://w3id.org/geolabs/ospd/data-types/register",
   "functionalIdentifier": "https://geolabs.github.io/bblocks-data-types/",
   "runsOn": "https://w3id.org/geolabs/ospd/data-types/registerSystem",
-  "registerOwner": "https://w3id.org/geolabs/ospd/data-types/geolabs",
-  "registerManager": "https://w3id.org/geolabs/ospd/data-types/geolabs",
-  "controlBody": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+  "registerOwner": "https://w3id.org/geolabs/ospd/org/geolabs",
+  "registerManager": "https://w3id.org/geolabs/ospd/org/geolabs",
+  "controlBody": "https://w3id.org/geolabs/ospd/org/geolabs",
   "hasSpecification": "https://w3id.org/geolabs/ospd/data-types/specification"
 }

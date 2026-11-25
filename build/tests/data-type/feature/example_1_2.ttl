@@ -8,7 +8,7 @@
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/feature> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Feature"@en ; skos:definition "A representation of a real-world phenomenon, with a geometry and properties, optionally identified by an identifier."@en ; dct:source [ dct:title "ISO 19109:2015 Geographic information -- Rules for application schema"@en ], [ dct:title "OGC 17-069r4 OGC API - Features - Part 1: Core"@en ; dct:references <https://docs.ogc.org/is/17-069r4/17-069r4.html> ] .
 <https://w3id.org/geolabs/ospd/data-types/data-type/feature/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/feature> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/feature/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/feature"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/feature/actions/addition> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/feature/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-02T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/feature/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; prov:startedAtTime "2026-11-02T00:00:00Z"^^xsd:dateTime .
 <https://w3id.org/geolabs/ospd/data-types/data-type/feature/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Feature"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/feature/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/feature/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/feature> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/feature> .
@@ -21,6 +21,6 @@
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:objectIdentifier ;
     dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/feature/item to https://w3id.org/geolabs/ospd/data-types/data-type/feature/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/feature/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
-    rim:proposer dt:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/feature/item> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .

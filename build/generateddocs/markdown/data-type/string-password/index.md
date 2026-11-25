@@ -80,7 +80,7 @@ The register item of the Password string data type: it realizes the governed ver
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },
@@ -103,9 +103,9 @@ The register item of the Password string data type: it realizes the governed ver
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-password> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Password string"@en ; skos:definition "A string designated to carry a password value; the source schema does not define a password-strength constraint."@en ; skos:broader <https://w3id.org/geolabs/ospd/data-types/data-type/string> ; dct:source [ dct:title "EOAP schemas: string_format.yaml (JSON Schema format: password)"@en ; dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ] .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/string-password> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-password/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-password"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/addition>, <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/unpublication> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Password string"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-password/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/string-password> ; rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/unpublication> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-password of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-password of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-password> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password> .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/v1> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/v1> .
@@ -117,7 +117,7 @@ The register item of the Password string data type: it realizes the governed ver
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:objectIdentifier ;
     dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/string-password/item to https://w3id.org/geolabs/ospd/data-types/data-type/string-password/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
-    rim:proposer dt:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-password/item> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -151,7 +151,7 @@ The register item of the Password string data type: it realizes the governed ver
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-password/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },

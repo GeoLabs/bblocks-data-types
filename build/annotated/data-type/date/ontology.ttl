@@ -27,7 +27,7 @@
 <https://w3id.org/geolabs/ospd/data-types/data-type/date/actions/addition> a rim:RegisterAction ;
     prov:startedAtTime "2026-11-18T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
-    rim:proposer dt:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/date/v1> a dt:DataTypeVersion,
         rim:ConceptVersion ;

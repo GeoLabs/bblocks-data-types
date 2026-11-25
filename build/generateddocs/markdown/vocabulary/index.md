@@ -214,7 +214,7 @@ not an encoding.
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-10-08T00:00:00Z"
     }
   },
@@ -252,7 +252,7 @@ not an encoding.
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-10-08T00:00:00Z"
     }
   },
@@ -285,7 +285,7 @@ not an encoding.
 <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition> a rim:RegisterAction ;
     prov:startedAtTime "2026-10-08T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
-    rim:proposer dt:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1> a dt:DataTypeVersion ;
     dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition> ;
@@ -323,9 +323,9 @@ dt:register a rim:Register ;
     rim:functionalIdentifier "https://geolabs.github.io/bblocks-data-types/"^^xsd:anyURI ;
     dct:title "Data Types"@en ;
     dct:description "A concept-plane register of the kinds of data that process profile inputs and outputs carry."@en ;
-    rim:registerOwner dt:geolabs ;
-    rim:registerManager dt:geolabs ;
-    rim:controlBody dt:geolabs ;
+    rim:registerOwner <https://w3id.org/geolabs/ospd/org/geolabs> ;
+    rim:registerManager <https://w3id.org/geolabs/ospd/org/geolabs> ;
+    rim:controlBody <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:hasSpecification dt:specification ;
     rim:runsOn dt:registerSystem ;
     dt:conceptSystem dt:dataTypes .
@@ -367,8 +367,15 @@ dt:dataTypeItemClass a rim:RegisterItemClass ;
     rim:definedIn dt:register ;
     rim:validatedBy dt:DataTypeItemShape .
 
-dt:geolabs a prov:Organization ;
-    dct:title "GeoLabs SARL"@en .
+# GeoLabs SARL, the one agent of the four OSPD registers (data-types, data-formats,
+# generic-profiles, process-profiles): register owner, register manager, control body and
+# proposer of every register action. Its IRI is outside every register namespace, since an
+# agent is not an item of a register, and it is defined here only; the three other registers
+# use it without redefining it (decision of 2026-11-19, which replaced the four per-register
+# IRIs <register>/geolabs everywhere).
+<https://w3id.org/geolabs/ospd/org/geolabs> a prov:Organization ;
+    dct:title "GeoLabs SARL"@en ;
+    rdfs:seeAlso <https://www.geolabs.fr/> .
 
 dt:registerSystem a rim:RegisterSystem ;
     dct:title "OGC Building Blocks register (bblocks-postprocess, GitHub Pages)"@en .
@@ -516,7 +523,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.vocabulary
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '0.1'
-  dateOfLastChange: '2026-11-19'
+  dateOfLastChange: '2026-11-25'
 
 ```
 

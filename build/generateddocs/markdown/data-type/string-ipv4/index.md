@@ -81,7 +81,7 @@ The register item of the IPv4 address string data type: it realizes the governed
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },
@@ -104,9 +104,9 @@ The register item of the IPv4 address string data type: it realizes the governed
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "IPv4 address string"@en ; skos:definition "A string representing an IPv4 address."@en ; skos:broader <https://w3id.org/geolabs/ospd/data-types/data-type/string> ; dct:source [ dct:title "EOAP schemas: string_format.yaml (JSON Schema format: ipv4)"@en ; dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ], [ dct:title "RFC 791"@en ; dct:references <https://www.rfc-editor.org/rfc/rfc791.html> ] .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/addition>, <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/unpublication> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "IPv4 address string"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/string-ipv4> ; rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/unpublication> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-ipv4 of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-ipv4 of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv4> .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/v1> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv4/v1> .
@@ -118,7 +118,7 @@ The register item of the IPv4 address string data type: it realizes the governed
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:objectIdentifier ;
     dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/string-ipv4/item to https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
-    rim:proposer dt:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/item> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -152,7 +152,7 @@ The register item of the IPv4 address string data type: it realizes the governed
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-ipv4/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },

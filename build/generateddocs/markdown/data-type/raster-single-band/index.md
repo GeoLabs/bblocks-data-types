@@ -61,7 +61,7 @@ The register item of the Raster (single band) data type: it realizes the governe
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-10-08T00:00:00Z"
     }
   },
@@ -83,9 +83,9 @@ The register item of the Raster (single band) data type: it realizes the governe
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Raster (single band)"@en ; skos:definition "A raster with exactly one band: a range type of one field."@en ; skos:broader <https://w3id.org/geolabs/ospd/data-types/data-type/raster> ; dct:source [ dct:title "OGC 09-146r8 Coverage Implementation Schema (CIS) 1.1.1, §6.5 RangeType"@en ; dct:references <https://docs.ogc.org/is/09-146r8/09-146r8.html> ] .
 <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-10-08T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; prov:startedAtTime "2026-10-08T00:00:00Z"^^xsd:dateTime .
 <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Raster (single band)"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/amendment-relations> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/amendment-relations> a rim:RegisterAction ; rim:actionType dt:amendmentAction ; rim:changeClassification rim:clarifyingChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item> ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime ; dct:description "In-place amendment of a proposal: the Relations text of the block now lists Binary mask among the narrower data types, besides Elevation model, since binary-mask (added 2026-11-10) has this type as skos:broader. The definition and skos:broader of this type are unchanged. Classified clarifying: a documentary text; the type covers the same data."@en .
+<https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/amendment-relations> a rim:RegisterAction ; rim:actionType dt:amendmentAction ; rim:changeClassification rim:clarifyingChange ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item> ; prov:startedAtTime "2026-11-10T00:00:00Z"^^xsd:dateTime ; dct:description "In-place amendment of a proposal: the Relations text of the block now lists Binary mask among the narrower data types, besides Elevation model, since binary-mask (added 2026-11-10) has this type as skos:broader. The definition and skos:broader of this type are unchanged. Classified clarifying: a documentary text; the type covers the same data."@en .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band> .
 <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/v1> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/v1> .
@@ -97,7 +97,7 @@ The register item of the Raster (single band) data type: it realizes the governe
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:objectIdentifier ;
     dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/raster-single-band/item to https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
-    rim:proposer dt:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/item> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -131,7 +131,7 @@ The register item of the Raster (single band) data type: it realizes the governe
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/raster-single-band/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-10-08T00:00:00Z"
     }
   },
@@ -155,7 +155,7 @@ x-bblocks-metadata:
   itemIdentifier: data-types.data-type.raster-single-band
   register: https://geolabs.github.io/bblocks-data-types/build/register.json
   version: '1.0'
-  dateOfLastChange: '2026-11-19'
+  dateOfLastChange: '2026-11-25'
 
 ```
 

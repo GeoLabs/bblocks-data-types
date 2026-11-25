@@ -20,7 +20,7 @@
 <https://w3id.org/geolabs/ospd/data-types/data-type/linear-ring/actions/addition> a rim:RegisterAction ;
     prov:startedAtTime "2026-11-03T00:00:00+00:00"^^xsd:dateTime ;
     rim:actionType rim:additionAction ;
-    rim:proposer dt:geolabs .
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/linear-ring/v1> a dt:DataTypeVersion ;
     dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/linear-ring/actions/addition> ;

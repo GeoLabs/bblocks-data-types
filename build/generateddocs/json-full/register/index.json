@@ -34,7 +34,7 @@
   "license": {
     "name": "Apache-2.0"
   },
-  "dateOfLastChange": "2026-11-19",
+  "dateOfLastChange": "2026-11-25",
   "schema": {
     "application/yaml": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.yaml",
     "application/json": "https://geolabs.github.io/bblocks-data-types/build/annotated/register/schema.json"
@@ -54,20 +54,20 @@
         {
           "language": "json",
           "url": "https://geolabs.github.io/bblocks-data-types/build/tests/register/example_1_1.json",
-          "sizeBytes": 600,
-          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"type\": \"Register\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/\",\n  \"runsOn\": \"https://w3id.org/geolabs/ospd/data-types/registerSystem\",\n  \"registerOwner\": \"https://w3id.org/geolabs/ospd/data-types/geolabs\",\n  \"registerManager\": \"https://w3id.org/geolabs/ospd/data-types/geolabs\",\n  \"controlBody\": \"https://w3id.org/geolabs/ospd/data-types/geolabs\",\n  \"hasSpecification\": \"https://w3id.org/geolabs/ospd/data-types/specification\"\n}\n"
+          "sizeBytes": 579,
+          "code": "{\n  \"id\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"type\": \"Register\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/\",\n  \"runsOn\": \"https://w3id.org/geolabs/ospd/data-types/registerSystem\",\n  \"registerOwner\": \"https://w3id.org/geolabs/ospd/org/geolabs\",\n  \"registerManager\": \"https://w3id.org/geolabs/ospd/org/geolabs\",\n  \"controlBody\": \"https://w3id.org/geolabs/ospd/org/geolabs\",\n  \"hasSpecification\": \"https://w3id.org/geolabs/ospd/data-types/specification\"\n}\n"
         },
         {
           "language": "jsonld",
           "url": "https://geolabs.github.io/bblocks-data-types/build/tests/register/example_1_1.jsonld",
-          "sizeBytes": 701,
-          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/register/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"type\": \"Register\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/\",\n  \"runsOn\": \"https://w3id.org/geolabs/ospd/data-types/registerSystem\",\n  \"registerOwner\": \"https://w3id.org/geolabs/ospd/data-types/geolabs\",\n  \"registerManager\": \"https://w3id.org/geolabs/ospd/data-types/geolabs\",\n  \"controlBody\": \"https://w3id.org/geolabs/ospd/data-types/geolabs\",\n  \"hasSpecification\": \"https://w3id.org/geolabs/ospd/data-types/specification\"\n}"
+          "sizeBytes": 680,
+          "code": "{\n  \"@context\": \"https://geolabs.github.io/bblocks-data-types/build/annotated/register/context.jsonld\",\n  \"id\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"type\": \"Register\",\n  \"objectIdentifier\": \"https://w3id.org/geolabs/ospd/data-types/register\",\n  \"functionalIdentifier\": \"https://geolabs.github.io/bblocks-data-types/\",\n  \"runsOn\": \"https://w3id.org/geolabs/ospd/data-types/registerSystem\",\n  \"registerOwner\": \"https://w3id.org/geolabs/ospd/org/geolabs\",\n  \"registerManager\": \"https://w3id.org/geolabs/ospd/org/geolabs\",\n  \"controlBody\": \"https://w3id.org/geolabs/ospd/org/geolabs\",\n  \"hasSpecification\": \"https://w3id.org/geolabs/ospd/data-types/specification\"\n}"
         },
         {
           "language": "ttl",
           "url": "https://geolabs.github.io/bblocks-data-types/build/tests/register/example_1_1.ttl",
-          "sizeBytes": 731,
-          "code": "@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://w3id.org/geolabs/ospd/data-types/register> a rim:Register ;\n    rim:controlBody <https://w3id.org/geolabs/ospd/data-types/geolabs> ;\n    rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/\"^^xsd:anyURI ;\n    rim:hasSpecification <https://w3id.org/geolabs/ospd/data-types/specification> ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-types/register\"^^xsd:anyURI ;\n    rim:registerManager <https://w3id.org/geolabs/ospd/data-types/geolabs> ;\n    rim:registerOwner <https://w3id.org/geolabs/ospd/data-types/geolabs> ;\n    rim:runsOn <https://w3id.org/geolabs/ospd/data-types/registerSystem> .\n\n"
+          "sizeBytes": 710,
+          "code": "@prefix rim: <https://w3id.org/ogc/rim/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://w3id.org/geolabs/ospd/data-types/register> a rim:Register ;\n    rim:controlBody <https://w3id.org/geolabs/ospd/org/geolabs> ;\n    rim:functionalIdentifier \"https://geolabs.github.io/bblocks-data-types/\"^^xsd:anyURI ;\n    rim:hasSpecification <https://w3id.org/geolabs/ospd/data-types/specification> ;\n    rim:objectIdentifier \"https://w3id.org/geolabs/ospd/data-types/register\"^^xsd:anyURI ;\n    rim:registerManager <https://w3id.org/geolabs/ospd/org/geolabs> ;\n    rim:registerOwner <https://w3id.org/geolabs/ospd/org/geolabs> ;\n    rim:runsOn <https://w3id.org/geolabs/ospd/data-types/registerSystem> .\n\n"
         }
       ]
     }

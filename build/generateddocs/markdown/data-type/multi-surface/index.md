@@ -66,7 +66,7 @@ The register item of the MultiSurface data type: it realizes the governed versio
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-03T00:00:00Z"
     }
   },
@@ -88,7 +88,7 @@ The register item of the MultiSurface data type: it realizes the governed versio
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "MultiSurface"@en ; skos:definition "A 2-dimensional geometry collection whose elements are surfaces. The interiors of any two of its surfaces do not intersect."@en ; skos:broader <https://w3id.org/geolabs/ospd/data-types/data-type/geometry-collection> ; dct:source [ dct:title "OGC 06-103r4 Simple Feature Access - Part 1: Common Architecture"@en ; dct:references <https://www.ogc.org/standards/sfa/> ], [ dct:title "OGC 23-034 OGC CDB Version 2 - Part 1: Core Standard, 7.6 Geometry"@en ; dct:references <https://docs.ogc.org/is/23-034/23-034.html> ] .
 <https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/actions/addition> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-03T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; prov:startedAtTime "2026-11-03T00:00:00Z"^^xsd:dateTime .
 <https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "MultiSurface"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:published .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/multi-surface> .
@@ -101,7 +101,7 @@ The register item of the MultiSurface data type: it realizes the governed versio
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:objectIdentifier ;
     dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/multi-surface/item to https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
-    rim:proposer dt:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/item> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -135,7 +135,7 @@ The register item of the MultiSurface data type: it realizes the governed versio
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/multi-surface/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-03T00:00:00Z"
     }
   },

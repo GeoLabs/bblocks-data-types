@@ -82,7 +82,7 @@ The register item of the Date-time string data type: it realizes the governed ve
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },
@@ -109,9 +109,9 @@ The register item of the Date-time string data type: it realizes the governed ve
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time> a dt:DataType, rim:Concept, skos:Concept ; skos:inScheme dt:dataTypes ; skos:prefLabel "Date-time string"@en ; skos:definition "A string representing a date and time in the YYYY-MM-DDThh:mm:ss.sTZD format."@en ; skos:broader <https://w3id.org/geolabs/ospd/data-types/data-type/string> ; dct:source [ dct:title "EOAP schemas: string_format.yaml (JSON Schema format: date-time)"@en ; dct:references <https://raw.githubusercontent.com/eoap/schemas/main/string_format.yaml> ] .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/v1> a dt:DataTypeVersion, rim:ConceptVersion ; rim:versionOf <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time> ; rim:version "1.0" ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/v1"^^xsd:anyURI ; rim:functionalIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time"^^xsd:anyURI ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dt:hasVersionAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/addition>, <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/unpublication> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer dt:geolabs ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/addition> a rim:RegisterAction ; rim:actionType rim:additionAction ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; prov:startedAtTime "2026-11-01T00:00:00Z"^^xsd:dateTime .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/item> a dt:DataTypeItem, rim:RegisterItem ; dct:title "Date-time string"@en ; rim:objectIdentifier "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/item"^^xsd:anyURI ; rim:itemClass dt:dataTypeItemClass ; rim:inRegister dt:register ; rim:realizes <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/v1> ; rim:validityStatus rim:invalid ; rim:publicationStatus rim:unpublished ; dct:isReplacedBy <https://w3id.org/geolabs/ospd/data-formats/format/string-date-time> ; rim:hasAction <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/unpublication> .
-<https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer dt:geolabs ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-date-time of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
+<https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/unpublication> a rim:RegisterAction ; rim:actionType rim:unpublishAction ; rim:changeClassification rim:substantiveChange ; rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ; rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/item> ; prov:startedAtTime "2026-11-09T00:00:00Z"^^xsd:dateTime ; dct:description "Withdrawal of the proposal: this is a format, not a kind of data. It is replaced by the format https://w3id.org/geolabs/ospd/data-formats/format/string-date-time of the data-formats register, which carries rim:supersedes towards this item. Classified substantive: the retirement of a type."@en .
 
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time> .
 <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/v1> owl:sameAs <https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/v1> .
@@ -123,7 +123,7 @@ The register item of the Date-time string data type: it realizes the governed ve
     rim:changeClassification rim:clarifyingChange ;
     rim:affectedProperty rim:objectIdentifier ;
     dct:description "The object identifier of this item moves from https://geolabs.github.io/bblocks-data-types/def/data-type/string-date-time/item to https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/item, which resolves through w3id.org (decision of 2026-11-17); the register actions of the item move with it, under https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/. The old IRI is kept as owl:sameAs. The content of the item is unchanged. Classified clarifying: the item is the same, only its identifier changes. The data type and its version keep their old IRIs as owl:sameAs too."@en ;
-    rim:proposer dt:geolabs ;
+    rim:proposer <https://w3id.org/geolabs/ospd/org/geolabs> ;
     rim:appliesTo <https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/item> ;
     prov:startedAtTime "2026-11-17T00:00:00Z"^^xsd:dateTime .
 
@@ -157,7 +157,7 @@ The register item of the Date-time string data type: it realizes the governed ve
       "id": "https://w3id.org/geolabs/ospd/data-types/data-type/string-date-time/actions/addition",
       "type": "RegisterAction",
       "actionType": "addition",
-      "proposer": "https://w3id.org/geolabs/ospd/data-types/geolabs",
+      "proposer": "https://w3id.org/geolabs/ospd/org/geolabs",
       "startedAtTime": "2026-11-01T00:00:00Z"
     }
   },
