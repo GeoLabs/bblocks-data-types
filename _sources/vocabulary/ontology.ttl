@@ -68,7 +68,7 @@ dt:conceptSystem a owl:ObjectProperty ;
 # Entry into the register: a proposed addition
 #
 # Every concept version records one rim:RegisterAction of type
-# rim:additionAction, proposed (rim:proposer) by dt:geolabs, at the date
+# rim:additionAction, proposed (rim:proposer) by <https://w3id.org/geolabs/ospd/org/geolabs>, at the date
 # the vocabulary was first drafted (2026-10-08, inline in
 # bblocks-generic-profiles). No control-body decision has been recorded,
 # so versions are rim:invalid (not in force) and rim:published (visible):
